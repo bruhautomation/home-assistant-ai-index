@@ -1,0 +1,40 @@
+id: marlin-analyzer
+name: Marlin Analyzer
+repo: kotope/marlin-ha-integration
+domain: marlin_analyzer
+category: summaries
+install: [hacs-integration, container]
+summary: Local vision AI that watches your recorded camera clips and turns motion events into written security summaries and daily briefings.
+providers: [self-hosted, google, anthropic]
+inference: [local, cloud]
+capabilities:
+  reads_entity_states: false
+  reads_camera: true
+  reads_history: false
+  listens_microphone: false
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: true
+data_sent:
+  - camera clips — to your own self-hosted Marlin server
+  - with cloud fallback enabled — event text summaries to Gemini or Claude
+evidence:
+  reads_camera:
+    path: custom_components/marlin_analyzer/client.py
+    line: 119
+    commit: 4fba57873c548433aeaafaaae5b938824b652182
+  runs_unattended:
+    repo: kotope/marlin-server
+    path: app/queue.py
+    line: 53
+    commit: 4114efcbaae1e0262b8d52967bf8cb328898a629
+notes: >
+  Two pieces: a HACS integration that feeds motion clips from your media
+  folders (Unifi Protect focused) to a self-hosted GPU server running the
+  Marlin-2B vision model, which captions events as background jobs and
+  aggregates them into briefings via get_summary / get_instant_summary
+  actions. Video never leaves your network; the optional cloud fallback sends
+  only text. Young project (2026) — expect fast movement.
+added: 2026-08-06

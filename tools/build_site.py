@@ -83,6 +83,11 @@ def page(title: str, body: str, css_path: str, description: str) -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{esc(description)}">
+<meta property="og:title" content="{esc(title)}">
+<meta property="og:description" content="{esc(description)}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Home Assistant AI Index">
+<meta property="og:image" content="https://raw.githubusercontent.com/bruhautomation/home-assistant-ai-index/main/docs/site-preview.png">
 <title>{esc(title)}</title>
 <link rel="stylesheet" href="{css_path}">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔎</text></svg>">
@@ -220,7 +225,17 @@ def health_section(entry: dict) -> str:
     if manifest.get("iot_class"):
         ev = manifest.get("evidence")
         link = f' (<a href="{evidence_url(entry, ev)}">manifest ↗</a>)' if ev else ""
-        manifest_line = f"<p>Integration <code>iot_class</code>: <code>{esc(manifest['iot_class'])}</code>{link}</p>"
+        gloss = {
+            "cloud_polling": "talks to a cloud service on a schedule",
+            "cloud_push": "a cloud service pushes to it",
+            "local_polling": "polls something on your network",
+            "local_push": "receives pushes on your network",
+            "calculated": "derives values locally",
+            "assumed_state": "assumes state without confirmation",
+        }.get(manifest["iot_class"], "")
+        gloss = f" — {gloss}" if gloss else ""
+        manifest_line = (f"<p>Integration <code>iot_class</code> (self-declared): "
+                         f"<code>{esc(manifest['iot_class'])}</code>{esc(gloss)}{link}</p>")
     return f"""<h2>Health</h2>
 {archived}
 <p>{" · ".join(facts) if facts else "No harvested metrics yet."}</p>

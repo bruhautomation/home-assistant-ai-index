@@ -19,15 +19,17 @@ Each entry carries nine **capability flags** (what the project can reach), an
 
 | | Capability | Meaning |
 |---|---|---|
-| 📖 | reads states | Reads the states of entities exposed to it |
-| 📜 | reads history | Queries recorder / history / logbook data |
-| 📷 | reads camera | Accesses camera images or streams |
-| 🎙️ | microphone | Processes live audio |
-| 🎛️ | controls devices | Calls Home Assistant services to actuate devices |
-| ⚙️ | creates automations | Writes automations, scripts, or helpers |
-| 📝 | edits files | Writes to configuration files or the filesystem |
-| ⚡ | executes code | Runs arbitrary code beyond declared service calls |
-| ⏰ | unattended | Self-initiates AI activity on schedules or triggers by design |
+| 📖 | [reads states](https://bruhautomation.github.io/home-assistant-ai-index/#cap=reads_entity_states:require) | Reads the states of entities exposed to it |
+| 📜 | [reads history](https://bruhautomation.github.io/home-assistant-ai-index/#cap=reads_history:require) | Queries recorder / history / logbook data |
+| 📷 | [reads camera](https://bruhautomation.github.io/home-assistant-ai-index/#cap=reads_camera:require) | Accesses camera images or streams |
+| 🎙️ | [microphone](https://bruhautomation.github.io/home-assistant-ai-index/#cap=listens_microphone:require) | Processes live audio |
+| 🎛️ | [controls devices](https://bruhautomation.github.io/home-assistant-ai-index/#cap=controls_devices:require) | Calls Home Assistant services to actuate devices |
+| ⚙️ | [creates automations](https://bruhautomation.github.io/home-assistant-ai-index/#cap=creates_automations:require) | Writes automations, scripts, or helpers |
+| 📝 | [edits files](https://bruhautomation.github.io/home-assistant-ai-index/#cap=edits_files:require) | Writes to configuration files or the filesystem |
+| ⚡ | [executes code](https://bruhautomation.github.io/home-assistant-ai-index/#cap=executes_code:require) | Runs arbitrary code beyond declared service calls |
+| ⏰ | [unattended](https://bruhautomation.github.io/home-assistant-ai-index/#cap=runs_unattended:require) | Self-initiates AI activity on schedules or triggers by design |
+
+Each capability links to the live list of projects that have it.
 
 **Inference:** 🏠 local · ☁️ cloud · 🏠/☁️ your choice of backend decides.
 The combinations are the point: *cloud inference + camera access* means your
@@ -61,7 +63,7 @@ Maintainer corrections get priority handling, and a disputed flag is marked ⚠�
 on the site immediately while it is resolved.
 
 <!-- BEGIN GENERATED -->
-**25 projects indexed**, metrics harvested 2026-08-06. Sorted by name — never by stars. [Filter, compare, and see the evidence on the site →](https://bruhautomation.github.io/home-assistant-ai-index/)
+**27 projects indexed**, metrics harvested 2026-08-06. Sorted by name — never by stars. [Filter, compare, and see the evidence on the site →](https://bruhautomation.github.io/home-assistant-ai-index/)
 
 ### Conversation agents
 
@@ -124,6 +126,7 @@ on the site immediately while it is resolved.
 | [openWakeWord](https://github.com/rhasspy/wyoming-openwakeword) | 🎙️ | 🏠 local | add-on, container | 🛡️ 5/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/openwakeword-addon/) |
 | [Piper (text-to-speech)](https://github.com/rhasspy/wyoming-piper) | — | 🏠 local | add-on, container | 🛡️ 5/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/piper-addon/) |
 | [Speech-to-Phrase](https://github.com/OHF-Voice/speech-to-phrase) | 📖🎙️ | 🏠 local | add-on, container | 🛡️ 5/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/speech-to-phrase/) |
+| [Voice Preview Edition (firmware)](https://github.com/esphome/home-assistant-voice-pe) | 🎙️ | 🏠 local | external | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/voice-pe-firmware/) |
 | [Whisper (speech-to-text)](https://github.com/rhasspy/wyoming-faster-whisper) | 🎙️ | 🏠 local | add-on, container | 🛡️ 5/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/whisper-addon/) |
 | [Wyoming Satellite](https://github.com/rhasspy/wyoming-satellite) | 🎙️ | 🏠 local | external | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/wyoming-satellite/) |
 
@@ -132,6 +135,12 @@ on the site immediately while it is resolved.
 | Name | Capabilities | Inference | Install | Health | |
 |---|---|---|---|---|---|
 | [View Assist](https://github.com/dinki/View-Assist) | 📖 | 🏠/☁️ choice | external | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/view-assist/) |
+
+### Summaries & briefings
+
+| Name | Capabilities | Inference | Install | Health | |
+|---|---|---|---|---|---|
+| [Marlin Analyzer](https://github.com/kotope/marlin-ha-integration) | 📷⏰ | 🏠/☁️ choice | HACS, container | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/marlin-analyzer/) |
 <!-- END GENERATED -->
 
 ## Contributing

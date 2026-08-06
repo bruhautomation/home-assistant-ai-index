@@ -1,0 +1,32 @@
+id: voice-pe-firmware
+name: Voice Preview Edition (firmware)
+repo: esphome/home-assistant-voice-pe
+url: https://www.home-assistant.io/voice-pe/
+category: voice-stack
+install: [external]
+summary: The ESPHome firmware behind Home Assistant's official voice hardware — on-device wake word, then audio streams to your own Assist pipeline.
+providers: [self-hosted]
+inference: [local]
+capabilities:
+  reads_entity_states: false
+  reads_camera: false
+  reads_history: false
+  listens_microphone: true
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - microphone audio after the wake word — to your Home Assistant server's Assist pipeline
+evidence:
+  listens_microphone:
+    path: home-assistant-voice.yaml
+    line: 1539
+    commit: 0579e7b9d8504264719c593474c85447253c9dc1
+notes: >
+  Wake detection runs on the ESP32 itself via microWakeWord, so audio leaves
+  the device only after "Okay Nabu" — and where speech goes after that (local
+  Whisper or a cloud agent) is decided by the pipeline you assign, not by the
+  hardware. The firmware is open and reflashable like any ESPHome device.
+added: 2026-08-06
