@@ -63,7 +63,7 @@ Maintainer corrections get priority handling, and a disputed flag is marked ⚠�
 on the site immediately while it is resolved.
 
 <!-- BEGIN GENERATED -->
-**27 projects indexed**, metrics harvested 2026-08-06. Sorted by name — never by stars. [Filter, compare, and see the evidence on the site →](https://bruhautomation.github.io/home-assistant-ai-index/)
+**28 projects indexed**, metrics harvested 2026-08-06. Sorted by name — never by stars. [Filter, compare, and see the evidence on the site →](https://bruhautomation.github.io/home-assistant-ai-index/)
 
 ### Conversation agents
 
@@ -115,6 +115,7 @@ on the site immediately while it is resolved.
 | Name | Capabilities | Inference | Install | Health | |
 |---|---|---|---|---|---|
 | [LocalAI](https://github.com/mudler/LocalAI) | — | 🏠 local | container, external | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/localai/) |
+| [Ollama (server)](https://github.com/ollama/ollama) | — | 🏠 local | container, external | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/ollama-server/) |
 
 ### Voice stack
 

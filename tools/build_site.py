@@ -34,6 +34,7 @@ from common import (
 SITE_DIR = ROOT / "site"
 OUT = ROOT / "_site"
 REPO_URL = "https://github.com/bruhautomation/home-assistant-ai-index"
+SITE_URL = "https://bruhautomation.github.io/home-assistant-ai-index"
 
 INSTALL_LABELS = {
     "core-integration": "core integration",
@@ -76,13 +77,14 @@ def build_data() -> dict:
     }
 
 
-def page(title: str, body: str, css_path: str, description: str) -> str:
+def page(title: str, body: str, css_path: str, description: str, canonical: str = "") -> str:
+    canonical_tag = f'\n<link rel="canonical" href="{esc(canonical)}">' if canonical else ""
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="{esc(description)}">
+<meta name="description" content="{esc(description)}">{canonical_tag}
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:type" content="website">
@@ -147,6 +149,7 @@ def build_index(data: dict) -> str:
         body,
         "./style.css",
         "Filterable index of Home Assistant AI integrations: capabilities, data flow, and health — with evidence.",
+        canonical=f"{SITE_URL}/",
     )
 
 
@@ -297,6 +300,7 @@ def build_entry_page(entry: dict, harvested_at: str | None) -> str:
         body,
         "../../style.css",
         entry["summary"],
+        canonical=f"{SITE_URL}/entries/{entry['id']}/",
     )
 
 
@@ -319,6 +323,14 @@ def main() -> None:
         (page_dir / "index.html").write_text(
             build_entry_page(entry, data["harvested_at"]), encoding="utf-8"
         )
+    urls = [f"{SITE_URL}/"] + [f"{SITE_URL}/entries/{e['id']}/" for e in data["entries"]]
+    sitemap = "\n".join(
+        ['<?xml version="1.0" encoding="UTF-8"?>',
+         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+        + [f"  <url><loc>{u}</loc></url>" for u in urls]
+        + ["</urlset>", ""]
+    )
+    (OUT / "sitemap.xml").write_text(sitemap, encoding="utf-8")
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
     print(f"built _site/ with {len(data['entries'])} entry pages")
 

@@ -1,0 +1,27 @@
+id: ollama-server
+name: Ollama (server)
+repo: ollama/ollama
+url: https://ollama.com
+category: model-runtime
+install: [container, external]
+summary: The self-hosted model server most Home Assistant local-AI setups run on — one binary serving chat and vision models to any integration that speaks to it.
+providers: [self-hosted]
+inference: [local]
+capabilities:
+  reads_entity_states: false
+  reads_camera: false
+  reads_history: false
+  listens_microphone: false
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent: []
+notes: >
+  A model runtime, not a Home Assistant integration: it has no reach into your
+  instance. It only sees what the integrations you point at it send — the core
+  Ollama integration, Home LLM, LLM Vision, and anything OpenAI-compatible via
+  its compatibility endpoint. Pairing cloud-capable integrations with a
+  runtime like this is how camera frames and conversations stay home.
+added: 2026-08-06
