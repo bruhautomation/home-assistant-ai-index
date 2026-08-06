@@ -1,0 +1,32 @@
+{
+  "addon": {
+    "apparmor_profile": false,
+    "commit": "95657e488570873dad94a3e62c2c84b43368fbe9",
+    "config_path": "whisper/config.yaml",
+    "path": "whisper",
+    "permissions": [
+      {
+        "description": "mapped Home Assistant folders",
+        "evidence": {
+          "commit": "95657e488570873dad94a3e62c2c84b43368fbe9",
+          "line": 15,
+          "path": "whisper/config.yaml",
+          "repo": "home-assistant/addons"
+        },
+        "key": "map",
+        "value": [
+          "app_config:rw"
+        ]
+      }
+    ],
+    "repo": "home-assistant/addons",
+    "supervisor_rating": {
+      "breakdown": [],
+      "value": 5
+    },
+    "version": "3.5.1"
+  },
+  "id": "whisper-addon",
+  "repo": "rhasspy/wyoming-faster-whisper",
+  "sha": "5b5854f36a0f228a289a6a30da7e594f74e35968"
+}

@@ -1,0 +1,47 @@
+id: extended-openai-conversation
+name: Extended OpenAI Conversation
+repo: jekalmin/extended_openai_conversation
+category: conversation-agent
+install: [hacs-integration]
+summary: Function-calling conversation agent that can run services, query history, create automations, and evaluate templates — with any OpenAI-compatible endpoint.
+providers: [openai, azure-openai, openai-compatible]
+inference: [cloud, local]
+capabilities:
+  reads_entity_states: true
+  reads_camera: false
+  reads_history: true
+  listens_microphone: false
+  controls_devices: true
+  creates_automations: true
+  edits_files: true
+  executes_code: true
+  runs_unattended: false
+data_sent:
+  - conversation text
+  - exposed entity states and attributes
+  - function results (history, energy, statistics queries)
+evidence:
+  executes_code:
+    path: custom_components/extended_openai_conversation/functions/bash.py
+    line: 26
+    commit: f2ccd03dbdce6a13dd2fef7d6997793ffb6005ef
+  edits_files:
+    path: custom_components/extended_openai_conversation/functions/file.py
+    line: 155
+    commit: f2ccd03dbdce6a13dd2fef7d6997793ffb6005ef
+  creates_automations:
+    path: custom_components/extended_openai_conversation/functions/native.py
+    line: 134
+    commit: f2ccd03dbdce6a13dd2fef7d6997793ffb6005ef
+  reads_history:
+    path: custom_components/extended_openai_conversation/functions/native.py
+    line: 56
+    commit: f2ccd03dbdce6a13dd2fef7d6997793ffb6005ef
+notes: >
+  The function system is the power and the reach: native functions include
+  execute_services, add_automation, and get_history, and the function library
+  now also ships bash execution, file read/write/edit, Jinja template
+  evaluation, SQL against the recorder database, web scraping, and REST calls.
+  Which of these the model can use is decided by the functions you enable in
+  its configuration. Local inference works via any OpenAI-compatible server.
+added: 2026-08-06

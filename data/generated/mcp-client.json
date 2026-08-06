@@ -1,0 +1,20 @@
+{
+  "id": "mcp-client",
+  "manifest": {
+    "domain": "mcp",
+    "evidence": {
+      "commit": "c263da982a0b98b0f1540fda08f298de56bbc44b",
+      "line": 8,
+      "path": "homeassistant/components/mcp/manifest.json",
+      "repo": "home-assistant/core"
+    },
+    "iot_class": "local_polling",
+    "name": "Model Context Protocol",
+    "requirements": [
+      "mcp==1.26.0"
+    ],
+    "version": null
+  },
+  "repo": "home-assistant/core",
+  "sha": "c263da982a0b98b0f1540fda08f298de56bbc44b"
+}

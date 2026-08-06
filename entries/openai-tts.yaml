@@ -1,0 +1,25 @@
+id: openai-tts
+name: OpenAI TTS
+repo: sfortis/openai_tts
+category: voice-stack
+install: [hacs-integration]
+summary: Text-to-speech for Assist using OpenAI's voices — the cloud counterpart to Piper.
+providers: [openai, openai-compatible]
+inference: [cloud]
+capabilities:
+  reads_entity_states: false
+  reads_camera: false
+  reads_history: false
+  listens_microphone: false
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - the text of every spoken response — to OpenAI (or a compatible endpoint)
+notes: >
+  Minimal reach, one clear trade: every announcement and reply your assistant
+  speaks transits the provider. Included as the cloud/local contrast case to
+  Piper.
+added: 2026-08-06

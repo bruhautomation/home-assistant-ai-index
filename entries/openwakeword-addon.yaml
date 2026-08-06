@@ -1,0 +1,32 @@
+id: openwakeword-addon
+name: openWakeWord
+repo: rhasspy/wyoming-openwakeword
+category: voice-stack
+install: [addon, container]
+addon_config:
+  repo: home-assistant/addons
+  path: openwakeword
+summary: Official wake-word detection add-on for Assist — continuously scores satellite audio for "Okay Nabu" and friends, locally.
+providers: [self-hosted]
+inference: [local]
+capabilities:
+  reads_entity_states: false
+  reads_camera: false
+  reads_history: false
+  listens_microphone: true
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent: []
+evidence:
+  listens_microphone:
+    path: wyoming_openwakeword/handler.py
+    line: 123
+    commit: 419701f64aa936ff62a820dfeac757f1afda01d1
+notes: >
+  Continuously processes microphone audio streamed from satellites — that is
+  what wake-word detection is — but entirely on your hardware, and only the
+  detection result moves on through the pipeline.
+added: 2026-08-06

@@ -1,0 +1,45 @@
+id: frigate
+name: Frigate
+repo: blakeblackshear/frigate
+url: https://frigate.video
+category: vision
+install: [addon, container]
+addon_config:
+  repo: blakeblackshear/frigate-hass-addons
+  path: frigate
+summary: Local NVR with realtime object detection on your cameras — and optional GenAI descriptions that send event snapshots to a cloud or local model.
+providers: [self-hosted, google, openai, ollama, openai-compatible]
+inference: [local, cloud]
+capabilities:
+  reads_entity_states: false
+  reads_camera: true
+  reads_history: false
+  listens_microphone: true
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: true
+data_sent:
+  - nothing by default — detection is fully local
+  - with GenAI enabled — event snapshots and clips to the provider you configure
+evidence:
+  reads_camera:
+    path: frigate/video/ffmpeg.py
+    line: 38
+    commit: e73a14db5d03e5f6532ddc6c02358d71f94de3c2
+  listens_microphone:
+    path: frigate/events/audio.py
+    line: 81
+    commit: e73a14db5d03e5f6532ddc6c02358d71f94de3c2
+  runs_unattended:
+    path: frigate/object_detection/base.py
+    line: 318
+    commit: e73a14db5d03e5f6532ddc6c02358d71f94de3c2
+notes: >
+  Detection (objects, audio events) runs continuously and entirely on your
+  hardware; that is the point of Frigate. The AI-index-relevant switch is
+  GenAI descriptions and semantic search — enabling them sends camera event
+  imagery to the configured provider. Home Assistant connects via the separate
+  frigate-hass-integration.
+added: 2026-08-06

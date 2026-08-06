@@ -1,0 +1,19 @@
+{
+  "id": "marlin-analyzer",
+  "in_hacs_default": false,
+  "manifest": {
+    "domain": "marlin_analyzer",
+    "evidence": {
+      "commit": "4fba57873c548433aeaafaaae5b938824b652182",
+      "line": 8,
+      "path": "custom_components/marlin_analyzer/manifest.json",
+      "repo": "kotope/marlin-ha-integration"
+    },
+    "iot_class": "local_polling",
+    "name": "Marlin Video Analyzer",
+    "requirements": [],
+    "version": "0.1.0"
+  },
+  "repo": "kotope/marlin-ha-integration",
+  "sha": "4fba57873c548433aeaafaaae5b938824b652182"
+}

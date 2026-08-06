@@ -1,0 +1,32 @@
+id: whisper-addon
+name: Whisper (speech-to-text)
+repo: rhasspy/wyoming-faster-whisper
+category: voice-stack
+install: [addon, container]
+addon_config:
+  repo: home-assistant/addons
+  path: whisper
+summary: Official local speech-to-text add-on for Assist, running faster-whisper models on your own hardware.
+providers: [self-hosted]
+inference: [local]
+capabilities:
+  reads_entity_states: false
+  reads_camera: false
+  reads_history: false
+  listens_microphone: true
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent: []
+evidence:
+  listens_microphone:
+    path: wyoming_faster_whisper/dispatch_handler.py
+    line: 59
+    commit: 5b5854f36a0f228a289a6a30da7e594f74e35968
+notes: >
+  Receives voice audio streamed from Assist satellites over the Wyoming
+  protocol and transcribes it locally. Audio stays on your network; nothing is
+  sent anywhere.
+added: 2026-08-06

@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Browse the index
+    url: https://bruhautomation.github.io/home-assistant-ai-index/
+    about: Filter by capability, compare projects, and see the evidence behind every claim.

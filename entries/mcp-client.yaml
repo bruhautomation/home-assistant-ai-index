@@ -1,0 +1,27 @@
+id: mcp-client
+name: Model Context Protocol (client)
+repo: home-assistant/core
+url: https://www.home-assistant.io/integrations/mcp/
+category: mcp
+install: [core-integration]
+summary: Official MCP client — lets Assist conversation agents use tools from external MCP servers you connect.
+providers: [openai, anthropic, google, ollama, openai-compatible]
+inference: [local, cloud]
+capabilities:
+  reads_entity_states: false
+  reads_camera: false
+  reads_history: false
+  listens_microphone: false
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - tool call arguments and results — between your conversation agent and the MCP servers you configure
+notes: >
+  The integration itself only brokers tool calls: every capability it adds
+  comes from the MCP servers you choose to connect. A filesystem MCP server
+  adds file access, a shell server adds code execution — audit the servers,
+  not this client.
+added: 2026-08-06

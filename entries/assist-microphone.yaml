@@ -1,0 +1,34 @@
+id: assist-microphone
+name: Assist Microphone
+repo: home-assistant/addons
+category: voice-stack
+install: [addon]
+addon_config:
+  repo: home-assistant/addons
+  path: assist_microphone
+summary: Official add-on that turns a USB microphone plugged into the Home Assistant box itself into an Assist voice satellite.
+providers: [self-hosted]
+inference: [local]
+capabilities:
+  reads_entity_states: false
+  reads_camera: false
+  reads_history: false
+  listens_microphone: true
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent: []
+evidence:
+  listens_microphone:
+    repo: rhasspy/wyoming-satellite
+    path: wyoming_satellite/satellite.py
+    line: 373
+    commit: 7a3ba2bc23fc6699adae4f5bbac4ce529fe2a623
+notes: >
+  Packages wyoming-satellite to run on the Home Assistant host with local
+  wake-word detection, for setups without separate satellite hardware. Audio
+  stays on the machine; where speech goes next is decided by your Assist
+  pipeline.
+added: 2026-08-06

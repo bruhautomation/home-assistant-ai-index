@@ -1,0 +1,22 @@
+{
+  "id": "mcp-server",
+  "manifest": {
+    "domain": "mcp_server",
+    "evidence": {
+      "commit": "c263da982a0b98b0f1540fda08f298de56bbc44b",
+      "line": 9,
+      "path": "homeassistant/components/mcp_server/manifest.json",
+      "repo": "home-assistant/core"
+    },
+    "iot_class": "local_push",
+    "name": "Model Context Protocol Server",
+    "requirements": [
+      "mcp==1.26.0",
+      "aiohttp_sse==2.2.0",
+      "anyio==4.13.0"
+    ],
+    "version": null
+  },
+  "repo": "home-assistant/core",
+  "sha": "c263da982a0b98b0f1540fda08f298de56bbc44b"
+}

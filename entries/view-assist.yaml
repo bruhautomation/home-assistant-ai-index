@@ -1,0 +1,26 @@
+id: view-assist
+name: View Assist
+repo: dinki/View-Assist
+category: dashboard-ui
+install: [external]
+summary: Turns tablets and screens into visual companions for Assist voice satellites — answers, timers, and camera popups rendered as dashboards.
+providers: []
+inference: [local, cloud]
+capabilities:
+  reads_entity_states: true
+  reads_camera: false
+  reads_history: false
+  listens_microphone: false
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent: []
+notes: >
+  The display layer of a voice assistant, not the brain: microphones, speech
+  recognition, and inference all live in the Assist pipeline you pair it with,
+  so where your voice data goes is decided there. Installed as a kit of
+  dashboard packages, scripts, and custom sentences (wiki-guided) rather than
+  a single integration; reads entity state to render views on browser devices.
+added: 2026-08-06

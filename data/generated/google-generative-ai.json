@@ -1,0 +1,23 @@
+{
+  "id": "google-generative-ai",
+  "manifest": {
+    "detected_providers": [
+      "google"
+    ],
+    "domain": "google_generative_ai_conversation",
+    "evidence": {
+      "commit": "c263da982a0b98b0f1540fda08f298de56bbc44b",
+      "line": 10,
+      "path": "homeassistant/components/google_generative_ai_conversation/manifest.json",
+      "repo": "home-assistant/core"
+    },
+    "iot_class": "cloud_polling",
+    "name": "Google Gemini",
+    "requirements": [
+      "google-genai==2.16.0"
+    ],
+    "version": null
+  },
+  "repo": "home-assistant/core",
+  "sha": "c263da982a0b98b0f1540fda08f298de56bbc44b"
+}

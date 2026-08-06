@@ -1,0 +1,30 @@
+id: microwakeword
+name: microWakeWord
+repo: kahrendt/microWakeWord
+category: voice-stack
+install: [external]
+summary: Wake-word engine small enough to run on the satellite itself — the detection used by ESPHome voice devices like Home Assistant Voice PE.
+providers: [self-hosted]
+inference: [local]
+capabilities:
+  reads_entity_states: false
+  reads_camera: false
+  reads_history: false
+  listens_microphone: true
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent: []
+evidence:
+  listens_microphone:
+    path: microwakeword/inference.py
+    line: 25
+    commit: 4665173cd35f1cff9a61e06fc427f124766c488e
+notes: >
+  Scores microphone audio for the wake word on the ESP32 itself, so no audio
+  leaves the device until after the wake word — the privacy property that
+  distinguishes on-device wake detection from server-side (openWakeWord).
+  This repo is the model framework; ESPHome ships the on-device runtime.
+added: 2026-08-06

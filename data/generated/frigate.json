@@ -1,0 +1,126 @@
+{
+  "addon": {
+    "apparmor_profile": false,
+    "commit": "d2c08bf9a418d425da4c741eed28c673d2365439",
+    "config_path": "frigate/config.yaml",
+    "path": "frigate",
+    "permissions": [
+      {
+        "description": "extra kernel capabilities",
+        "evidence": {
+          "commit": "d2c08bf9a418d425da4c741eed28c673d2365439",
+          "line": 57,
+          "path": "frigate/config.yaml",
+          "repo": "blakeblackshear/frigate-hass-addons"
+        },
+        "key": "privileged",
+        "value": [
+          "PERFMON"
+        ]
+      },
+      {
+        "description": "Supervisor API access",
+        "evidence": {
+          "commit": "d2c08bf9a418d425da4c741eed28c673d2365439",
+          "line": 24,
+          "path": "frigate/config.yaml",
+          "repo": "blakeblackshear/frigate-hass-addons"
+        },
+        "key": "hassio_api",
+        "value": true
+      },
+      {
+        "description": "Home Assistant API access",
+        "evidence": {
+          "commit": "d2c08bf9a418d425da4c741eed28c673d2365439",
+          "line": 23,
+          "path": "frigate/config.yaml",
+          "repo": "blakeblackshear/frigate-hass-addons"
+        },
+        "key": "homeassistant_api",
+        "value": true
+      },
+      {
+        "description": "web UI through authenticated ingress",
+        "evidence": {
+          "commit": "d2c08bf9a418d425da4c741eed28c673d2365439",
+          "line": 19,
+          "path": "frigate/config.yaml",
+          "repo": "blakeblackshear/frigate-hass-addons"
+        },
+        "key": "ingress",
+        "value": true
+      },
+      {
+        "description": "mapped Home Assistant folders",
+        "evidence": {
+          "commit": "d2c08bf9a418d425da4c741eed28c673d2365439",
+          "line": 67,
+          "path": "frigate/config.yaml",
+          "repo": "blakeblackshear/frigate-hass-addons"
+        },
+        "key": "map",
+        "value": [
+          "media:rw",
+          "addon_config:rw",
+          "homeassistant_config:rw",
+          "ssl"
+        ]
+      },
+      {
+        "description": "direct device access",
+        "evidence": {
+          "commit": "d2c08bf9a418d425da4c741eed28c673d2365439",
+          "line": 41,
+          "path": "frigate/config.yaml",
+          "repo": "blakeblackshear/frigate-hass-addons"
+        },
+        "key": "devices",
+        "value": [
+          "/dev/dri/renderD128",
+          "/dev/apex_0",
+          "/dev/apex_1",
+          "/dev/apex_2",
+          "/dev/apex_3",
+          "/dev/dri/card0",
+          "/dev/vchiq",
+          "/dev/video10",
+          "/dev/video0",
+          "/dev/hailo0",
+          "/dev/hailo1"
+        ]
+      },
+      {
+        "description": "video device access",
+        "evidence": {
+          "commit": "d2c08bf9a418d425da4c741eed28c673d2365439",
+          "line": 54,
+          "path": "frigate/config.yaml",
+          "repo": "blakeblackshear/frigate-hass-addons"
+        },
+        "key": "video",
+        "value": true
+      }
+    ],
+    "repo": "blakeblackshear/frigate-hass-addons",
+    "supervisor_rating": {
+      "breakdown": [
+        {
+          "key": "ingress",
+          "modifier": 2,
+          "reason": "UI served through authenticated ingress"
+        },
+        {
+          "key": "privileged",
+          "modifier": -1,
+          "reason": "requests privileged kernel capabilities"
+        }
+      ],
+      "value": 6
+    },
+    "version": "0.17.2"
+  },
+  "id": "frigate",
+  "repo": "blakeblackshear/frigate",
+  "sha": "e73a14db5d03e5f6532ddc6c02358d71f94de3c2"
+}

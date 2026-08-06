@@ -1,0 +1,27 @@
+id: mcp-server
+name: MCP Server (core)
+repo: home-assistant/core
+url: https://www.home-assistant.io/integrations/mcp_server/
+category: mcp
+install: [core-integration]
+summary: Official Model Context Protocol server — exposes Assist tools to external MCP clients like Claude Desktop, bounded by entity exposure.
+providers: [openai, anthropic, openai-compatible]
+inference: [local, cloud]
+capabilities:
+  reads_entity_states: true
+  reads_camera: false
+  reads_history: false
+  listens_microphone: false
+  controls_devices: true
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - exposed entity states and tool results — to whichever MCP client you connect
+notes: >
+  Reach is bounded by Assist entity exposure, same as voice assistants — the
+  connected LLM only sees and controls what you expose. What the client does
+  with that data (and where its model runs) is decided by the client, not this
+  integration.
+added: 2026-08-06

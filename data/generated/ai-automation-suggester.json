@@ -1,0 +1,28 @@
+{
+  "id": "ai-automation-suggester",
+  "in_hacs_default": true,
+  "manifest": {
+    "detected_providers": [
+      "anthropic"
+    ],
+    "domain": "ai_automation_suggester",
+    "evidence": {
+      "commit": "054f5d54b5b127678bbc8b4fed3c49eade9e7b43",
+      "line": 9,
+      "path": "custom_components/ai_automation_suggester/manifest.json",
+      "repo": "ITSpecialist111/ai_automation_suggester"
+    },
+    "iot_class": "cloud_polling",
+    "name": "AI Automation Suggester",
+    "requirements": [
+      "anthropic>=0.8.0",
+      "aiohttp>=3.8.0",
+      "litellm>=1.67.0",
+      "pyyaml>=6.0",
+      "voluptuous>=0.13.1"
+    ],
+    "version": "1.5.10"
+  },
+  "repo": "ITSpecialist111/ai_automation_suggester",
+  "sha": "054f5d54b5b127678bbc8b4fed3c49eade9e7b43"
+}
