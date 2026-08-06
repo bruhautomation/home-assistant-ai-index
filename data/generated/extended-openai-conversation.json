@@ -1,5 +1,6 @@
 {
   "id": "extended-openai-conversation",
+  "in_hacs_default": true,
   "manifest": {
     "detected_providers": [
       "openai"

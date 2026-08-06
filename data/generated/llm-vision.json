@@ -1,5 +1,6 @@
 {
   "id": "llm-vision",
+  "in_hacs_default": true,
   "manifest": {
     "domain": "llmvision",
     "evidence": {

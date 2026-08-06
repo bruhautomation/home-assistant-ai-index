@@ -7,8 +7,9 @@ body:
     attributes:
       value: >
         Prefer a PR? Copy any file in `entries/`, fill it in per
-        [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md), and CI will check the
-        rest. Otherwise fill this out and we'll research the capability flags.
+        [CONTRIBUTING.md](https://github.com/bruhautomation/home-assistant-ai-index/blob/main/CONTRIBUTING.md),
+        and CI will check the rest. Otherwise fill this out and we'll research
+        the capability flags.
   - type: input
     id: repo
     attributes:

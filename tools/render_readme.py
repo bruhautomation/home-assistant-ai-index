@@ -65,6 +65,8 @@ def health_cell(entry: dict, generated: dict) -> str:
     meta = generated.get("repo_meta") or {}
     if entry["repo"] == "home-assistant/core":
         parts.append("part of core")
+    elif entry["repo"] == "home-assistant/addons":
+        parts.append("official add-on")
     else:
         if meta.get("stars") is not None:
             parts.append(f"★ {fmt_stars(meta['stars'])}")

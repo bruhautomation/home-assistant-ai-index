@@ -1,5 +1,6 @@
 {
   "id": "home-llm",
+  "in_hacs_default": false,
   "manifest": {
     "detected_providers": [
       "anthropic",

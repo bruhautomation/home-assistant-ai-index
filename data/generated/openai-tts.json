@@ -1,5 +1,6 @@
 {
   "id": "openai-tts",
+  "in_hacs_default": true,
   "manifest": {
     "domain": "openai_tts",
     "evidence": {

@@ -288,7 +288,18 @@ def harvest_addon(entry: dict, result: dict, errors: list) -> None:
     }
 
 
-def harvest_entry(entry: dict, errors: list, no_api: bool) -> dict:
+def fetch_hacs_default() -> set[str] | None:
+    """Repos listed in HACS's default store (a curated, reviewed list)."""
+    status, body = http_get(f"{RAW}/hacs/default/master/integration")
+    if status != 200:
+        return None
+    try:
+        return {r.lower() for r in json.loads(body)}
+    except json.JSONDecodeError:
+        return None
+
+
+def harvest_entry(entry: dict, errors: list, no_api: bool, hacs_default: set[str] | None) -> dict:
     result: dict = {"id": entry["id"], "repo": entry["repo"]}
     if not no_api:
         harvest_repo_meta(entry, result, errors)
@@ -296,6 +307,8 @@ def harvest_entry(entry: dict, errors: list, no_api: bool) -> dict:
     installs = set(entry.get("install", []))
     if sha and installs & {"core-integration", "hacs-integration"}:
         harvest_manifest(entry, sha, result, errors)
+    if hacs_default is not None and "hacs-integration" in installs:
+        result["in_hacs_default"] = entry["repo"].lower() in hacs_default
     harvest_addon(entry, result, errors)
     return result
 
@@ -321,8 +334,11 @@ def main() -> int:
 
     errors: list[dict] = []
     changed = 0
+    hacs_default = fetch_hacs_default()
+    if hacs_default is None:
+        errors.append({"id": "-", "stage": "hacs_default", "error": "could not fetch HACS default list"})
     for entry in entries:
-        result = harvest_entry(entry, errors, args.no_api)
+        result = harvest_entry(entry, errors, args.no_api, hacs_default)
         if write_if_changed(GENERATED_DIR / f"{entry['id']}.json", result):
             changed += 1
         print(f"harvested {entry['id']}", file=sys.stderr)

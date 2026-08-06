@@ -1,5 +1,6 @@
 {
   "id": "ai-automation-suggester",
+  "in_hacs_default": true,
   "manifest": {
     "detected_providers": [
       "anthropic"

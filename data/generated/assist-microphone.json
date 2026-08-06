@@ -1,0 +1,54 @@
+{
+  "addon": {
+    "apparmor_profile": false,
+    "commit": "95657e488570873dad94a3e62c2c84b43368fbe9",
+    "config_path": "assist_microphone/config.yaml",
+    "path": "assist_microphone",
+    "permissions": [
+      {
+        "description": "Supervisor API access",
+        "evidence": {
+          "commit": "95657e488570873dad94a3e62c2c84b43368fbe9",
+          "line": 8,
+          "path": "assist_microphone/config.yaml",
+          "repo": "home-assistant/addons"
+        },
+        "key": "hassio_api",
+        "value": true
+      },
+      {
+        "description": "mapped Home Assistant folders",
+        "evidence": {
+          "commit": "95657e488570873dad94a3e62c2c84b43368fbe9",
+          "line": 15,
+          "path": "assist_microphone/config.yaml",
+          "repo": "home-assistant/addons"
+        },
+        "key": "map",
+        "value": [
+          "share:ro"
+        ]
+      },
+      {
+        "description": "audio subsystem access",
+        "evidence": {
+          "commit": "95657e488570873dad94a3e62c2c84b43368fbe9",
+          "line": 41,
+          "path": "assist_microphone/config.yaml",
+          "repo": "home-assistant/addons"
+        },
+        "key": "audio",
+        "value": true
+      }
+    ],
+    "repo": "home-assistant/addons",
+    "supervisor_rating": {
+      "breakdown": [],
+      "value": 5
+    },
+    "version": "1.3.0"
+  },
+  "id": "assist-microphone",
+  "repo": "home-assistant/addons",
+  "sha": "95657e488570873dad94a3e62c2c84b43368fbe9"
+}

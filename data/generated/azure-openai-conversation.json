@@ -1,0 +1,24 @@
+{
+  "id": "azure-openai-conversation",
+  "in_hacs_default": true,
+  "manifest": {
+    "detected_providers": [
+      "openai"
+    ],
+    "domain": "azure_openai_conversation",
+    "evidence": {
+      "commit": "e495c8177293488c49aac02b4b2f30720d43b026",
+      "line": 10,
+      "path": "custom_components/azure_openai_conversation/manifest.json",
+      "repo": "joselcaguilar/azure-openai-ha"
+    },
+    "iot_class": "cloud_polling",
+    "name": "Azure OpenAI Conversation",
+    "requirements": [
+      "openai>=2.15.0,<3.0.0"
+    ],
+    "version": "2026.02.0"
+  },
+  "repo": "joselcaguilar/azure-openai-ha",
+  "sha": "e495c8177293488c49aac02b4b2f30720d43b026"
+}

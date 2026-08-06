@@ -1,0 +1,27 @@
+id: azure-openai-conversation
+name: Azure OpenAI Conversation
+repo: joselcaguilar/azure-openai-ha
+domain: azure_openai_conversation
+category: conversation-agent
+install: [hacs-integration]
+summary: Conversation agent for Azure-hosted OpenAI deployments — the core OpenAI experience for homes that must stay inside an Azure tenancy.
+providers: [azure-openai]
+inference: [cloud]
+capabilities:
+  reads_entity_states: true
+  reads_camera: false
+  reads_history: false
+  listens_microphone: false
+  controls_devices: true
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - conversation text
+  - names, states, and attributes of entities you expose to Assist
+notes: >
+  Supports Home Assistant's LLM API, so device control is opt-in and bounded
+  by Assist entity exposure, same as the core OpenAI integration. Data flows
+  to your own Azure OpenAI deployment rather than api.openai.com.
+added: 2026-08-06

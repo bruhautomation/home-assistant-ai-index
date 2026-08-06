@@ -1,5 +1,6 @@
 {
   "id": "home-generative-agent",
+  "in_hacs_default": true,
   "manifest": {
     "detected_providers": [
       "ollama"

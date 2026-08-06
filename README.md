@@ -10,6 +10,8 @@ the project's own source code at a pinned commit.
 
 **[Browse and filter the full index →](https://bruhautomation.github.io/home-assistant-ai-index/)**
 
+[![The index site: preset questions, capability filters, comparison](docs/site-preview.png)](https://bruhautomation.github.io/home-assistant-ai-index/)
+
 ## How to read this index
 
 Each entry carries nine **capability flags** (what the project can reach), an
@@ -59,13 +61,14 @@ Maintainer corrections get priority handling, and a disputed flag is marked ⚠�
 on the site immediately while it is resolved.
 
 <!-- BEGIN GENERATED -->
-**21 projects indexed**, metrics harvested 2026-08-06. Sorted by name — never by stars. [Filter, compare, and see the evidence on the site →](https://bruhautomation.github.io/home-assistant-ai-index/)
+**25 projects indexed**, metrics harvested 2026-08-06. Sorted by name — never by stars. [Filter, compare, and see the evidence on the site →](https://bruhautomation.github.io/home-assistant-ai-index/)
 
 ### Conversation agents
 
 | Name | Capabilities | Inference | Install | Health | |
 |---|---|---|---|---|---|
 | [Anthropic Claude](https://github.com/home-assistant/core) | 📖🎛️ | ☁️ cloud | core | part of core | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/anthropic-conversation/) |
+| [Azure OpenAI Conversation](https://github.com/joselcaguilar/azure-openai-ha) | 📖🎛️ | ☁️ cloud | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/azure-openai-conversation/) |
 | [Extended OpenAI Conversation](https://github.com/jekalmin/extended_openai_conversation) | 📖📜🎛️⚙️📝⚡ | 🏠/☁️ choice | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/extended-openai-conversation/) |
 | [Google Generative AI](https://github.com/home-assistant/core) | 📖🎛️ | ☁️ cloud | core | part of core | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/google-generative-ai/) |
 | [Home LLM](https://github.com/acon96/home-llm) | 📖🎛️ | 🏠/☁️ choice | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/home-llm/) |
@@ -115,12 +118,20 @@ on the site immediately while it is resolved.
 
 | Name | Capabilities | Inference | Install | Health | |
 |---|---|---|---|---|---|
+| [Assist Microphone](https://github.com/home-assistant/addons) | 🎙️ | 🏠 local | add-on | official add-on · 🛡️ 5/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/assist-microphone/) |
+| [microWakeWord](https://github.com/kahrendt/microWakeWord) | 🎙️ | 🏠 local | external | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/microwakeword/) |
 | [OpenAI TTS](https://github.com/sfortis/openai_tts) | — | ☁️ cloud | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/openai-tts/) |
 | [openWakeWord](https://github.com/rhasspy/wyoming-openwakeword) | 🎙️ | 🏠 local | add-on, container | 🛡️ 5/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/openwakeword-addon/) |
 | [Piper (text-to-speech)](https://github.com/rhasspy/wyoming-piper) | — | 🏠 local | add-on, container | 🛡️ 5/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/piper-addon/) |
 | [Speech-to-Phrase](https://github.com/OHF-Voice/speech-to-phrase) | 📖🎙️ | 🏠 local | add-on, container | 🛡️ 5/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/speech-to-phrase/) |
 | [Whisper (speech-to-text)](https://github.com/rhasspy/wyoming-faster-whisper) | 🎙️ | 🏠 local | add-on, container | 🛡️ 5/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/whisper-addon/) |
 | [Wyoming Satellite](https://github.com/rhasspy/wyoming-satellite) | 🎙️ | 🏠 local | external | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/wyoming-satellite/) |
+
+### Dashboards & UI
+
+| Name | Capabilities | Inference | Install | Health | |
+|---|---|---|---|---|---|
+| [View Assist](https://github.com/dinki/View-Assist) | 📖 | 🏠/☁️ choice | external | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/view-assist/) |
 <!-- END GENERATED -->
 
 ## Contributing

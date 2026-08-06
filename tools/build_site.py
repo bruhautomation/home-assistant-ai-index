@@ -198,6 +198,12 @@ def health_section(entry: dict) -> str:
     facts = []
     if entry["repo"] == "home-assistant/core":
         facts.append("ships with Home Assistant core")
+    elif entry["repo"] == "home-assistant/addons":
+        facts.append("official Home Assistant add-on")
+    if gen.get("in_hacs_default") is True:
+        facts.append("in the HACS default store")
+    elif gen.get("in_hacs_default") is False:
+        facts.append("custom HACS repository (not in the default store)")
     if meta.get("stars") is not None:
         facts.append(f"★ {meta['stars']:,}")
     if meta.get("pushed_at"):
