@@ -1,0 +1,27 @@
+id: home-llm
+name: Home LLM
+repo: acon96/home-llm
+domain: llama_conversation
+category: conversation-agent
+install: [hacs-integration]
+summary: Local-first conversation agent with purpose-trained "Home" models that run on modest hardware, via llama.cpp, Ollama, or any OpenAI-compatible backend.
+providers: [self-hosted, ollama, openai-compatible, llama-cpp]
+inference: [local, cloud]
+capabilities:
+  reads_entity_states: true
+  reads_camera: false
+  reads_history: false
+  listens_microphone: false
+  controls_devices: true
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - conversation text and exposed entity data — to the backend you host (or a remote endpoint if you configure one)
+notes: >
+  Designed for fully-local operation: ships fine-tuned 1–3B "Home" models that
+  handle device control without cloud calls. Pointing it at a remote
+  OpenAI-compatible endpoint is possible, which is why cloud inference is
+  listed — but local is the design center.
+added: 2026-08-06

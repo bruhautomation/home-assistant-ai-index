@@ -1,0 +1,27 @@
+id: ai-automation-suggester
+name: AI Automation Suggester
+repo: ITSpecialist111/ai_automation_suggester
+category: automation-authoring
+install: [hacs-integration]
+summary: Scans your entities on demand and asks an AI provider to suggest automations you haven't built yet, delivered as notifications.
+providers: [openai, anthropic, google, groq, mistral, ollama, localai, openai-compatible]
+inference: [cloud, local]
+capabilities:
+  reads_entity_states: true
+  reads_camera: false
+  reads_history: false
+  listens_microphone: false
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - inventories of your entities, devices, and areas — to the provider you configure, whenever a scan is triggered
+notes: >
+  Suggests rather than writes: proposals arrive as notifications and creating
+  the automation stays a human action. It has no built-in schedule — scans run
+  when you call its service, press its button, or fire its update event from
+  your own automations (wire it to a nightly trigger and inventory snapshots
+  flow to your provider unattended, but that wiring is yours).
+added: 2026-08-06

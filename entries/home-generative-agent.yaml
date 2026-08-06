@@ -1,0 +1,39 @@
+id: home-generative-agent
+name: Home Generative Agent
+repo: goruck/home-generative-agent
+category: agent-platform
+install: [hacs-integration]
+summary: LangGraph-based agent for Home Assistant with camera scene analysis, long-term memory, and the ability to write automations itself.
+providers: [openai, ollama]
+inference: [cloud, local]
+capabilities:
+  reads_entity_states: true
+  reads_camera: true
+  reads_history: true
+  listens_microphone: false
+  controls_devices: true
+  creates_automations: true
+  edits_files: false
+  executes_code: false
+  runs_unattended: true
+data_sent:
+  - conversation text, entity states and history, camera snapshots — to the configured backends
+evidence:
+  reads_camera:
+    path: custom_components/home_generative_agent/agent/tools.py
+    line: 386
+    commit: ef805411de140bd6d4f9f5d91534ed4cabc60990
+  runs_unattended:
+    path: custom_components/home_generative_agent/core/video_analyzer.py
+    line: 2353
+    commit: ef805411de140bd6d4f9f5d91534ed4cabc60990
+  creates_automations:
+    path: custom_components/home_generative_agent/agent/tools.py
+    line: 649
+    commit: ef805411de140bd6d4f9f5d91534ed4cabc60990
+notes: >
+  The most agentic entry in the index: it can analyze camera snapshots on
+  motion, remember people and events across conversations, and create
+  automations from natural-language requests. Runs hybrid by design — an
+  edge/cloud split between Ollama and OpenAI models is configurable.
+added: 2026-08-06

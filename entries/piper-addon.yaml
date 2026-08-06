@@ -1,0 +1,26 @@
+id: piper-addon
+name: Piper (text-to-speech)
+repo: rhasspy/wyoming-piper
+category: voice-stack
+install: [addon, container]
+addon_config:
+  repo: home-assistant/addons
+  path: piper
+summary: Official local text-to-speech add-on for Assist — fast neural voices generated entirely on your own hardware.
+providers: [self-hosted]
+inference: [local]
+capabilities:
+  reads_entity_states: false
+  reads_camera: false
+  reads_history: false
+  listens_microphone: false
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent: []
+notes: >
+  Synthesizes spoken responses locally over the Wyoming protocol. Sees only
+  the response text it is asked to speak; nothing leaves your network.
+added: 2026-08-06

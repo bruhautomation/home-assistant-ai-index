@@ -1,0 +1,37 @@
+id: hass-mcp
+name: hass-mcp
+repo: voska/hass-mcp
+category: mcp
+install: [container, external]
+summary: Community MCP server that gives LLM clients (Claude Desktop, Cursor) access to Home Assistant via a long-lived access token.
+providers: [anthropic, openai, openai-compatible]
+inference: [local, cloud]
+capabilities:
+  reads_entity_states: true
+  reads_camera: false
+  reads_history: true
+  listens_microphone: false
+  controls_devices: true
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - entity states, history, and tool results — to whichever MCP client (and its model provider) you connect
+evidence:
+  controls_devices:
+    path: app/server.py
+    line: 946
+    commit: e05bfde09d275f1bc2be2e2de6ba650d56333968
+  reads_history:
+    path: app/server.py
+    line: 1505
+    commit: e05bfde09d275f1bc2be2e2de6ba650d56333968
+notes: >
+  The trust model is the difference from the core MCP Server integration: this
+  authenticates with a long-lived access token, so its reach is bounded by
+  what that token can do — effectively your whole instance — rather than by
+  Assist entity exposure. Its tools go beyond states and services: it can also
+  edit dashboards and restart Home Assistant. Understand that boundary before
+  wiring it to a cloud client.
+added: 2026-08-06

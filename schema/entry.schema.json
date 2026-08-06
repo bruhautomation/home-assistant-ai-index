@@ -18,6 +18,11 @@
       "description": "GitHub owner/name of the project's source repository"
     },
     "url": { "type": "string", "format": "uri", "description": "Homepage or docs, if not the repo" },
+    "domain": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$",
+      "description": "Home Assistant integration domain, when it can't be derived from the id/repo/url (helps the harvester locate manifest.json)"
+    },
     "category": {
       "enum": [
         "conversation-agent", "agent-platform", "vision", "automation-authoring",

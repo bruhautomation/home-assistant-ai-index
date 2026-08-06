@@ -1,0 +1,33 @@
+id: llm-vision
+name: LLM Vision
+repo: valentinfrlch/ha-llmvision
+domain: llmvision
+category: vision
+install: [hacs-integration]
+summary: Sends camera images, clips, and doorbell events to a vision model for analysis — with a timeline that remembers what it saw.
+providers: [openai, anthropic, google, ollama, localai, groq, openai-compatible]
+inference: [cloud, local]
+capabilities:
+  reads_entity_states: false
+  reads_camera: true
+  reads_history: false
+  listens_microphone: false
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - camera frames and recorded clips — to whichever provider you configure per call
+evidence:
+  reads_camera:
+    path: custom_components/llmvision/media_handlers.py
+    line: 300
+    commit: 3cc0510a4dfc8d8a05599eb9f7a0079979c80492
+notes: >
+  Built to be invoked from motion and doorbell automations, so in practice
+  camera frames flow to your chosen provider whenever those triggers fire —
+  pair it with a local backend (Ollama, LocalAI) if that flow shouldn't leave
+  your network. It analyzes and remembers; acting on the result is left to
+  your automations.
+added: 2026-08-06

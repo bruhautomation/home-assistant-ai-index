@@ -1,0 +1,25 @@
+id: ollama-conversation
+name: Ollama
+repo: home-assistant/core
+url: https://www.home-assistant.io/integrations/ollama/
+category: conversation-agent
+install: [core-integration]
+summary: Official conversation agent backed by a self-hosted Ollama server — local-first Assist with optional device control.
+providers: [ollama]
+inference: [local]
+capabilities:
+  reads_entity_states: true
+  reads_camera: false
+  reads_history: false
+  listens_microphone: false
+  controls_devices: true
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - conversation text and exposed entity data — only to the Ollama server you host
+notes: >
+  Nothing leaves your network unless you point it at a remote Ollama instance.
+  Device control is opt-in and bounded by Assist entity exposure.
+added: 2026-08-06

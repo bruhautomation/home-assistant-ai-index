@@ -1,0 +1,30 @@
+id: wyoming-satellite
+name: Wyoming Satellite
+repo: rhasspy/wyoming-satellite
+category: voice-stack
+install: [external]
+summary: Turns a Raspberry Pi or similar into an Assist voice satellite — captures room audio and streams it to your Home Assistant pipeline.
+providers: [self-hosted]
+inference: [local]
+capabilities:
+  reads_entity_states: false
+  reads_camera: false
+  reads_history: false
+  listens_microphone: true
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - microphone audio — to your Home Assistant server over the Wyoming protocol
+evidence:
+  listens_microphone:
+    path: wyoming_satellite/satellite.py
+    line: 373
+    commit: 7a3ba2bc23fc6699adae4f5bbac4ce529fe2a623
+notes: >
+  The physical microphone end of the local voice stack. With local wake-word
+  detection enabled, audio streams to the server only after the wake word;
+  where speech goes after that is decided by the pipeline you attach it to.
+added: 2026-08-06

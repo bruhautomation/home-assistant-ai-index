@@ -1,0 +1,37 @@
+id: ai-task
+name: AI Task (core framework)
+repo: home-assistant/core
+url: https://www.home-assistant.io/integrations/ai_task/
+category: agent-tools
+install: [core-integration]
+summary: Core framework that lets automations call any configured AI provider to generate data, with attachments including live camera snapshots.
+providers: [openai, anthropic, google, ollama, openai-compatible]
+inference: [local, cloud]
+capabilities:
+  reads_entity_states: false
+  reads_camera: true
+  reads_history: false
+  listens_microphone: false
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: true
+data_sent:
+  - whatever your automation attaches — camera snapshots, files, prompt text — to the provider entity you select
+evidence:
+  reads_camera:
+    path: homeassistant/components/ai_task/task.py
+    line: 64
+    commit: c263da982a0b98b0f1540fda08f298de56bbc44b
+  runs_unattended:
+    path: homeassistant/components/ai_task/__init__.py
+    line: 96
+    commit: c263da982a0b98b0f1540fda08f298de56bbc44b
+notes: >
+  This is the mechanism by which Home Assistant runs AI from triggers and
+  schedules: an automation fires, AI Task resolves attachments (camera
+  snapshots via media source) and sends them to the chosen provider. The
+  framework returns data; acting on it is up to your automation. Which provider
+  sees the data is decided per call, not per install.
+added: 2026-08-06

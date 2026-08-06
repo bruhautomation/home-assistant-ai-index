@@ -1,0 +1,29 @@
+id: google-generative-ai
+name: Google Generative AI
+repo: home-assistant/core
+url: https://www.home-assistant.io/integrations/google_generative_ai_conversation/
+category: conversation-agent
+install: [core-integration]
+summary: Official Google Gemini conversation agent for Assist, plus a generate_content service that accepts image and file attachments.
+providers: [google]
+inference: [cloud]
+capabilities:
+  reads_entity_states: true
+  reads_camera: false
+  reads_history: false
+  listens_microphone: false
+  controls_devices: true
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - conversation text
+  - names, states, and attributes of entities you expose to Assist
+  - files or images you pass to the generate_content service
+notes: >
+  Device control is opt-in and bounded by Assist entity exposure. The
+  generate_content service can send local files (including saved camera
+  snapshots) to Google when you explicitly pass them; live camera access goes
+  through the AI Task framework (see the ai-task entry).
+added: 2026-08-06

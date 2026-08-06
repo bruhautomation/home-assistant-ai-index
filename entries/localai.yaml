@@ -1,0 +1,26 @@
+id: localai
+name: LocalAI
+repo: mudler/LocalAI
+url: https://localai.io
+category: model-runtime
+install: [container, external]
+summary: Self-hosted OpenAI-compatible model server — run chat, vision, and audio models locally and point any OpenAI-compatible integration at it.
+providers: [self-hosted]
+inference: [local]
+capabilities:
+  reads_entity_states: false
+  reads_camera: false
+  reads_history: false
+  listens_microphone: false
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent: []
+notes: >
+  A model runtime, not a Home Assistant integration: it has no reach into your
+  instance at all. It only sees what the integrations you point at it choose
+  to send — which is exactly why runtimes like this and Ollama are how you
+  keep camera frames and conversations on your own network.
+added: 2026-08-06

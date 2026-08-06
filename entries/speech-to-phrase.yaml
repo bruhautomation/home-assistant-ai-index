@@ -1,0 +1,33 @@
+id: speech-to-phrase
+name: Speech-to-Phrase
+repo: OHF-Voice/speech-to-phrase
+category: voice-stack
+install: [addon, container]
+addon_config:
+  repo: home-assistant/addons
+  path: speech-to-phrase
+summary: Official constrained speech recognition for Assist — recognizes only phrases your entities can answer, fast on a Raspberry Pi.
+providers: [self-hosted]
+inference: [local]
+capabilities:
+  reads_entity_states: true
+  reads_camera: false
+  reads_history: false
+  listens_microphone: true
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent: []
+evidence:
+  listens_microphone:
+    path: speech_to_phrase/event_handler.py
+    line: 81
+    commit: b4ecef9519e84fefd5dc35c0384c50efa13a0bad
+notes: >
+  Trains itself on your entity, area, and floor names to build a closed
+  phrase list — which is why it reads entity metadata — then recognizes those
+  phrases locally. Not a general transcriber: it cannot hear sentences outside
+  its trained set.
+added: 2026-08-06
