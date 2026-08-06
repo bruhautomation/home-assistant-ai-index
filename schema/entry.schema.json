@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/bruhautomation/home-assistant-ai-index/blob/main/schema/entry.schema.json",
+  "title": "Home Assistant AI Index entry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "repo", "category", "install", "summary", "inference", "capabilities", "added"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "description": "Slug; must equal the filename without .yaml"
+    },
+    "name": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "repo": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$",
+      "description": "GitHub owner/name of the project's source repository"
+    },
+    "url": { "type": "string", "format": "uri", "description": "Homepage or docs, if not the repo" },
+    "category": {
+      "enum": [
+        "conversation-agent", "agent-platform", "vision", "automation-authoring",
+        "mcp", "agent-tools", "model-runtime", "voice-stack", "dashboard-ui", "summaries"
+      ]
+    },
+    "install": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "enum": ["core-integration", "hacs-integration", "addon", "container", "external"] }
+    },
+    "summary": { "type": "string", "minLength": 10, "maxLength": 220 },
+    "providers": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[a-z0-9][a-z0-9.+-]*$" },
+      "description": "AI providers/backends usable with this project (openai, anthropic, google, ollama, openai-compatible, self-hosted, ...)"
+    },
+    "inference": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "enum": ["local", "cloud"] },
+      "description": "Where model inference can run. Both listed = user's choice of backend decides."
+    },
+    "capabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "reads_entity_states", "reads_camera", "reads_history", "listens_microphone",
+        "controls_devices", "creates_automations", "edits_files", "executes_code", "runs_unattended"
+      ],
+      "properties": {
+        "reads_entity_states": { "type": "boolean" },
+        "reads_camera": { "type": "boolean" },
+        "reads_history": { "type": "boolean" },
+        "listens_microphone": { "type": "boolean" },
+        "controls_devices": { "type": "boolean" },
+        "creates_automations": { "type": "boolean" },
+        "edits_files": { "type": "boolean" },
+        "executes_code": { "type": "boolean" },
+        "runs_unattended": { "type": "boolean" }
+      }
+    },
+    "data_sent": {
+      "type": "array",
+      "items": { "type": "string", "maxLength": 120 },
+      "description": "Plain-language list of what can leave the Home Assistant host, and implicitly to whom (providers)"
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "propertyNames": {
+        "enum": [
+          "reads_entity_states", "reads_camera", "reads_history", "listens_microphone",
+          "controls_devices", "creates_automations", "edits_files", "executes_code", "runs_unattended"
+        ]
+      },
+      "patternProperties": {
+        "^.*$": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["path", "line", "commit"],
+          "properties": {
+            "path": { "type": "string", "minLength": 1 },
+            "line": { "type": "integer", "minimum": 1 },
+            "commit": { "type": "string", "pattern": "^[0-9a-f]{7,40}$" },
+            "repo": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$",
+              "description": "Only when the evidence lives outside the entry's main repo (e.g. add-on packaging)"
+            }
+          }
+        }
+      },
+      "description": "Per-capability source citation. Required for the sensitive flags when true: reads_camera, listens_microphone, edits_files, executes_code, runs_unattended."
+    },
+    "addon_config": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repo", "path"],
+      "properties": {
+        "repo": { "type": "string", "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$" },
+        "path": { "type": "string", "minLength": 1 }
+      },
+      "description": "Where the add-on's config.yaml lives when packaging is a different repo than the source (e.g. home-assistant/addons)"
+    },
+    "notes": { "type": "string", "maxLength": 600 },
+    "disputed": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "reads_entity_states", "reads_camera", "reads_history", "listens_microphone",
+          "controls_devices", "creates_automations", "edits_files", "executes_code", "runs_unattended"
+        ]
+      },
+      "description": "Flags under active dispute (open correction issue). Rendered with a warning until resolved."
+    },
+    "audits": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["date", "reviewer", "url", "reviewed_commit"],
+        "properties": {
+          "date": { "type": "string", "format": "date" },
+          "reviewer": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "reviewed_commit": { "type": "string", "pattern": "^[0-9a-f]{7,40}$" }
+        }
+      },
+      "description": "Hand-written security audits. The site diffs reviewed_commit against HEAD and shows how far behind the audit is."
+    },
+    "added": { "type": "string", "format": "date" }
+  }
+}
