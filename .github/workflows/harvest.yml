@@ -1,0 +1,49 @@
+name: Harvest
+
+on:
+  schedule:
+    - cron: "17 4 * * *" # nightly, off the top of the hour
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  harvest:
+    if: github.repository == 'bruhautomation/home-assistant-ai-index'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml jsonschema
+      - name: Harvest metrics, manifests, and add-on configs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python tools/harvest.py
+      - name: Regenerate README tables
+        run: python tools/render_readme.py
+      - name: Commit harvested data (bot-owned paths only)
+        run: |
+          git config user.name "index-harvester[bot]"
+          git config user.email "actions@github.com"
+          git add data/generated README.md
+          if git diff --cached --quiet; then
+            echo "No changes tonight."
+          else
+            git commit -m "chore(data): harvest $(date -u +%F)"
+            git push
+          fi
+
+  # A push made with GITHUB_TOKEN doesn't trigger the pages workflow,
+  # so redeploy the site here after harvesting.
+  deploy:
+    needs: harvest
+    uses: ./.github/workflows/pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

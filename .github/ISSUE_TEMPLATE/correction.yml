@@ -1,0 +1,54 @@
+name: "This is wrong about my project"
+description: The index misstates what a project can reach — the bug we care about most. Maintainer reports get priority.
+title: "[correction] "
+labels: [correction]
+body:
+  - type: markdown
+    attributes:
+      value: >
+        Thank you — this index makes public claims about other people's code, so
+        corrections are its most important input. Disputed flags get marked ⚠️
+        on the site while we resolve, and maintainer reports get priority.
+  - type: input
+    id: entry
+    attributes:
+      label: Entry
+      description: The entry id (the filename in `entries/`, e.g. `llm-vision`) or the project name.
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of claim is wrong?
+      options:
+        - Capability flag (one of the nine)
+        - Data flow (providers, what leaves the network)
+        - Category / install surface
+        - Add-on permissions or rating
+        - Summary or notes wording
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: What the index says
+      description: Quote or describe the claim as currently stated.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it's wrong
+      description: >
+        What the truth is — ideally with a link to the source that shows it
+        (a permalink to a file/line is perfect, same standard the index holds
+        itself to).
+    validations:
+      required: true
+  - type: checkboxes
+    id: maintainer
+    attributes:
+      label: Relationship to the project
+      options:
+        - label: I am a maintainer of this project

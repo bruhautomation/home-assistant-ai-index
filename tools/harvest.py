@@ -259,6 +259,14 @@ def harvest_addon(entry: dict, result: dict, errors: list) -> None:
     permissions = []
     for key, description in ADDON_PERMISSION_KEYS.items():
         if key in config:
+            value = config[key]
+            # Only surface what is actually granted — `full_access: false` is
+            # not a permission. The exception is `apparmor: false`, where the
+            # false value is itself the notable fact.
+            if value in (False, None, [], {}) and key != "apparmor":
+                continue
+            if key == "apparmor" and value is not False:
+                continue
             permissions.append({
                 "key": key,
                 "value": config[key],

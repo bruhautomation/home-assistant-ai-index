@@ -1,0 +1,32 @@
+{
+  "addon": {
+    "apparmor_profile": false,
+    "commit": "95657e488570873dad94a3e62c2c84b43368fbe9",
+    "config_path": "openwakeword/config.yaml",
+    "path": "openwakeword",
+    "permissions": [
+      {
+        "description": "mapped Home Assistant folders",
+        "evidence": {
+          "commit": "95657e488570873dad94a3e62c2c84b43368fbe9",
+          "line": 15,
+          "path": "openwakeword/config.yaml",
+          "repo": "home-assistant/addons"
+        },
+        "key": "map",
+        "value": [
+          "share:ro"
+        ]
+      }
+    ],
+    "repo": "home-assistant/addons",
+    "supervisor_rating": {
+      "breakdown": [],
+      "value": 5
+    },
+    "version": "2.1.1"
+  },
+  "id": "openwakeword-addon",
+  "repo": "rhasspy/wyoming-openwakeword",
+  "sha": "419701f64aa936ff62a820dfeac757f1afda01d1"
+}

@@ -1,0 +1,71 @@
+name: Submit a project
+description: Suggest a Home Assistant AI project for the index — we'll do the capability research, or open a PR yourself.
+title: "[new] "
+labels: [new-entry]
+body:
+  - type: markdown
+    attributes:
+      value: >
+        Prefer a PR? Copy any file in `entries/`, fill it in per
+        [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md), and CI will check the
+        rest. Otherwise fill this out and we'll research the capability flags.
+  - type: input
+    id: repo
+    attributes:
+      label: Repository
+      description: GitHub owner/name, e.g. `valentinfrlch/ha-llmvision`
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - conversation-agent
+        - agent-platform
+        - vision
+        - automation-authoring
+        - mcp
+        - agent-tools
+        - model-runtime
+        - voice-stack
+        - dashboard-ui
+        - summaries
+    validations:
+      required: true
+  - type: input
+    id: summary
+    attributes:
+      label: One-line summary
+      description: What it does, plainly.
+    validations:
+      required: true
+  - type: checkboxes
+    id: capabilities
+    attributes:
+      label: What can it reach? (best guess is fine — we verify against source)
+      options:
+        - label: "📖 reads entity states"
+        - label: "📜 reads history / recorder data"
+        - label: "📷 reads cameras"
+        - label: "🎙️ processes live audio"
+        - label: "🎛️ controls devices (calls services)"
+        - label: "⚙️ creates automations / scripts / helpers"
+        - label: "📝 writes config files or the filesystem"
+        - label: "⚡ executes arbitrary code"
+        - label: "⏰ self-initiates AI activity (schedules, background loops)"
+  - type: dropdown
+    id: inference
+    attributes:
+      label: Where does inference run?
+      options:
+        - local only
+        - cloud only
+        - user's choice (local or cloud)
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: Providers it supports, install surface (HACS / add-on / container), notable caveats.

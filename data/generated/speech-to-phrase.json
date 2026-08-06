@@ -1,0 +1,43 @@
+{
+  "addon": {
+    "apparmor_profile": false,
+    "commit": "95657e488570873dad94a3e62c2c84b43368fbe9",
+    "config_path": "speech_to_phrase/config.yaml",
+    "path": "speech_to_phrase",
+    "permissions": [
+      {
+        "description": "Home Assistant API access",
+        "evidence": {
+          "commit": "95657e488570873dad94a3e62c2c84b43368fbe9",
+          "line": 17,
+          "path": "speech_to_phrase/config.yaml",
+          "repo": "home-assistant/addons"
+        },
+        "key": "homeassistant_api",
+        "value": true
+      },
+      {
+        "description": "mapped Home Assistant folders",
+        "evidence": {
+          "commit": "95657e488570873dad94a3e62c2c84b43368fbe9",
+          "line": 13,
+          "path": "speech_to_phrase/config.yaml",
+          "repo": "home-assistant/addons"
+        },
+        "key": "map",
+        "value": [
+          "share:rw"
+        ]
+      }
+    ],
+    "repo": "home-assistant/addons",
+    "supervisor_rating": {
+      "breakdown": [],
+      "value": 5
+    },
+    "version": "1.4.3"
+  },
+  "id": "speech-to-phrase",
+  "repo": "OHF-Voice/speech-to-phrase",
+  "sha": "b4ecef9519e84fefd5dc35c0384c50efa13a0bad"
+}

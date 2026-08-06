@@ -1,0 +1,20 @@
+{
+  "id": "openai-tts",
+  "manifest": {
+    "domain": "openai_tts",
+    "evidence": {
+      "commit": "277bc499955db993f9bdf5c07e1ffccfdf05bbf0",
+      "line": 10,
+      "path": "custom_components/openai_tts/manifest.json",
+      "repo": "sfortis/openai_tts"
+    },
+    "iot_class": "cloud_polling",
+    "name": "OpenAI TTS",
+    "requirements": [
+      "aiohttp>=3.9.0"
+    ],
+    "version": "3.8"
+  },
+  "repo": "sfortis/openai_tts",
+  "sha": "277bc499955db993f9bdf5c07e1ffccfdf05bbf0"
+}

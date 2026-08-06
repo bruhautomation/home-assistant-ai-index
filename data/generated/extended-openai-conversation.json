@@ -1,0 +1,23 @@
+{
+  "id": "extended-openai-conversation",
+  "manifest": {
+    "detected_providers": [
+      "openai"
+    ],
+    "domain": "extended_openai_conversation",
+    "evidence": {
+      "commit": "f2ccd03dbdce6a13dd2fef7d6997793ffb6005ef",
+      "line": 19,
+      "path": "custom_components/extended_openai_conversation/manifest.json",
+      "repo": "jekalmin/extended_openai_conversation"
+    },
+    "iot_class": "cloud_polling",
+    "name": "Extended OpenAI Conversation",
+    "requirements": [
+      "openai~=2.21.0"
+    ],
+    "version": "3.0.0"
+  },
+  "repo": "jekalmin/extended_openai_conversation",
+  "sha": "f2ccd03dbdce6a13dd2fef7d6997793ffb6005ef"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "llm-vision",
+  "manifest": {
+    "domain": "llmvision",
+    "evidence": {
+      "commit": "3cc0510a4dfc8d8a05599eb9f7a0079979c80492",
+      "line": 9,
+      "path": "custom_components/llmvision/manifest.json",
+      "repo": "valentinfrlch/ha-llmvision"
+    },
+    "iot_class": "cloud_polling",
+    "name": "LLM Vision",
+    "requirements": [
+      "boto3>=1.37.1",
+      "aiosqlite==0.21.0",
+      "aiofile==3.9.0"
+    ],
+    "version": "1.7.1"
+  },
+  "repo": "valentinfrlch/ha-llmvision",
+  "sha": "3cc0510a4dfc8d8a05599eb9f7a0079979c80492"
+}

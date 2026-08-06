@@ -5,7 +5,7 @@ category: voice-stack
 install: [addon, container]
 addon_config:
   repo: home-assistant/addons
-  path: speech-to-phrase
+  path: speech_to_phrase
 summary: Official constrained speech recognition for Assist — recognizes only phrases your entities can answer, fast on a Raspberry Pi.
 providers: [self-hosted]
 inference: [local]
