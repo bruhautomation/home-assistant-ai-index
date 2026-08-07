@@ -210,14 +210,13 @@ def caps_section(entry: dict) -> str:
     denied = [c for c in CAPABILITIES if not entry["capabilities"].get(c)]
     rows = []
     for cap in granted:
-        hot = " hot" if cap in SENSITIVE else ""
         extra = []
         if cap in evidence:
             extra.append(f'<a href="{evidence_url(entry, evidence[cap])}">source ↗</a>')
         if cap in disputed:
             extra.append(f'<span class="disputed">disputed — <a href="{correction_url(entry["id"])}">see corrections</a></span>')
         rows.append(
-            f'<li class="capitem{hot}"><span class="capname">{svg(cap)} <b>{esc(CAP_LABELS[cap])}</b></span>'
+            f'<li class="capitem"><span class="capname">{svg(cap)} <b>{esc(CAP_LABELS[cap])}</b></span>'
             f'<span class="captip">{esc(CAP_TIPS[cap])}</span>'
             f'<span class="capev">{" · ".join(extra)}</span></li>'
         )

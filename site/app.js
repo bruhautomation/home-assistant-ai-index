@@ -153,7 +153,7 @@ function capIcons(entry) {
   const disputed = new Set(entry.disputed || []);
   return `<span class="capstrip">` + CAPS.map((c) => {
     const on = !!entry.capabilities[c];
-    const cls = !on ? "off" : SENSITIVE.has(c) ? "hot" : "on";
+    const cls = on ? "on" : "off";
     const tip = on
       ? `${CAP_ON[c] || LABELS[c]}${disputed.has(c) ? " (disputed)" : ""}`
       : (CAP_OFF[c] || LABELS[c]);
@@ -198,7 +198,7 @@ function renderTable() {
     <th class="cmpcol" data-tip="tick to compare"></th>
     <th data-sort="name">Name${arrow("name")}</th>
     <th data-sort="category">Category${arrow("category")}</th>
-    <th data-tip="all nine capability flags — lit means granted, amber means sensitive">Capabilities</th>
+    <th data-tip="all nine capability flags — lit means granted, faint means not">Capabilities</th>
     <th>Inference</th>
     <th>Install</th>
     <th data-sort="stars" data-tip="GitHub stars and last activity">Health${arrow("stars")}</th>
