@@ -1,0 +1,36 @@
+id: mistral-conversation
+name: Mistral AI Conversation
+repo: Elijaht-dev/mistralai-conversation
+domain: mistral_conversation
+category: conversation-agent
+install: [hacs-integration]
+summary: Mistral conversation agent for Assist with device control, AI Task, TTS, and Voxtral speech-to-text — text, entity context, and voice audio go to api.mistral.ai.
+providers: [mistral]
+inference: [cloud]
+capabilities:
+  reads_entity_states: true
+  reads_camera: false
+  reads_history: false
+  listens_microphone: true
+  controls_devices: true
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - conversation text, system prompt, and exposed entity states — to Mistral
+  - voice audio, when selected as the pipeline's STT engine — uploaded to Mistral for Voxtral transcription
+  - AI Task attachments such as camera snapshots — base64-uploaded to Mistral
+evidence:
+  listens_microphone:
+    path: custom_components/mistral_conversation/stt.py
+    line: 126
+    commit: abed2f1c8000c3a214ec57896822fbe87697e89f
+notes: >
+  A faithful mirror of the core OpenAI integration's shape — but broader by
+  default: setup enables the Assist control API and auto-creates conversation,
+  AI Task, and STT subentries, so once you pick it in a pipeline your voice
+  clips go to Mistral too. Cloud-only, no custom base URL. Very new (first
+  release July 2026, single maintainer) — the polish is real, the track
+  record is short.
+added: 2026-08-07

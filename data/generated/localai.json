@@ -1,5 +1,10 @@
 {
   "id": "localai",
   "repo": "mudler/LocalAI",
+  "screenshot": {
+    "commit": "07dfb32bc91818f8389a6d99d84c4cdc61b7ff79",
+    "source": "readme",
+    "url": "https://raw.githubusercontent.com/mudler/LocalAI/07dfb32bc91818f8389a6d99d84c4cdc61b7ff79/docs/static/images/diagrams/composable-core.png"
+  },
   "sha": "07dfb32bc91818f8389a6d99d84c4cdc61b7ff79"
 }

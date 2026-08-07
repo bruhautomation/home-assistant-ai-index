@@ -1,0 +1,28 @@
+id: edge-tts
+name: Microsoft Edge TTS
+repo: hasscc/hass-edge-tts
+domain: edge_tts
+category: voice-stack
+install: [hacs-integration]
+summary: TTS entity using Microsoft Edge's free neural read-aloud voices — every spoken message is sent to Microsoft's cloud endpoint, no account or key required.
+providers: [microsoft]
+inference: [cloud]
+capabilities:
+  reads_entity_states: false
+  reads_camera: false
+  reads_history: false
+  listens_microphone: false
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - all TTS text, including Assist responses — to Microsoft's Edge read-aloud service, anonymously
+notes: >
+  Text goes out, audio comes back; it never hears anything. The convenience is
+  the trade: it rides an unofficial free Microsoft endpoint that can rate-limit
+  or break without notice, and it registers an unauthenticated /api/tts_proxy
+  HTTP view guarded only by a long-lived query token — treat generated TTS URLs
+  as sensitive.
+added: 2026-08-07

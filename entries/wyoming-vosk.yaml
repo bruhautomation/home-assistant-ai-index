@@ -1,0 +1,34 @@
+id: wyoming-vosk
+name: Vosk (speech-to-text)
+repo: rhasspy/wyoming-vosk
+category: voice-stack
+install: [addon, container]
+addon_config:
+  repo: rhasspy/hassio-addons
+  path: vosk
+summary: Offline speech-to-text add-on for Assist — a Wyoming server transcribing pipeline audio locally with Vosk, with optional template-constrained recognition.
+providers: [self-hosted]
+inference: [local]
+capabilities:
+  reads_entity_states: false
+  reads_camera: false
+  reads_history: false
+  listens_microphone: true
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent: []
+evidence:
+  listens_microphone:
+    path: wyoming_vosk/__main__.py
+    line: 303
+    commit: 335a4744d2d0d67624386338e8656f40a3294626
+notes: >
+  The lighter-weight alternative to the Whisper add-on: Vosk models run well
+  on modest hardware, and the optional limited/corrected modes constrain
+  output to your sentence templates for much better accuracy on small models.
+  No audio or text leaves the host; models auto-download from Hugging Face on
+  first use.
+added: 2026-08-07

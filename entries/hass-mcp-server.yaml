@@ -1,0 +1,53 @@
+id: hass-mcp-server
+name: MCP Server (HTTP Transport)
+repo: ganhammar/hass-mcp-server
+domain: mcp_server_http_transport
+category: mcp
+install: [hacs-integration]
+summary: MCP server at /api/mcp inside HA itself — states, service calls, history, logbook, camera snapshots, helper and automation CRUD, and opt-in YAML config editing.
+inference: [local, cloud]
+capabilities:
+  reads_entity_states: true
+  reads_camera: true
+  reads_history: true
+  listens_microphone: false
+  controls_devices: true
+  creates_automations: true
+  edits_files: true
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - states, history, logs, config YAML, and (if enabled) camera images — to whichever authorized MCP client asks
+evidence:
+  reads_entity_states:
+    path: custom_components/mcp_server_http_transport/tools/entities.py
+    line: 60
+    commit: ecbbc3ac589fd2cdcadc4897db75ef973bce7fb5
+  reads_history:
+    path: custom_components/mcp_server_http_transport/tools/system.py
+    line: 118
+    commit: ecbbc3ac589fd2cdcadc4897db75ef973bce7fb5
+  reads_camera:
+    path: custom_components/mcp_server_http_transport/tools/images.py
+    line: 128
+    commit: ecbbc3ac589fd2cdcadc4897db75ef973bce7fb5
+  controls_devices:
+    path: custom_components/mcp_server_http_transport/tools/entities.py
+    line: 124
+    commit: ecbbc3ac589fd2cdcadc4897db75ef973bce7fb5
+  creates_automations:
+    path: custom_components/mcp_server_http_transport/config_manager.py
+    line: 56
+    commit: ecbbc3ac589fd2cdcadc4897db75ef973bce7fb5
+  edits_files:
+    path: custom_components/mcp_server_http_transport/tools/config_files.py
+    line: 205
+    commit: ecbbc3ac589fd2cdcadc4897db75ef973bce7fb5
+notes: >
+  The widest MCP tool surface of the three servers in the index — automation,
+  scene, script, and helper CRUD, dashboards, HA restart, raw YAML editing.
+  The riskiest tools (camera images, config-file editing) default off,
+  secrets.yaml is blocked, and backups are taken before writes. Auth is bearer
+  token: OIDC via the author's companion integration, or long-lived HA tokens
+  if you enable native auth. What connects to it decides where your data goes.
+added: 2026-08-07

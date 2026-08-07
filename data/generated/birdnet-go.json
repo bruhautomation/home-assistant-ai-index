@@ -1,0 +1,181 @@
+{
+  "addon": {
+    "apparmor_profile": true,
+    "commit": "ca0f78f10e415f1c1d038a22006086faccfc4a32",
+    "config_path": "birdnet-go/config.yaml",
+    "path": "birdnet-go",
+    "permissions": [
+      {
+        "description": "extra kernel capabilities",
+        "evidence": {
+          "commit": "ca0f78f10e415f1c1d038a22006086faccfc4a32",
+          "line": 104,
+          "path": "birdnet-go/config.yaml",
+          "repo": "alexbelgium/hassio-addons"
+        },
+        "key": "privileged",
+        "value": [
+          "SYS_ADMIN",
+          "DAC_READ_SEARCH",
+          "SYS_RESOURCE"
+        ]
+      },
+      {
+        "description": "web UI through authenticated ingress",
+        "evidence": {
+          "commit": "ca0f78f10e415f1c1d038a22006086faccfc4a32",
+          "line": 79,
+          "path": "birdnet-go/config.yaml",
+          "repo": "alexbelgium/hassio-addons"
+        },
+        "key": "ingress",
+        "value": true
+      },
+      {
+        "description": "mapped Home Assistant folders",
+        "evidence": {
+          "commit": "ca0f78f10e415f1c1d038a22006086faccfc4a32",
+          "line": 83,
+          "path": "birdnet-go/config.yaml",
+          "repo": "alexbelgium/hassio-addons"
+        },
+        "key": "map",
+        "value": [
+          "addon_config:rw",
+          "media:rw",
+          "share:rw"
+        ]
+      },
+      {
+        "description": "direct device access",
+        "evidence": {
+          "commit": "ca0f78f10e415f1c1d038a22006086faccfc4a32",
+          "line": 8,
+          "path": "birdnet-go/config.yaml",
+          "repo": "alexbelgium/hassio-addons"
+        },
+        "key": "devices",
+        "value": [
+          "/dev/dri",
+          "/dev/snd",
+          "/dev/snd/controlC0",
+          "/dev/snd/controlC1",
+          "/dev/snd/pcmC1D0c",
+          "/dev/snd/pcmC1D0p",
+          "/dev/dri/card0",
+          "/dev/dri/card1",
+          "/dev/dri/renderD128",
+          "/dev/vchiq",
+          "/dev/video10",
+          "/dev/video11",
+          "/dev/video12",
+          "/dev/video13",
+          "/dev/video14",
+          "/dev/video15",
+          "/dev/video16",
+          "/dev/ttyUSB0",
+          "/dev/sda",
+          "/dev/sdb",
+          "/dev/sdc",
+          "/dev/sdd",
+          "/dev/sde",
+          "/dev/sdf",
+          "/dev/sdg",
+          "/dev/nvme",
+          "/dev/nvme0",
+          "/dev/nvme0n1",
+          "/dev/nvme0n1p1",
+          "/dev/nvme0n1p2",
+          "/dev/nvme0n1p3",
+          "/dev/nvme1n1",
+          "/dev/nvme1n1p1",
+          "/dev/nvme1n1p2",
+          "/dev/nvme1n1p3",
+          "/dev/nvme2n1",
+          "/dev/nvme2n1p1",
+          "/dev/nvme2n1p2",
+          "/dev/nvme2n3p3",
+          "/dev/mmcblk",
+          "/dev/fuse",
+          "/dev/sda1",
+          "/dev/sdb1",
+          "/dev/sdc1",
+          "/dev/sdd1",
+          "/dev/sde1",
+          "/dev/sdf1",
+          "/dev/sdg1",
+          "/dev/sda2",
+          "/dev/sdb2",
+          "/dev/sdc2",
+          "/dev/sdd2",
+          "/dev/sde2",
+          "/dev/sdf2",
+          "/dev/sdg2",
+          "/dev/sda3",
+          "/dev/sdb3",
+          "/dev/sda4",
+          "/dev/sdb4",
+          "/dev/sda5",
+          "/dev/sda6",
+          "/dev/sda7",
+          "/dev/sda8",
+          "/dev/nvme0",
+          "/dev/nvme1",
+          "/dev/nvme2"
+        ]
+      },
+      {
+        "description": "hardware/udev events",
+        "evidence": {
+          "commit": "ca0f78f10e415f1c1d038a22006086faccfc4a32",
+          "line": 128,
+          "path": "birdnet-go/config.yaml",
+          "repo": "alexbelgium/hassio-addons"
+        },
+        "key": "udev",
+        "value": true
+      },
+      {
+        "description": "audio subsystem access",
+        "evidence": {
+          "commit": "ca0f78f10e415f1c1d038a22006086faccfc4a32",
+          "line": 4,
+          "path": "birdnet-go/config.yaml",
+          "repo": "alexbelgium/hassio-addons"
+        },
+        "key": "audio",
+        "value": true
+      }
+    ],
+    "repo": "alexbelgium/hassio-addons",
+    "supervisor_rating": {
+      "breakdown": [
+        {
+          "key": "apparmor",
+          "modifier": 1,
+          "reason": "custom AppArmor profile shipped"
+        },
+        {
+          "key": "ingress",
+          "modifier": 2,
+          "reason": "UI served through authenticated ingress"
+        },
+        {
+          "key": "privileged",
+          "modifier": -1,
+          "reason": "requests privileged kernel capabilities"
+        }
+      ],
+      "value": 7
+    },
+    "version": "20260716"
+  },
+  "id": "birdnet-go",
+  "repo": "tphakala/birdnet-go",
+  "screenshot": {
+    "commit": "606040c2edb43e933442abacd2c64e84db0a9213",
+    "source": "readme",
+    "url": "https://raw.githubusercontent.com/tphakala/birdnet-go/606040c2edb43e933442abacd2c64e84db0a9213/doc/BirdNET-Go-dashboard.webp"
+  },
+  "sha": "606040c2edb43e933442abacd2c64e84db0a9213"
+}

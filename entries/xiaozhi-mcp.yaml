@@ -1,0 +1,39 @@
+id: xiaozhi-mcp
+name: Xiaozhi MCP
+repo: mac8005/xiaozhi-mcp-ha
+domain: xiaozhi_mcp
+category: mcp
+install: [hacs-integration]
+summary: Bridges Xiaozhi ESP32 chatbots to HA — keeps a WebSocket open to the Xiaozhi cloud and relays MCP calls to HA's official MCP Server and its Assist tools.
+providers: [xiaozhi, self-hosted]
+inference: [cloud, local]
+capabilities:
+  reads_entity_states: true
+  reads_camera: false
+  reads_history: false
+  listens_microphone: false
+  controls_devices: true
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - tool list, exposed entity states, and tool results — relayed to the configured Xiaozhi endpoint
+  - voice audio stays between the Xiaozhi device and Xiaozhi's cloud; it never passes through HA
+evidence:
+  reads_entity_states:
+    path: custom_components/xiaozhi_mcp/coordinator.py
+    line: 564
+    commit: e0fbfe0179d720160c3e491352794d825892d293
+  controls_devices:
+    path: custom_components/xiaozhi_mcp/coordinator.py
+    line: 522
+    commit: e0fbfe0179d720160c3e491352794d825892d293
+notes: >
+  A pure proxy in front of HA's core MCP Server, authenticated with your
+  long-lived token — so everything exposed to Assist becomes reachable from
+  the Xiaozhi cloud over an always-open outbound WebSocket. One finding worth
+  weighing: TLS certificate verification is disabled on that wss:// link in
+  source, so the channel carrying your states trusts any certificate. Quiet
+  since late 2025.
+added: 2026-08-07

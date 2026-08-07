@@ -1,0 +1,24 @@
+{
+  "id": "mistral-conversation",
+  "in_hacs_default": true,
+  "manifest": {
+    "detected_providers": [
+      "mistral"
+    ],
+    "domain": "mistral_conversation",
+    "evidence": {
+      "commit": "abed2f1c8000c3a214ec57896822fbe87697e89f",
+      "line": 10,
+      "path": "custom_components/mistral_conversation/manifest.json",
+      "repo": "Elijaht-dev/mistralai-conversation"
+    },
+    "iot_class": "cloud_polling",
+    "name": "Mistral AI Conversation",
+    "requirements": [
+      "mistralai==2.8.0"
+    ],
+    "version": "0.1.1"
+  },
+  "repo": "Elijaht-dev/mistralai-conversation",
+  "sha": "abed2f1c8000c3a214ec57896822fbe87697e89f"
+}

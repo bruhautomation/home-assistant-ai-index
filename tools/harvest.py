@@ -298,6 +298,48 @@ def harvest_addon(entry: dict, result: dict, errors: list) -> None:
     }
 
 
+# Image URLs that are decoration rather than screenshots: badges, buttons,
+# logos, sponsor links. Anything matching is skipped when picking a preview.
+_NON_SCREENSHOT = re.compile(
+    r"shields\.io|badgen\.net|img\.shields|/badge|badge\.svg|buymeacoffee|ko-fi\.com"
+    r"|paypal|liberapay|patreon|discord|star-history|my\.home-assistant\.io"
+    r"|hacs\.xyz|opencollective|sponsors|logo|icon|banner\.svg|brands\.home-assistant",
+    re.IGNORECASE,
+)
+_IMG_MD = re.compile(r"!\[[^\]]*\]\(\s*([^)\s]+)")
+_IMG_HTML = re.compile(r"<img[^>]+src=[\"']([^\"']+)[\"']", re.IGNORECASE)
+
+
+def harvest_screenshot(entry: dict, sha: str, result: dict) -> None:
+    """Pick the first real screenshot-looking image from the repo README."""
+    repo = entry["repo"]
+    if repo in ("home-assistant/core", "home-assistant/addons"):
+        return
+    readme = None
+    for candidate in ("README.md", "readme.md", "Readme.md"):
+        status, body = http_get(f"{RAW}/{repo}/{sha}/{candidate}")
+        if status == 200:
+            readme = body.decode("utf-8", errors="replace")
+            break
+    if not readme:
+        return
+    urls = _IMG_MD.findall(readme) + _IMG_HTML.findall(readme)
+    for url in urls:
+        url = url.strip().strip('"').strip("'")
+        if _NON_SCREENSHOT.search(url):
+            continue
+        if url.lower().endswith(".svg"):
+            continue
+        if url.startswith("http://") or url.startswith("https://"):
+            resolved = url
+        else:
+            resolved = f"{RAW}/{repo}/{sha}/{url.lstrip('./')}"
+        if not re.search(r"\.(png|jpe?g|gif|webp)(\?|$)", resolved, re.IGNORECASE) and "githubusercontent" not in resolved:
+            continue
+        result["screenshot"] = {"url": resolved, "source": "readme", "commit": sha}
+        return
+
+
 def fetch_hacs_default() -> set[str] | None:
     """Repos listed in HACS's default store (a curated, reviewed list)."""
     status, body = http_get(f"{RAW}/hacs/default/master/integration")
@@ -322,6 +364,8 @@ def harvest_entry(entry: dict, errors: list, no_api: bool, hacs_default: set[str
     if hacs_default is not None and "hacs-integration" in installs:
         result["in_hacs_default"] = entry["repo"].lower() in hacs_default
     harvest_addon(entry, result, errors)
+    if sha:
+        harvest_screenshot(entry, sha, result)
     return result
 
 

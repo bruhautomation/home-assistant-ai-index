@@ -1,0 +1,34 @@
+id: voice-satellite
+name: Voice Satellite
+repo: jxlarrea/voice-satellite-card-integration
+domain: voice_satellite
+category: voice-stack
+install: [hacs-integration]
+summary: Lovelace card plus companion integration that turns any browser or wall tablet into an Assist voice satellite, with wake-word detection running in the browser itself.
+providers: [self-hosted]
+inference: [local]
+capabilities:
+  reads_entity_states: false
+  reads_camera: false
+  reads_history: false
+  listens_microphone: true
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - nothing off-network by the project itself — mic audio streams only to your own Assist pipeline
+evidence:
+  listens_microphone:
+    path: src/audio/index.js
+    line: 119
+    commit: 8af37123aaf813663959484b7f41fde6fbf63839
+notes: >
+  The browser tab keeps the microphone open and runs openWakeWord/microWakeWord
+  models in-page, only opening an Assist session on detection — so audio stays
+  between the browser and your HA server, and what happens after STT depends on
+  the pipeline you point it at. Needs HTTPS and mic permission. The card also
+  displays camera streams and plays TTS, but that is dashboard display, not AI
+  reach.
+added: 2026-08-07

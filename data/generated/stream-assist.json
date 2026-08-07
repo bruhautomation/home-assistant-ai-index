@@ -1,0 +1,24 @@
+{
+  "id": "stream-assist",
+  "in_hacs_default": false,
+  "manifest": {
+    "domain": "stream_assist",
+    "evidence": {
+      "commit": "49fde307ea11ecd1495b2bdcff3409217fe10b10",
+      "line": 13,
+      "path": "custom_components/stream_assist/manifest.json",
+      "repo": "AlexxIT/StreamAssist"
+    },
+    "iot_class": "calculated",
+    "name": "Stream Assist",
+    "requirements": [],
+    "version": "v2.1.0"
+  },
+  "repo": "AlexxIT/StreamAssist",
+  "screenshot": {
+    "commit": "49fde307ea11ecd1495b2bdcff3409217fe10b10",
+    "source": "readme",
+    "url": "https://img.youtube.com/vi/fP_BNFWLYnk/mqdefault.jpg"
+  },
+  "sha": "49fde307ea11ecd1495b2bdcff3409217fe10b10"
+}

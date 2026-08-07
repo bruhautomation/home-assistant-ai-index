@@ -1,0 +1,25 @@
+{
+  "id": "mcp-assist",
+  "in_hacs_default": true,
+  "manifest": {
+    "domain": "mcp_assist",
+    "evidence": {
+      "commit": "feff8d31761fe54a3a7ca2afd1949ad6e69dd019",
+      "line": 9,
+      "path": "custom_components/mcp_assist/manifest.json",
+      "repo": "mike-nott/mcp-assist"
+    },
+    "iot_class": "local_polling",
+    "name": "MCP Assist",
+    "requirements": [
+      "aiohttp>=3.8.0",
+      "pyyaml>=6.0",
+      "ddgs>=9.0.0",
+      "websockets>=12.0",
+      "cryptography>=41.0.0"
+    ],
+    "version": "0.17.2"
+  },
+  "repo": "mike-nott/mcp-assist",
+  "sha": "feff8d31761fe54a3a7ca2afd1949ad6e69dd019"
+}

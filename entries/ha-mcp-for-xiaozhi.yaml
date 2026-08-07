@@ -1,0 +1,37 @@
+id: ha-mcp-for-xiaozhi
+name: MCP Server for Xiaozhi
+repo: c1pher-cn/ha-mcp-for-xiaozhi
+domain: ws_mcp_server
+category: mcp
+install: [hacs-integration]
+summary: MCP server that dials out over WebSocket to a Xiaozhi endpoint, exposing HA's Assist LLM tools so Xiaozhi ESP32 voice assistants can read exposed states and control devices.
+providers: [xiaozhi]
+inference: [cloud, local]
+capabilities:
+  reads_entity_states: true
+  reads_camera: false
+  reads_history: false
+  listens_microphone: false
+  controls_devices: true
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - exposed entity states, tool schemas, and tool results — to the WebSocket endpoint you configure (usually xiaozhi.me)
+evidence:
+  reads_entity_states:
+    path: custom_components/ws_mcp_server/server.py
+    line: 64
+    commit: 07613946e04e6a9d3db2b5a51997c716ee21ba5c
+  controls_devices:
+    path: custom_components/ws_mcp_server/server.py
+    line: 112
+    commit: 07613946e04e6a9d3db2b5a51997c716ee21ba5c
+notes: >
+  Reverses the usual MCP direction: HA keeps a persistent outbound WebSocket
+  to the endpoint URL you paste, giving that remote service standing reach
+  over everything exposed to Assist — the only credential is the token inside
+  the URL. A fork of the core MCP Server, bounded by the same Assist entity
+  exposure. Quiet since late 2025.
+added: 2026-08-07

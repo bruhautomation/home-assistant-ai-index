@@ -1,0 +1,27 @@
+id: fallback-conversation
+name: Fallback Conversation Agent
+repo: m50/ha-fallback-conversation
+domain: fallback_conversation
+category: conversation-agent
+install: [hacs-integration]
+summary: Meta agent that tries a primary conversation agent and retries with a fallback when it fails — typically local Assist first, cloud LLM second. Archived.
+inference: [local, cloud]
+capabilities:
+  reads_entity_states: false
+  reads_camera: false
+  reads_history: false
+  listens_microphone: false
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - nothing itself — your text goes to the agents you configure, which may be cloud LLMs
+notes: >
+  A pure router with no reach of its own: states, control, and data flow all
+  belong to the agents it delegates to. Worth knowing anyway — a failed
+  "local-first" query is re-sent verbatim to the fallback, so cloud can still
+  see text you expected to stay local. The repo is archived (read-only) and
+  targets the pre-2025 conversation API, so expect breakage on current HA.
+added: 2026-08-07

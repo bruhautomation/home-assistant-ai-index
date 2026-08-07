@@ -58,6 +58,19 @@ CAP_LABELS = {
     "runs_unattended": "unattended",
 }
 
+# One-line plain-language explanations, used as tooltips on the site.
+CAP_TIPS = {
+    "reads_entity_states": "Can read the live state of entities exposed to it — temperatures, lights, locks, presence.",
+    "reads_history": "Can query past states and events from the recorder, history, or logbook.",
+    "reads_camera": "Can access camera images or streams.",
+    "listens_microphone": "Processes live audio — voice commands, wake words, or ambient sound.",
+    "controls_devices": "Can call Home Assistant services to switch, dim, unlock, or otherwise act on devices.",
+    "creates_automations": "Can write automations, scripts, or helpers into your configuration.",
+    "edits_files": "Can write to configuration files or the filesystem beyond its own storage.",
+    "executes_code": "Can run arbitrary code — shell commands or generated scripts.",
+    "runs_unattended": "Starts AI activity by itself on schedules, watchers, or triggers — no human in the loop.",
+}
+
 CATEGORIES = [
     "conversation-agent",
     "agent-platform",

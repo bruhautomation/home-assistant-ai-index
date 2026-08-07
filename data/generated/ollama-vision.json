@@ -1,0 +1,21 @@
+{
+  "id": "ollama-vision",
+  "in_hacs_default": true,
+  "manifest": {
+    "domain": "ollama_vision",
+    "evidence": {
+      "commit": "f8eb8968c726acce8bab7a25a83b62f37b9db6c4",
+      "line": 8,
+      "path": "custom_components/ollama_vision/manifest.json",
+      "repo": "remimikalsen/ollama_vision"
+    },
+    "iot_class": "local_polling",
+    "name": "Ollama Vision",
+    "requirements": [
+      "aiohttp>=3.8.0"
+    ],
+    "version": "1.0.9"
+  },
+  "repo": "remimikalsen/ollama_vision",
+  "sha": "f8eb8968c726acce8bab7a25a83b62f37b9db6c4"
+}

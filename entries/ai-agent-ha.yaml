@@ -1,0 +1,50 @@
+id: ai-agent-ha
+name: AI Agent HA
+repo: sbenodiz/ai_agent_ha
+domain: ai_agent_ha
+category: automation-authoring
+install: [hacs-integration]
+summary: Chat-panel agent that reads states and history, calls services, writes automations.yaml, and creates dashboards from natural language, against your choice of LLM.
+providers: [openai, anthropic, google, openrouter, ollama, openai-compatible]
+inference: [cloud, local]
+capabilities:
+  reads_entity_states: true
+  reads_camera: false
+  reads_history: true
+  listens_microphone: false
+  controls_devices: true
+  creates_automations: true
+  edits_files: true
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - prompts plus requested entity states, areas, and recorder history — to the configured provider
+evidence:
+  reads_entity_states:
+    path: custom_components/ai_agent_ha/agent.py
+    line: 1882
+    commit: b1ec82cbb6c8800aea816000b446856f5e893ff1
+  reads_history:
+    path: custom_components/ai_agent_ha/agent.py
+    line: 2356
+    commit: b1ec82cbb6c8800aea816000b446856f5e893ff1
+  controls_devices:
+    path: custom_components/ai_agent_ha/agent.py
+    line: 4365
+    commit: b1ec82cbb6c8800aea816000b446856f5e893ff1
+  creates_automations:
+    path: custom_components/ai_agent_ha/agent.py
+    line: 2617
+    commit: b1ec82cbb6c8800aea816000b446856f5e893ff1
+  edits_files:
+    path: custom_components/ai_agent_ha/agent.py
+    line: 2828
+    commit: b1ec82cbb6c8800aea816000b446856f5e893ff1
+notes: >
+  The model drives a tool loop that can call any HA service, write
+  automations.yaml (with backup, atomically), and write dashboard YAML —
+  including appending a lovelace section to configuration.yaml. The panel
+  shows approve buttons for suggestions, but the backend also executes
+  service-call and automation-create requests the model emits directly. Runs
+  only when you chat with it or call its services.
+added: 2026-08-07

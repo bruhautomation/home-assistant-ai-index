@@ -1,0 +1,40 @@
+id: willow
+name: Willow
+repo: toverainc/willow
+url: https://heywillow.io
+category: voice-stack
+install: [external]
+summary: ESP32-S3-BOX voice satellite firmware with on-device wake word, streaming speech to a Willow Inference Server and driving HA through the Willow Application Server.
+providers: [self-hosted]
+inference: [local, cloud]
+capabilities:
+  reads_entity_states: true
+  reads_camera: false
+  reads_history: false
+  listens_microphone: true
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - wake-triggered voice audio — to the configured inference server; the firmware default is Tovera's hosted infer.tovera.io
+  - transcripts — through the Willow Application Server to your HA Assist pipeline
+evidence:
+  listens_microphone:
+    path: main/audio.c
+    line: 420
+    commit: 415ba07007f49873649d36e0b384d72640f1cfac
+  reads_entity_states:
+    repo: toverainc/willow-application-server
+    path: app/internal/was.py
+    line: 160
+    commit: a9c0f722c3fcebf39e21f79cbe6c592f814914bf
+notes: >
+  The pre-Voice-PE hardware answer, still maintained at a modest pace. The
+  detail that matters: out of the box, audio streams to Tovera's hosted
+  inference server — self-host WIS to keep your voice on your network. Device
+  control is delegated to HA's Assist pipeline via the required Application
+  Server (which also reads /api/states for its entity list); the firmware
+  itself only wakes, records, and streams.
+added: 2026-08-07

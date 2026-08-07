@@ -1,0 +1,27 @@
+{
+  "id": "amazon-rekognition",
+  "in_hacs_default": true,
+  "manifest": {
+    "domain": "amazon_rekognition",
+    "evidence": {
+      "commit": "5c1849d63d6a0b539678d66deb2dd303e5fecd7d",
+      "line": 1,
+      "path": "custom_components/amazon_rekognition/manifest.json",
+      "repo": "robmarkcole/HASS-amazon-rekognition"
+    },
+    "iot_class": null,
+    "name": "Amazon Rekognition custom component",
+    "requirements": [
+      "pillow",
+      "boto3>=1.9.69"
+    ],
+    "version": "3.4.0"
+  },
+  "repo": "robmarkcole/HASS-amazon-rekognition",
+  "screenshot": {
+    "commit": "5c1849d63d6a0b539678d66deb2dd303e5fecd7d",
+    "source": "readme",
+    "url": "http://img.youtube.com/vi/GCHYBxnZK-E/0.jpg"
+  },
+  "sha": "5c1849d63d6a0b539678d66deb2dd303e5fecd7d"
+}

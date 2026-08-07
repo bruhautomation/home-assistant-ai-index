@@ -1,0 +1,28 @@
+id: ha-text-ai
+name: HA Text AI
+repo: smkrv/ha-text-ai
+domain: ha_text_ai
+category: summaries
+install: [hacs-integration]
+summary: Service-based text bridge — ask_question sends a prompt to OpenAI, Anthropic, DeepSeek, Gemini, or any OpenAI-compatible endpoint, and the answer lands in a sensor.
+providers: [openai, anthropic, deepseek, google, openai-compatible]
+inference: [cloud, local]
+capabilities:
+  reads_entity_states: false
+  reads_camera: false
+  reads_history: false
+  listens_microphone: false
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - your questions, system prompts, and prior conversation context — to the configured provider
+notes: >
+  Deliberately reach-less: it cannot see states, history, cameras, or call
+  services. Home data reaches the model only if your automations template it
+  into ask_question calls — which makes it a clean building block when you
+  want AI text without handing over the house. History is stored in its own
+  local .storage.
+added: 2026-08-07

@@ -1,0 +1,39 @@
+id: grok-conversation
+name: xAI Grok Conversation
+repo: braytonstafford/grok_conversation
+domain: grok_conversation
+category: conversation-agent
+install: [hacs-integration]
+summary: xAI Grok conversation agent for Assist with optional device control, plus services for image analysis and entity-snapshot "home briefings" via api.x.ai.
+providers: [xai]
+inference: [cloud]
+capabilities:
+  reads_entity_states: true
+  reads_camera: false
+  reads_history: false
+  listens_microphone: false
+  controls_devices: true
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - conversation text and exposed entity context — to xAI
+  - home_briefing sends a snapshot of up to 80 entity states (locks, alarm, climate) to xAI
+  - image services upload local image files, e.g. saved camera snapshots, to xAI
+evidence:
+  reads_entity_states:
+    path: custom_components/grok_conversation/__init__.py
+    line: 537
+    commit: 11cc37075e7e59a963ea25d4fd87a0e83d284976
+  controls_devices:
+    path: custom_components/grok_conversation/conversation.py
+    line: 801
+    commit: 11cc37075e7e59a963ea25d4fd87a0e83d284976
+notes: >
+  Control happens only when the HA LLM API is enabled in options — chat-only
+  mode disables tools. Optional Live Search modes have xAI run web/X searches
+  server-side on your queries. A helpers.py copied from
+  extended_openai_conversation (automation writing, history queries) is dead
+  code that is never imported — the agent cannot actually do either.
+added: 2026-08-07

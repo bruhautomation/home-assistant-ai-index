@@ -1,0 +1,24 @@
+{
+  "id": "grok-conversation",
+  "in_hacs_default": true,
+  "manifest": {
+    "detected_providers": [
+      "openai"
+    ],
+    "domain": "grok_conversation",
+    "evidence": {
+      "commit": "11cc37075e7e59a963ea25d4fd87a0e83d284976",
+      "line": 22,
+      "path": "custom_components/grok_conversation/manifest.json",
+      "repo": "braytonstafford/grok_conversation"
+    },
+    "iot_class": "cloud_polling",
+    "name": "xAI Grok Conversation",
+    "requirements": [
+      "openai>=2.0.0"
+    ],
+    "version": "1.6.0"
+  },
+  "repo": "braytonstafford/grok_conversation",
+  "sha": "11cc37075e7e59a963ea25d4fd87a0e83d284976"
+}

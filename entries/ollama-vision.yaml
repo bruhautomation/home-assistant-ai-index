@@ -1,0 +1,33 @@
+id: ollama-vision
+name: Ollama Vision
+repo: remimikalsen/ollama_vision
+domain: ollama_vision
+category: vision
+install: [hacs-integration]
+summary: analyze_image service that fetches an image — camera snapshot URL, HA path, or file — and describes it with a self-hosted Ollama vision model; results become sensors and events.
+providers: [ollama, self-hosted]
+inference: [local]
+capabilities:
+  reads_entity_states: false
+  reads_camera: true
+  reads_history: false
+  listens_microphone: false
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - base64 image and prompt — to your own Ollama server, wherever you host it
+evidence:
+  reads_camera:
+    path: custom_components/ollama_vision/api.py
+    line: 136
+    commit: f8eb8968c726acce8bab7a25a83b62f37b9db6c4
+notes: >
+  Images arrive as URL or path strings — camera_proxy links, Frigate snapshot
+  URLs, files under /config — rather than camera entities, and go to a server
+  speaking the raw Ollama protocol with no API key, so this is built for
+  self-hosted backends. Runs only when your automations call its service. An
+  optional second text model rewrites the description.
+added: 2026-08-07
