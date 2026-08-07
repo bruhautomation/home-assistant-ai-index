@@ -176,13 +176,6 @@ def build_index(data: dict) -> str:
     pinned to a commit. Hover any icon or filter for its meaning.</p>
   </details>
 </header>
-<section class="presets" aria-label="Preset questions">
-  <button data-preset="cameras">{svg("reads_camera")} Can see my cameras</button>
-  <button data-preset="localonly">{svg("local")} 100% local</button>
-  <button data-preset="autonomous">{svg("runs_unattended")} Acts on its own</button>
-  <button data-preset="cloudcamera">{svg("cloud")} Camera frames leave home</button>
-  <button data-preset="clear" class="ghost">Clear filters</button>
-</section>
 <button id="ftoggle" class="ftoggle" aria-expanded="false">Filters &amp; search</button>
 <section class="filters" id="filters"></section>
 <p class="count" id="count"></p>
