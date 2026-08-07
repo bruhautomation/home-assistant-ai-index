@@ -122,5 +122,10 @@
   },
   "id": "frigate",
   "repo": "blakeblackshear/frigate",
+  "screenshot": {
+    "commit": "e73a14db5d03e5f6532ddc6c02358d71f94de3c2",
+    "source": "readme",
+    "url": "https://raw.githubusercontent.com/blakeblackshear/frigate/e73a14db5d03e5f6532ddc6c02358d71f94de3c2/docs/static/img/branding/frigate.png"
+  },
   "sha": "e73a14db5d03e5f6532ddc6c02358d71f94de3c2"
 }

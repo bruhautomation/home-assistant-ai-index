@@ -34,5 +34,10 @@
     "version": "3.25.1"
   },
   "repo": "goruck/home-generative-agent",
+  "screenshot": {
+    "commit": "ef805411de140bd6d4f9f5d91534ed4cabc60990",
+    "source": "readme",
+    "url": "https://raw.githubusercontent.com/goruck/home-generative-agent/ef805411de140bd6d4f9f5d91534ed4cabc60990/assets/create_automation.gif"
+  },
   "sha": "ef805411de140bd6d4f9f5d91534ed4cabc60990"
 }

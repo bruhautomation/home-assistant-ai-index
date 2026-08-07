@@ -1,0 +1,24 @@
+{
+  "id": "fallback-conversation",
+  "in_hacs_default": false,
+  "manifest": {
+    "domain": "fallback_conversation",
+    "evidence": {
+      "commit": "1e8e616916d5e19f315554c843036948b686c2ac",
+      "line": 15,
+      "path": "custom_components/fallback_conversation/manifest.json",
+      "repo": "m50/ha-fallback-conversation"
+    },
+    "iot_class": "local_polling",
+    "name": "Fallback Conversation Agent",
+    "requirements": [],
+    "version": "2.0.2"
+  },
+  "repo": "m50/ha-fallback-conversation",
+  "screenshot": {
+    "commit": "1e8e616916d5e19f315554c843036948b686c2ac",
+    "source": "readme",
+    "url": "https://raw.githubusercontent.com/m50/ha-fallback-conversation/1e8e616916d5e19f315554c843036948b686c2ac/images/fallback_no_debug.png"
+  },
+  "sha": "1e8e616916d5e19f315554c843036948b686c2ac"
+}

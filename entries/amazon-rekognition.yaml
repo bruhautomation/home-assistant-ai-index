@@ -1,0 +1,35 @@
+id: amazon-rekognition
+name: Amazon Rekognition
+repo: robmarkcole/HASS-amazon-rekognition
+domain: amazon_rekognition
+category: vision
+install: [hacs-integration]
+summary: Legacy image_processing platform sending camera snapshots to Amazon Rekognition for object detection; entity state counts detected targets and fires events.
+providers: [aws]
+inference: [cloud]
+capabilities:
+  reads_entity_states: false
+  reads_camera: true
+  reads_history: false
+  listens_microphone: false
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - camera snapshot bytes — to Amazon Rekognition in your configured AWS region
+  - optionally, annotated detection images to your own S3 bucket
+evidence:
+  reads_camera:
+    path: custom_components/amazon_rekognition/image_processing.py
+    line: 355
+    commit: 5c1849d63d6a0b539678d66deb2dd303e5fecd7d
+notes: >
+  From the Deepstack-era generation of vision integrations: YAML-configured,
+  built on HA's legacy image_processing platform, and effectively in
+  maintenance mode (recent activity is dependency bumps). It never scans on
+  its own — frames go to AWS only when image_processing.scan is called, which
+  keeps billing and data flow under your automations' control. AWS keys live
+  in configuration.yaml.
+added: 2026-08-07

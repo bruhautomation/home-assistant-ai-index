@@ -1,0 +1,34 @@
+id: ai-on-the-edge-device
+name: AI on the Edge Device
+repo: jomjol/AI-on-the-edge-device
+url: https://jomjol.github.io/AI-on-the-edge-device-docs/
+category: vision
+install: [external]
+summary: ESP32-CAM firmware that photographs analog water, gas, and power meters and digitizes the reading with an on-device CNN, publishing to HA via MQTT auto-discovery.
+providers: [self-hosted]
+inference: [local]
+capabilities:
+  reads_entity_states: false
+  reads_camera: false
+  reads_history: false
+  listens_microphone: false
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: true
+data_sent:
+  - meter readings and device status — to your MQTT broker (optionally your own InfluxDB or webhook)
+evidence:
+  runs_unattended:
+    path: code/components/jomjol_flowcontroll/MainFlowControl.cpp
+    line: 1682
+    commit: 384079b5d459f4730dc64d36ba4071bb02349d93
+notes: >
+  A standalone LAN device rather than HA software — it is its own camera and
+  never touches HA's. It self-runs digitization rounds on a timer and pushes
+  values over MQTT discovery; all TFLite inference happens on the ESP32, so
+  nothing leaves your network unless you add your own upload targets. Trust
+  surface is your MQTT broker and the device's web UI. Community co-maintainers
+  took over from the original author and remain active.
+added: 2026-08-07

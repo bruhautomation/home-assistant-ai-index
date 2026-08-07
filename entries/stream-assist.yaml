@@ -1,0 +1,37 @@
+id: stream-assist
+name: Stream Assist
+repo: AlexxIT/StreamAssist
+domain: stream_assist
+category: voice-stack
+install: [hacs-integration]
+summary: Turns cameras and media players into Assist voice satellites — pipes camera audio through the wake-word and STT pipeline and plays replies on a speaker.
+inference: [local, cloud]
+capabilities:
+  reads_entity_states: false
+  reads_camera: true
+  reads_history: false
+  listens_microphone: true
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - nothing by the project itself — camera audio goes to whatever engines your chosen Assist pipeline uses
+evidence:
+  reads_camera:
+    path: custom_components/stream_assist/core/__init__.py
+    line: 54
+    commit: 49fde307ea11ecd1495b2bdcff3409217fe10b10
+  listens_microphone:
+    path: custom_components/stream_assist/core/stream.py
+    line: 43
+    commit: 49fde307ea11ecd1495b2bdcff3409217fe10b10
+notes: >
+  Once its mic switch is on it holds the camera's audio stream open around the
+  clock, running wake-word detection like any satellite — the satellite just
+  happens to be your security camera. Where the audio then goes is decided by
+  the pipeline you select. Dormant: no commits since mid-2024 and a growing
+  issue backlog, though it still works for many. Its only service call is
+  playing TTS on media players.
+added: 2026-08-07

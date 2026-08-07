@@ -1,0 +1,43 @@
+id: mcp-assist
+name: MCP Assist
+repo: mike-nott/mcp-assist
+domain: mcp_assist
+category: conversation-agent
+install: [hacs-integration]
+summary: Conversation agent that gives your chosen LLM MCP tools for dynamic entity discovery, state and history reads, and service calls — local or cloud backends.
+providers: [openai, anthropic, google, openrouter, ollama, openai-compatible, self-hosted]
+inference: [local, cloud]
+capabilities:
+  reads_entity_states: true
+  reads_camera: false
+  reads_history: true
+  listens_microphone: false
+  controls_devices: true
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - conversation text and discovered entity data — to the chosen LLM API; nothing leaves with a local backend
+  - optional web-search tools send queries to Brave or DuckDuckGo
+evidence:
+  reads_entity_states:
+    path: custom_components/mcp_assist/mcp_server.py
+    line: 1493
+    commit: feff8d31761fe54a3a7ca2afd1949ad6e69dd019
+  reads_history:
+    path: custom_components/mcp_assist/mcp_server.py
+    line: 1725
+    commit: feff8d31761fe54a3a7ca2afd1949ad6e69dd019
+  controls_devices:
+    path: custom_components/mcp_assist/mcp_server.py
+    line: 1457
+    commit: feff8d31761fe54a3a7ca2afd1949ad6e69dd019
+notes: >
+  Solves the exposed-entity context-window problem with discovery tools
+  instead of dumping every entity into the prompt. Tools stay bounded by
+  Assist exposure, and there is no automation writing or file editing —
+  though run_script can invoke your scripts, which may do more. Its internal
+  MCP server also listens on TCP 8090 with an IP allowlist that defaults to
+  localhost only.
+added: 2026-08-07

@@ -1,0 +1,22 @@
+{
+  "id": "hass-mcp-server",
+  "in_hacs_default": true,
+  "manifest": {
+    "domain": "mcp_server_http_transport",
+    "evidence": {
+      "commit": "ecbbc3ac589fd2cdcadc4897db75ef973bce7fb5",
+      "line": 10,
+      "path": "custom_components/mcp_server_http_transport/manifest.json",
+      "repo": "ganhammar/hass-mcp-server"
+    },
+    "iot_class": "local_push",
+    "name": "MCP Server (HTTP Transport)",
+    "requirements": [
+      "mcp>=1.0.0",
+      "python-dateutil>=2.9.0"
+    ],
+    "version": "1.14.0"
+  },
+  "repo": "ganhammar/hass-mcp-server",
+  "sha": "ecbbc3ac589fd2cdcadc4897db75ef973bce7fb5"
+}

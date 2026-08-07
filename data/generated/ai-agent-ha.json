@@ -1,0 +1,26 @@
+{
+  "id": "ai-agent-ha",
+  "in_hacs_default": true,
+  "manifest": {
+    "domain": "ai_agent_ha",
+    "evidence": {
+      "commit": "b1ec82cbb6c8800aea816000b446856f5e893ff1",
+      "line": 18,
+      "path": "custom_components/ai_agent_ha/manifest.json",
+      "repo": "sbenodiz/ai_agent_ha"
+    },
+    "iot_class": "cloud_polling",
+    "name": "AI Agent HA",
+    "requirements": [
+      "aiohttp>=3.8.0"
+    ],
+    "version": "1.14.1"
+  },
+  "repo": "sbenodiz/ai_agent_ha",
+  "screenshot": {
+    "commit": "b1ec82cbb6c8800aea816000b446856f5e893ff1",
+    "source": "readme",
+    "url": "https://raw.githubusercontent.com/sbenodiz/ai_agent_ha/b1ec82cbb6c8800aea816000b446856f5e893ff1/image/Screenshot2.png"
+  },
+  "sha": "b1ec82cbb6c8800aea816000b446856f5e893ff1"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "voice-satellite",
+  "in_hacs_default": true,
+  "manifest": {
+    "domain": "voice_satellite",
+    "evidence": {
+      "commit": "8af37123aaf813663959484b7f41fde6fbf63839",
+      "line": 17,
+      "path": "custom_components/voice_satellite/manifest.json",
+      "repo": "jxlarrea/voice-satellite-card-integration"
+    },
+    "iot_class": "local_push",
+    "name": "Voice Satellite",
+    "requirements": [
+      "mutagen>=1.47.0"
+    ],
+    "version": "2026.8.4"
+  },
+  "repo": "jxlarrea/voice-satellite-card-integration",
+  "screenshot": {
+    "commit": "8af37123aaf813663959484b7f41fde6fbf63839",
+    "source": "readme",
+    "url": "https://raw.githubusercontent.com/jxlarrea/voice-satellite-card-integration/refs/heads/main/assets/banner.png"
+  },
+  "sha": "8af37123aaf813663959484b7f41fde6fbf63839"
+}

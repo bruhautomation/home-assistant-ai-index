@@ -1,0 +1,33 @@
+id: whisper-cloud-stt
+name: OpenAI Whisper Cloud STT
+repo: fabio-garavini/ha-openai-whisper-stt-api
+domain: openai_whisper_cloud
+category: voice-stack
+install: [hacs-integration]
+summary: STT entity that records each Assist voice command as WAV and posts it to OpenAI, Groq, Mistral, Cohere, or any OpenAI-compatible transcription endpoint.
+providers: [openai, groq, mistral, cohere, openai-compatible]
+inference: [cloud, local]
+capabilities:
+  reads_entity_states: false
+  reads_camera: false
+  reads_history: false
+  listens_microphone: true
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - the full audio of every voice command, as a WAV upload — to the provider you configure
+evidence:
+  listens_microphone:
+    path: custom_components/openai_whisper_cloud/stt.py
+    line: 146
+    commit: fde9d1c114568eb4a2aafff2cfeb16300258eb39
+notes: >
+  The cloud inverse of the Whisper add-on: the complete recording of each
+  command leaves your host per request. The "custom" provider accepts any
+  OpenAI-compatible URL, so pointing it at a self-hosted Whisper server keeps
+  audio on your network — that choice, not the integration, decides where your
+  voice goes. Only ever invoked by the pipeline.
+added: 2026-08-07

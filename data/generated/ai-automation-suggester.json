@@ -24,5 +24,10 @@
     "version": "1.5.10"
   },
   "repo": "ITSpecialist111/ai_automation_suggester",
+  "screenshot": {
+    "commit": "054f5d54b5b127678bbc8b4fed3c49eade9e7b43",
+    "source": "readme",
+    "url": "https://raw.githubusercontent.com/ITSpecialist111/ai_automation_suggester/main/Screenshot%202025-01-19%20082247-1.png"
+  },
   "sha": "054f5d54b5b127678bbc8b4fed3c49eade9e7b43"
 }

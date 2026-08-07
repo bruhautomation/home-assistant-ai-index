@@ -1,0 +1,32 @@
+{
+  "addon": {
+    "apparmor_profile": false,
+    "commit": "2bc5dda06bada6d3f719c6446f17cfea39872f4f",
+    "config_path": "vosk/config.yaml",
+    "path": "vosk",
+    "permissions": [
+      {
+        "description": "mapped Home Assistant folders",
+        "evidence": {
+          "commit": "2bc5dda06bada6d3f719c6446f17cfea39872f4f",
+          "line": 14,
+          "path": "vosk/config.yaml",
+          "repo": "rhasspy/hassio-addons"
+        },
+        "key": "map",
+        "value": [
+          "share:rw"
+        ]
+      }
+    ],
+    "repo": "rhasspy/hassio-addons",
+    "supervisor_rating": {
+      "breakdown": [],
+      "value": 5
+    },
+    "version": "1.6.1"
+  },
+  "id": "wyoming-vosk",
+  "repo": "rhasspy/wyoming-vosk",
+  "sha": "335a4744d2d0d67624386338e8656f40a3294626"
+}

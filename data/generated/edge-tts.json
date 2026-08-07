@@ -1,0 +1,21 @@
+{
+  "id": "edge-tts",
+  "in_hacs_default": true,
+  "manifest": {
+    "domain": "edge_tts",
+    "evidence": {
+      "commit": "d8dfb6db89c156537863604f3efe120394d880c3",
+      "line": 9,
+      "path": "custom_components/edge_tts/manifest.json",
+      "repo": "hasscc/hass-edge-tts"
+    },
+    "iot_class": "cloud_polling",
+    "name": "Microsoft Edge TTS",
+    "requirements": [
+      "edge-tts>=7.2.0"
+    ],
+    "version": "0.7.7"
+  },
+  "repo": "hasscc/hass-edge-tts",
+  "sha": "d8dfb6db89c156537863604f3efe120394d880c3"
+}

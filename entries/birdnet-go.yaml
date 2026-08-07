@@ -1,0 +1,45 @@
+id: birdnet-go
+name: BirdNET-Go
+repo: tphakala/birdnet-go
+category: vision
+install: [addon, container]
+addon_config:
+  repo: alexbelgium/hassio-addons
+  path: birdnet-go
+summary: Realtime bird-sound classifier — continuously analyzes microphone or camera (RTSP) audio with local BirdNET models and publishes detections to HA via MQTT discovery.
+providers: [self-hosted]
+inference: [local]
+capabilities:
+  reads_entity_states: false
+  reads_camera: true
+  reads_history: false
+  listens_microphone: true
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: true
+data_sent:
+  - nothing by default — detection is fully local
+  - opt-in BirdWeather sharing uploads detections and audio snippets to app.birdweather.com
+evidence:
+  listens_microphone:
+    path: internal/audiocore/capture.go
+    line: 420
+    commit: 606040c2edb43e933442abacd2c64e84db0a9213
+  reads_camera:
+    path: internal/audiocore/ffmpeg/process.go
+    line: 64
+    commit: 606040c2edb43e933442abacd2c64e84db0a9213
+  runs_unattended:
+    path: internal/analysis/audio_pipeline_service.go
+    line: 139
+    commit: 606040c2edb43e933442abacd2c64e84db0a9213
+notes: >
+  The acoustic sibling of Frigate: an always-on pipeline classifying your
+  home's audio locally (TensorFlow Lite), not a voice assistant — filed under
+  perception. It can take audio from RTSP camera streams (video is dropped)
+  as well as microphones. Nothing leaves your network unless you opt into
+  BirdWeather sharing or error telemetry. Very active development; packaged
+  for HA in alexbelgium's add-on repository.
+added: 2026-08-07

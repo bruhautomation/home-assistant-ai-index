@@ -63,7 +63,7 @@ Maintainer corrections get priority handling, and a disputed flag is marked ⚠�
 on the site immediately while it is resolved.
 
 <!-- BEGIN GENERATED -->
-**32 projects indexed**, metrics harvested 2026-08-07. Sorted by name — never by stars. [Filter, compare, and see the evidence on the site →](https://bruhautomation.github.io/home-assistant-ai-index/)
+**51 projects indexed**, metrics harvested 2026-08-07. Sorted by name — never by stars. [Filter, compare, and see the evidence on the site →](https://bruhautomation.github.io/home-assistant-ai-index/)
 
 ### Conversation agents
 
@@ -72,11 +72,15 @@ on the site immediately while it is resolved.
 | [Anthropic Claude](https://github.com/home-assistant/core) | 📖🎛️ | ☁️ cloud | core | part of core | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/anthropic-conversation/) |
 | [Azure OpenAI Conversation](https://github.com/joselcaguilar/azure-openai-ha) | 📖🎛️ | ☁️ cloud | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/azure-openai-conversation/) |
 | [Extended OpenAI Conversation](https://github.com/jekalmin/extended_openai_conversation) | 📖📜🎛️⚙️📝⚡ | 🏠/☁️ choice | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/extended-openai-conversation/) |
+| [Fallback Conversation Agent](https://github.com/m50/ha-fallback-conversation) | — | 🏠/☁️ choice | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/fallback-conversation/) |
 | [Google Generative AI](https://github.com/home-assistant/core) | 📖🎛️ | ☁️ cloud | core | part of core | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/google-generative-ai/) |
 | [Home LLM](https://github.com/acon96/home-llm) | 📖🎛️ | 🏠/☁️ choice | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/home-llm/) |
+| [MCP Assist](https://github.com/mike-nott/mcp-assist) | 📖📜🎛️ | 🏠/☁️ choice | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/mcp-assist/) |
+| [Mistral AI Conversation](https://github.com/Elijaht-dev/mistralai-conversation) | 📖🎙️🎛️ | ☁️ cloud | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/mistral-conversation/) |
 | [Ollama](https://github.com/home-assistant/core) | 📖🎛️ | 🏠 local | core | part of core | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/ollama-conversation/) |
 | [OpenAI Conversation](https://github.com/home-assistant/core) | 📖🎛️ | ☁️ cloud | core | part of core | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/openai-conversation/) |
 | [OpenRouter](https://github.com/home-assistant/core) | 📖🎛️ | ☁️ cloud | core | part of core | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/openrouter-conversation/) |
+| [xAI Grok Conversation](https://github.com/braytonstafford/grok_conversation) | 📖🎛️ | ☁️ cloud | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/grok-conversation/) |
 
 ### Agent platforms
 
@@ -89,13 +93,18 @@ on the site immediately while it is resolved.
 
 | Name | Capabilities | Inference | Install | Health | |
 |---|---|---|---|---|---|
+| [AI on the Edge Device](https://github.com/jomjol/AI-on-the-edge-device) | ⏰ | 🏠 local | external | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/ai-on-the-edge-device/) |
+| [Amazon Rekognition](https://github.com/robmarkcole/HASS-amazon-rekognition) | 📷 | ☁️ cloud | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/amazon-rekognition/) |
+| [BirdNET-Go](https://github.com/tphakala/birdnet-go) | 📷🎙️⏰ | 🏠 local | add-on, container | 🛡️ 7/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/birdnet-go/) |
 | [Frigate](https://github.com/blakeblackshear/frigate) | 📷🎙️⏰ | 🏠/☁️ choice | add-on, container | 🛡️ 6/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/frigate/) |
 | [LLM Vision](https://github.com/valentinfrlch/ha-llmvision) | 📷 | 🏠/☁️ choice | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/llm-vision/) |
+| [Ollama Vision](https://github.com/remimikalsen/ollama_vision) | 📷 | 🏠 local | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/ollama-vision/) |
 
 ### Automation authoring
 
 | Name | Capabilities | Inference | Install | Health | |
 |---|---|---|---|---|---|
+| [AI Agent HA](https://github.com/sbenodiz/ai_agent_ha) | 📖📜🎛️⚙️📝 | 🏠/☁️ choice | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/ai-agent-ha/) |
 | [AI Automation Suggester](https://github.com/ITSpecialist111/ai_automation_suggester) | 📖 | 🏠/☁️ choice | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/ai-automation-suggester/) |
 
 ### Model Context Protocol
@@ -104,7 +113,10 @@ on the site immediately while it is resolved.
 |---|---|---|---|---|---|
 | [hass-mcp](https://github.com/voska/hass-mcp) | 📖📜🎛️ | 🏠/☁️ choice | container, external | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/hass-mcp/) |
 | [MCP Server (core)](https://github.com/home-assistant/core) | 📖🎛️ | 🏠/☁️ choice | core | part of core | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/mcp-server/) |
+| [MCP Server (HTTP Transport)](https://github.com/ganhammar/hass-mcp-server) | 📖📜📷🎛️⚙️📝 | 🏠/☁️ choice | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/hass-mcp-server/) |
+| [MCP Server for Xiaozhi](https://github.com/c1pher-cn/ha-mcp-for-xiaozhi) | 📖🎛️ | 🏠/☁️ choice | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/ha-mcp-for-xiaozhi/) |
 | [Model Context Protocol (client)](https://github.com/home-assistant/core) | — | 🏠/☁️ choice | core | part of core | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/mcp-client/) |
+| [Xiaozhi MCP](https://github.com/mac8005/xiaozhi-mcp-ha) | 📖🎛️ | 🏠/☁️ choice | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/xiaozhi-mcp/) |
 
 ### Agent tools & frameworks
 
@@ -126,13 +138,19 @@ on the site immediately while it is resolved.
 | [Assist Microphone](https://github.com/home-assistant/addons) | 🎙️ | 🏠 local | add-on | official add-on · 🛡️ 5/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/assist-microphone/) |
 | [ElevenLabs](https://github.com/home-assistant/core) | 🎙️ | ☁️ cloud | core | part of core | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/elevenlabs/) |
 | [Google Cloud (STT/TTS)](https://github.com/home-assistant/core) | 🎙️ | ☁️ cloud | core | part of core | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/google-cloud-speech/) |
+| [Microsoft Edge TTS](https://github.com/hasscc/hass-edge-tts) | — | ☁️ cloud | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/edge-tts/) |
 | [microWakeWord](https://github.com/kahrendt/microWakeWord) | 🎙️ | 🏠 local | external | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/microwakeword/) |
 | [OpenAI TTS](https://github.com/sfortis/openai_tts) | — | ☁️ cloud | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/openai-tts/) |
+| [OpenAI Whisper Cloud STT](https://github.com/fabio-garavini/ha-openai-whisper-stt-api) | 🎙️ | 🏠/☁️ choice | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/whisper-cloud-stt/) |
 | [openWakeWord](https://github.com/rhasspy/wyoming-openwakeword) | 🎙️ | 🏠 local | add-on, container | 🛡️ 5/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/openwakeword-addon/) |
 | [Piper (text-to-speech)](https://github.com/rhasspy/wyoming-piper) | — | 🏠 local | add-on, container | 🛡️ 5/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/piper-addon/) |
 | [Speech-to-Phrase](https://github.com/OHF-Voice/speech-to-phrase) | 📖🎙️ | 🏠 local | add-on, container | 🛡️ 5/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/speech-to-phrase/) |
+| [Stream Assist](https://github.com/AlexxIT/StreamAssist) | 📷🎙️ | 🏠/☁️ choice | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/stream-assist/) |
 | [Voice Preview Edition (firmware)](https://github.com/esphome/home-assistant-voice-pe) | 🎙️ | 🏠 local | external | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/voice-pe-firmware/) |
+| [Voice Satellite](https://github.com/jxlarrea/voice-satellite-card-integration) | 🎙️ | 🏠 local | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/voice-satellite/) |
+| [Vosk (speech-to-text)](https://github.com/rhasspy/wyoming-vosk) | 🎙️ | 🏠 local | add-on, container | 🛡️ 5/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/wyoming-vosk/) |
 | [Whisper (speech-to-text)](https://github.com/rhasspy/wyoming-faster-whisper) | 🎙️ | 🏠 local | add-on, container | 🛡️ 5/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/whisper-addon/) |
+| [Willow](https://github.com/toverainc/willow) | 📖🎙️ | 🏠/☁️ choice | external | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/willow/) |
 | [Wyoming Satellite](https://github.com/rhasspy/wyoming-satellite) | 🎙️ | 🏠 local | external | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/wyoming-satellite/) |
 
 ### Dashboards & UI
@@ -145,6 +163,7 @@ on the site immediately while it is resolved.
 
 | Name | Capabilities | Inference | Install | Health | |
 |---|---|---|---|---|---|
+| [HA Text AI](https://github.com/smkrv/ha-text-ai) | — | 🏠/☁️ choice | HACS | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/ha-text-ai/) |
 | [Marlin Analyzer](https://github.com/kotope/marlin-ha-integration) | 📷⏰ | 🏠/☁️ choice | HACS, container | — | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/marlin-analyzer/) |
 <!-- END GENERATED -->
 

@@ -1,13 +1,263 @@
 {
   "api_authenticated": true,
-  "changed": 1,
-  "entries": 1,
+  "changed": 25,
+  "entries": 51,
   "errors": [
+    {
+      "error": "rate limited (403)",
+      "id": "ai-agent-ha",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "ai-automation-suggester",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "ai-on-the-edge-device",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "ai-task",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "amazon-rekognition",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "anthropic-conversation",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "assist-microphone",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "azure-openai-conversation",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "birdnet-go",
+      "stage": "repo_meta"
+    },
     {
       "error": "rate limited (403)",
       "id": "brain",
       "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "edge-tts",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "elevenlabs",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "extended-openai-conversation",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "fallback-conversation",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "frigate",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "google-cloud-speech",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "google-generative-ai",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "grok-conversation",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "ha-mcp-for-xiaozhi",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "ha-text-ai",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "hass-mcp-server",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "hass-mcp",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "home-generative-agent",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "home-llm",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "llm-vision",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "localai",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "marlin-analyzer",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "mcp-assist",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "mcp-client",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "mcp-server",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "microwakeword",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "mistral-conversation",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "ollama-conversation",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "ollama-server",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "ollama-vision",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "openai-conversation",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "openai-tts",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "openrouter-conversation",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "openwakeword-addon",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "piper-addon",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "speech-to-phrase",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "stream-assist",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "view-assist",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "voice-pe-firmware",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "voice-satellite",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "whisper-addon",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "whisper-cloud-stt",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "willow",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "wyoming-satellite",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "wyoming-vosk",
+      "stage": "repo_meta"
+    },
+    {
+      "error": "rate limited (403)",
+      "id": "xiaozhi-mcp",
+      "stage": "repo_meta"
     }
   ],
-  "harvested_at": "2026-08-07T02:34:56Z"
+  "harvested_at": "2026-08-07T02:54:02Z"
 }

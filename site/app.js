@@ -4,8 +4,9 @@
 
 const DATA = JSON.parse(document.getElementById("data").textContent);
 const CAPS = DATA.capabilities;
-const ICONS = DATA.capability_icons;
 const LABELS = DATA.capability_labels;
+const TIPS = DATA.capability_tips || {};
+const SVGS = DATA.capability_svgs || {};
 const CATS = DATA.categories;
 
 const INSTALL_LABELS = {
@@ -15,6 +16,10 @@ const INSTALL_LABELS = {
   "container": "container",
   "external": "external",
 };
+
+const svg = (name, cls = "ic") => SVGS[name]
+  ? `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${SVGS[name]}</svg>`
+  : "";
 
 const state = {
   q: "",
@@ -98,15 +103,16 @@ const esc = (s) => String(s).replace(/[&<>"']/g, (c) =>
 function capIcons(entry) {
   const disputed = new Set(entry.disputed || []);
   return CAPS.filter((c) => entry.capabilities[c])
-    .map((c) => `<span title="${esc(LABELS[c])}">${ICONS[c]}${disputed.has(c) ? "⚠️" : ""}</span>`)
-    .join("") || "—";
+    .map((c) => `<span class="capic${disputed.has(c) ? " disputed" : ""}" data-tip="${esc(LABELS[c])}${disputed.has(c) ? " (disputed)" : ""}" tabindex="0">${svg(c)}</span>`)
+    .join("") || '<span class="none">—</span>';
 }
 
 function inferenceLabel(entry) {
   const inf = new Set(entry.inference || []);
-  if (inf.has("local") && inf.has("cloud")) return "🏠/☁️";
-  if (inf.has("local")) return "🏠 local";
-  return "☁️ cloud";
+  if (inf.has("local") && inf.has("cloud"))
+    return `<span class="inf" data-tip="local or cloud — your choice of backend decides">${svg("local")}/${svg("cloud")}</span>`;
+  if (inf.has("local")) return `<span class="inf" data-tip="model runs on your hardware">${svg("local")} local</span>`;
+  return `<span class="inf" data-tip="model runs on someone else's servers">${svg("cloud")} cloud</span>`;
 }
 
 function starsLabel(entry) {
@@ -125,32 +131,32 @@ function renderTable() {
 
   const arrow = (key) => (state.sort.key === key ? (state.sort.dir > 0 ? " ↑" : " ↓") : "");
   document.querySelector("#index thead").innerHTML = `<tr>
-    <th title="select to compare"></th>
+    <th class="cmpcol" data-tip="tick to compare"></th>
     <th data-sort="name">Name${arrow("name")}</th>
     <th data-sort="category">Category${arrow("category")}</th>
     <th>Capabilities</th>
     <th>Inference</th>
     <th>Install</th>
-    <th data-sort="stars">★${arrow("stars")}</th>
+    <th data-sort="stars" data-tip="GitHub stars">${svg("star")}${arrow("stars")}</th>
     <th data-sort="updated">Updated${arrow("updated")}</th>
-    <th data-sort="rating" title="Supervisor add-on security rating">🛡️${arrow("rating")}</th>
+    <th data-sort="rating" data-tip="Supervisor add-on security rating">${svg("shield")}${arrow("rating")}</th>
   </tr>`;
 
   document.querySelector("#index tbody").innerHTML = rows.map((entry) => {
     const meta = (entry.generated && entry.generated.repo_meta) || {};
     const addon = entry.generated && entry.generated.addon;
-    const archived = meta.archived ? " ⚠️<small>archived</small>" : "";
+    const archived = meta.archived ? ' <span class="archived" data-tip="repository is archived — no longer maintained">archived</span>' : "";
     return `<tr>
-      <td><input type="checkbox" data-compare="${esc(entry.id)}" ${state.compare.has(entry.id) ? "checked" : ""}></td>
-      <td><a href="./entries/${esc(entry.id)}/">${esc(entry.name)}</a>${archived}
+      <td class="cmpcol"><input type="checkbox" data-compare="${esc(entry.id)}" aria-label="compare ${esc(entry.name)}" ${state.compare.has(entry.id) ? "checked" : ""}></td>
+      <td data-label="Project"><a href="./entries/${esc(entry.id)}/">${esc(entry.name)}</a>${archived}
           <span class="sub">${esc(entry.summary)}</span></td>
-      <td><span class="chip">${esc(CATS[entry.category])}</span></td>
-      <td class="capcell">${capIcons(entry)}</td>
-      <td class="nowrap">${inferenceLabel(entry)}</td>
-      <td>${entry.install.map((i) => INSTALL_LABELS[i]).join(", ")}</td>
-      <td class="nowrap">${starsLabel(entry)}</td>
-      <td class="nowrap">${meta.pushed_at ? meta.pushed_at.slice(0, 10) : "—"}</td>
-      <td class="nowrap">${addon ? addon.supervisor_rating.value + "/8" : "—"}</td>
+      <td data-label="Category"><span class="chip">${esc(CATS[entry.category])}</span></td>
+      <td data-label="Capabilities" class="capcell">${capIcons(entry)}</td>
+      <td data-label="Inference" class="nowrap">${inferenceLabel(entry)}</td>
+      <td data-label="Install">${entry.install.map((i) => INSTALL_LABELS[i]).join(", ")}</td>
+      <td data-label="Stars" class="nowrap">${starsLabel(entry)}</td>
+      <td data-label="Updated" class="nowrap">${meta.pushed_at ? meta.pushed_at.slice(0, 10) : "—"}</td>
+      <td data-label="Add-on rating" class="nowrap">${addon ? addon.supervisor_rating.value + "/8" : "—"}</td>
     </tr>`;
   }).join("");
 
@@ -163,26 +169,30 @@ function renderTable() {
 function renderFilters() {
   const capBtn = (cap) => {
     const mode = state.caps[cap] || "";
-    return `<button data-cap="${cap}" class="${mode}"
-      title="click: must have · click again: must NOT have · again: any">${ICONS[cap]} ${esc(LABELS[cap])}</button>`;
+    const modeTip = mode === "require" ? "required — click for exclude"
+      : mode === "exclude" ? "excluded — click to reset"
+      : "click to require";
+    return `<button data-cap="${cap}" class="fchip ${mode}" aria-pressed="${mode ? "true" : "false"}"
+      data-tip="${esc(TIPS[cap] || LABELS[cap])} (${modeTip})">${svg(cap)}<span>${esc(LABELS[cap])}</span><b class="st"></b></button>`;
   };
+  const infBtn = (value, label, tip) =>
+    `<button data-inf="${value}" class="seg ${state.inference === value ? "on" : ""}" data-tip="${esc(tip)}">${label}</button>`;
   document.getElementById("filters").innerHTML = `
-  <div class="group"><span class="label">Search</span>
-    <input type="search" id="q" placeholder="name, summary, provider…" value="${esc(state.q)}"></div>
-  <div class="group"><span class="label">Category</span>
+  <div class="frow search"><label class="searchbox">${svg("search")}
+    <input type="search" id="q" placeholder="Search name, summary, provider…" value="${esc(state.q)}" aria-label="Search"></label>
+    <span class="hint">Capability filters cycle: <b class="eg req">require</b> → <b class="eg exc">exclude</b> → off</span></div>
+  <div class="frow"><span class="flabel">Capabilities</span><div class="fset">${CAPS.map(capBtn).join("")}</div></div>
+  <div class="frow"><span class="flabel">Category</span><div class="fset">
     ${Object.entries(CATS).map(([id, title]) =>
-      `<button data-cat="${id}" class="${state.cats.has(id) ? "on" : ""}">${esc(title)}</button>`).join("")}</div>
-  <div class="group"><span class="label">Capability</span>${CAPS.map(capBtn).join("")}</div>
-  <div class="group"><span class="label">Inference</span>
-    <select id="inference">
-      <option value="any" ${state.inference === "any" ? "selected" : ""}>any</option>
-      <option value="local-only" ${state.inference === "local-only" ? "selected" : ""}>🏠 local only — cloud not even possible</option>
-      <option value="local-possible" ${state.inference === "local-possible" ? "selected" : ""}>🏠 can run local</option>
-      <option value="cloud-possible" ${state.inference === "cloud-possible" ? "selected" : ""}>☁️ can use cloud</option>
-    </select></div>
-  <div class="group"><span class="label">Install</span>
+      `<button data-cat="${id}" class="fchip cat ${state.cats.has(id) ? "on" : ""}">${esc(title)}</button>`).join("")}</div></div>
+  <div class="frow"><span class="flabel">Inference</span><div class="fset seggroup" role="group">
+    ${infBtn("any", "any", "no inference filter")}
+    ${infBtn("local-only", `${svg("local")} local only`, "cloud not even possible — inference stays on your hardware")}
+    ${infBtn("local-possible", `${svg("local")} can run local`, "a local backend is one of the options")}
+    ${infBtn("cloud-possible", `${svg("cloud")} can use cloud`, "a cloud backend is one of the options")}</div></div>
+  <div class="frow"><span class="flabel">Install</span><div class="fset">
     ${Object.entries(INSTALL_LABELS).map(([id, label]) =>
-      `<button data-install="${id}" class="${state.installs.has(id) ? "on" : ""}">${esc(label)}</button>`).join("")}</div>`;
+      `<button data-install="${id}" class="fchip ${state.installs.has(id) ? "on" : ""}">${esc(label)}</button>`).join("")}</div></div>`;
 }
 
 /* ---------- compare ---------- */
@@ -200,14 +210,14 @@ function openCompare() {
   let html = `<table><thead><tr><th></th>${chosen.map((e) =>
     `<th><a href="./entries/${esc(e.id)}/">${esc(e.name)}</a></th>`).join("")}</tr></thead><tbody>`;
   for (const cap of CAPS)
-    html += row(`${ICONS[cap]} ${esc(LABELS[cap])}`, chosen.map((e) =>
+    html += row(`${svg(cap)} ${esc(LABELS[cap])}`, chosen.map((e) =>
       e.capabilities[cap] ? '<span class="yes">yes</span>' : '<span class="no">—</span>'));
   html += row("inference", chosen.map(inferenceLabel));
   html += row("install", chosen.map((e) => e.install.map((i) => INSTALL_LABELS[i]).join(", ")));
   html += row("providers", chosen.map((e) => (e.providers || []).join(", ") || "—"));
-  html += row("🛡️ add-on rating", chosen.map((e) =>
+  html += row(`${svg("shield")} add-on rating`, chosen.map((e) =>
     e.generated && e.generated.addon ? e.generated.addon.supervisor_rating.value + "/8" : "—"));
-  html += row("★ stars", chosen.map(starsLabel));
+  html += row(`${svg("star")} stars`, chosen.map(starsLabel));
   html += "</tbody></table>";
   document.getElementById("comparebody").innerHTML = html;
   document.getElementById("comparedlg").showModal();
@@ -250,6 +260,9 @@ document.addEventListener("click", (event) => {
     else if (mode === "require") state.caps[cap] = "exclude";
     else delete state.caps[cap];
     renderFilters(); renderTable();
+  } else if (target.dataset.inf !== undefined) {
+    state.inference = target.dataset.inf;
+    renderFilters(); renderTable();
   } else if (target.dataset.install !== undefined) {
     state.installs.has(target.dataset.install)
       ? state.installs.delete(target.dataset.install)
@@ -270,7 +283,6 @@ document.addEventListener("click", (event) => {
 
 document.addEventListener("input", (event) => {
   if (event.target.id === "q") { state.q = event.target.value; renderTable(); }
-  if (event.target.id === "inference") { state.inference = event.target.value; renderTable(); }
 });
 
 document.addEventListener("change", (event) => {

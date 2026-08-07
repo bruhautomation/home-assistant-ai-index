@@ -21,6 +21,7 @@ from pathlib import Path
 from common import (
     CAP_ICONS,
     CAP_LABELS,
+    CAP_TIPS,
     CAPABILITIES,
     CATEGORIES,
     CATEGORY_TITLES,
@@ -30,6 +31,33 @@ from common import (
     load_generated,
     load_summary,
 )
+
+# Inline SVG icon set (24px grid, stroke-based, currentColor). One coherent
+# family instead of emoji, so icons render identically everywhere and pick up
+# the text color in both themes.
+SVG_PATHS = {
+    "reads_entity_states": '<path d="M12 6.6C10.8 5 8.9 4 6.8 4H3v14.5h4.2c1.8 0 3.6.7 4.8 2 1.2-1.3 3-2 4.8-2H21V4h-3.8c-2.1 0-4 1-5.2 2.6z"/><path d="M12 6.6V20"/>',
+    "reads_history": '<path d="M3.8 12a8.4 8.4 0 1 0 2.3-5.7L3.8 8.6"/><path d="M3.8 3.6v5h5"/><path d="M12 7.6V12l3 2"/>',
+    "reads_camera": '<path d="M3 8h3.2l1.9-2.6h7.8L17.8 8H21v11H3z"/><circle cx="12" cy="13.2" r="3.4"/>',
+    "listens_microphone": '<rect x="9" y="2.5" width="6" height="11.5" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0"/><path d="M12 18v3.5"/>',
+    "controls_devices": '<path d="M4 7h8m5.4 0H20M4 12h3m5.4 0H20M4 17h11m5.4 0H20"/><circle cx="14.7" cy="7" r="2.2"/><circle cx="9.7" cy="12" r="2.2"/><circle cx="17.7" cy="17" r="2.2"/>',
+    "creates_automations": '<rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="M12 8.5v7M8.5 12h7"/>',
+    "edits_files": '<path d="M13 4H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/><path d="M17.8 3.2a2.05 2.05 0 0 1 2.9 2.9L14 12.8l-3.7.8.8-3.7z"/>',
+    "executes_code": '<rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m6.5 9.5 3.5 2.7-3.5 2.7M12.8 15h4.7"/>',
+    "runs_unattended": '<circle cx="12" cy="12" r="8.8"/><path d="M10.2 8.7v6.6l5.4-3.3z"/>',
+    "local": '<path d="M3.5 10.8 12 3.5l8.5 7.3"/><path d="M5.5 9.3V20h13V9.3"/>',
+    "cloud": '<path d="M17.3 18.5H7a4.2 4.2 0 0 1-.6-8.4 6 6 0 0 1 11.6 1.6 3.4 3.4 0 0 1-.7 6.8z"/>',
+    "shield": '<path d="M12 3 5 5.8v5.4c0 4.3 2.9 7.6 7 9.3 4.1-1.7 7-5 7-9.3V5.8z"/>',
+    "star": '<path d="m12 3.5 2.6 5.4 5.9.8-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8L3.5 9.7l5.9-.8z"/>',
+    "search": '<circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.4-4.4"/>',
+    "warn": '<path d="M12 3.5 2.5 20h19z"/><path d="M12 9.5v4.5"/><circle cx="12" cy="17" r="0.4"/>',
+}
+
+
+def svg(name: str, cls: str = "ic") -> str:
+    return (f'<svg class="{cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+            f'stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" '
+            f'aria-hidden="true">{SVG_PATHS[name]}</svg>')
 
 SITE_DIR = ROOT / "site"
 OUT = ROOT / "_site"
@@ -72,6 +100,8 @@ def build_data() -> dict:
         "sensitive_capabilities": SENSITIVE,
         "capability_labels": CAP_LABELS,
         "capability_icons": CAP_ICONS,
+        "capability_tips": CAP_TIPS,
+        "capability_svgs": SVG_PATHS,
         "categories": {c: CATEGORY_TITLES[c] for c in CATEGORIES},
         "entries": merged,
     }
@@ -114,19 +144,29 @@ def correction_url(entry_id: str) -> str:
 def build_index(data: dict) -> str:
     payload = json.dumps(data, ensure_ascii=False, sort_keys=True)
     payload = payload.replace("</", "<\\/")  # keep the inline JSON script-safe
+    tips = "".join(
+        f'<li>{svg(c)}<div><strong>{esc(CAP_LABELS[c])}</strong> — {esc(CAP_TIPS[c])}</div></li>'
+        for c in CAPABILITIES
+    )
     body = f"""<header class="hero">
-  <h1>Home Assistant AI Index</h1>
-  <p class="tag"><strong>What can this thing reach?</strong> Capability and data-flow facts for every way to
-  hook AI into Home Assistant — cited to source at a pinned commit.</p>
-  <nav><a href="{REPO_URL}">GitHub</a> · <a href="./data.json">data.json</a> ·
-  <a href="{REPO_URL}#this-is-wrong-about-my-project">report an error</a></nav>
+  <div class="herotop">
+    <h1>Home Assistant AI Index</h1>
+    <nav><a href="{REPO_URL}">GitHub</a><a href="./data.json">data</a><a href="{REPO_URL}#this-is-wrong-about-my-project">report an error</a></nav>
+  </div>
+  <p class="tag"><strong>What can this thing reach?</strong> Every AI project for Home Assistant,
+  with its real capabilities cited to source.</p>
+  <details class="howto"><summary>How to read the capability icons</summary>
+    <ul class="tiplist">{tips}</ul>
+    <p>Every icon on a sensitive claim links to the exact line of source that implements it,
+    pinned to a commit. Hover any icon or filter for its meaning.</p>
+  </details>
 </header>
 <section class="presets" aria-label="Preset questions">
-  <button data-preset="cameras">📷 What can see my cameras?</button>
-  <button data-preset="localonly">🏠 100% local only</button>
-  <button data-preset="autonomous">⏰ Acts on its own</button>
-  <button data-preset="cloudcamera">☁️📷 Camera frames leave home</button>
-  <button data-preset="clear">✕ Clear filters</button>
+  <button data-preset="cameras">{svg("reads_camera")} Can see my cameras</button>
+  <button data-preset="localonly">{svg("local")} 100% local</button>
+  <button data-preset="autonomous">{svg("runs_unattended")} Acts on its own</button>
+  <button data-preset="cloudcamera">{svg("cloud")} Camera frames leave home</button>
+  <button data-preset="clear" class="ghost">Clear filters</button>
 </section>
 <section class="filters" id="filters"></section>
 <p class="count" id="count"></p>
@@ -160,14 +200,14 @@ def cap_rows(entry: dict) -> str:
     for cap in CAPABILITIES:
         value = entry["capabilities"].get(cap, False)
         cells = [
-            f"<td>{CAP_ICONS[cap]} {esc(CAP_LABELS[cap])}</td>",
-            f'<td class="{"yes" if value else "no"}">{"yes" if value else "no"}</td>',
+            f'<td><span class="capname" data-tip="{esc(CAP_TIPS[cap])}">{svg(cap)} {esc(CAP_LABELS[cap])}</span></td>',
+            f'<td><span class="pill {"yes" if value else "no"}">{"yes" if value else "no"}</span></td>',
         ]
         extra = []
         if cap in evidence:
             extra.append(f'<a href="{evidence_url(entry, evidence[cap])}">source ↗</a>')
         if cap in disputed:
-            extra.append(f'<span class="disputed">⚠️ disputed — <a href="{correction_url(entry["id"])}">see corrections</a></span>')
+            extra.append(f'<span class="disputed">disputed — <a href="{correction_url(entry["id"])}">see corrections</a></span>')
         cells.append(f"<td>{' · '.join(extra)}</td>")
         rows.append(f"<tr>{''.join(cells)}</tr>")
     return "\n".join(rows)
@@ -268,6 +308,13 @@ def build_entry_page(entry: dict, harvested_at: str | None) -> str:
     if entry.get("url"):
         links.append(f'<a href="{esc(entry["url"])}">docs</a>')
     stamp = f"Metrics harvested {esc(harvested_at[:10])} · " if harvested_at else ""
+    shot = (entry.get("generated") or {}).get("screenshot")
+    screenshot = ""
+    if shot:
+        screenshot = f"""<figure class="shot">
+  <a href="{esc(shot["url"])}"><img src="{esc(shot["url"])}" alt="Screenshot of {esc(entry["name"])}" loading="lazy" onerror="this.closest('figure').remove()"></a>
+  <figcaption>From the project's README at the pinned commit.</figcaption>
+</figure>"""
     body = f"""<header>
   <nav><a href="../../">← all {esc(CATEGORY_TITLES[entry["category"]].lower())} &amp; more</a></nav>
   <h1>{esc(entry["name"])}</h1>
@@ -277,6 +324,7 @@ def build_entry_page(entry: dict, harvested_at: str | None) -> str:
   <span class="chip">inference: {esc(inference)}</span></p>
   <p>{" · ".join(links)}</p>
 </header>
+{screenshot}
 <h2>Capabilities</h2>
 <table class="caps"><tbody>
 {cap_rows(entry)}

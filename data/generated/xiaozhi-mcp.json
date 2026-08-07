@@ -1,0 +1,27 @@
+{
+  "id": "xiaozhi-mcp",
+  "in_hacs_default": true,
+  "manifest": {
+    "domain": "xiaozhi_mcp",
+    "evidence": {
+      "commit": "e0fbfe0179d720160c3e491352794d825892d293",
+      "line": 13,
+      "path": "custom_components/xiaozhi_mcp/manifest.json",
+      "repo": "mac8005/xiaozhi-mcp-ha"
+    },
+    "iot_class": "cloud_push",
+    "name": "Xiaozhi MCP",
+    "requirements": [
+      "websockets>=11.0.3",
+      "aiohttp>=3.8.0"
+    ],
+    "version": "0.0.25"
+  },
+  "repo": "mac8005/xiaozhi-mcp-ha",
+  "screenshot": {
+    "commit": "e0fbfe0179d720160c3e491352794d825892d293",
+    "source": "readme",
+    "url": "https://ph-files.imgix.net/80909cc8-6bcb-42b9-96eb-4572b4e8b3cf.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=969&h=640&fit=max&frame=1&dpr=1"
+  },
+  "sha": "e0fbfe0179d720160c3e491352794d825892d293"
+}
