@@ -195,14 +195,24 @@ def harvest_manifest(entry: dict, sha: str, result: dict, errors: list) -> None:
     """Locate and parse the integration's manifest.json at the pinned SHA."""
     repo = entry["repo"]
     is_core = repo == "home-assistant/core"
+    addon = entry.get("addon_config") or {}
     for domain in integration_domain_candidates(entry):
-        path = (
-            f"homeassistant/components/{domain}/manifest.json"
-            if is_core
-            else f"custom_components/{domain}/manifest.json"
-        )
-        status, body = http_get(f"{RAW}/{repo}/{sha}/{path}")
-        if status != 200:
+        if is_core:
+            paths = [f"homeassistant/components/{domain}/manifest.json"]
+        else:
+            paths = [f"custom_components/{domain}/manifest.json"]
+            # Add-ons that bundle their companion integration keep it under
+            # the add-on's own directory rather than the repo root.
+            if addon.get("repo") == repo:
+                base = addon["path"].strip("/")
+                paths.append(f"{base}/custom_components/{domain}/manifest.json")
+        path, body = None, b""
+        for candidate in paths:
+            status, body = http_get(f"{RAW}/{repo}/{sha}/{candidate}")
+            if status == 200:
+                path = candidate
+                break
+        if path is None:
             continue
         text = body.decode("utf-8", errors="replace")
         try:
@@ -305,7 +315,9 @@ def harvest_entry(entry: dict, errors: list, no_api: bool, hacs_default: set[str
         harvest_repo_meta(entry, result, errors)
     sha = pin_sha(entry, result, errors)
     installs = set(entry.get("install", []))
-    if sha and installs & {"core-integration", "hacs-integration"}:
+    # Add-on entries can bundle a companion integration too (declared via
+    # `domain`), so the install list alone doesn't decide manifest lookup.
+    if sha and (installs & {"core-integration", "hacs-integration"} or entry.get("domain")):
         harvest_manifest(entry, sha, result, errors)
     if hacs_default is not None and "hacs-integration" in installs:
         result["in_hacs_default"] = entry["repo"].lower() in hacs_default

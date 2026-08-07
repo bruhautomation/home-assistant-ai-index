@@ -1,0 +1,34 @@
+id: elevenlabs
+name: ElevenLabs
+repo: home-assistant/core
+url: https://www.home-assistant.io/integrations/elevenlabs/
+domain: elevenlabs
+category: voice-stack
+install: [core-integration]
+summary: Official ElevenLabs integration providing cloud text-to-speech voices and speech-to-text for Assist pipelines.
+providers: [elevenlabs]
+inference: [cloud]
+capabilities:
+  reads_entity_states: false
+  reads_camera: false
+  reads_history: false
+  listens_microphone: true
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - everything your assistant speaks (TTS text) — to ElevenLabs
+  - your voice audio, when used as the pipeline's STT engine — to ElevenLabs
+evidence:
+  listens_microphone:
+    path: homeassistant/components/elevenlabs/stt.py
+    line: 201
+    commit: c263da982a0b98b0f1540fda08f298de56bbc44b
+notes: >
+  Best-known as a TTS voice, but it is also an STT platform: select it as a
+  pipeline's speech-to-text engine and every voice command is uploaded to
+  ElevenLabs for transcription. If you chose local wake words and local
+  control, this is the piece that would quietly send audio off-network anyway.
+added: 2026-08-07

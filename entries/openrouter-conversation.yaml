@@ -1,0 +1,30 @@
+id: openrouter-conversation
+name: OpenRouter
+repo: home-assistant/core
+url: https://www.home-assistant.io/integrations/open_router/
+domain: open_router
+category: conversation-agent
+install: [core-integration]
+summary: Official OpenRouter conversation agent for Assist — one API key routing to hundreds of hosted models, with optional control of exposed entities.
+providers: [openrouter, openai-compatible]
+inference: [cloud]
+capabilities:
+  reads_entity_states: true
+  reads_camera: false
+  reads_history: false
+  listens_microphone: false
+  controls_devices: true
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - conversation text
+  - names, states, and attributes of entities you expose to Assist
+notes: >
+  Same trust shape as the other official conversation agents — device control
+  is opt-in and bounded by Assist entity exposure, and it also registers an AI
+  Task entity (see the ai-task entry). The routing is the difference to weigh:
+  OpenRouter forwards your prompts to whichever upstream model host you pick,
+  so the parties seeing your data change when you change models.
+added: 2026-08-07

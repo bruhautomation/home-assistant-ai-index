@@ -6,10 +6,14 @@ on:
   workflow_dispatch:
   workflow_call:
 
+# Publishes to the gh-pages branch rather than a Pages Actions deployment.
+# The Actions route needs the Pages site to already exist, and creating it
+# via actions/configure-pages `enablement: true` requires repo-admin rights
+# the workflow GITHUB_TOKEN cannot hold ("Resource not accessible by
+# integration"). A gh-pages branch, by contrast, is picked up by GitHub's
+# own pages-build-deployment with no one-time console step.
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages
@@ -17,9 +21,6 @@ concurrency:
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -31,11 +32,9 @@ jobs:
       - run: pip install pyyaml jsonschema
       - name: Build site
         run: python tools/build_site.py
-      - uses: actions/configure-pages@v5
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          enablement: true
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          force_orphan: true

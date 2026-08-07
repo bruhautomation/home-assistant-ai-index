@@ -1,0 +1,67 @@
+id: brain
+name: brAIn
+repo: bruhautomation/BRUH-HA-Apps
+url: https://bruhautomation.com/brain/
+domain: brain
+category: agent-platform
+install: [addon]
+addon_config:
+  repo: bruhautomation/BRUH-HA-Apps
+  path: brain
+summary: Add-on that runs Claude Code inside Home Assistant with admin reach — every entity, camera, history, and config file — plus persistent memory, insights, Assist and automation hooks.
+providers: [anthropic]
+inference: [cloud]
+capabilities:
+  reads_entity_states: true
+  reads_camera: true
+  reads_history: true
+  listens_microphone: false
+  controls_devices: true
+  creates_automations: true
+  edits_files: true
+  executes_code: true
+  runs_unattended: true
+data_sent:
+  - conversation text and whatever the agent reads to answer — states, history, snapshots, config files — to Anthropic
+evidence:
+  reads_entity_states:
+    path: brain/ha-mcp-server/ha_mcp_server.py
+    line: 167
+    commit: 0fbde9af9fd121675a10d5fbebf981bdffda8e07
+  reads_camera:
+    path: brain/ha-mcp-server/ha_mcp_server.py
+    line: 617
+    commit: 0fbde9af9fd121675a10d5fbebf981bdffda8e07
+  reads_history:
+    path: brain/ha-mcp-server/ha_mcp_server.py
+    line: 824
+    commit: 0fbde9af9fd121675a10d5fbebf981bdffda8e07
+  controls_devices:
+    path: brain/ha-mcp-server/ha_mcp_server.py
+    line: 231
+    commit: 0fbde9af9fd121675a10d5fbebf981bdffda8e07
+  creates_automations:
+    path: brain/scripts/ha-context-gen.sh
+    line: 417
+    commit: 0fbde9af9fd121675a10d5fbebf981bdffda8e07
+  edits_files:
+    path: brain/config.yaml
+    line: 173
+    commit: 0fbde9af9fd121675a10d5fbebf981bdffda8e07
+  executes_code:
+    path: brain/run.sh
+    line: 1152
+    commit: 0fbde9af9fd121675a10d5fbebf981bdffda8e07
+  runs_unattended:
+    path: brain/integrations/automation-listener.sh
+    line: 318
+    commit: 0fbde9af9fd121675a10d5fbebf981bdffda8e07
+notes: >
+  The widest capability surface in the index, by design: Supervisor admin
+  role, read-write /config, and Bash pre-approved for headless runs, so
+  automations can invoke the agent unattended. The counterweights are also
+  in source: permission prompts stay on by default, every file edit is
+  snapshotted to an undo journal first, the terminal port is unpublished by
+  default, and backups exclude the Claude credential. Disclosure — this
+  index is maintained by brAIn's author.
+added: 2026-08-07

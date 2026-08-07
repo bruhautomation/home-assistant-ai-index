@@ -1,0 +1,35 @@
+id: google-cloud-speech
+name: Google Cloud (STT/TTS)
+repo: home-assistant/core
+url: https://www.home-assistant.io/integrations/google_cloud/
+domain: google_cloud
+category: voice-stack
+install: [core-integration]
+summary: Official Google Cloud integration providing Cloud Speech-to-Text and Text-to-Speech engines for Assist pipelines, authenticated by a service-account key.
+providers: [google]
+inference: [cloud]
+capabilities:
+  reads_entity_states: false
+  reads_camera: false
+  reads_history: false
+  listens_microphone: true
+  controls_devices: false
+  creates_automations: false
+  edits_files: false
+  executes_code: false
+  runs_unattended: false
+data_sent:
+  - your voice audio, when used as the pipeline's STT engine — streamed to Google Cloud
+  - everything your assistant speaks (TTS text) — to Google Cloud
+evidence:
+  listens_microphone:
+    path: homeassistant/components/google_cloud/stt.py
+    line: 144
+    commit: c263da982a0b98b0f1540fda08f298de56bbc44b
+notes: >
+  The cloud counterpart to the Whisper add-on: voice commands are streamed to
+  Google's Speech API rather than transcribed on your hardware. Requires a
+  Google Cloud service-account JSON key, so usage is billed and logged under
+  your own GCP project — a clearer audit trail than consumer-keyed clouds,
+  but off-network all the same.
+added: 2026-08-07
