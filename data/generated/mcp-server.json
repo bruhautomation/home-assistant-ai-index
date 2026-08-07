@@ -18,5 +18,9 @@
     "version": null
   },
   "repo": "home-assistant/core",
+  "repo_meta": {
+    "pushed_at": "2026-08-06T19:56:37+02:00",
+    "source": "backfill"
+  },
   "sha": "c263da982a0b98b0f1540fda08f298de56bbc44b"
 }

@@ -20,5 +20,11 @@
     "version": "1.6.0"
   },
   "repo": "braytonstafford/grok_conversation",
+  "repo_meta": {
+    "open_issues": 12,
+    "pushed_at": "2026-08-03T03:53:23Z",
+    "source": "backfill",
+    "stars": 39
+  },
   "sha": "11cc37075e7e59a963ea25d4fd87a0e83d284976"
 }

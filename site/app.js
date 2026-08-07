@@ -8,6 +8,8 @@ const LABELS = DATA.capability_labels;
 const TIPS = DATA.capability_tips || {};
 const SVGS = DATA.capability_svgs || {};
 const CATS = DATA.categories;
+const CATS_SHORT = DATA.categories_short || CATS;
+const SENSITIVE = new Set(DATA.sensitive_capabilities || []);
 
 const INSTALL_LABELS = {
   "core-integration": "core",
@@ -102,9 +104,14 @@ const esc = (s) => String(s).replace(/[&<>"']/g, (c) =>
 
 function capIcons(entry) {
   const disputed = new Set(entry.disputed || []);
-  return CAPS.filter((c) => entry.capabilities[c])
-    .map((c) => `<span class="capic${disputed.has(c) ? " disputed" : ""}" data-tip="${esc(LABELS[c])}${disputed.has(c) ? " (disputed)" : ""}" tabindex="0">${svg(c)}</span>`)
-    .join("") || '<span class="none">—</span>';
+  return `<span class="capstrip">` + CAPS.map((c) => {
+    const on = !!entry.capabilities[c];
+    const cls = !on ? "off" : SENSITIVE.has(c) ? "hot" : "on";
+    const tip = on
+      ? `${LABELS[c]}${disputed.has(c) ? " (disputed)" : ""}`
+      : `no ${LABELS[c]}`;
+    return `<span class="capt ${cls}${disputed.has(c) ? " disputed" : ""}" data-tip="${esc(tip)}" tabindex="0">${svg(c)}</span>`;
+  }).join("") + `</span>`;
 }
 
 function inferenceLabel(entry) {
@@ -122,6 +129,16 @@ function starsLabel(entry) {
   return meta.stars >= 1000 ? (meta.stars / 1000).toFixed(1).replace(/\.0$/, "") + "k" : String(meta.stars);
 }
 
+function healthLabel(entry) {
+  const meta = (entry.generated && entry.generated.repo_meta) || {};
+  const bits = [];
+  if (entry.repo !== "home-assistant/core" && meta.stars != null)
+    bits.push(`${svg("star")} ${starsLabel(entry)}`);
+  if (meta.pushed_at) bits.push(meta.pushed_at.slice(0, 7));
+  if (meta.archived) bits.push('<span class="archived" data-tip="repository is archived — no longer maintained">archived</span>');
+  return bits.length ? `<span class="health">${bits.join(" · ")}</span>` : "—";
+}
+
 function renderTable() {
   const rows = DATA.entries.filter(matches);
   rows.sort((a, b) => {
@@ -134,29 +151,27 @@ function renderTable() {
     <th class="cmpcol" data-tip="tick to compare"></th>
     <th data-sort="name">Name${arrow("name")}</th>
     <th data-sort="category">Category${arrow("category")}</th>
-    <th>Capabilities</th>
+    <th data-tip="all nine capability flags — lit means granted, amber means sensitive">Capabilities</th>
     <th>Inference</th>
     <th>Install</th>
-    <th data-sort="stars" data-tip="GitHub stars">${svg("star")}${arrow("stars")}</th>
-    <th data-sort="updated">Updated${arrow("updated")}</th>
-    <th data-sort="rating" data-tip="Supervisor add-on security rating">${svg("shield")}${arrow("rating")}</th>
+    <th data-sort="stars" data-tip="GitHub stars and last activity">Health${arrow("stars")}</th>
+    <th data-sort="rating" data-tip="Supervisor add-on security rating (add-ons only)">${svg("shield")}${arrow("rating")}</th>
   </tr>`;
 
   document.querySelector("#index tbody").innerHTML = rows.map((entry) => {
     const meta = (entry.generated && entry.generated.repo_meta) || {};
     const addon = entry.generated && entry.generated.addon;
-    const archived = meta.archived ? ' <span class="archived" data-tip="repository is archived — no longer maintained">archived</span>' : "";
+    const archived = "";
     return `<tr>
       <td class="cmpcol"><input type="checkbox" data-compare="${esc(entry.id)}" aria-label="compare ${esc(entry.name)}" ${state.compare.has(entry.id) ? "checked" : ""}></td>
       <td data-label="Project"><a href="./entries/${esc(entry.id)}/">${esc(entry.name)}</a>${archived}
           <span class="sub">${esc(entry.summary)}</span></td>
-      <td data-label="Category"><span class="chip">${esc(CATS[entry.category])}</span></td>
+      <td data-label="Category" class="catcell nowrap">${esc(CATS_SHORT[entry.category] || CATS[entry.category])}</td>
       <td data-label="Capabilities" class="capcell">${capIcons(entry)}</td>
       <td data-label="Inference" class="nowrap">${inferenceLabel(entry)}</td>
-      <td data-label="Install">${entry.install.map((i) => INSTALL_LABELS[i]).join(", ")}</td>
-      <td data-label="Stars" class="nowrap">${starsLabel(entry)}</td>
-      <td data-label="Updated" class="nowrap">${meta.pushed_at ? meta.pushed_at.slice(0, 10) : "—"}</td>
-      <td data-label="Add-on rating" class="nowrap">${addon ? addon.supervisor_rating.value + "/8" : "—"}</td>
+      <td data-label="Install" class="nowrap installcell">${entry.install.map((i) => INSTALL_LABELS[i]).join(", ")}</td>
+      <td data-label="Health" class="nowrap">${healthLabel(entry)}</td>
+      <td data-label="Add-on rating" class="nowrap ratingcell">${addon ? addon.supervisor_rating.value + "/8" : ""}</td>
     </tr>`;
   }).join("");
 
@@ -188,8 +203,8 @@ function renderFilters() {
   <div class="frow"><span class="flabel">Inference</span><div class="fset seggroup" role="group">
     ${infBtn("any", "any", "no inference filter")}
     ${infBtn("local-only", `${svg("local")} local only`, "cloud not even possible — inference stays on your hardware")}
-    ${infBtn("local-possible", `${svg("local")} can run local`, "a local backend is one of the options")}
-    ${infBtn("cloud-possible", `${svg("cloud")} can use cloud`, "a cloud backend is one of the options")}</div></div>
+    ${infBtn("local-possible", `${svg("local")} local OK`, "a local backend is one of the options")}
+    ${infBtn("cloud-possible", `${svg("cloud")} cloud OK`, "a cloud backend is one of the options")}</div></div>
   <div class="frow"><span class="flabel">Install</span><div class="fset">
     ${Object.entries(INSTALL_LABELS).map(([id, label]) =>
       `<button data-install="${id}" class="fchip ${state.installs.has(id) ? "on" : ""}">${esc(label)}</button>`).join("")}</div></div>`;
@@ -293,6 +308,13 @@ document.addEventListener("change", (event) => {
     state.compare.add(id);
   } else state.compare.delete(id);
   renderCompareBar();
+});
+
+const ftoggle = document.getElementById("ftoggle");
+if (ftoggle) ftoggle.addEventListener("click", () => {
+  const panel = document.getElementById("filters");
+  const open = panel.classList.toggle("open");
+  ftoggle.setAttribute("aria-expanded", open ? "true" : "false");
 });
 
 hashToState();

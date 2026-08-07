@@ -1,5 +1,9 @@
 {
   "id": "willow",
   "repo": "toverainc/willow",
+  "repo_meta": {
+    "pushed_at": "2026-08-04T20:02:56+03:00",
+    "source": "backfill"
+  },
   "sha": "415ba07007f49873649d36e0b384d72640f1cfac"
 }

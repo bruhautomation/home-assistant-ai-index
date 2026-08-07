@@ -17,5 +17,11 @@
     "version": "0.0.8"
   },
   "repo": "c1pher-cn/ha-mcp-for-xiaozhi",
+  "repo_meta": {
+    "open_issues": 1,
+    "pushed_at": "2025-10-10T02:34:35Z",
+    "source": "backfill",
+    "stars": 260
+  },
   "sha": "07613946e04e6a9d3db2b5a51997c716ee21ba5c"
 }

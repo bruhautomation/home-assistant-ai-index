@@ -17,6 +17,12 @@
     "version": "1.14.1"
   },
   "repo": "sbenodiz/ai_agent_ha",
+  "repo_meta": {
+    "open_issues": 15,
+    "pushed_at": "2026-07-14T18:42:46Z",
+    "source": "backfill",
+    "stars": 150
+  },
   "screenshot": {
     "commit": "b1ec82cbb6c8800aea816000b446856f5e893ff1",
     "source": "readme",

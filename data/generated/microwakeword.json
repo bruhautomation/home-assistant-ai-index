@@ -1,5 +1,9 @@
 {
   "id": "microwakeword",
   "repo": "kahrendt/microWakeWord",
+  "repo_meta": {
+    "pushed_at": "2026-07-06T13:48:24-05:00",
+    "source": "backfill"
+  },
   "sha": "4665173cd35f1cff9a61e06fc427f124766c488e"
 }

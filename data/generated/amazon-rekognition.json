@@ -18,6 +18,12 @@
     "version": "3.4.0"
   },
   "repo": "robmarkcole/HASS-amazon-rekognition",
+  "repo_meta": {
+    "open_issues": 19,
+    "pushed_at": "2026-04-13T23:38:37Z",
+    "source": "backfill",
+    "stars": 89
+  },
   "screenshot": {
     "commit": "5c1849d63d6a0b539678d66deb2dd303e5fecd7d",
     "source": "readme",

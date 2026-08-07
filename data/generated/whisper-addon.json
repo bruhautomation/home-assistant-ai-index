@@ -28,5 +28,9 @@
   },
   "id": "whisper-addon",
   "repo": "rhasspy/wyoming-faster-whisper",
+  "repo_meta": {
+    "pushed_at": "2026-07-09T16:07:00-05:00",
+    "source": "backfill"
+  },
   "sha": "5b5854f36a0f228a289a6a30da7e594f74e35968"
 }

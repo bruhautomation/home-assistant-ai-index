@@ -172,6 +172,10 @@
   },
   "id": "birdnet-go",
   "repo": "tphakala/birdnet-go",
+  "repo_meta": {
+    "pushed_at": "2026-08-06T17:53:08+03:00",
+    "source": "backfill"
+  },
   "screenshot": {
     "commit": "606040c2edb43e933442abacd2c64e84db0a9213",
     "source": "readme",

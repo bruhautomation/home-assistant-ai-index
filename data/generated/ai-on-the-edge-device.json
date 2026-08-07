@@ -1,6 +1,11 @@
 {
   "id": "ai-on-the-edge-device",
   "repo": "jomjol/AI-on-the-edge-device",
+  "repo_meta": {
+    "pushed_at": "2026-07-03T23:50:32+02:00",
+    "source": "backfill",
+    "stars": 8600
+  },
   "screenshot": {
     "commit": "384079b5d459f4730dc64d36ba4071bb02349d93",
     "source": "readme",

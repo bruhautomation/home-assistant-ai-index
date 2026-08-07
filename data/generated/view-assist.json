@@ -1,6 +1,10 @@
 {
   "id": "view-assist",
   "repo": "dinki/View-Assist",
+  "repo_meta": {
+    "pushed_at": "2026-05-19T16:06:30-05:00",
+    "source": "backfill"
+  },
   "screenshot": {
     "commit": "360de499841574f86a9dfef717b67f807344e001",
     "source": "readme",

@@ -34,6 +34,12 @@
     "version": "3.25.1"
   },
   "repo": "goruck/home-generative-agent",
+  "repo_meta": {
+    "open_issues": 3,
+    "pushed_at": "2026-08-06T00:25:57Z",
+    "source": "backfill",
+    "stars": 281
+  },
   "screenshot": {
     "commit": "ef805411de140bd6d4f9f5d91534ed4cabc60990",
     "source": "readme",

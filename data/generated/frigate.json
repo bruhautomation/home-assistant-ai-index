@@ -122,6 +122,10 @@
   },
   "id": "frigate",
   "repo": "blakeblackshear/frigate",
+  "repo_meta": {
+    "pushed_at": "2026-08-05T07:40:24-05:00",
+    "source": "backfill"
+  },
   "screenshot": {
     "commit": "e73a14db5d03e5f6532ddc6c02358d71f94de3c2",
     "source": "readme",

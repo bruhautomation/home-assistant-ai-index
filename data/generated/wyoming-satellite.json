@@ -1,5 +1,9 @@
 {
   "id": "wyoming-satellite",
   "repo": "rhasspy/wyoming-satellite",
+  "repo_meta": {
+    "pushed_at": "2026-01-24T07:20:36-06:00",
+    "source": "backfill"
+  },
   "sha": "7a3ba2bc23fc6699adae4f5bbac4ce529fe2a623"
 }

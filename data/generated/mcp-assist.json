@@ -21,5 +21,11 @@
     "version": "0.17.2"
   },
   "repo": "mike-nott/mcp-assist",
+  "repo_meta": {
+    "open_issues": 21,
+    "pushed_at": "2026-08-02T13:41:38Z",
+    "source": "backfill",
+    "stars": 100
+  },
   "sha": "feff8d31761fe54a3a7ca2afd1949ad6e69dd019"
 }

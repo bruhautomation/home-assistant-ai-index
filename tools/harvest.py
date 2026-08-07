@@ -35,7 +35,7 @@ from datetime import datetime, timezone
 
 import yaml
 
-from common import GENERATED_DIR, load_entries
+from common import GENERATED_DIR, load_entries, load_generated
 from rating import rating_security
 
 API = "https://api.github.com"
@@ -355,6 +355,13 @@ def harvest_entry(entry: dict, errors: list, no_api: bool, hacs_default: set[str
     result: dict = {"id": entry["id"], "repo": entry["repo"]}
     if not no_api:
         harvest_repo_meta(entry, result, errors)
+    # A failed metadata fetch must not erase what a previous run harvested —
+    # carry the old values forward so transient API failures degrade to
+    # stale-but-present rather than blank.
+    previous = load_generated(entry["id"])
+    for key in ("repo_meta", "latest_release", "screenshot"):
+        if key not in result and key in previous:
+            result[key] = previous[key]
     sha = pin_sha(entry, result, errors)
     installs = set(entry.get("install", []))
     # Add-on entries can bundle a companion integration too (declared via

@@ -20,6 +20,12 @@
     "version": "2026.02.0"
   },
   "repo": "joselcaguilar/azure-openai-ha",
+  "repo_meta": {
+    "open_issues": 15,
+    "pushed_at": "2026-07-21T15:54:43Z",
+    "source": "backfill",
+    "stars": 73
+  },
   "screenshot": {
     "commit": "e495c8177293488c49aac02b4b2f30720d43b026",
     "source": "readme",

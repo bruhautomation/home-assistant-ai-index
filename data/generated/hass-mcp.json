@@ -1,5 +1,9 @@
 {
   "id": "hass-mcp",
   "repo": "voska/hass-mcp",
+  "repo_meta": {
+    "pushed_at": "2026-08-06T08:23:05-03:00",
+    "source": "backfill"
+  },
   "sha": "e05bfde09d275f1bc2be2e2de6ba650d56333968"
 }

@@ -17,5 +17,10 @@
     "version": "1.0.9"
   },
   "repo": "remimikalsen/ollama_vision",
+  "repo_meta": {
+    "pushed_at": "2026-01-17T10:08:56Z",
+    "source": "backfill",
+    "stars": 21
+  },
   "sha": "f8eb8968c726acce8bab7a25a83b62f37b9db6c4"
 }

@@ -21,5 +21,10 @@
     "version": "2.5.1"
   },
   "repo": "smkrv/ha-text-ai",
+  "repo_meta": {
+    "pushed_at": "2026-07-21T07:21:39Z",
+    "source": "backfill",
+    "stars": 80
+  },
   "sha": "03cd40de29b3fb061b4e49492fd84ba1f899aaaf"
 }
