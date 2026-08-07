@@ -15,5 +15,9 @@
     "version": "0.1.0"
   },
   "repo": "kotope/marlin-ha-integration",
+  "repo_meta": {
+    "pushed_at": "2026-06-08T16:14:00+03:00",
+    "source": "backfill"
+  },
   "sha": "4fba57873c548433aeaafaaae5b938824b652182"
 }

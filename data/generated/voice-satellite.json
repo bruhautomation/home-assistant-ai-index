@@ -17,6 +17,11 @@
     "version": "2026.8.4"
   },
   "repo": "jxlarrea/voice-satellite-card-integration",
+  "repo_meta": {
+    "pushed_at": "2026-08-05T14:09:41Z",
+    "source": "backfill",
+    "stars": 606
+  },
   "screenshot": {
     "commit": "8af37123aaf813663959484b7f41fde6fbf63839",
     "source": "readme",

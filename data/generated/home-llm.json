@@ -26,5 +26,9 @@
     "version": "0.4.10"
   },
   "repo": "acon96/home-llm",
+  "repo_meta": {
+    "pushed_at": "2026-07-06T21:47:27-04:00",
+    "source": "backfill"
+  },
   "sha": "50cf35c9b66440f64ce45baeb3f5b39a2f382cd1"
 }

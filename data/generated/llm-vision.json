@@ -19,5 +19,11 @@
     "version": "1.7.1"
   },
   "repo": "valentinfrlch/ha-llmvision",
+  "repo_meta": {
+    "open_issues": 40,
+    "pushed_at": "2026-08-05T12:43:58Z",
+    "source": "backfill",
+    "stars": 1419
+  },
   "sha": "3cc0510a4dfc8d8a05599eb9f7a0079979c80492"
 }

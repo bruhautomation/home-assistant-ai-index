@@ -17,5 +17,11 @@
     "version": "0.7.7"
   },
   "repo": "hasscc/hass-edge-tts",
+  "repo_meta": {
+    "open_issues": 18,
+    "pushed_at": "2026-06-05T00:54:46Z",
+    "source": "backfill",
+    "stars": 484
+  },
   "sha": "d8dfb6db89c156537863604f3efe120394d880c3"
 }

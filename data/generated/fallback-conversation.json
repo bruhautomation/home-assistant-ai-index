@@ -15,6 +15,12 @@
     "version": "2.0.2"
   },
   "repo": "m50/ha-fallback-conversation",
+  "repo_meta": {
+    "archived": true,
+    "pushed_at": "2024-12-05T00:34:54+01:00",
+    "source": "backfill",
+    "stars": 81
+  },
   "screenshot": {
     "commit": "1e8e616916d5e19f315554c843036948b686c2ac",
     "source": "readme",

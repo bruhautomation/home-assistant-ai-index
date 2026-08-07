@@ -54,6 +54,20 @@ SVG_PATHS = {
 }
 
 
+CATEGORY_SHORT = {
+    "conversation-agent": "Conversation",
+    "agent-platform": "Agent platform",
+    "vision": "Vision",
+    "automation-authoring": "Automation",
+    "mcp": "MCP",
+    "agent-tools": "Agent tools",
+    "model-runtime": "Model runtime",
+    "voice-stack": "Voice",
+    "dashboard-ui": "Dashboards",
+    "summaries": "Summaries",
+}
+
+
 def svg(name: str, cls: str = "ic") -> str:
     return (f'<svg class="{cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
             f'stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" '
@@ -103,6 +117,7 @@ def build_data() -> dict:
         "capability_tips": CAP_TIPS,
         "capability_svgs": SVG_PATHS,
         "categories": {c: CATEGORY_TITLES[c] for c in CATEGORIES},
+        "categories_short": CATEGORY_SHORT,
         "entries": merged,
     }
 
@@ -168,6 +183,7 @@ def build_index(data: dict) -> str:
   <button data-preset="cloudcamera">{svg("cloud")} Camera frames leave home</button>
   <button data-preset="clear" class="ghost">Clear filters</button>
 </section>
+<button id="ftoggle" class="ftoggle" aria-expanded="false">Filters &amp; search</button>
 <section class="filters" id="filters"></section>
 <p class="count" id="count"></p>
 <div class="tablewrap">
@@ -193,24 +209,32 @@ def build_index(data: dict) -> str:
     )
 
 
-def cap_rows(entry: dict) -> str:
-    rows = []
+def caps_section(entry: dict) -> str:
+    """Lead with what the project CAN reach; fold the rest into one line."""
     disputed = set(entry.get("disputed", []))
     evidence = entry.get("evidence", {})
-    for cap in CAPABILITIES:
-        value = entry["capabilities"].get(cap, False)
-        cells = [
-            f'<td><span class="capname" data-tip="{esc(CAP_TIPS[cap])}">{svg(cap)} {esc(CAP_LABELS[cap])}</span></td>',
-            f'<td><span class="pill {"yes" if value else "no"}">{"yes" if value else "no"}</span></td>',
-        ]
+    granted = [c for c in CAPABILITIES if entry["capabilities"].get(c)]
+    denied = [c for c in CAPABILITIES if not entry["capabilities"].get(c)]
+    rows = []
+    for cap in granted:
+        hot = " hot" if cap in SENSITIVE else ""
         extra = []
         if cap in evidence:
             extra.append(f'<a href="{evidence_url(entry, evidence[cap])}">source ↗</a>')
         if cap in disputed:
             extra.append(f'<span class="disputed">disputed — <a href="{correction_url(entry["id"])}">see corrections</a></span>')
-        cells.append(f"<td>{' · '.join(extra)}</td>")
-        rows.append(f"<tr>{''.join(cells)}</tr>")
-    return "\n".join(rows)
+        rows.append(
+            f'<li class="capitem{hot}"><span class="capname">{svg(cap)} <b>{esc(CAP_LABELS[cap])}</b></span>'
+            f'<span class="captip">{esc(CAP_TIPS[cap])}</span>'
+            f'<span class="capev">{" · ".join(extra)}</span></li>'
+        )
+    reach = (f'<ul class="canreach">{"".join(rows)}</ul>' if rows
+             else '<p class="noreach">Reaches nothing in Home Assistant — see the notes for what it does instead.</p>')
+    notline = ""
+    if denied and rows:
+        notline = ('<p class="notgranted">Not granted: '
+                   + " · ".join(esc(CAP_LABELS[c]) for c in denied) + "</p>")
+    return f"<h2>What it can reach</h2>\n{reach}\n{notline}"
 
 
 def addon_section(entry: dict) -> str:
@@ -325,10 +349,7 @@ def build_entry_page(entry: dict, harvested_at: str | None) -> str:
   <p>{" · ".join(links)}</p>
 </header>
 {screenshot}
-<h2>Capabilities</h2>
-<table class="caps"><tbody>
-{cap_rows(entry)}
-</tbody></table>
+{caps_section(entry)}
 <h2>Data flow</h2>
 <p>Providers/backends: {providers or "—"}</p>
 <p>What can leave your Home Assistant host:</p>

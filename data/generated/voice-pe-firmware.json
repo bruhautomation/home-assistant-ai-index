@@ -1,5 +1,9 @@
 {
   "id": "voice-pe-firmware",
   "repo": "esphome/home-assistant-voice-pe",
+  "repo_meta": {
+    "pushed_at": "2026-07-07T19:37:00-04:00",
+    "source": "backfill"
+  },
   "sha": "0579e7b9d8504264719c593474c85447253c9dc1"
 }

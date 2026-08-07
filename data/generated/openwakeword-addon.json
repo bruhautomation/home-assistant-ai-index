@@ -28,5 +28,9 @@
   },
   "id": "openwakeword-addon",
   "repo": "rhasspy/wyoming-openwakeword",
+  "repo_meta": {
+    "pushed_at": "2025-10-30T09:41:41-05:00",
+    "source": "backfill"
+  },
   "sha": "419701f64aa936ff62a820dfeac757f1afda01d1"
 }
