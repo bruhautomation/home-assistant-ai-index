@@ -11,6 +11,30 @@ const CATS = DATA.categories;
 const CATS_SHORT = DATA.categories_short || CATS;
 const SENSITIVE = new Set(DATA.sensitive_capabilities || []);
 
+// Grammatical phrasings for capability tiles — "no reads camera" is not a sentence.
+const CAP_ON = {
+  reads_entity_states: "Reads entity states",
+  reads_history: "Reads history",
+  reads_camera: "Accesses cameras",
+  listens_microphone: "Listens to audio",
+  controls_devices: "Controls devices",
+  creates_automations: "Creates automations",
+  edits_files: "Edits config files",
+  executes_code: "Executes arbitrary code",
+  runs_unattended: "Acts on its own",
+};
+const CAP_OFF = {
+  reads_entity_states: "Doesn't read entity states",
+  reads_history: "Doesn't read history",
+  reads_camera: "No camera access",
+  listens_microphone: "No microphone access",
+  controls_devices: "Doesn't control devices",
+  creates_automations: "Doesn't create automations",
+  edits_files: "Doesn't edit files",
+  executes_code: "Doesn't execute code",
+  runs_unattended: "Doesn't act unattended",
+};
+
 const INSTALL_LABELS = {
   "core-integration": "core",
   "hacs-integration": "HACS",
@@ -85,6 +109,29 @@ function matches(entry) {
   return true;
 }
 
+function countWith(mutate) {
+  const saved = {
+    q: state.q,
+    cats: new Set(state.cats),
+    caps: { ...state.caps },
+    inference: state.inference,
+    installs: new Set(state.installs),
+  };
+  mutate();
+  const n = DATA.entries.filter(matches).length;
+  state.q = saved.q;
+  state.cats = saved.cats;
+  state.caps = saved.caps;
+  state.inference = saved.inference;
+  state.installs = saved.installs;
+  return n;
+}
+
+function anyFilterActive() {
+  return state.q || state.cats.size || Object.keys(state.caps).length ||
+    state.inference !== "any" || state.installs.size;
+}
+
 function sortKey(entry) {
   const meta = (entry.generated && entry.generated.repo_meta) || {};
   const addon = entry.generated && entry.generated.addon;
@@ -108,8 +155,8 @@ function capIcons(entry) {
     const on = !!entry.capabilities[c];
     const cls = !on ? "off" : SENSITIVE.has(c) ? "hot" : "on";
     const tip = on
-      ? `${LABELS[c]}${disputed.has(c) ? " (disputed)" : ""}`
-      : `no ${LABELS[c]}`;
+      ? `${CAP_ON[c] || LABELS[c]}${disputed.has(c) ? " (disputed)" : ""}`
+      : (CAP_OFF[c] || LABELS[c]);
     return `<span class="capt ${cls}${disputed.has(c) ? " disputed" : ""}" data-tip="${esc(tip)}" tabindex="0">${svg(c)}</span>`;
   }).join("") + `</span>`;
 }
@@ -175,39 +222,71 @@ function renderTable() {
     </tr>`;
   }).join("");
 
-  document.getElementById("count").textContent =
+  const countEl = document.getElementById("count");
+  countEl.innerHTML =
     `${rows.length} of ${DATA.entries.length} projects` +
-    (rows.length < DATA.entries.length ? " match the filters" : "");
+    (rows.length < DATA.entries.length ? " match" : "") +
+    (anyFilterActive() ? ' · <button class="clearlink" id="clearfilters">clear filters</button>' : "");
   stateToHash();
 }
 
 function renderFilters() {
   const capBtn = (cap) => {
     const mode = state.caps[cap] || "";
-    const modeTip = mode === "require" ? "required — click for exclude"
-      : mode === "exclude" ? "excluded — click to reset"
-      : "click to require";
-    return `<button data-cap="${cap}" class="fchip ${mode}" aria-pressed="${mode ? "true" : "false"}"
-      data-tip="${esc(TIPS[cap] || LABELS[cap])} (${modeTip})">${svg(cap)}<span>${esc(LABELS[cap])}</span><b class="st"></b></button>`;
+    let tip, dim = false;
+    if (mode === "require") tip = `${TIPS[cap]} Required — click to exclude instead.`;
+    else if (mode === "exclude") tip = `${TIPS[cap]} Excluded — click to reset.`;
+    else {
+      const n = countWith(() => { state.caps = { ...state.caps, [cap]: "require" }; });
+      dim = n === 0;
+      tip = dim ? `${TIPS[cap]} No matches with the current filters.`
+                : `${TIPS[cap]} ${n} project${n === 1 ? "" : "s"}.`;
+    }
+    return `<button data-cap="${cap}" class="fchip ${mode}${dim ? " dim" : ""}" aria-pressed="${mode ? "true" : "false"}"
+      data-tip="${esc(tip)}">${svg(cap)}<span>${esc(LABELS[cap])}</span><b class="st"></b></button>`;
   };
-  const infBtn = (value, label, tip) =>
-    `<button data-inf="${value}" class="seg ${state.inference === value ? "on" : ""}" data-tip="${esc(tip)}">${label}</button>`;
+  const catBtn = ([id, title]) => {
+    const on = state.cats.has(id);
+    let dim = false, tip = "";
+    if (!on) {
+      const n = countWith(() => { state.cats = new Set([id]); });
+      dim = n === 0;
+      tip = dim ? "no matches with the current filters" : `${n} project${n === 1 ? "" : "s"}`;
+    }
+    return `<button data-cat="${id}" class="fchip cat ${on ? "on" : ""}${dim ? " dim" : ""}"${tip ? ` data-tip="${esc(tip)}"` : ""}>${esc(title)}</button>`;
+  };
+  const infBtn = (value, label, tip) => {
+    const on = state.inference === value;
+    let dim = false;
+    if (!on && value !== "any") {
+      dim = countWith(() => { state.inference = value; }) === 0;
+    }
+    return `<button data-inf="${value}" class="seg ${on ? "on" : ""}${dim ? " dim" : ""}" data-tip="${esc(tip)}">${label}</button>`;
+  };
+  const instBtn = ([id, label]) => {
+    const on = state.installs.has(id);
+    let dim = false, tip = "";
+    if (!on) {
+      const n = countWith(() => { state.installs = new Set([id]); });
+      dim = n === 0;
+      tip = dim ? "no matches with the current filters" : `${n} project${n === 1 ? "" : "s"}`;
+    }
+    return `<button data-install="${id}" class="fchip ${on ? "on" : ""}${dim ? " dim" : ""}"${tip ? ` data-tip="${esc(tip)}"` : ""}>${esc(label)}</button>`;
+  };
   document.getElementById("filters").innerHTML = `
   <div class="frow search"><label class="searchbox">${svg("search")}
     <input type="search" id="q" placeholder="Search name, summary, provider…" value="${esc(state.q)}" aria-label="Search"></label>
     <span class="hint">Capability filters cycle: <b class="eg req">require</b> → <b class="eg exc">exclude</b> → off</span></div>
   <div class="frow"><span class="flabel">Capabilities</span><div class="fset">${CAPS.map(capBtn).join("")}</div></div>
   <div class="frow"><span class="flabel">Category</span><div class="fset">
-    ${Object.entries(CATS).map(([id, title]) =>
-      `<button data-cat="${id}" class="fchip cat ${state.cats.has(id) ? "on" : ""}">${esc(title)}</button>`).join("")}</div></div>
+    ${Object.entries(CATS).map(catBtn).join("")}</div></div>
   <div class="frow"><span class="flabel">Inference</span><div class="fset seggroup" role="group">
     ${infBtn("any", "any", "no inference filter")}
     ${infBtn("local-only", `${svg("local")} local only`, "cloud not even possible — inference stays on your hardware")}
     ${infBtn("local-possible", `${svg("local")} local OK`, "a local backend is one of the options")}
     ${infBtn("cloud-possible", `${svg("cloud")} cloud OK`, "a cloud backend is one of the options")}</div></div>
   <div class="frow"><span class="flabel">Install</span><div class="fset">
-    ${Object.entries(INSTALL_LABELS).map(([id, label]) =>
-      `<button data-install="${id}" class="fchip ${state.installs.has(id) ? "on" : ""}">${esc(label)}</button>`).join("")}</div></div>`;
+    ${Object.entries(INSTALL_LABELS).map(instBtn).join("")}</div></div>`;
 }
 
 /* ---------- compare ---------- */
@@ -238,16 +317,6 @@ function openCompare() {
   document.getElementById("comparedlg").showModal();
 }
 
-/* ---------- presets ---------- */
-
-const PRESETS = {
-  cameras:     () => { state.caps = { reads_camera: "require" }; },
-  localonly:   () => { state.inference = "local-only"; },
-  autonomous:  () => { state.caps = { runs_unattended: "require" }; },
-  cloudcamera: () => { state.caps = { reads_camera: "require" }; state.inference = "cloud-possible"; },
-  clear:       () => {},
-};
-
 function resetFilters() {
   state.q = "";
   state.cats.clear();
@@ -261,9 +330,9 @@ function resetFilters() {
 document.addEventListener("click", (event) => {
   const target = event.target.closest("button, th");
   if (!target) return;
-  if (target.dataset.preset) {
+  if (target.classList.contains("dim")) return;
+  if (target.id === "clearfilters") {
     resetFilters();
-    PRESETS[target.dataset.preset]();
     renderFilters(); renderTable();
   } else if (target.dataset.cat !== undefined) {
     state.cats.has(target.dataset.cat) ? state.cats.delete(target.dataset.cat) : state.cats.add(target.dataset.cat);
