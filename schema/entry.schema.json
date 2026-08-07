@@ -49,6 +49,13 @@
       "items": { "enum": ["local", "cloud"] },
       "description": "Where model inference can run. Both listed = user's choice of backend decides."
     },
+    "llm_access": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "enum": ["api-key", "subscription", "self-hosted"] },
+      "description": "How the project authenticates to its LLM providers. Omit to derive from providers: cloud providers imply api-key, purely local backends imply self-hosted."
+    },
     "capabilities": {
       "type": "object",
       "additionalProperties": false,

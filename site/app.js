@@ -35,6 +35,34 @@ const CAP_OFF = {
   runs_unattended: "Doesn't act unattended",
 };
 
+const PROVIDER_NAMES = {
+  openai: "ChatGPT",
+  anthropic: "Claude",
+  google: "Gemini",
+  ollama: "Ollama",
+  mistral: "Mistral",
+  groq: "Groq",
+  xai: "Grok",
+  openrouter: "OpenRouter",
+  azure: "Azure OpenAI",
+  aws: "AWS",
+  microsoft: "Microsoft",
+  deepseek: "DeepSeek",
+  cohere: "Cohere",
+  elevenlabs: "ElevenLabs",
+  localai: "LocalAI",
+  llama: "Meta Llama",
+  xiaozhi: "Xiaozhi",
+  "openai-compatible": "OpenAI-compatible",
+  "self-hosted": "self-hosted",
+};
+const LOCAL_PROVIDERS = new Set(["ollama", "localai", "self-hosted", "openai-compatible"]);
+const ACCESS_LABELS = {
+  "api-key": "API key",
+  "subscription": "subscription",
+  "self-hosted": "self-hosted",
+};
+
 const INSTALL_LABELS = {
   "core-integration": "core",
   "hacs-integration": "HACS",
@@ -170,20 +198,41 @@ function inferenceLabel(entry) {
 }
 
 function starsLabel(entry) {
-  if (entry.repo === "home-assistant/core") return "core";
+  if (entry.repo === "home-assistant/core") return "";
   const meta = (entry.generated && entry.generated.repo_meta) || {};
   if (meta.stars == null) return "—";
   return meta.stars >= 1000 ? (meta.stars / 1000).toFixed(1).replace(/\.0$/, "") + "k" : String(meta.stars);
 }
 
-function healthLabel(entry) {
-  const meta = (entry.generated && entry.generated.repo_meta) || {};
-  const bits = [];
-  if (entry.repo !== "home-assistant/core" && meta.stars != null)
-    bits.push(`${svg("star")} ${starsLabel(entry)}`);
-  if (meta.pushed_at) bits.push(meta.pushed_at.slice(0, 7));
-  if (meta.archived) bits.push('<span class="archived" data-tip="repository is archived — no longer maintained">archived</span>');
-  return bits.length ? `<span class="health">${bits.join(" · ")}</span>` : "—";
+function llmAccess(entry) {
+  if (entry.llm_access) return entry.llm_access;
+  const provs = entry.providers || [];
+  if (!provs.length) return [];
+  const cloud = provs.filter((p) => !LOCAL_PROVIDERS.has(p));
+  const local = provs.filter((p) => LOCAL_PROVIDERS.has(p));
+  const out = [];
+  if (cloud.length) out.push("api-key");
+  if (local.length) out.push("self-hosted");
+  return out;
+}
+
+function llmLabel(entry) {
+  const provs = entry.providers || [];
+  if (!provs.length) return '<span class="none">—</span>';
+  const names = provs.map((p) => PROVIDER_NAMES[p] || p);
+  const shown = names.slice(0, 2).join(", ") + (names.length > 2 ? ` +${names.length - 2}` : "");
+  const access = llmAccess(entry).map((a) => ACCESS_LABELS[a]);
+  const accessText = access.join(" or ");
+  const accessLine = access.length && accessText !== shown
+    ? `<span class="llmaccess">${esc(accessText)}</span>` : "";
+  const tipAccess = access.length
+    ? (access.includes("subscription")
+        ? "Works on a consumer subscription (e.g. Claude Pro/Max) as well as an API key."
+        : access.join(" or ") === "self-hosted"
+          ? "Self-hosted backend — no provider account needed."
+          : `Access: ${access.join(" or ")}.`)
+    : "";
+  return `<span class="llmcell" data-tip="${esc(names.join(", "))}. ${esc(tipAccess)}"><span class="llmnames">${esc(shown)}</span>${accessLine}</span>`;
 }
 
 function renderTable() {
@@ -199,9 +248,11 @@ function renderTable() {
     <th data-sort="name">Name${arrow("name")}</th>
     <th data-sort="category">Category${arrow("category")}</th>
     <th data-tip="all nine capability flags — lit means granted, faint means not">Capabilities</th>
+    <th data-tip="which AI backends it works with, and how access is paid for">LLMs</th>
     <th>Inference</th>
     <th>Install</th>
-    <th data-sort="stars" data-tip="GitHub stars and last activity">Health${arrow("stars")}</th>
+    <th data-sort="stars" data-tip="GitHub stars">${svg("star")}${arrow("stars")}</th>
+    <th data-sort="updated" class="wrapok">Last Updated${arrow("updated")}</th>
     <th data-sort="rating" data-tip="Supervisor add-on security rating (add-ons only)">${svg("shield")}${arrow("rating")}</th>
   </tr>`;
 
@@ -215,9 +266,11 @@ function renderTable() {
           <span class="sub">${esc(entry.summary)}</span></td>
       <td data-label="Category" class="catcell nowrap">${esc(CATS_SHORT[entry.category] || CATS[entry.category])}</td>
       <td data-label="Capabilities" class="capcell">${capIcons(entry)}</td>
+      <td data-label="LLMs">${llmLabel(entry)}</td>
       <td data-label="Inference" class="nowrap">${inferenceLabel(entry)}</td>
-      <td data-label="Install" class="nowrap installcell">${entry.install.map((i) => INSTALL_LABELS[i]).join(", ")}</td>
-      <td data-label="Health" class="nowrap">${healthLabel(entry)}</td>
+      <td data-label="Install" class="installcell">${entry.install.map((i) => INSTALL_LABELS[i]).join(", ")}</td>
+      <td data-label="Stars" class="nowrap starcell">${starsLabel(entry)}</td>
+      <td data-label="Last Updated" class="nowrap updatedcell">${(meta.pushed_at || "").slice(0, 10) || "—"}${meta.archived ? ' <span class="archived" data-tip="repository is archived — no longer maintained">archived</span>' : ""}</td>
       <td data-label="Add-on rating" class="nowrap ratingcell">${addon ? addon.supervisor_rating.value + "/8" : ""}</td>
     </tr>`;
   }).join("");
