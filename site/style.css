@@ -253,7 +253,6 @@ td .sub {
 }
 .capt .ic { width: .95rem; height: .95rem; vertical-align: 0; }
 .capt.on { background: var(--accent-soft); color: var(--accent); }
-.capt.hot { background: var(--warn-bg); color: var(--warn-fg); }
 .capt.off { color: var(--border); background: transparent; }
 .capt.disputed { outline: 1.5px dashed var(--warn-fg); }
 .inf { display: inline-flex; align-items: center; gap: .3rem; color: var(--muted); }
@@ -277,8 +276,6 @@ td .sub {
   padding: .55rem .9rem;
   box-shadow: var(--shadow);
 }
-.capitem.hot { border-left-color: var(--warn-fg); }
-.capitem.hot .capname .ic { color: var(--warn-fg); }
 .capname { display: inline-flex; align-items: center; gap: .5rem; white-space: nowrap; }
 .capname .ic { color: var(--accent); }
 .captip { color: var(--muted); font-size: .85rem; }
