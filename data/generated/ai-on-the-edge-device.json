@@ -1,10 +1,18 @@
 {
   "id": "ai-on-the-edge-device",
+  "latest_release": {
+    "published_at": "2026-01-11T22:37:17Z",
+    "tag": "v16.1.0"
+  },
   "repo": "jomjol/AI-on-the-edge-device",
   "repo_meta": {
-    "pushed_at": "2026-07-03T23:50:32+02:00",
-    "source": "backfill",
-    "stars": 8600
+    "archived": false,
+    "default_branch": "main",
+    "forks": 894,
+    "license": "NOASSERTION",
+    "open_issues": 200,
+    "pushed_at": "2026-07-03T21:50:32Z",
+    "stars": 8583
   },
   "screenshot": {
     "commit": "384079b5d459f4730dc64d36ba4071bb02349d93",

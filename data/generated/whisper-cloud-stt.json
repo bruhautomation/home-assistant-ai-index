@@ -1,6 +1,10 @@
 {
   "id": "whisper-cloud-stt",
   "in_hacs_default": true,
+  "latest_release": {
+    "published_at": "2026-08-03T20:22:09Z",
+    "tag": "1.3.3"
+  },
   "manifest": {
     "domain": "openai_whisper_cloud",
     "evidence": {
@@ -16,9 +20,13 @@
   },
   "repo": "fabio-garavini/ha-openai-whisper-stt-api",
   "repo_meta": {
+    "archived": false,
+    "default_branch": "main",
+    "forks": 18,
+    "license": "AGPL-3.0",
+    "open_issues": 0,
     "pushed_at": "2026-08-04T06:54:13Z",
-    "source": "backfill",
-    "stars": 104
+    "stars": 105
   },
   "sha": "fde9d1c114568eb4a2aafff2cfeb16300258eb39"
 }

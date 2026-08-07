@@ -1,6 +1,10 @@
 {
   "id": "azure-openai-conversation",
   "in_hacs_default": true,
+  "latest_release": {
+    "published_at": "2026-07-21T15:54:44Z",
+    "tag": "v4.4.0"
+  },
   "manifest": {
     "detected_providers": [
       "openai"
@@ -21,9 +25,12 @@
   },
   "repo": "joselcaguilar/azure-openai-ha",
   "repo_meta": {
+    "archived": false,
+    "default_branch": "main",
+    "forks": 26,
+    "license": "MIT",
     "open_issues": 15,
     "pushed_at": "2026-07-21T15:54:43Z",
-    "source": "backfill",
     "stars": 73
   },
   "screenshot": {

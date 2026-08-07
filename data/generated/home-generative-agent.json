@@ -1,6 +1,10 @@
 {
   "id": "home-generative-agent",
   "in_hacs_default": true,
+  "latest_release": {
+    "published_at": "2026-08-04T14:59:39Z",
+    "tag": "v3.25.1"
+  },
   "manifest": {
     "detected_providers": [
       "ollama"
@@ -35,9 +39,12 @@
   },
   "repo": "goruck/home-generative-agent",
   "repo_meta": {
+    "archived": false,
+    "default_branch": "main",
+    "forks": 48,
+    "license": "MIT",
     "open_issues": 3,
     "pushed_at": "2026-08-06T00:25:57Z",
-    "source": "backfill",
     "stars": 281
   },
   "screenshot": {

@@ -171,10 +171,19 @@
     "version": "20260716"
   },
   "id": "birdnet-go",
+  "latest_release": {
+    "published_at": "2026-07-16T19:52:10Z",
+    "tag": "20260716"
+  },
   "repo": "tphakala/birdnet-go",
   "repo_meta": {
-    "pushed_at": "2026-08-06T17:53:08+03:00",
-    "source": "backfill"
+    "archived": false,
+    "default_branch": "main",
+    "forks": 150,
+    "license": "NOASSERTION",
+    "open_issues": 177,
+    "pushed_at": "2026-08-06T14:53:10Z",
+    "stars": 1540
   },
   "screenshot": {
     "commit": "606040c2edb43e933442abacd2c64e84db0a9213",

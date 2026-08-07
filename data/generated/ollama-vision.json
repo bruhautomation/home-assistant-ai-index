@@ -1,6 +1,10 @@
 {
   "id": "ollama-vision",
   "in_hacs_default": true,
+  "latest_release": {
+    "published_at": "2026-01-17T10:08:56Z",
+    "tag": "1.0.9"
+  },
   "manifest": {
     "domain": "ollama_vision",
     "evidence": {
@@ -18,8 +22,12 @@
   },
   "repo": "remimikalsen/ollama_vision",
   "repo_meta": {
+    "archived": false,
+    "default_branch": "main",
+    "forks": 5,
+    "license": "MIT",
+    "open_issues": 0,
     "pushed_at": "2026-01-17T10:08:56Z",
-    "source": "backfill",
     "stars": 21
   },
   "sha": "f8eb8968c726acce8bab7a25a83b62f37b9db6c4"

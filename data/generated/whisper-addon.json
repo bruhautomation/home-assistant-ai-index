@@ -27,10 +27,19 @@
     "version": "3.5.1"
   },
   "id": "whisper-addon",
+  "latest_release": {
+    "published_at": "2026-07-09T21:19:08Z",
+    "tag": "v3.5.0"
+  },
   "repo": "rhasspy/wyoming-faster-whisper",
   "repo_meta": {
-    "pushed_at": "2026-07-09T16:07:00-05:00",
-    "source": "backfill"
+    "archived": false,
+    "default_branch": "main",
+    "forks": 100,
+    "license": "MIT",
+    "open_issues": 13,
+    "pushed_at": "2026-07-09T21:07:18Z",
+    "stars": 361
   },
   "sha": "5b5854f36a0f228a289a6a30da7e594f74e35968"
 }

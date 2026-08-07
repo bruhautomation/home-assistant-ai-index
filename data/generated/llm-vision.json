@@ -1,6 +1,10 @@
 {
   "id": "llm-vision",
   "in_hacs_default": true,
+  "latest_release": {
+    "published_at": "2026-08-04T08:15:28Z",
+    "tag": "v1.7.1"
+  },
   "manifest": {
     "domain": "llmvision",
     "evidence": {
@@ -20,9 +24,12 @@
   },
   "repo": "valentinfrlch/ha-llmvision",
   "repo_meta": {
+    "archived": false,
+    "default_branch": "main",
+    "forks": 133,
+    "license": "Apache-2.0",
     "open_issues": 40,
     "pushed_at": "2026-08-05T12:43:58Z",
-    "source": "backfill",
     "stars": 1419
   },
   "sha": "3cc0510a4dfc8d8a05599eb9f7a0079979c80492"

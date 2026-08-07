@@ -38,10 +38,19 @@
     "version": "1.4.3"
   },
   "id": "speech-to-phrase",
+  "latest_release": {
+    "published_at": "2026-04-03T14:33:51Z",
+    "tag": "v1.4.3"
+  },
   "repo": "OHF-Voice/speech-to-phrase",
   "repo_meta": {
-    "pushed_at": "2026-04-03T11:43:29-05:00",
-    "source": "backfill"
+    "archived": false,
+    "default_branch": "main",
+    "forks": 71,
+    "license": "Apache-2.0",
+    "open_issues": 83,
+    "pushed_at": "2026-07-27T23:59:13Z",
+    "stars": 326
   },
   "sha": "b4ecef9519e84fefd5dc35c0384c50efa13a0bad"
 }

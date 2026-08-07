@@ -1,6 +1,10 @@
 {
   "id": "voice-satellite",
   "in_hacs_default": true,
+  "latest_release": {
+    "published_at": "2026-08-05T14:09:41Z",
+    "tag": "2026.8.4"
+  },
   "manifest": {
     "domain": "voice_satellite",
     "evidence": {
@@ -18,9 +22,13 @@
   },
   "repo": "jxlarrea/voice-satellite-card-integration",
   "repo_meta": {
+    "archived": false,
+    "default_branch": "main",
+    "forks": 18,
+    "license": "AGPL-3.0",
+    "open_issues": 0,
     "pushed_at": "2026-08-05T14:09:41Z",
-    "source": "backfill",
-    "stars": 606
+    "stars": 609
   },
   "screenshot": {
     "commit": "8af37123aaf813663959484b7f41fde6fbf63839",

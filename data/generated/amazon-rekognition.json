@@ -1,6 +1,10 @@
 {
   "id": "amazon-rekognition",
   "in_hacs_default": true,
+  "latest_release": {
+    "published_at": "2021-12-26T07:50:05Z",
+    "tag": "v3.2"
+  },
   "manifest": {
     "domain": "amazon_rekognition",
     "evidence": {
@@ -19,9 +23,12 @@
   },
   "repo": "robmarkcole/HASS-amazon-rekognition",
   "repo_meta": {
+    "archived": false,
+    "default_branch": "master",
+    "forks": 11,
+    "license": "MIT",
     "open_issues": 19,
     "pushed_at": "2026-04-13T23:38:37Z",
-    "source": "backfill",
     "stars": 89
   },
   "screenshot": {

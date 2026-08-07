@@ -1,6 +1,10 @@
 {
   "id": "ai-agent-ha",
   "in_hacs_default": true,
+  "latest_release": {
+    "published_at": "2026-07-14T18:42:47Z",
+    "tag": "v1.42"
+  },
   "manifest": {
     "domain": "ai_agent_ha",
     "evidence": {
@@ -18,10 +22,13 @@
   },
   "repo": "sbenodiz/ai_agent_ha",
   "repo_meta": {
+    "archived": false,
+    "default_branch": "main",
+    "forks": 24,
+    "license": "MIT",
     "open_issues": 15,
     "pushed_at": "2026-07-14T18:42:46Z",
-    "source": "backfill",
-    "stars": 150
+    "stars": 151
   },
   "screenshot": {
     "commit": "b1ec82cbb6c8800aea816000b446856f5e893ff1",

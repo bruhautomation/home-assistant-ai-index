@@ -1,6 +1,10 @@
 {
   "id": "mcp-assist",
   "in_hacs_default": true,
+  "latest_release": {
+    "published_at": "2026-08-02T13:41:39Z",
+    "tag": "v0.17.2"
+  },
   "manifest": {
     "domain": "mcp_assist",
     "evidence": {
@@ -22,9 +26,12 @@
   },
   "repo": "mike-nott/mcp-assist",
   "repo_meta": {
+    "archived": false,
+    "default_branch": "main",
+    "forks": 20,
+    "license": "MIT",
     "open_issues": 21,
     "pushed_at": "2026-08-02T13:41:38Z",
-    "source": "backfill",
     "stars": 100
   },
   "sha": "feff8d31761fe54a3a7ca2afd1949ad6e69dd019"

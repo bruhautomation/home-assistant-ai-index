@@ -2,8 +2,13 @@
   "id": "view-assist",
   "repo": "dinki/View-Assist",
   "repo_meta": {
-    "pushed_at": "2026-05-19T16:06:30-05:00",
-    "source": "backfill"
+    "archived": false,
+    "default_branch": "main",
+    "forks": 70,
+    "license": "NOASSERTION",
+    "open_issues": 34,
+    "pushed_at": "2026-08-04T16:47:00Z",
+    "stars": 501
   },
   "screenshot": {
     "commit": "360de499841574f86a9dfef717b67f807344e001",

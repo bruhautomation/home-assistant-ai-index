@@ -1,6 +1,10 @@
 {
   "id": "hass-mcp-server",
   "in_hacs_default": true,
+  "latest_release": {
+    "published_at": "2026-07-30T12:08:52Z",
+    "tag": "v1.14.0"
+  },
   "manifest": {
     "domain": "mcp_server_http_transport",
     "evidence": {
@@ -19,9 +23,12 @@
   },
   "repo": "ganhammar/hass-mcp-server",
   "repo_meta": {
+    "archived": false,
+    "default_branch": "main",
+    "forks": 14,
+    "license": "MIT",
     "open_issues": 3,
     "pushed_at": "2026-07-30T12:08:51Z",
-    "source": "backfill",
     "stars": 59
   },
   "sha": "ecbbc3ac589fd2cdcadc4897db75ef973bce7fb5"

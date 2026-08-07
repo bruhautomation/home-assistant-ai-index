@@ -1,9 +1,18 @@
 {
   "id": "hass-mcp",
+  "latest_release": {
+    "published_at": "2026-08-06T11:27:44Z",
+    "tag": "v0.6.0"
+  },
   "repo": "voska/hass-mcp",
   "repo_meta": {
-    "pushed_at": "2026-08-06T08:23:05-03:00",
-    "source": "backfill"
+    "archived": false,
+    "default_branch": "master",
+    "forks": 49,
+    "license": "MIT",
+    "open_issues": 6,
+    "pushed_at": "2026-08-06T11:24:41Z",
+    "stars": 312
   },
   "sha": "e05bfde09d275f1bc2be2e2de6ba650d56333968"
 }

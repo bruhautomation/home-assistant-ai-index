@@ -1,9 +1,18 @@
 {
   "id": "willow",
+  "latest_release": {
+    "published_at": "2026-07-21T21:36:56Z",
+    "tag": "0.4.3"
+  },
   "repo": "toverainc/willow",
   "repo_meta": {
-    "pushed_at": "2026-08-04T20:02:56+03:00",
-    "source": "backfill"
+    "archived": false,
+    "default_branch": "main",
+    "forks": 125,
+    "license": "Apache-2.0",
+    "open_issues": 24,
+    "pushed_at": "2026-08-04T17:02:58Z",
+    "stars": 3086
   },
   "sha": "415ba07007f49873649d36e0b384d72640f1cfac"
 }

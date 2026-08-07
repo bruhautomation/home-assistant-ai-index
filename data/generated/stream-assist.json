@@ -1,6 +1,10 @@
 {
   "id": "stream-assist",
   "in_hacs_default": false,
+  "latest_release": {
+    "published_at": "2024-06-12T12:08:56Z",
+    "tag": "v2.1.0"
+  },
   "manifest": {
     "domain": "stream_assist",
     "evidence": {
@@ -16,8 +20,12 @@
   },
   "repo": "AlexxIT/StreamAssist",
   "repo_meta": {
-    "pushed_at": "2024-06-12T15:05:57+03:00",
-    "source": "backfill",
+    "archived": false,
+    "default_branch": "main",
+    "forks": 38,
+    "license": "MIT",
+    "open_issues": 47,
+    "pushed_at": "2024-07-30T21:04:03Z",
     "stars": 384
   },
   "screenshot": {

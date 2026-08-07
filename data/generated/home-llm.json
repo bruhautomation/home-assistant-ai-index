@@ -1,6 +1,10 @@
 {
   "id": "home-llm",
   "in_hacs_default": false,
+  "latest_release": {
+    "published_at": "2026-07-07T01:48:17Z",
+    "tag": "v0.4.10"
+  },
   "manifest": {
     "detected_providers": [
       "anthropic",
@@ -27,8 +31,13 @@
   },
   "repo": "acon96/home-llm",
   "repo_meta": {
-    "pushed_at": "2026-07-06T21:47:27-04:00",
-    "source": "backfill"
+    "archived": false,
+    "default_branch": "develop",
+    "forks": 142,
+    "license": null,
+    "open_issues": 36,
+    "pushed_at": "2026-07-07T01:47:32Z",
+    "stars": 1408
   },
   "sha": "50cf35c9b66440f64ce45baeb3f5b39a2f382cd1"
 }

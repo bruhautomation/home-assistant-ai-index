@@ -27,6 +27,19 @@
     "version": "2.3.2"
   },
   "id": "piper-addon",
+  "latest_release": {
+    "published_at": "2026-07-14T14:43:55Z",
+    "tag": "v2.3.1"
+  },
   "repo": "rhasspy/wyoming-piper",
+  "repo_meta": {
+    "archived": false,
+    "default_branch": "main",
+    "forks": 57,
+    "license": "MIT",
+    "open_issues": 3,
+    "pushed_at": "2026-07-23T16:25:48Z",
+    "stars": 195
+  },
   "sha": "fd78db7f40f59c17207840402f7df70808ff8dd3"
 }

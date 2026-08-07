@@ -1,6 +1,19 @@
 {
   "id": "localai",
+  "latest_release": {
+    "published_at": "2026-08-06T15:36:06Z",
+    "tag": "v4.8.1"
+  },
   "repo": "mudler/LocalAI",
+  "repo_meta": {
+    "archived": false,
+    "default_branch": "master",
+    "forks": 4351,
+    "license": "MIT",
+    "open_issues": 149,
+    "pushed_at": "2026-08-07T04:04:37Z",
+    "stars": 48300
+  },
   "screenshot": {
     "commit": "07dfb32bc91818f8389a6d99d84c4cdc61b7ff79",
     "source": "readme",

@@ -1,6 +1,10 @@
 {
   "id": "ai-automation-suggester",
   "in_hacs_default": true,
+  "latest_release": {
+    "published_at": "2026-07-11T09:59:21Z",
+    "tag": "v1.5.10"
+  },
   "manifest": {
     "detected_providers": [
       "anthropic"
@@ -25,9 +29,12 @@
   },
   "repo": "ITSpecialist111/ai_automation_suggester",
   "repo_meta": {
-    "open_issues": 7,
+    "archived": false,
+    "default_branch": "main",
+    "forks": 42,
+    "license": "MIT",
+    "open_issues": 6,
     "pushed_at": "2026-07-11T09:59:19Z",
-    "source": "backfill",
     "stars": 762
   },
   "screenshot": {

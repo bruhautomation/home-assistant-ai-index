@@ -121,10 +121,19 @@
     "version": "0.17.2"
   },
   "id": "frigate",
+  "latest_release": {
+    "published_at": "2026-06-28T12:12:11Z",
+    "tag": "v0.17.2"
+  },
   "repo": "blakeblackshear/frigate",
   "repo_meta": {
-    "pushed_at": "2026-08-05T07:40:24-05:00",
-    "source": "backfill"
+    "archived": false,
+    "default_branch": "dev",
+    "forks": 3456,
+    "license": "MIT",
+    "open_issues": 163,
+    "pushed_at": "2026-08-06T18:59:58Z",
+    "stars": 34883
   },
   "screenshot": {
     "commit": "e73a14db5d03e5f6532ddc6c02358d71f94de3c2",

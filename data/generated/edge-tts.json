@@ -1,6 +1,10 @@
 {
   "id": "edge-tts",
   "in_hacs_default": true,
+  "latest_release": {
+    "published_at": "2025-12-16T03:33:13Z",
+    "tag": "v0.7.7"
+  },
   "manifest": {
     "domain": "edge_tts",
     "evidence": {
@@ -18,9 +22,12 @@
   },
   "repo": "hasscc/hass-edge-tts",
   "repo_meta": {
+    "archived": false,
+    "default_branch": "main",
+    "forks": 80,
+    "license": null,
     "open_issues": 18,
     "pushed_at": "2026-06-05T00:54:46Z",
-    "source": "backfill",
     "stars": 484
   },
   "sha": "d8dfb6db89c156537863604f3efe120394d880c3"

@@ -1,9 +1,18 @@
 {
   "id": "microwakeword",
+  "latest_release": {
+    "published_at": "2026-07-08T14:31:29Z",
+    "tag": "stop"
+  },
   "repo": "kahrendt/microWakeWord",
   "repo_meta": {
-    "pushed_at": "2026-07-06T13:48:24-05:00",
-    "source": "backfill"
+    "archived": false,
+    "default_branch": "main",
+    "forks": 2,
+    "license": "Apache-2.0",
+    "open_issues": 0,
+    "pushed_at": "2026-07-09T22:48:47Z",
+    "stars": 4
   },
   "sha": "4665173cd35f1cff9a61e06fc427f124766c488e"
 }

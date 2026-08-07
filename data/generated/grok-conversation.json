@@ -1,6 +1,10 @@
 {
   "id": "grok-conversation",
   "in_hacs_default": true,
+  "latest_release": {
+    "published_at": "2026-08-03T03:53:28Z",
+    "tag": "v1.6.0"
+  },
   "manifest": {
     "detected_providers": [
       "openai"
@@ -21,9 +25,12 @@
   },
   "repo": "braytonstafford/grok_conversation",
   "repo_meta": {
+    "archived": false,
+    "default_branch": "master",
+    "forks": 5,
+    "license": "MIT",
     "open_issues": 12,
     "pushed_at": "2026-08-03T03:53:23Z",
-    "source": "backfill",
     "stars": 39
   },
   "sha": "11cc37075e7e59a963ea25d4fd87a0e83d284976"

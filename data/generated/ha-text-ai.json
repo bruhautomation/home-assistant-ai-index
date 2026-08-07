@@ -1,6 +1,10 @@
 {
   "id": "ha-text-ai",
   "in_hacs_default": true,
+  "latest_release": {
+    "published_at": "2026-07-06T23:14:16Z",
+    "tag": "v2.5.1"
+  },
   "manifest": {
     "detected_providers": [
       "google"
@@ -22,8 +26,12 @@
   },
   "repo": "smkrv/ha-text-ai",
   "repo_meta": {
+    "archived": false,
+    "default_branch": "main",
+    "forks": 7,
+    "license": "MIT",
+    "open_issues": 0,
     "pushed_at": "2026-07-21T07:21:39Z",
-    "source": "backfill",
     "stars": 80
   },
   "sha": "03cd40de29b3fb061b4e49492fd84ba1f899aaaf"

@@ -1,6 +1,10 @@
 {
   "id": "marlin-analyzer",
   "in_hacs_default": false,
+  "latest_release": {
+    "published_at": "2026-06-08T13:29:39Z",
+    "tag": "0.1.0"
+  },
   "manifest": {
     "domain": "marlin_analyzer",
     "evidence": {
@@ -16,8 +20,13 @@
   },
   "repo": "kotope/marlin-ha-integration",
   "repo_meta": {
-    "pushed_at": "2026-06-08T16:14:00+03:00",
-    "source": "backfill"
+    "archived": false,
+    "default_branch": "main",
+    "forks": 1,
+    "license": "MIT",
+    "open_issues": 0,
+    "pushed_at": "2026-06-08T13:29:39Z",
+    "stars": 0
   },
   "sha": "4fba57873c548433aeaafaaae5b938824b652182"
 }

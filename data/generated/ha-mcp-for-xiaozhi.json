@@ -1,6 +1,10 @@
 {
   "id": "ha-mcp-for-xiaozhi",
   "in_hacs_default": true,
+  "latest_release": {
+    "published_at": "2025-10-06T06:38:38Z",
+    "tag": "v0.1.1"
+  },
   "manifest": {
     "domain": "ws_mcp_server",
     "evidence": {
@@ -18,9 +22,12 @@
   },
   "repo": "c1pher-cn/ha-mcp-for-xiaozhi",
   "repo_meta": {
+    "archived": false,
+    "default_branch": "main",
+    "forks": 50,
+    "license": null,
     "open_issues": 1,
     "pushed_at": "2025-10-10T02:34:35Z",
-    "source": "backfill",
     "stars": 260
   },
   "sha": "07613946e04e6a9d3db2b5a51997c716ee21ba5c"

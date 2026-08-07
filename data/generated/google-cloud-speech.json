@@ -18,8 +18,13 @@
   },
   "repo": "home-assistant/core",
   "repo_meta": {
-    "pushed_at": "2026-08-06T19:56:37+02:00",
-    "source": "backfill"
+    "archived": false,
+    "default_branch": "dev",
+    "forks": 38294,
+    "license": "Apache-2.0",
+    "open_issues": 3513,
+    "pushed_at": "2026-08-07T00:36:35Z",
+    "stars": 89783
   },
   "sha": "c263da982a0b98b0f1540fda08f298de56bbc44b"
 }
