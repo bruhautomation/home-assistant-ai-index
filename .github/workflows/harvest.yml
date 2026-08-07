@@ -39,11 +39,11 @@ jobs:
           fi
 
   # A push made with GITHUB_TOKEN doesn't trigger the pages workflow,
-  # so redeploy the site here after harvesting.
+  # so redeploy the site here after harvesting. The called workflow pushes
+  # the built site to the gh-pages branch, so it needs contents: write —
+  # granting less makes the whole run die at startup ("startup_failure").
   deploy:
     needs: harvest
     uses: ./.github/workflows/pages.yml
     permissions:
-      contents: read
-      pages: write
-      id-token: write
+      contents: write
