@@ -198,7 +198,8 @@ function inferenceLabel(entry) {
 }
 
 function starsLabel(entry) {
-  if (entry.repo === "home-assistant/core") return "";
+  if (entry.repo === "home-assistant/core")
+    return '<span class="na" data-tip="ships inside the home-assistant/core monorepo — no repository of its own to star">N/A</span>';
   const meta = (entry.generated && entry.generated.repo_meta) || {};
   if (meta.stars == null) return "—";
   return meta.stars >= 1000 ? (meta.stars / 1000).toFixed(1).replace(/\.0$/, "") + "k" : String(meta.stars);

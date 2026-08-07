@@ -249,6 +249,7 @@ td .sub {
   font-size: .74rem;
 }
 .starcell, .updatedcell { color: var(--muted); font-size: .84rem; }
+.na { color: var(--no); font-size: .78rem; }
 .health { color: var(--muted); font-size: .84rem; display: inline-flex; align-items: center; gap: .25rem; }
 .health .ic { width: .85rem; height: .85rem; }
 .ratingcell { color: var(--muted); }
