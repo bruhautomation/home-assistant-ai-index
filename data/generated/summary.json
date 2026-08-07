@@ -2,6 +2,12 @@
   "api_authenticated": true,
   "changed": 1,
   "entries": 1,
-  "errors": [],
-  "harvested_at": "2026-08-06T23:36:45Z"
+  "errors": [
+    {
+      "error": "rate limited (403)",
+      "id": "brain",
+      "stage": "repo_meta"
+    }
+  ],
+  "harvested_at": "2026-08-07T02:34:56Z"
 }

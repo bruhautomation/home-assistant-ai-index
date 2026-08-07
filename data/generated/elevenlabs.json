@@ -1,0 +1,21 @@
+{
+  "id": "elevenlabs",
+  "manifest": {
+    "domain": "elevenlabs",
+    "evidence": {
+      "commit": "c263da982a0b98b0f1540fda08f298de56bbc44b",
+      "line": 8,
+      "path": "homeassistant/components/elevenlabs/manifest.json",
+      "repo": "home-assistant/core"
+    },
+    "iot_class": "cloud_polling",
+    "name": "ElevenLabs",
+    "requirements": [
+      "elevenlabs==2.51.0",
+      "sentence-stream==1.3.0"
+    ],
+    "version": null
+  },
+  "repo": "home-assistant/core",
+  "sha": "c263da982a0b98b0f1540fda08f298de56bbc44b"
+}

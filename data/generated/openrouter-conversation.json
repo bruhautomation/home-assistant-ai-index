@@ -1,0 +1,24 @@
+{
+  "id": "openrouter-conversation",
+  "manifest": {
+    "detected_providers": [
+      "openai"
+    ],
+    "domain": "open_router",
+    "evidence": {
+      "commit": "c263da982a0b98b0f1540fda08f298de56bbc44b",
+      "line": 10,
+      "path": "homeassistant/components/open_router/manifest.json",
+      "repo": "home-assistant/core"
+    },
+    "iot_class": "cloud_polling",
+    "name": "OpenRouter",
+    "requirements": [
+      "openai==2.45.0",
+      "python-open-router==0.4.0"
+    ],
+    "version": null
+  },
+  "repo": "home-assistant/core",
+  "sha": "c263da982a0b98b0f1540fda08f298de56bbc44b"
+}
