@@ -10,6 +10,7 @@ addon_config:
   path: brain
 summary: Add-on that runs Claude Code inside Home Assistant with admin reach — every entity, camera, history, and config file — plus persistent memory, insights, Assist and automation hooks.
 providers: [anthropic]
+llm_access: [subscription, api-key]
 inference: [cloud]
 capabilities:
   reads_entity_states: true

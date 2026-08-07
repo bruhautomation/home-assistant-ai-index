@@ -221,8 +221,9 @@ button { font: inherit; }
   box-shadow: var(--shadow);
 }
 table { border-collapse: collapse; width: 100%; }
-th, td { text-align: left; padding: .5rem .6rem; border-bottom: 1px solid var(--border-soft); vertical-align: top; }
+th, td { text-align: left; padding: .45rem .55rem; border-bottom: 1px solid var(--border-soft); vertical-align: top; }
 tbody tr:last-child td { border-bottom: 0; }
+thead th.wrapok { white-space: normal; min-width: 5.5rem; }
 thead th {
   position: sticky; top: 0; z-index: 2;
   background: var(--panel);
@@ -237,19 +238,27 @@ td .sub {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  color: var(--muted); font-size: .8rem; font-weight: 400; max-width: 34rem;
+  color: var(--muted); font-size: .8rem; font-weight: 400; max-width: 21rem;
 }
 .catcell, .installcell { color: var(--muted); font-size: .84rem; }
+.llmcell { display: block; font-size: .84rem; }
+.llmcell .llmnames { display: block; white-space: nowrap; max-width: 10.5rem; overflow: hidden; text-overflow: ellipsis; }
+.llmcell .llmaccess {
+  display: block;
+  color: var(--muted);
+  font-size: .74rem;
+}
+.starcell, .updatedcell { color: var(--muted); font-size: .84rem; }
 .health { color: var(--muted); font-size: .84rem; display: inline-flex; align-items: center; gap: .25rem; }
 .health .ic { width: .85rem; height: .85rem; }
 .ratingcell { color: var(--muted); }
 .nowrap { white-space: nowrap; }
 .cmpcol { width: 1.5rem; }
 .capcell { white-space: nowrap; }
-.capstrip { display: inline-flex; gap: 3px; }
+.capstrip { display: inline-flex; gap: 2px; }
 .capt {
   display: inline-flex; align-items: center; justify-content: center;
-  width: 1.55rem; height: 1.55rem; border-radius: 6px;
+  width: 1.3rem; height: 1.3rem; border-radius: 5px;
 }
 .capt .ic { width: .95rem; height: .95rem; vertical-align: 0; }
 .capt.on { background: var(--accent-soft); color: var(--accent); }
