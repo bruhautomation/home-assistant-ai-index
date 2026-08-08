@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="STT entity that records each Assist voice command as WAV and posts it to OpenAI, Groq, Mistral, Cohere, or any OpenAI-compatible transcription endpoint.">
+<link rel="canonical" href="https://bruhautomation.github.io/home-assistant-ai-index/entries/whisper-cloud-stt/">
+<meta property="og:title" content="OpenAI Whisper Cloud STT — Home Assistant AI Index">
+<meta property="og:description" content="STT entity that records each Assist voice command as WAV and posts it to OpenAI, Groq, Mistral, Cohere, or any OpenAI-compatible transcription endpoint.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Home Assistant AI Index">
+<meta property="og:image" content="https://raw.githubusercontent.com/bruhautomation/home-assistant-ai-index/main/docs/site-preview.png">
+<title>OpenAI Whisper Cloud STT — Home Assistant AI Index</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔎</text></svg>">
+</head>
+<body>
+<header>
+  <nav><a href="../../">← all voice stack &amp; more</a></nav>
+  <h1>OpenAI Whisper Cloud STT</h1>
+  <p class="tag">STT entity that records each Assist voice command as WAV and posts it to OpenAI, Groq, Mistral, Cohere, or any OpenAI-compatible transcription endpoint.</p>
+  <p class="chips"><span class="chip cat">Voice stack</span>
+  <span class="chip">HACS integration</span>
+  <span class="chip">inference: cloud · local</span></p>
+  <p><a href="https://github.com/fabio-garavini/ha-openai-whisper-stt-api">github.com/fabio-garavini/ha-openai-whisper-stt-api</a></p>
+</header>
+
+<h2>What it can reach</h2>
+<ul class="canreach"><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2.5" width="6" height="11.5" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0"/><path d="M12 18v3.5"/></svg> <b>microphone</b></span><span class="captip">Processes live audio — voice commands, wake words, or ambient sound.</span><span class="capev"><a href="https://github.com/fabio-garavini/ha-openai-whisper-stt-api/blob/fde9d1c114568eb4a2aafff2cfeb16300258eb39/custom_components/openai_whisper_cloud/stt.py#L146">source ↗</a></span></li></ul>
+<p class="notgranted">Not granted: reads states · reads history · reads camera · controls devices · creates automations · edits files · executes code · unattended</p>
+<h2>Data flow</h2>
+<p>Providers/backends: <span class="chip">openai</span><span class="chip">groq</span><span class="chip">mistral</span><span class="chip">cohere</span><span class="chip">openai-compatible</span></p>
+<p>What can leave your Home Assistant host:</p>
+<ul><li>the full audio of every voice command, as a WAV upload — to the provider you configure</li></ul>
+
+<h2>Health</h2>
+
+<p>in the HACS default store · ★ 105 · last push 2026-08-04 · latest release 1.3.3 · license AGPL-3.0 · 0 open issues</p>
+<p>Integration <code>iot_class</code> (self-declared): <code>cloud_push</code> — a cloud service pushes to it (<a href="https://github.com/fabio-garavini/ha-openai-whisper-stt-api/blob/fde9d1c114568eb4a2aafff2cfeb16300258eb39/custom_components/openai_whisper_cloud/manifest.json#L11">manifest ↗</a>)</p>
+
+<h2>Notes</h2><p>The cloud inverse of the Whisper add-on: the complete recording of each command leaves your host per request. The &quot;custom&quot; provider accepts any OpenAI-compatible URL, so pointing it at a self-hosted Whisper server keeps audio on your network — that choice, not the integration, decides where your voice goes. Only ever invoked by the pipeline.
+</p>
+<div class="correction">
+  <p><strong>Is this wrong about OpenAI Whisper Cloud STT?</strong> That's the bug we care about most —
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index/issues/new?template=correction.yml&title=%5Bcorrection%5D%20whisper-cloud-stt">open a correction</a>. Maintainer reports get priority.</p>
+</div>
+<p class="stamp">Metrics harvested 2026-08-08 · Entry added 2026-08-07 ·
+<a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/entries/whisper-cloud-stt.yaml">entry source</a></p>
+<footer>
+  <p>Facts with evidence, not scores. Content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+  code <a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/LICENSE">MIT</a> ·
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index">source &amp; corrections</a></p>
+</footer>
+</body>
+</html>

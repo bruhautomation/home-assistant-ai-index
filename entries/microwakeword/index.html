@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Wake-word engine small enough to run on the satellite itself — the detection used by ESPHome voice devices like Home Assistant Voice PE.">
+<link rel="canonical" href="https://bruhautomation.github.io/home-assistant-ai-index/entries/microwakeword/">
+<meta property="og:title" content="microWakeWord — Home Assistant AI Index">
+<meta property="og:description" content="Wake-word engine small enough to run on the satellite itself — the detection used by ESPHome voice devices like Home Assistant Voice PE.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Home Assistant AI Index">
+<meta property="og:image" content="https://raw.githubusercontent.com/bruhautomation/home-assistant-ai-index/main/docs/site-preview.png">
+<title>microWakeWord — Home Assistant AI Index</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔎</text></svg>">
+</head>
+<body>
+<header>
+  <nav><a href="../../">← all voice stack &amp; more</a></nav>
+  <h1>microWakeWord</h1>
+  <p class="tag">Wake-word engine small enough to run on the satellite itself — the detection used by ESPHome voice devices like Home Assistant Voice PE.</p>
+  <p class="chips"><span class="chip cat">Voice stack</span>
+  <span class="chip">external</span>
+  <span class="chip">inference: local</span></p>
+  <p><a href="https://github.com/kahrendt/microWakeWord">github.com/kahrendt/microWakeWord</a></p>
+</header>
+
+<h2>What it can reach</h2>
+<ul class="canreach"><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2.5" width="6" height="11.5" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0"/><path d="M12 18v3.5"/></svg> <b>microphone</b></span><span class="captip">Processes live audio — voice commands, wake words, or ambient sound.</span><span class="capev"><a href="https://github.com/kahrendt/microWakeWord/blob/4665173cd35f1cff9a61e06fc427f124766c488e/microwakeword/inference.py#L25">source ↗</a></span></li></ul>
+<p class="notgranted">Not granted: reads states · reads history · reads camera · controls devices · creates automations · edits files · executes code · unattended</p>
+<h2>Data flow</h2>
+<p>Providers/backends: <span class="chip">self-hosted</span></p>
+<p>What can leave your Home Assistant host:</p>
+<ul><li>nothing identified</li></ul>
+
+<h2>Health</h2>
+
+<p>★ 4 · last push 2026-07-09 · latest release stop · license Apache-2.0 · 0 open issues</p>
+
+
+<h2>Notes</h2><p>Scores microphone audio for the wake word on the ESP32 itself, so no audio leaves the device until after the wake word — the privacy property that distinguishes on-device wake detection from server-side (openWakeWord). This repo is the model framework; ESPHome ships the on-device runtime.
+</p>
+<div class="correction">
+  <p><strong>Is this wrong about microWakeWord?</strong> That's the bug we care about most —
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index/issues/new?template=correction.yml&title=%5Bcorrection%5D%20microwakeword">open a correction</a>. Maintainer reports get priority.</p>
+</div>
+<p class="stamp">Metrics harvested 2026-08-08 · Entry added 2026-08-06 ·
+<a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/entries/microwakeword.yaml">entry source</a></p>
+<footer>
+  <p>Facts with evidence, not scores. Content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+  code <a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/LICENSE">MIT</a> ·
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index">source &amp; corrections</a></p>
+</footer>
+</body>
+</html>

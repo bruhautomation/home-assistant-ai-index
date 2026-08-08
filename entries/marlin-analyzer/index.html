@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Local vision AI that watches your recorded camera clips and turns motion events into written security summaries and daily briefings.">
+<link rel="canonical" href="https://bruhautomation.github.io/home-assistant-ai-index/entries/marlin-analyzer/">
+<meta property="og:title" content="Marlin Analyzer — Home Assistant AI Index">
+<meta property="og:description" content="Local vision AI that watches your recorded camera clips and turns motion events into written security summaries and daily briefings.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Home Assistant AI Index">
+<meta property="og:image" content="https://raw.githubusercontent.com/bruhautomation/home-assistant-ai-index/main/docs/site-preview.png">
+<title>Marlin Analyzer — Home Assistant AI Index</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔎</text></svg>">
+</head>
+<body>
+<header>
+  <nav><a href="../../">← all summaries &amp; briefings &amp; more</a></nav>
+  <h1>Marlin Analyzer</h1>
+  <p class="tag">Local vision AI that watches your recorded camera clips and turns motion events into written security summaries and daily briefings.</p>
+  <p class="chips"><span class="chip cat">Summaries &amp; briefings</span>
+  <span class="chip">HACS integration · container</span>
+  <span class="chip">inference: local · cloud</span></p>
+  <p><a href="https://github.com/kotope/marlin-ha-integration">github.com/kotope/marlin-ha-integration</a></p>
+</header>
+
+<h2>What it can reach</h2>
+<ul class="canreach"><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h3.2l1.9-2.6h7.8L17.8 8H21v11H3z"/><circle cx="12" cy="13.2" r="3.4"/></svg> <b>reads camera</b></span><span class="captip">Can access camera images or streams.</span><span class="capev"><a href="https://github.com/kotope/marlin-ha-integration/blob/4fba57873c548433aeaafaaae5b938824b652182/custom_components/marlin_analyzer/client.py#L119">source ↗</a></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.8"/><path d="M10.2 8.7v6.6l5.4-3.3z"/></svg> <b>unattended</b></span><span class="captip">Starts AI activity by itself on schedules, watchers, or triggers — no human in the loop.</span><span class="capev"><a href="https://github.com/kotope/marlin-server/blob/4114efcbaae1e0262b8d52967bf8cb328898a629/app/queue.py#L53">source ↗</a></span></li></ul>
+<p class="notgranted">Not granted: reads states · reads history · microphone · controls devices · creates automations · edits files · executes code</p>
+<h2>Data flow</h2>
+<p>Providers/backends: <span class="chip">self-hosted</span><span class="chip">google</span><span class="chip">anthropic</span></p>
+<p>What can leave your Home Assistant host:</p>
+<ul><li>camera clips — to your own self-hosted Marlin server</li><li>with cloud fallback enabled — event text summaries to Gemini or Claude</li></ul>
+
+<h2>Health</h2>
+
+<p>custom HACS repository (not in the default store) · ★ 0 · last push 2026-06-08 · latest release 0.1.0 · license MIT · 0 open issues</p>
+<p>Integration <code>iot_class</code> (self-declared): <code>local_polling</code> — polls something on your network (<a href="https://github.com/kotope/marlin-ha-integration/blob/4fba57873c548433aeaafaaae5b938824b652182/custom_components/marlin_analyzer/manifest.json#L8">manifest ↗</a>)</p>
+
+<h2>Notes</h2><p>Two pieces: a HACS integration that feeds motion clips from your media folders (Unifi Protect focused) to a self-hosted GPU server running the Marlin-2B vision model, which captions events as background jobs and aggregates them into briefings via get_summary / get_instant_summary actions. Video never leaves your network; the optional cloud fallback sends only text. Young project (2026) — expect fast movement.
+</p>
+<div class="correction">
+  <p><strong>Is this wrong about Marlin Analyzer?</strong> That's the bug we care about most —
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index/issues/new?template=correction.yml&title=%5Bcorrection%5D%20marlin-analyzer">open a correction</a>. Maintainer reports get priority.</p>
+</div>
+<p class="stamp">Metrics harvested 2026-08-08 · Entry added 2026-08-06 ·
+<a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/entries/marlin-analyzer.yaml">entry source</a></p>
+<footer>
+  <p>Facts with evidence, not scores. Content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+  code <a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/LICENSE">MIT</a> ·
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index">source &amp; corrections</a></p>
+</footer>
+</body>
+</html>

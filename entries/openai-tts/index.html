@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Text-to-speech for Assist using OpenAI&#x27;s voices — the cloud counterpart to Piper.">
+<link rel="canonical" href="https://bruhautomation.github.io/home-assistant-ai-index/entries/openai-tts/">
+<meta property="og:title" content="OpenAI TTS — Home Assistant AI Index">
+<meta property="og:description" content="Text-to-speech for Assist using OpenAI&#x27;s voices — the cloud counterpart to Piper.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Home Assistant AI Index">
+<meta property="og:image" content="https://raw.githubusercontent.com/bruhautomation/home-assistant-ai-index/main/docs/site-preview.png">
+<title>OpenAI TTS — Home Assistant AI Index</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔎</text></svg>">
+</head>
+<body>
+<header>
+  <nav><a href="../../">← all voice stack &amp; more</a></nav>
+  <h1>OpenAI TTS</h1>
+  <p class="tag">Text-to-speech for Assist using OpenAI&#x27;s voices — the cloud counterpart to Piper.</p>
+  <p class="chips"><span class="chip cat">Voice stack</span>
+  <span class="chip">HACS integration</span>
+  <span class="chip">inference: cloud</span></p>
+  <p><a href="https://github.com/sfortis/openai_tts">github.com/sfortis/openai_tts</a></p>
+</header>
+
+<h2>What it can reach</h2>
+<p class="noreach">Reaches nothing in Home Assistant — see the notes for what it does instead.</p>
+
+<h2>Data flow</h2>
+<p>Providers/backends: <span class="chip">openai</span><span class="chip">openai-compatible</span></p>
+<p>What can leave your Home Assistant host:</p>
+<ul><li>the text of every spoken response — to OpenAI (or a compatible endpoint)</li></ul>
+
+<h2>Health</h2>
+
+<p>in the HACS default store · ★ 204 · last push 2026-05-05 · latest release v3.8 · license GPL-3.0 · 9 open issues</p>
+<p>Integration <code>iot_class</code> (self-declared): <code>cloud_polling</code> — talks to a cloud service on a schedule (<a href="https://github.com/sfortis/openai_tts/blob/277bc499955db993f9bdf5c07e1ffccfdf05bbf0/custom_components/openai_tts/manifest.json#L10">manifest ↗</a>)</p>
+
+<h2>Notes</h2><p>Minimal reach, one clear trade: every announcement and reply your assistant speaks transits the provider. Included as the cloud/local contrast case to Piper.
+</p>
+<div class="correction">
+  <p><strong>Is this wrong about OpenAI TTS?</strong> That's the bug we care about most —
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index/issues/new?template=correction.yml&title=%5Bcorrection%5D%20openai-tts">open a correction</a>. Maintainer reports get priority.</p>
+</div>
+<p class="stamp">Metrics harvested 2026-08-08 · Entry added 2026-08-06 ·
+<a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/entries/openai-tts.yaml">entry source</a></p>
+<footer>
+  <p>Facts with evidence, not scores. Content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+  code <a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/LICENSE">MIT</a> ·
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index">source &amp; corrections</a></p>
+</footer>
+</body>
+</html>

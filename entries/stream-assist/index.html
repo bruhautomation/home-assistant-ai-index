@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Turns cameras and media players into Assist voice satellites — pipes camera audio through the wake-word and STT pipeline and plays replies on a speaker.">
+<link rel="canonical" href="https://bruhautomation.github.io/home-assistant-ai-index/entries/stream-assist/">
+<meta property="og:title" content="Stream Assist — Home Assistant AI Index">
+<meta property="og:description" content="Turns cameras and media players into Assist voice satellites — pipes camera audio through the wake-word and STT pipeline and plays replies on a speaker.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Home Assistant AI Index">
+<meta property="og:image" content="https://raw.githubusercontent.com/bruhautomation/home-assistant-ai-index/main/docs/site-preview.png">
+<title>Stream Assist — Home Assistant AI Index</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔎</text></svg>">
+</head>
+<body>
+<header>
+  <nav><a href="../../">← all voice stack &amp; more</a></nav>
+  <h1>Stream Assist</h1>
+  <p class="tag">Turns cameras and media players into Assist voice satellites — pipes camera audio through the wake-word and STT pipeline and plays replies on a speaker.</p>
+  <p class="chips"><span class="chip cat">Voice stack</span>
+  <span class="chip">HACS integration</span>
+  <span class="chip">inference: local · cloud</span></p>
+  <p><a href="https://github.com/AlexxIT/StreamAssist">github.com/AlexxIT/StreamAssist</a></p>
+</header>
+<figure class="shot">
+  <a href="https://img.youtube.com/vi/fP_BNFWLYnk/mqdefault.jpg"><img src="https://img.youtube.com/vi/fP_BNFWLYnk/mqdefault.jpg" alt="Screenshot of Stream Assist" loading="lazy" onerror="this.closest('figure').remove()"></a>
+  <figcaption>From the project's README at the pinned commit.</figcaption>
+</figure>
+<h2>What it can reach</h2>
+<ul class="canreach"><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h3.2l1.9-2.6h7.8L17.8 8H21v11H3z"/><circle cx="12" cy="13.2" r="3.4"/></svg> <b>reads camera</b></span><span class="captip">Can access camera images or streams.</span><span class="capev"><a href="https://github.com/AlexxIT/StreamAssist/blob/49fde307ea11ecd1495b2bdcff3409217fe10b10/custom_components/stream_assist/core/__init__.py#L54">source ↗</a></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2.5" width="6" height="11.5" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0"/><path d="M12 18v3.5"/></svg> <b>microphone</b></span><span class="captip">Processes live audio — voice commands, wake words, or ambient sound.</span><span class="capev"><a href="https://github.com/AlexxIT/StreamAssist/blob/49fde307ea11ecd1495b2bdcff3409217fe10b10/custom_components/stream_assist/core/stream.py#L43">source ↗</a></span></li></ul>
+<p class="notgranted">Not granted: reads states · reads history · controls devices · creates automations · edits files · executes code · unattended</p>
+<h2>Data flow</h2>
+<p>Providers/backends: —</p>
+<p>What can leave your Home Assistant host:</p>
+<ul><li>nothing by the project itself — camera audio goes to whatever engines your chosen Assist pipeline uses</li></ul>
+
+<h2>Health</h2>
+
+<p>custom HACS repository (not in the default store) · ★ 384 · last push 2024-07-30 · latest release v2.1.0 · license MIT · 47 open issues</p>
+<p>Integration <code>iot_class</code> (self-declared): <code>calculated</code> — derives values locally (<a href="https://github.com/AlexxIT/StreamAssist/blob/49fde307ea11ecd1495b2bdcff3409217fe10b10/custom_components/stream_assist/manifest.json#L13">manifest ↗</a>)</p>
+
+<h2>Notes</h2><p>Once its mic switch is on it holds the camera&#x27;s audio stream open around the clock, running wake-word detection like any satellite — the satellite just happens to be your security camera. Where the audio then goes is decided by the pipeline you select. Dormant: no commits since mid-2024 and a growing issue backlog, though it still works for many. Its only service call is playing TTS on media players.
+</p>
+<div class="correction">
+  <p><strong>Is this wrong about Stream Assist?</strong> That's the bug we care about most —
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index/issues/new?template=correction.yml&title=%5Bcorrection%5D%20stream-assist">open a correction</a>. Maintainer reports get priority.</p>
+</div>
+<p class="stamp">Metrics harvested 2026-08-08 · Entry added 2026-08-07 ·
+<a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/entries/stream-assist.yaml">entry source</a></p>
+<footer>
+  <p>Facts with evidence, not scores. Content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+  code <a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/LICENSE">MIT</a> ·
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index">source &amp; corrections</a></p>
+</footer>
+</body>
+</html>

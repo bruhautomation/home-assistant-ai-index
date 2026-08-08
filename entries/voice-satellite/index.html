@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Lovelace card plus companion integration that turns any browser or wall tablet into an Assist voice satellite, with wake-word detection running in the browser itself.">
+<link rel="canonical" href="https://bruhautomation.github.io/home-assistant-ai-index/entries/voice-satellite/">
+<meta property="og:title" content="Voice Satellite — Home Assistant AI Index">
+<meta property="og:description" content="Lovelace card plus companion integration that turns any browser or wall tablet into an Assist voice satellite, with wake-word detection running in the browser itself.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Home Assistant AI Index">
+<meta property="og:image" content="https://raw.githubusercontent.com/bruhautomation/home-assistant-ai-index/main/docs/site-preview.png">
+<title>Voice Satellite — Home Assistant AI Index</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔎</text></svg>">
+</head>
+<body>
+<header>
+  <nav><a href="../../">← all voice stack &amp; more</a></nav>
+  <h1>Voice Satellite</h1>
+  <p class="tag">Lovelace card plus companion integration that turns any browser or wall tablet into an Assist voice satellite, with wake-word detection running in the browser itself.</p>
+  <p class="chips"><span class="chip cat">Voice stack</span>
+  <span class="chip">HACS integration</span>
+  <span class="chip">inference: local</span></p>
+  <p><a href="https://github.com/jxlarrea/voice-satellite-card-integration">github.com/jxlarrea/voice-satellite-card-integration</a></p>
+</header>
+<figure class="shot">
+  <a href="https://raw.githubusercontent.com/jxlarrea/voice-satellite-card-integration/refs/heads/main/assets/banner.png"><img src="https://raw.githubusercontent.com/jxlarrea/voice-satellite-card-integration/refs/heads/main/assets/banner.png" alt="Screenshot of Voice Satellite" loading="lazy" onerror="this.closest('figure').remove()"></a>
+  <figcaption>From the project's README at the pinned commit.</figcaption>
+</figure>
+<h2>What it can reach</h2>
+<ul class="canreach"><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2.5" width="6" height="11.5" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0"/><path d="M12 18v3.5"/></svg> <b>microphone</b></span><span class="captip">Processes live audio — voice commands, wake words, or ambient sound.</span><span class="capev"><a href="https://github.com/jxlarrea/voice-satellite-card-integration/blob/8af37123aaf813663959484b7f41fde6fbf63839/src/audio/index.js#L119">source ↗</a></span></li></ul>
+<p class="notgranted">Not granted: reads states · reads history · reads camera · controls devices · creates automations · edits files · executes code · unattended</p>
+<h2>Data flow</h2>
+<p>Providers/backends: <span class="chip">self-hosted</span></p>
+<p>What can leave your Home Assistant host:</p>
+<ul><li>nothing off-network by the project itself — mic audio streams only to your own Assist pipeline</li></ul>
+
+<h2>Health</h2>
+
+<p>in the HACS default store · ★ 630 · last push 2026-08-07 · latest release 2026.8.5 · license AGPL-3.0 · 0 open issues</p>
+<p>Integration <code>iot_class</code> (self-declared): <code>local_push</code> — receives pushes on your network (<a href="https://github.com/jxlarrea/voice-satellite-card-integration/blob/250d5c468b32517c91b83c5fc4e2bebdf99789ff/custom_components/voice_satellite/manifest.json#L17">manifest ↗</a>)</p>
+
+<h2>Notes</h2><p>The browser tab keeps the microphone open and runs openWakeWord/microWakeWord models in-page, only opening an Assist session on detection — so audio stays between the browser and your HA server, and what happens after STT depends on the pipeline you point it at. Needs HTTPS and mic permission. The card also displays camera streams and plays TTS, but that is dashboard display, not AI reach.
+</p>
+<div class="correction">
+  <p><strong>Is this wrong about Voice Satellite?</strong> That's the bug we care about most —
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index/issues/new?template=correction.yml&title=%5Bcorrection%5D%20voice-satellite">open a correction</a>. Maintainer reports get priority.</p>
+</div>
+<p class="stamp">Metrics harvested 2026-08-08 · Entry added 2026-08-07 ·
+<a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/entries/voice-satellite.yaml">entry source</a></p>
+<footer>
+  <p>Facts with evidence, not scores. Content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+  code <a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/LICENSE">MIT</a> ·
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index">source &amp; corrections</a></p>
+</footer>
+</body>
+</html>
