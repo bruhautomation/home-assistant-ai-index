@@ -2,8 +2,8 @@
   "id": "home-generative-agent",
   "in_hacs_default": true,
   "latest_release": {
-    "published_at": "2026-08-04T14:59:39Z",
-    "tag": "v3.25.1"
+    "published_at": "2026-08-09T01:42:16Z",
+    "tag": "v3.26.0"
   },
   "manifest": {
     "detected_providers": [
@@ -43,9 +43,9 @@
     "default_branch": "main",
     "forks": 49,
     "license": "MIT",
-    "open_issues": 2,
-    "pushed_at": "2026-08-07T20:21:32Z",
-    "stars": 281
+    "open_issues": 3,
+    "pushed_at": "2026-08-09T03:58:59Z",
+    "stars": 282
   },
   "screenshot": {
     "commit": "cd29e935c971fc2820552ae7640579e755340574",

@@ -2,8 +2,8 @@
   "id": "grok-conversation",
   "in_hacs_default": true,
   "latest_release": {
-    "published_at": "2026-08-03T03:53:28Z",
-    "tag": "v1.6.0"
+    "published_at": "2026-08-09T04:46:49Z",
+    "tag": "v1.7.2"
   },
   "manifest": {
     "detected_providers": [
@@ -11,17 +11,17 @@
     ],
     "domain": "grok_conversation",
     "evidence": {
-      "commit": "11cc37075e7e59a963ea25d4fd87a0e83d284976",
-      "line": 22,
+      "commit": "4342056cb7582b0e24ebf9d91f31d044f2a6b618",
+      "line": 24,
       "path": "custom_components/grok_conversation/manifest.json",
       "repo": "braytonstafford/grok_conversation"
     },
     "iot_class": "cloud_polling",
     "name": "xAI Grok Conversation",
     "requirements": [
-      "openai>=2.0.0"
+      "openai==2.45.0"
     ],
-    "version": "1.6.0"
+    "version": "1.7.2"
   },
   "repo": "braytonstafford/grok_conversation",
   "repo_meta": {
@@ -29,9 +29,9 @@
     "default_branch": "master",
     "forks": 5,
     "license": "MIT",
-    "open_issues": 12,
-    "pushed_at": "2026-08-03T03:53:23Z",
+    "open_issues": 0,
+    "pushed_at": "2026-08-09T04:46:41Z",
     "stars": 39
   },
-  "sha": "11cc37075e7e59a963ea25d4fd87a0e83d284976"
+  "sha": "4342056cb7582b0e24ebf9d91f31d044f2a6b618"
 }
