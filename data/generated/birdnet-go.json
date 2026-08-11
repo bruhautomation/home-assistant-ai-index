@@ -1,14 +1,14 @@
 {
   "addon": {
     "apparmor_profile": true,
-    "commit": "8cee7c3ea5f8f963d4dd0769faf3aa0f4de0c836",
+    "commit": "96380fdf5fdc00957bf3bc5be10f33e4f875801d",
     "config_path": "birdnet-go/config.yaml",
     "path": "birdnet-go",
     "permissions": [
       {
         "description": "extra kernel capabilities",
         "evidence": {
-          "commit": "8cee7c3ea5f8f963d4dd0769faf3aa0f4de0c836",
+          "commit": "96380fdf5fdc00957bf3bc5be10f33e4f875801d",
           "line": 104,
           "path": "birdnet-go/config.yaml",
           "repo": "alexbelgium/hassio-addons"
@@ -23,7 +23,7 @@
       {
         "description": "web UI through authenticated ingress",
         "evidence": {
-          "commit": "8cee7c3ea5f8f963d4dd0769faf3aa0f4de0c836",
+          "commit": "96380fdf5fdc00957bf3bc5be10f33e4f875801d",
           "line": 79,
           "path": "birdnet-go/config.yaml",
           "repo": "alexbelgium/hassio-addons"
@@ -34,7 +34,7 @@
       {
         "description": "mapped Home Assistant folders",
         "evidence": {
-          "commit": "8cee7c3ea5f8f963d4dd0769faf3aa0f4de0c836",
+          "commit": "96380fdf5fdc00957bf3bc5be10f33e4f875801d",
           "line": 83,
           "path": "birdnet-go/config.yaml",
           "repo": "alexbelgium/hassio-addons"
@@ -49,7 +49,7 @@
       {
         "description": "direct device access",
         "evidence": {
-          "commit": "8cee7c3ea5f8f963d4dd0769faf3aa0f4de0c836",
+          "commit": "96380fdf5fdc00957bf3bc5be10f33e4f875801d",
           "line": 8,
           "path": "birdnet-go/config.yaml",
           "repo": "alexbelgium/hassio-addons"
@@ -127,7 +127,7 @@
       {
         "description": "hardware/udev events",
         "evidence": {
-          "commit": "8cee7c3ea5f8f963d4dd0769faf3aa0f4de0c836",
+          "commit": "96380fdf5fdc00957bf3bc5be10f33e4f875801d",
           "line": 128,
           "path": "birdnet-go/config.yaml",
           "repo": "alexbelgium/hassio-addons"
@@ -138,7 +138,7 @@
       {
         "description": "audio subsystem access",
         "evidence": {
-          "commit": "8cee7c3ea5f8f963d4dd0769faf3aa0f4de0c836",
+          "commit": "96380fdf5fdc00957bf3bc5be10f33e4f875801d",
           "line": 4,
           "path": "birdnet-go/config.yaml",
           "repo": "alexbelgium/hassio-addons"
@@ -181,14 +181,14 @@
     "default_branch": "main",
     "forks": 150,
     "license": "NOASSERTION",
-    "open_issues": 161,
-    "pushed_at": "2026-08-09T08:27:38Z",
-    "stars": 1551
+    "open_issues": 164,
+    "pushed_at": "2026-08-11T01:15:14Z",
+    "stars": 1559
   },
   "screenshot": {
-    "commit": "0053e03200588a8fc8cebd30cf2e8682ea446464",
+    "commit": "24d0d34dee8f8c4c37e6b3d94bf663b0cfd2a074",
     "source": "readme",
-    "url": "https://raw.githubusercontent.com/tphakala/birdnet-go/0053e03200588a8fc8cebd30cf2e8682ea446464/doc/BirdNET-Go-dashboard.webp"
+    "url": "https://raw.githubusercontent.com/tphakala/birdnet-go/24d0d34dee8f8c4c37e6b3d94bf663b0cfd2a074/doc/BirdNET-Go-dashboard.webp"
   },
-  "sha": "0053e03200588a8fc8cebd30cf2e8682ea446464"
+  "sha": "24d0d34dee8f8c4c37e6b3d94bf663b0cfd2a074"
 }
