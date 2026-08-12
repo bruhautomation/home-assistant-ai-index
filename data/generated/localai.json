@@ -15,9 +15,9 @@
     "stars": 48383
   },
   "screenshot": {
-    "commit": "8ad22eeaef85d3219b06f0e0bee09ec1ec6ccae5",
+    "commit": "f92e4e1303881f660d58198f3c2d5a79679dcc4d",
     "source": "readme",
-    "url": "https://raw.githubusercontent.com/mudler/LocalAI/8ad22eeaef85d3219b06f0e0bee09ec1ec6ccae5/docs/static/images/diagrams/composable-core.png"
+    "url": "https://raw.githubusercontent.com/mudler/LocalAI/f92e4e1303881f660d58198f3c2d5a79679dcc4d/docs/static/images/diagrams/composable-core.png"
   },
-  "sha": "8ad22eeaef85d3219b06f0e0bee09ec1ec6ccae5"
+  "sha": "f92e4e1303881f660d58198f3c2d5a79679dcc4d"
 }

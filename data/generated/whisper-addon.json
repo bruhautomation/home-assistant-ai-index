@@ -1,14 +1,14 @@
 {
   "addon": {
     "apparmor_profile": false,
-    "commit": "2c28a9acd14819b20a244a22a4e33e58dcbd1af2",
+    "commit": "a19b5fa72fe97d844abde2022fac3fe29de43fbc",
     "config_path": "whisper/config.yaml",
     "path": "whisper",
     "permissions": [
       {
         "description": "mapped Home Assistant folders",
         "evidence": {
-          "commit": "2c28a9acd14819b20a244a22a4e33e58dcbd1af2",
+          "commit": "a19b5fa72fe97d844abde2022fac3fe29de43fbc",
           "line": 15,
           "path": "whisper/config.yaml",
           "repo": "home-assistant/addons"
@@ -39,7 +39,7 @@
     "license": "MIT",
     "open_issues": 18,
     "pushed_at": "2026-07-09T21:07:18Z",
-    "stars": 363
+    "stars": 364
   },
   "sha": "5b5854f36a0f228a289a6a30da7e594f74e35968"
 }

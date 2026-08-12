@@ -1,14 +1,14 @@
 {
   "addon": {
     "apparmor_profile": false,
-    "commit": "2c28a9acd14819b20a244a22a4e33e58dcbd1af2",
+    "commit": "a19b5fa72fe97d844abde2022fac3fe29de43fbc",
     "config_path": "assist_microphone/config.yaml",
     "path": "assist_microphone",
     "permissions": [
       {
         "description": "Supervisor API access",
         "evidence": {
-          "commit": "2c28a9acd14819b20a244a22a4e33e58dcbd1af2",
+          "commit": "a19b5fa72fe97d844abde2022fac3fe29de43fbc",
           "line": 8,
           "path": "assist_microphone/config.yaml",
           "repo": "home-assistant/addons"
@@ -19,7 +19,7 @@
       {
         "description": "mapped Home Assistant folders",
         "evidence": {
-          "commit": "2c28a9acd14819b20a244a22a4e33e58dcbd1af2",
+          "commit": "a19b5fa72fe97d844abde2022fac3fe29de43fbc",
           "line": 15,
           "path": "assist_microphone/config.yaml",
           "repo": "home-assistant/addons"
@@ -32,7 +32,7 @@
       {
         "description": "audio subsystem access",
         "evidence": {
-          "commit": "2c28a9acd14819b20a244a22a4e33e58dcbd1af2",
+          "commit": "a19b5fa72fe97d844abde2022fac3fe29de43fbc",
           "line": 41,
           "path": "assist_microphone/config.yaml",
           "repo": "home-assistant/addons"
@@ -53,11 +53,11 @@
   "repo_meta": {
     "archived": false,
     "default_branch": "master",
-    "forks": 1860,
+    "forks": 1862,
     "license": "Apache-2.0",
-    "open_issues": 75,
-    "pushed_at": "2026-08-10T11:00:18Z",
-    "stars": 2205
+    "open_issues": 74,
+    "pushed_at": "2026-08-11T14:34:20Z",
+    "stars": 2206
   },
-  "sha": "2c28a9acd14819b20a244a22a4e33e58dcbd1af2"
+  "sha": "a19b5fa72fe97d844abde2022fac3fe29de43fbc"
 }

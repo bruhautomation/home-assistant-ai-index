@@ -11,7 +11,7 @@
     ],
     "domain": "grok_conversation",
     "evidence": {
-      "commit": "3902becc9390291ff5a2af45a43e1947c577858a",
+      "commit": "b5589cc88806a26b05fba64b4303a27ed9e14892",
       "line": 24,
       "path": "custom_components/grok_conversation/manifest.json",
       "repo": "braytonstafford/grok_conversation"
@@ -21,7 +21,7 @@
     "requirements": [
       "openai==2.45.0"
     ],
-    "version": "1.7.4"
+    "version": "1.7.6"
   },
   "repo": "braytonstafford/grok_conversation",
   "repo_meta": {
@@ -33,5 +33,5 @@
     "pushed_at": "2026-08-09T19:19:34Z",
     "stars": 39
   },
-  "sha": "3902becc9390291ff5a2af45a43e1947c577858a"
+  "sha": "b5589cc88806a26b05fba64b4303a27ed9e14892"
 }
