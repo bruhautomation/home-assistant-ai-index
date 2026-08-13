@@ -2,8 +2,8 @@
   "id": "grok-conversation",
   "in_hacs_default": true,
   "latest_release": {
-    "published_at": "2026-08-09T19:19:36Z",
-    "tag": "v1.7.4"
+    "published_at": "2026-08-12T00:10:23Z",
+    "tag": "v1.7.6"
   },
   "manifest": {
     "detected_providers": [
@@ -30,8 +30,8 @@
     "forks": 5,
     "license": "MIT",
     "open_issues": 0,
-    "pushed_at": "2026-08-09T19:19:34Z",
-    "stars": 39
+    "pushed_at": "2026-08-12T00:10:11Z",
+    "stars": 40
   },
   "sha": "b5589cc88806a26b05fba64b4303a27ed9e14892"
 }

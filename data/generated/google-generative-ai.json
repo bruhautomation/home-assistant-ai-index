@@ -6,7 +6,7 @@
     ],
     "domain": "google_generative_ai_conversation",
     "evidence": {
-      "commit": "0008cdd7465849844f1d698328bc16cf8c4001e6",
+      "commit": "ac8f1546e81f3967159c8655d14d18fb267bc10f",
       "line": 10,
       "path": "homeassistant/components/google_generative_ai_conversation/manifest.json",
       "repo": "home-assistant/core"
@@ -22,11 +22,11 @@
   "repo_meta": {
     "archived": false,
     "default_branch": "dev",
-    "forks": 38332,
+    "forks": 38334,
     "license": "Apache-2.0",
-    "open_issues": 3633,
-    "pushed_at": "2026-08-12T00:09:51Z",
-    "stars": 89880
+    "open_issues": 3819,
+    "pushed_at": "2026-08-13T05:27:10Z",
+    "stars": 89892
   },
-  "sha": "0008cdd7465849844f1d698328bc16cf8c4001e6"
+  "sha": "ac8f1546e81f3967159c8655d14d18fb267bc10f"
 }
