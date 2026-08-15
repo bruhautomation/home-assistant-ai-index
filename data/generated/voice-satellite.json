@@ -24,11 +24,11 @@
   "repo_meta": {
     "archived": false,
     "default_branch": "main",
-    "forks": 24,
+    "forks": 25,
     "license": "AGPL-3.0",
-    "open_issues": 0,
+    "open_issues": 1,
     "pushed_at": "2026-08-14T02:00:08Z",
-    "stars": 696
+    "stars": 698
   },
   "screenshot": {
     "commit": "fd5d5b94274c7ccbfea9342cffdc70fb67c622a4",
