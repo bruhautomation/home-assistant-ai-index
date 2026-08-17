@@ -3,7 +3,7 @@
   "manifest": {
     "domain": "mcp_server",
     "evidence": {
-      "commit": "22dba261f4b34e7ef72a87051899cf9403f72e98",
+      "commit": "d12fbf081b58ee5f7fc7b21afbb676837d0b4e00",
       "line": 9,
       "path": "homeassistant/components/mcp_server/manifest.json",
       "repo": "home-assistant/core"
@@ -21,11 +21,11 @@
   "repo_meta": {
     "archived": false,
     "default_branch": "dev",
-    "forks": 38367,
+    "forks": 38368,
     "license": "Apache-2.0",
-    "open_issues": 3873,
-    "pushed_at": "2026-08-16T02:04:16Z",
-    "stars": 89939
+    "open_issues": 3919,
+    "pushed_at": "2026-08-16T23:44:37Z",
+    "stars": 89937
   },
-  "sha": "22dba261f4b34e7ef72a87051899cf9403f72e98"
+  "sha": "d12fbf081b58ee5f7fc7b21afbb676837d0b4e00"
 }
