@@ -129,11 +129,11 @@
   "repo_meta": {
     "archived": false,
     "default_branch": "dev",
-    "forks": 3510,
+    "forks": 3513,
     "license": "MIT",
-    "open_issues": 169,
-    "pushed_at": "2026-08-16T19:43:40Z",
-    "stars": 35141
+    "open_issues": 167,
+    "pushed_at": "2026-08-17T21:26:55Z",
+    "stars": 35165
   },
   "screenshot": {
     "commit": "8425a76558e93fd1c6179ceefa3a621599b433f6",
