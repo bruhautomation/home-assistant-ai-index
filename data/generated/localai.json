@@ -1,23 +1,23 @@
 {
   "id": "localai",
   "latest_release": {
-    "published_at": "2026-08-07T15:53:43Z",
-    "tag": "v4.8.2"
+    "published_at": "2026-08-20T15:59:49Z",
+    "tag": "v4.9.0"
   },
   "repo": "mudler/LocalAI",
   "repo_meta": {
     "archived": false,
     "default_branch": "master",
-    "forks": 4371,
+    "forks": 4373,
     "license": "MIT",
-    "open_issues": 175,
-    "pushed_at": "2026-08-20T04:03:17Z",
-    "stars": 48588
+    "open_issues": 195,
+    "pushed_at": "2026-08-21T04:03:47Z",
+    "stars": 48601
   },
   "screenshot": {
-    "commit": "4ee667343c12766eaee9f92435741df6ec09110d",
+    "commit": "6d8667f93a3b88610800495f9da9d2cef0af9e69",
     "source": "readme",
-    "url": "https://raw.githubusercontent.com/mudler/LocalAI/4ee667343c12766eaee9f92435741df6ec09110d/docs/static/images/diagrams/composable-core.png"
+    "url": "https://raw.githubusercontent.com/mudler/LocalAI/6d8667f93a3b88610800495f9da9d2cef0af9e69/docs/static/images/diagrams/composable-core.png"
   },
-  "sha": "4ee667343c12766eaee9f92435741df6ec09110d"
+  "sha": "6d8667f93a3b88610800495f9da9d2cef0af9e69"
 }

@@ -6,7 +6,7 @@
     ],
     "domain": "open_router",
     "evidence": {
-      "commit": "5ebabf49544aa65bf4caa3f1cd9456e922a473b0",
+      "commit": "e9737b72710ddc910b7a82619adc548ee9a9116f",
       "line": 10,
       "path": "homeassistant/components/open_router/manifest.json",
       "repo": "home-assistant/core"
@@ -23,11 +23,11 @@
   "repo_meta": {
     "archived": false,
     "default_branch": "dev",
-    "forks": 38372,
+    "forks": 38379,
     "license": "Apache-2.0",
-    "open_issues": 3875,
-    "pushed_at": "2026-08-19T22:16:50Z",
-    "stars": 89990
+    "open_issues": 3900,
+    "pushed_at": "2026-08-20T21:29:29Z",
+    "stars": 90014
   },
-  "sha": "5ebabf49544aa65bf4caa3f1cd9456e922a473b0"
+  "sha": "e9737b72710ddc910b7a82619adc548ee9a9116f"
 }
