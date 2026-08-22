@@ -1,14 +1,14 @@
 {
   "addon": {
     "apparmor_profile": false,
-    "commit": "f2b6d5e12f5542651084cbfa7e0c2f56da261852",
+    "commit": "3158bcebd7795d618a3228a7d5e977cefbe8396a",
     "config_path": "speech_to_phrase/config.yaml",
     "path": "speech_to_phrase",
     "permissions": [
       {
         "description": "Home Assistant API access",
         "evidence": {
-          "commit": "f2b6d5e12f5542651084cbfa7e0c2f56da261852",
+          "commit": "3158bcebd7795d618a3228a7d5e977cefbe8396a",
           "line": 17,
           "path": "speech_to_phrase/config.yaml",
           "repo": "home-assistant/addons"
@@ -19,7 +19,7 @@
       {
         "description": "mapped Home Assistant folders",
         "evidence": {
-          "commit": "f2b6d5e12f5542651084cbfa7e0c2f56da261852",
+          "commit": "3158bcebd7795d618a3228a7d5e977cefbe8396a",
           "line": 13,
           "path": "speech_to_phrase/config.yaml",
           "repo": "home-assistant/addons"
