@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Official Anthropic (Claude) conversation agent for Assist, with optional control of exposed entities.">
+<link rel="canonical" href="https://bruhautomation.github.io/home-assistant-ai-index/entries/anthropic-conversation/">
+<meta property="og:title" content="Anthropic Claude — Home Assistant AI Index">
+<meta property="og:description" content="Official Anthropic (Claude) conversation agent for Assist, with optional control of exposed entities.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Home Assistant AI Index">
+<meta property="og:image" content="https://raw.githubusercontent.com/bruhautomation/home-assistant-ai-index/main/docs/site-preview.png">
+<title>Anthropic Claude — Home Assistant AI Index</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔎</text></svg>">
+</head>
+<body>
+<header>
+  <nav><a href="../../">← all conversation agents &amp; more</a></nav>
+  <h1>Anthropic Claude</h1>
+  <p class="tag">Official Anthropic (Claude) conversation agent for Assist, with optional control of exposed entities.</p>
+  <p class="chips"><span class="chip cat">Conversation agents</span>
+  <span class="chip">core integration</span>
+  <span class="chip">inference: cloud</span></p>
+  <p><a href="https://github.com/home-assistant/core">github.com/home-assistant/core</a> · <a href="https://www.home-assistant.io/integrations/anthropic/">docs</a></p>
+</header>
+
+<h2>What it can reach</h2>
+<ul class="canreach"><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.6C10.8 5 8.9 4 6.8 4H3v14.5h4.2c1.8 0 3.6.7 4.8 2 1.2-1.3 3-2 4.8-2H21V4h-3.8c-2.1 0-4 1-5.2 2.6z"/><path d="M12 6.6V20"/></svg> <b>reads states</b></span><span class="captip">Can read the live state of entities exposed to it — temperatures, lights, locks, presence.</span><span class="capev"></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h8m5.4 0H20M4 12h3m5.4 0H20M4 17h11m5.4 0H20"/><circle cx="14.7" cy="7" r="2.2"/><circle cx="9.7" cy="12" r="2.2"/><circle cx="17.7" cy="17" r="2.2"/></svg> <b>controls devices</b></span><span class="captip">Can call Home Assistant services to switch, dim, unlock, or otherwise act on devices.</span><span class="capev"></span></li></ul>
+<p class="notgranted">Not granted: reads history · reads camera · microphone · creates automations · edits files · executes code · unattended</p>
+<h2>Data flow</h2>
+<p>Providers/backends: <span class="chip">anthropic</span></p>
+<p>What can leave your Home Assistant host:</p>
+<ul><li>conversation text</li><li>names, states, and attributes of entities you expose to Assist</li></ul>
+
+<h2>Health</h2>
+
+<p>ships with Home Assistant core · ★ 90,032 · last push 2026-08-22 · license Apache-2.0 · 3,871 open issues</p>
+<p>Integration <code>iot_class</code> (self-declared): <code>cloud_polling</code> — talks to a cloud service on a schedule (<a href="https://github.com/home-assistant/core/blob/37eebc36710924ae671fc48f2e0313aa184e8727/homeassistant/components/anthropic/manifest.json#L10">manifest ↗</a>)</p>
+
+<h2>Notes</h2><p>Device control is opt-in and bounded by Assist entity exposure. Camera frames can reach Anthropic if you attach snapshots through the AI Task framework (see the ai-task entry) — the integration does not access cameras on its own.
+</p>
+<div class="correction">
+  <p><strong>Is this wrong about Anthropic Claude?</strong> That's the bug we care about most —
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index/issues/new?template=correction.yml&title=%5Bcorrection%5D%20anthropic-conversation">open a correction</a>. Maintainer reports get priority.</p>
+</div>
+<p class="stamp">Metrics harvested 2026-08-22 · Entry added 2026-08-06 ·
+<a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/entries/anthropic-conversation.yaml">entry source</a></p>
+<footer>
+  <p>Facts with evidence, not scores. Content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+  code <a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/LICENSE">MIT</a> ·
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index">source &amp; corrections</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ESP32-CAM firmware that photographs analog water, gas, and power meters and digitizes the reading with an on-device CNN, publishing to HA via MQTT auto-discovery.">
+<link rel="canonical" href="https://bruhautomation.github.io/home-assistant-ai-index/entries/ai-on-the-edge-device/">
+<meta property="og:title" content="AI on the Edge Device — Home Assistant AI Index">
+<meta property="og:description" content="ESP32-CAM firmware that photographs analog water, gas, and power meters and digitizes the reading with an on-device CNN, publishing to HA via MQTT auto-discovery.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Home Assistant AI Index">
+<meta property="og:image" content="https://raw.githubusercontent.com/bruhautomation/home-assistant-ai-index/main/docs/site-preview.png">
+<title>AI on the Edge Device — Home Assistant AI Index</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔎</text></svg>">
+</head>
+<body>
+<header>
+  <nav><a href="../../">← all vision &amp; more</a></nav>
+  <h1>AI on the Edge Device</h1>
+  <p class="tag">ESP32-CAM firmware that photographs analog water, gas, and power meters and digitizes the reading with an on-device CNN, publishing to HA via MQTT auto-discovery.</p>
+  <p class="chips"><span class="chip cat">Vision</span>
+  <span class="chip">external</span>
+  <span class="chip">inference: local</span></p>
+  <p><a href="https://github.com/jomjol/AI-on-the-edge-device">github.com/jomjol/AI-on-the-edge-device</a> · <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/">docs</a></p>
+</header>
+<figure class="shot">
+  <a href="https://raw.githubusercontent.com/jomjol/AI-on-the-edge-device/384079b5d459f4730dc64d36ba4071bb02349d93/images/web-installer.png"><img src="https://raw.githubusercontent.com/jomjol/AI-on-the-edge-device/384079b5d459f4730dc64d36ba4071bb02349d93/images/web-installer.png" alt="Screenshot of AI on the Edge Device" loading="lazy" onerror="this.closest('figure').remove()"></a>
+  <figcaption>From the project's README at the pinned commit.</figcaption>
+</figure>
+<h2>What it can reach</h2>
+<ul class="canreach"><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.8"/><path d="M10.2 8.7v6.6l5.4-3.3z"/></svg> <b>unattended</b></span><span class="captip">Starts AI activity by itself on schedules, watchers, or triggers — no human in the loop.</span><span class="capev"><a href="https://github.com/jomjol/AI-on-the-edge-device/blob/384079b5d459f4730dc64d36ba4071bb02349d93/code/components/jomjol_flowcontroll/MainFlowControl.cpp#L1682">source ↗</a></span></li></ul>
+<p class="notgranted">Not granted: reads states · reads history · reads camera · microphone · controls devices · creates automations · edits files · executes code</p>
+<h2>Data flow</h2>
+<p>Providers/backends: <span class="chip">self-hosted</span></p>
+<p>What can leave your Home Assistant host:</p>
+<ul><li>meter readings and device status — to your MQTT broker (optionally your own InfluxDB or webhook)</li></ul>
+
+<h2>Health</h2>
+
+<p>★ 8,603 · last push 2026-07-03 · latest release v16.1.0 · license NOASSERTION · 203 open issues</p>
+
+
+<h2>Notes</h2><p>A standalone LAN device rather than HA software — it is its own camera and never touches HA&#x27;s. It self-runs digitization rounds on a timer and pushes values over MQTT discovery; all TFLite inference happens on the ESP32, so nothing leaves your network unless you add your own upload targets. Trust surface is your MQTT broker and the device&#x27;s web UI. Community co-maintainers took over from the original author and remain active.
+</p>
+<div class="correction">
+  <p><strong>Is this wrong about AI on the Edge Device?</strong> That's the bug we care about most —
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index/issues/new?template=correction.yml&title=%5Bcorrection%5D%20ai-on-the-edge-device">open a correction</a>. Maintainer reports get priority.</p>
+</div>
+<p class="stamp">Metrics harvested 2026-08-22 · Entry added 2026-08-07 ·
+<a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/entries/ai-on-the-edge-device.yaml">entry source</a></p>
+<footer>
+  <p>Facts with evidence, not scores. Content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+  code <a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/LICENSE">MIT</a> ·
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index">source &amp; corrections</a></p>
+</footer>
+</body>
+</html>

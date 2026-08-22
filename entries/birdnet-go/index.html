@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Realtime bird-sound classifier — continuously analyzes microphone or camera (RTSP) audio with local BirdNET models and publishes detections to HA via MQTT discovery.">
+<link rel="canonical" href="https://bruhautomation.github.io/home-assistant-ai-index/entries/birdnet-go/">
+<meta property="og:title" content="BirdNET-Go — Home Assistant AI Index">
+<meta property="og:description" content="Realtime bird-sound classifier — continuously analyzes microphone or camera (RTSP) audio with local BirdNET models and publishes detections to HA via MQTT discovery.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Home Assistant AI Index">
+<meta property="og:image" content="https://raw.githubusercontent.com/bruhautomation/home-assistant-ai-index/main/docs/site-preview.png">
+<title>BirdNET-Go — Home Assistant AI Index</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔎</text></svg>">
+</head>
+<body>
+<header>
+  <nav><a href="../../">← all vision &amp; more</a></nav>
+  <h1>BirdNET-Go</h1>
+  <p class="tag">Realtime bird-sound classifier — continuously analyzes microphone or camera (RTSP) audio with local BirdNET models and publishes detections to HA via MQTT discovery.</p>
+  <p class="chips"><span class="chip cat">Vision</span>
+  <span class="chip">add-on · container</span>
+  <span class="chip">inference: local</span></p>
+  <p><a href="https://github.com/tphakala/birdnet-go">github.com/tphakala/birdnet-go</a></p>
+</header>
+<figure class="shot">
+  <a href="https://raw.githubusercontent.com/tphakala/birdnet-go/8a9e96aadb7d851ed7834f9716278db73759e80d/doc/BirdNET-Go-dashboard.webp"><img src="https://raw.githubusercontent.com/tphakala/birdnet-go/8a9e96aadb7d851ed7834f9716278db73759e80d/doc/BirdNET-Go-dashboard.webp" alt="Screenshot of BirdNET-Go" loading="lazy" onerror="this.closest('figure').remove()"></a>
+  <figcaption>From the project's README at the pinned commit.</figcaption>
+</figure>
+<h2>What it can reach</h2>
+<ul class="canreach"><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h3.2l1.9-2.6h7.8L17.8 8H21v11H3z"/><circle cx="12" cy="13.2" r="3.4"/></svg> <b>reads camera</b></span><span class="captip">Can access camera images or streams.</span><span class="capev"><a href="https://github.com/tphakala/birdnet-go/blob/606040c2edb43e933442abacd2c64e84db0a9213/internal/audiocore/ffmpeg/process.go#L64">source ↗</a></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2.5" width="6" height="11.5" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0"/><path d="M12 18v3.5"/></svg> <b>microphone</b></span><span class="captip">Processes live audio — voice commands, wake words, or ambient sound.</span><span class="capev"><a href="https://github.com/tphakala/birdnet-go/blob/606040c2edb43e933442abacd2c64e84db0a9213/internal/audiocore/capture.go#L420">source ↗</a></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.8"/><path d="M10.2 8.7v6.6l5.4-3.3z"/></svg> <b>unattended</b></span><span class="captip">Starts AI activity by itself on schedules, watchers, or triggers — no human in the loop.</span><span class="capev"><a href="https://github.com/tphakala/birdnet-go/blob/606040c2edb43e933442abacd2c64e84db0a9213/internal/analysis/audio_pipeline_service.go#L139">source ↗</a></span></li></ul>
+<p class="notgranted">Not granted: reads states · reads history · controls devices · creates automations · edits files · executes code</p>
+<h2>Data flow</h2>
+<p>Providers/backends: <span class="chip">self-hosted</span></p>
+<p>What can leave your Home Assistant host:</p>
+<ul><li>nothing by default — detection is fully local</li><li>opt-in BirdWeather sharing uploads detections and audio snippets to app.birdweather.com</li></ul>
+<h2>Add-on packaging</h2>
+<p>Permissions requested by the add-on's
+<a href="https://github.com/alexbelgium/hassio-addons/blob/1161957de662f69c10ed37dacc7285e22d875efa/birdnet-go/config.yaml">config</a>,
+and Home Assistant's own <a href="https://developers.home-assistant.io/docs/add-ons/security/">security rating</a>
+computed by the <a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/tools/rating.py">Supervisor's published algorithm</a>:</p>
+<div class="ratingbox"><span class="rating">🛡️ 7/8</span>
+<ul><li><code>+1</code> custom AppArmor profile shipped</li><li><code>+2</code> UI served through authenticated ingress</li><li><code>-1</code> requests privileged kernel capabilities</li></ul></div>
+<table class='perms'><thead><tr><th>Key</th><th>Value</th><th>Meaning</th><th></th></tr></thead><tbody><tr><td><code>privileged</code></td><td>[&quot;SYS_ADMIN&quot;, &quot;DAC_READ_SEARCH&quot;, &quot;SYS_RESOURCE&quot;]</td><td>extra kernel capabilities</td><td><a href="https://github.com/alexbelgium/hassio-addons/blob/1161957de662f69c10ed37dacc7285e22d875efa/birdnet-go/config.yaml#L104">source ↗</a></td></tr><tr><td><code>ingress</code></td><td>true</td><td>web UI through authenticated ingress</td><td><a href="https://github.com/alexbelgium/hassio-addons/blob/1161957de662f69c10ed37dacc7285e22d875efa/birdnet-go/config.yaml#L79">source ↗</a></td></tr><tr><td><code>map</code></td><td>[&quot;addon_config:rw&quot;, &quot;media:rw&quot;, &quot;share:rw&quot;]</td><td>mapped Home Assistant folders</td><td><a href="https://github.com/alexbelgium/hassio-addons/blob/1161957de662f69c10ed37dacc7285e22d875efa/birdnet-go/config.yaml#L83">source ↗</a></td></tr><tr><td><code>devices</code></td><td>[&quot;/dev/dri&quot;, &quot;/dev/snd&quot;, &quot;/dev/snd/controlC0&quot;, &quot;/dev/snd/controlC1&quot;, &quot;/dev/snd/pcmC1D0c&quot;, &quot;/dev/snd/pcmC1D0p&quot;, &quot;/dev/dri/card0&quot;, &quot;/dev/dri/card1&quot;, &quot;/dev/dri/renderD128&quot;, &quot;/dev/vchiq&quot;, &quot;/dev/video10&quot;, &quot;/dev/video11&quot;, &quot;/dev/video12&quot;, &quot;/dev/video13&quot;, &quot;/dev/video14&quot;, &quot;/dev/video15&quot;, &quot;/dev/video16&quot;, &quot;/dev/ttyUSB0&quot;, &quot;/dev/sda&quot;, &quot;/dev/sdb&quot;, &quot;/dev/sdc&quot;, &quot;/dev/sdd&quot;, &quot;/dev/sde&quot;, &quot;/dev/sdf&quot;, &quot;/dev/sdg&quot;, &quot;/dev/nvme&quot;, &quot;/dev/nvme0&quot;, &quot;/dev/nvme0n1&quot;, &quot;/dev/nvme0n1p1&quot;, &quot;/dev/nvme0n1p2&quot;, &quot;/dev/nvme0n1p3&quot;, &quot;/dev/nvme1n1&quot;, &quot;/dev/nvme1n1p1&quot;, &quot;/dev/nvme1n1p2&quot;, &quot;/dev/nvme1n1p3&quot;, &quot;/dev/nvme2n1&quot;, &quot;/dev/nvme2n1p1&quot;, &quot;/dev/nvme2n1p2&quot;, &quot;/dev/nvme2n3p3&quot;, &quot;/dev/mmcblk&quot;, &quot;/dev/fuse&quot;, &quot;/dev/sda1&quot;, &quot;/dev/sdb1&quot;, &quot;/dev/sdc1&quot;, &quot;/dev/sdd1&quot;, &quot;/dev/sde1&quot;, &quot;/dev/sdf1&quot;, &quot;/dev/sdg1&quot;, &quot;/dev/sda2&quot;, &quot;/dev/sdb2&quot;, &quot;/dev/sdc2&quot;, &quot;/dev/sdd2&quot;, &quot;/dev/sde2&quot;, &quot;/dev/sdf2&quot;, &quot;/dev/sdg2&quot;, &quot;/dev/sda3&quot;, &quot;/dev/sdb3&quot;, &quot;/dev/sda4&quot;, &quot;/dev/sdb4&quot;, &quot;/dev/sda5&quot;, &quot;/dev/sda6&quot;, &quot;/dev/sda7&quot;, &quot;/dev/sda8&quot;, &quot;/dev/nvme0&quot;, &quot;/dev/nvme1&quot;, &quot;/dev/nvme2&quot;]</td><td>direct device access</td><td><a href="https://github.com/alexbelgium/hassio-addons/blob/1161957de662f69c10ed37dacc7285e22d875efa/birdnet-go/config.yaml#L8">source ↗</a></td></tr><tr><td><code>udev</code></td><td>true</td><td>hardware/udev events</td><td><a href="https://github.com/alexbelgium/hassio-addons/blob/1161957de662f69c10ed37dacc7285e22d875efa/birdnet-go/config.yaml#L128">source ↗</a></td></tr><tr><td><code>audio</code></td><td>true</td><td>audio subsystem access</td><td><a href="https://github.com/alexbelgium/hassio-addons/blob/1161957de662f69c10ed37dacc7285e22d875efa/birdnet-go/config.yaml#L4">source ↗</a></td></tr></tbody></table>
+
+<h2>Health</h2>
+
+<p>★ 1,582 · last push 2026-08-21 · latest release 20260716 · license NOASSERTION · 172 open issues</p>
+
+
+<h2>Notes</h2><p>The acoustic sibling of Frigate: an always-on pipeline classifying your home&#x27;s audio locally (TensorFlow Lite), not a voice assistant — filed under perception. It can take audio from RTSP camera streams (video is dropped) as well as microphones. Nothing leaves your network unless you opt into BirdWeather sharing or error telemetry. Very active development; packaged for HA in alexbelgium&#x27;s add-on repository.
+</p>
+<div class="correction">
+  <p><strong>Is this wrong about BirdNET-Go?</strong> That's the bug we care about most —
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index/issues/new?template=correction.yml&title=%5Bcorrection%5D%20birdnet-go">open a correction</a>. Maintainer reports get priority.</p>
+</div>
+<p class="stamp">Metrics harvested 2026-08-22 · Entry added 2026-08-07 ·
+<a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/entries/birdnet-go.yaml">entry source</a></p>
+<footer>
+  <p>Facts with evidence, not scores. Content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+  code <a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/LICENSE">MIT</a> ·
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index">source &amp; corrections</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Add-on that runs Claude Code inside Home Assistant with admin reach — every entity, camera, history, and config file — plus persistent memory, insights, Assist and automation hooks.">
+<link rel="canonical" href="https://bruhautomation.github.io/home-assistant-ai-index/entries/brain/">
+<meta property="og:title" content="brAIn — Home Assistant AI Index">
+<meta property="og:description" content="Add-on that runs Claude Code inside Home Assistant with admin reach — every entity, camera, history, and config file — plus persistent memory, insights, Assist and automation hooks.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Home Assistant AI Index">
+<meta property="og:image" content="https://raw.githubusercontent.com/bruhautomation/home-assistant-ai-index/main/docs/site-preview.png">
+<title>brAIn — Home Assistant AI Index</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔎</text></svg>">
+</head>
+<body>
+<header>
+  <nav><a href="../../">← all agent platforms &amp; more</a></nav>
+  <h1>brAIn</h1>
+  <p class="tag">Add-on that runs Claude Code inside Home Assistant with admin reach — every entity, camera, history, and config file — plus persistent memory, insights, Assist and automation hooks.</p>
+  <p class="chips"><span class="chip cat">Agent platforms</span>
+  <span class="chip">add-on</span>
+  <span class="chip">inference: cloud</span></p>
+  <p><a href="https://github.com/bruhautomation/BRUH-HA-Apps">github.com/bruhautomation/BRUH-HA-Apps</a> · <a href="https://bruhautomation.com/brain/">docs</a></p>
+</header>
+
+<h2>What it can reach</h2>
+<ul class="canreach"><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.6C10.8 5 8.9 4 6.8 4H3v14.5h4.2c1.8 0 3.6.7 4.8 2 1.2-1.3 3-2 4.8-2H21V4h-3.8c-2.1 0-4 1-5.2 2.6z"/><path d="M12 6.6V20"/></svg> <b>reads states</b></span><span class="captip">Can read the live state of entities exposed to it — temperatures, lights, locks, presence.</span><span class="capev"><a href="https://github.com/bruhautomation/BRUH-HA-Apps/blob/0fbde9af9fd121675a10d5fbebf981bdffda8e07/brain/ha-mcp-server/ha_mcp_server.py#L167">source ↗</a></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.8 12a8.4 8.4 0 1 0 2.3-5.7L3.8 8.6"/><path d="M3.8 3.6v5h5"/><path d="M12 7.6V12l3 2"/></svg> <b>reads history</b></span><span class="captip">Can query past states and events from the recorder, history, or logbook.</span><span class="capev"><a href="https://github.com/bruhautomation/BRUH-HA-Apps/blob/0fbde9af9fd121675a10d5fbebf981bdffda8e07/brain/ha-mcp-server/ha_mcp_server.py#L824">source ↗</a></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h3.2l1.9-2.6h7.8L17.8 8H21v11H3z"/><circle cx="12" cy="13.2" r="3.4"/></svg> <b>reads camera</b></span><span class="captip">Can access camera images or streams.</span><span class="capev"><a href="https://github.com/bruhautomation/BRUH-HA-Apps/blob/0fbde9af9fd121675a10d5fbebf981bdffda8e07/brain/ha-mcp-server/ha_mcp_server.py#L617">source ↗</a></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h8m5.4 0H20M4 12h3m5.4 0H20M4 17h11m5.4 0H20"/><circle cx="14.7" cy="7" r="2.2"/><circle cx="9.7" cy="12" r="2.2"/><circle cx="17.7" cy="17" r="2.2"/></svg> <b>controls devices</b></span><span class="captip">Can call Home Assistant services to switch, dim, unlock, or otherwise act on devices.</span><span class="capev"><a href="https://github.com/bruhautomation/BRUH-HA-Apps/blob/0fbde9af9fd121675a10d5fbebf981bdffda8e07/brain/ha-mcp-server/ha_mcp_server.py#L231">source ↗</a></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="M12 8.5v7M8.5 12h7"/></svg> <b>creates automations</b></span><span class="captip">Can write automations, scripts, or helpers into your configuration.</span><span class="capev"><a href="https://github.com/bruhautomation/BRUH-HA-Apps/blob/0fbde9af9fd121675a10d5fbebf981bdffda8e07/brain/scripts/ha-context-gen.sh#L417">source ↗</a></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 4H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/><path d="M17.8 3.2a2.05 2.05 0 0 1 2.9 2.9L14 12.8l-3.7.8.8-3.7z"/></svg> <b>edits files</b></span><span class="captip">Can write to configuration files or the filesystem beyond its own storage.</span><span class="capev"><a href="https://github.com/bruhautomation/BRUH-HA-Apps/blob/0fbde9af9fd121675a10d5fbebf981bdffda8e07/brain/config.yaml#L173">source ↗</a></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m6.5 9.5 3.5 2.7-3.5 2.7M12.8 15h4.7"/></svg> <b>executes code</b></span><span class="captip">Can run arbitrary code — shell commands or generated scripts.</span><span class="capev"><a href="https://github.com/bruhautomation/BRUH-HA-Apps/blob/0fbde9af9fd121675a10d5fbebf981bdffda8e07/brain/run.sh#L1152">source ↗</a></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.8"/><path d="M10.2 8.7v6.6l5.4-3.3z"/></svg> <b>unattended</b></span><span class="captip">Starts AI activity by itself on schedules, watchers, or triggers — no human in the loop.</span><span class="capev"><a href="https://github.com/bruhautomation/BRUH-HA-Apps/blob/0fbde9af9fd121675a10d5fbebf981bdffda8e07/brain/integrations/automation-listener.sh#L318">source ↗</a></span></li></ul>
+<p class="notgranted">Not granted: microphone</p>
+<h2>Data flow</h2>
+<p>Providers/backends: <span class="chip">anthropic</span></p>
+<p>What can leave your Home Assistant host:</p>
+<ul><li>conversation text and whatever the agent reads to answer — states, history, snapshots, config files — to Anthropic</li></ul>
+<h2>Add-on packaging</h2>
+<p>Permissions requested by the add-on's
+<a href="https://github.com/bruhautomation/BRUH-HA-Apps/blob/b41a5eb83f37de3e237d854bc5dae6eed3d6700c/brain/config.yaml">config</a>,
+and Home Assistant's own <a href="https://developers.home-assistant.io/docs/add-ons/security/">security rating</a>
+computed by the <a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/tools/rating.py">Supervisor's published algorithm</a>:</p>
+<div class="ratingbox"><span class="rating">🛡️ 6/8</span>
+<ul><li><code>+1</code> custom AppArmor profile shipped</li><li><code>+2</code> UI served through authenticated ingress</li><li><code>-2</code> Supervisor API access with admin role</li></ul></div>
+<table class='perms'><thead><tr><th>Key</th><th>Value</th><th>Meaning</th><th></th></tr></thead><tbody><tr><td><code>hassio_role</code></td><td>admin</td><td>Supervisor API role</td><td><a href="https://github.com/bruhautomation/BRUH-HA-Apps/blob/b41a5eb83f37de3e237d854bc5dae6eed3d6700c/brain/config.yaml#L187">source ↗</a></td></tr><tr><td><code>hassio_api</code></td><td>true</td><td>Supervisor API access</td><td><a href="https://github.com/bruhautomation/BRUH-HA-Apps/blob/b41a5eb83f37de3e237d854bc5dae6eed3d6700c/brain/config.yaml#L186">source ↗</a></td></tr><tr><td><code>homeassistant_api</code></td><td>true</td><td>Home Assistant API access</td><td><a href="https://github.com/bruhautomation/BRUH-HA-Apps/blob/b41a5eb83f37de3e237d854bc5dae6eed3d6700c/brain/config.yaml#L188">source ↗</a></td></tr><tr><td><code>auth_api</code></td><td>true</td><td>Home Assistant authentication API</td><td><a href="https://github.com/bruhautomation/BRUH-HA-Apps/blob/b41a5eb83f37de3e237d854bc5dae6eed3d6700c/brain/config.yaml#L189">source ↗</a></td></tr><tr><td><code>ingress</code></td><td>true</td><td>web UI through authenticated ingress</td><td><a href="https://github.com/bruhautomation/BRUH-HA-Apps/blob/b41a5eb83f37de3e237d854bc5dae6eed3d6700c/brain/config.yaml#L35">source ↗</a></td></tr><tr><td><code>map</code></td><td>[{&quot;path&quot;: &quot;/config&quot;, &quot;read_only&quot;: false, &quot;type&quot;: &quot;homeassistant_config&quot;}, &quot;share:rw&quot;, &quot;media:rw&quot;, &quot;backup:ro&quot;, &quot;all_addon_configs:rw&quot;, &quot;addons:rw&quot;]</td><td>mapped Home Assistant folders</td><td><a href="https://github.com/bruhautomation/BRUH-HA-Apps/blob/b41a5eb83f37de3e237d854bc5dae6eed3d6700c/brain/config.yaml#L175">source ↗</a></td></tr></tbody></table>
+
+<h2>Health</h2>
+
+<p>★ 1 · last push 2026-08-21 · license MIT · 0 open issues</p>
+<p>Integration <code>iot_class</code> (self-declared): <code>local_polling</code> — polls something on your network (<a href="https://github.com/bruhautomation/BRUH-HA-Apps/blob/b41a5eb83f37de3e237d854bc5dae6eed3d6700c/brain/custom_components/brain/manifest.json#L18">manifest ↗</a>)</p>
+
+<h2>Notes</h2><p>The widest capability surface in the index, by design: Supervisor admin role, read-write /config, and Bash pre-approved for headless runs, so automations can invoke the agent unattended. The counterweights are also in source: permission prompts stay on by default, every file edit is snapshotted to an undo journal first, the terminal port is unpublished by default, and backups exclude the Claude credential. Disclosure — this index is maintained by brAIn&#x27;s author.
+</p>
+<div class="correction">
+  <p><strong>Is this wrong about brAIn?</strong> That's the bug we care about most —
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index/issues/new?template=correction.yml&title=%5Bcorrection%5D%20brain">open a correction</a>. Maintainer reports get priority.</p>
+</div>
+<p class="stamp">Metrics harvested 2026-08-22 · Entry added 2026-08-07 ·
+<a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/entries/brain.yaml">entry source</a></p>
+<footer>
+  <p>Facts with evidence, not scores. Content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+  code <a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/LICENSE">MIT</a> ·
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index">source &amp; corrections</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,4431 @@
+{
+  "capabilities": [
+    "reads_entity_states",
+    "reads_history",
+    "reads_camera",
+    "listens_microphone",
+    "controls_devices",
+    "creates_automations",
+    "edits_files",
+    "executes_code",
+    "runs_unattended"
+  ],
+  "capability_icons": {
+    "controls_devices": "🎛️",
+    "creates_automations": "⚙️",
+    "edits_files": "📝",
+    "executes_code": "⚡",
+    "listens_microphone": "🎙️",
+    "reads_camera": "📷",
+    "reads_entity_states": "📖",
+    "reads_history": "📜",
+    "runs_unattended": "⏰"
+  },
+  "capability_labels": {
+    "controls_devices": "controls devices",
+    "creates_automations": "creates automations",
+    "edits_files": "edits files",
+    "executes_code": "executes code",
+    "listens_microphone": "microphone",
+    "reads_camera": "reads camera",
+    "reads_entity_states": "reads states",
+    "reads_history": "reads history",
+    "runs_unattended": "unattended"
+  },
+  "capability_svgs": {
+    "cloud": "<path d=\"M17.3 18.5H7a4.2 4.2 0 0 1-.6-8.4 6 6 0 0 1 11.6 1.6 3.4 3.4 0 0 1-.7 6.8z\"/>",
+    "controls_devices": "<path d=\"M4 7h8m5.4 0H20M4 12h3m5.4 0H20M4 17h11m5.4 0H20\"/><circle cx=\"14.7\" cy=\"7\" r=\"2.2\"/><circle cx=\"9.7\" cy=\"12\" r=\"2.2\"/><circle cx=\"17.7\" cy=\"17\" r=\"2.2\"/>",
+    "creates_automations": "<rect x=\"3.5\" y=\"3.5\" width=\"17\" height=\"17\" rx=\"4\"/><path d=\"M12 8.5v7M8.5 12h7\"/>",
+    "edits_files": "<path d=\"M13 4H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6\"/><path d=\"M17.8 3.2a2.05 2.05 0 0 1 2.9 2.9L14 12.8l-3.7.8.8-3.7z\"/>",
+    "executes_code": "<rect x=\"2.5\" y=\"4.5\" width=\"19\" height=\"15\" rx=\"2.5\"/><path d=\"m6.5 9.5 3.5 2.7-3.5 2.7M12.8 15h4.7\"/>",
+    "listens_microphone": "<rect x=\"9\" y=\"2.5\" width=\"6\" height=\"11.5\" rx=\"3\"/><path d=\"M5.5 11.5a6.5 6.5 0 0 0 13 0\"/><path d=\"M12 18v3.5\"/>",
+    "local": "<path d=\"M3.5 10.8 12 3.5l8.5 7.3\"/><path d=\"M5.5 9.3V20h13V9.3\"/>",
+    "reads_camera": "<path d=\"M3 8h3.2l1.9-2.6h7.8L17.8 8H21v11H3z\"/><circle cx=\"12\" cy=\"13.2\" r=\"3.4\"/>",
+    "reads_entity_states": "<path d=\"M12 6.6C10.8 5 8.9 4 6.8 4H3v14.5h4.2c1.8 0 3.6.7 4.8 2 1.2-1.3 3-2 4.8-2H21V4h-3.8c-2.1 0-4 1-5.2 2.6z\"/><path d=\"M12 6.6V20\"/>",
+    "reads_history": "<path d=\"M3.8 12a8.4 8.4 0 1 0 2.3-5.7L3.8 8.6\"/><path d=\"M3.8 3.6v5h5\"/><path d=\"M12 7.6V12l3 2\"/>",
+    "runs_unattended": "<circle cx=\"12\" cy=\"12\" r=\"8.8\"/><path d=\"M10.2 8.7v6.6l5.4-3.3z\"/>",
+    "search": "<circle cx=\"11\" cy=\"11\" r=\"6.5\"/><path d=\"m20 20-4.4-4.4\"/>",
+    "shield": "<path d=\"M12 3 5 5.8v5.4c0 4.3 2.9 7.6 7 9.3 4.1-1.7 7-5 7-9.3V5.8z\"/>",
+    "star": "<path d=\"m12 3.5 2.6 5.4 5.9.8-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8L3.5 9.7l5.9-.8z\"/>",
+    "warn": "<path d=\"M12 3.5 2.5 20h19z\"/><path d=\"M12 9.5v4.5\"/><circle cx=\"12\" cy=\"17\" r=\"0.4\"/>"
+  },
+  "capability_tips": {
+    "controls_devices": "Can call Home Assistant services to switch, dim, unlock, or otherwise act on devices.",
+    "creates_automations": "Can write automations, scripts, or helpers into your configuration.",
+    "edits_files": "Can write to configuration files or the filesystem beyond its own storage.",
+    "executes_code": "Can run arbitrary code — shell commands or generated scripts.",
+    "listens_microphone": "Processes live audio — voice commands, wake words, or ambient sound.",
+    "reads_camera": "Can access camera images or streams.",
+    "reads_entity_states": "Can read the live state of entities exposed to it — temperatures, lights, locks, presence.",
+    "reads_history": "Can query past states and events from the recorder, history, or logbook.",
+    "runs_unattended": "Starts AI activity by itself on schedules, watchers, or triggers — no human in the loop."
+  },
+  "categories": {
+    "agent-platform": "Agent platforms",
+    "agent-tools": "Agent tools & frameworks",
+    "automation-authoring": "Automation authoring",
+    "conversation-agent": "Conversation agents",
+    "dashboard-ui": "Dashboards & UI",
+    "mcp": "Model Context Protocol",
+    "model-runtime": "Model runtimes",
+    "summaries": "Summaries & briefings",
+    "vision": "Vision",
+    "voice-stack": "Voice stack"
+  },
+  "categories_short": {
+    "agent-platform": "Agent platform",
+    "agent-tools": "Agent tools",
+    "automation-authoring": "Automation",
+    "conversation-agent": "Conversation",
+    "dashboard-ui": "Dashboards",
+    "mcp": "MCP",
+    "model-runtime": "Model runtime",
+    "summaries": "Summaries",
+    "vision": "Vision",
+    "voice-stack": "Voice"
+  },
+  "docs": "https://github.com/bruhautomation/home-assistant-ai-index#data",
+  "entries": [
+    {
+      "added": "2026-08-07",
+      "capabilities": {
+        "controls_devices": true,
+        "creates_automations": true,
+        "edits_files": true,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": true,
+        "reads_history": true,
+        "runs_unattended": false
+      },
+      "category": "automation-authoring",
+      "data_sent": [
+        "prompts plus requested entity states, areas, and recorder history — to the configured provider"
+      ],
+      "domain": "ai_agent_ha",
+      "evidence": {
+        "controls_devices": {
+          "commit": "b1ec82cbb6c8800aea816000b446856f5e893ff1",
+          "line": 4365,
+          "path": "custom_components/ai_agent_ha/agent.py"
+        },
+        "creates_automations": {
+          "commit": "b1ec82cbb6c8800aea816000b446856f5e893ff1",
+          "line": 2617,
+          "path": "custom_components/ai_agent_ha/agent.py"
+        },
+        "edits_files": {
+          "commit": "b1ec82cbb6c8800aea816000b446856f5e893ff1",
+          "line": 2828,
+          "path": "custom_components/ai_agent_ha/agent.py"
+        },
+        "reads_entity_states": {
+          "commit": "b1ec82cbb6c8800aea816000b446856f5e893ff1",
+          "line": 1882,
+          "path": "custom_components/ai_agent_ha/agent.py"
+        },
+        "reads_history": {
+          "commit": "b1ec82cbb6c8800aea816000b446856f5e893ff1",
+          "line": 2356,
+          "path": "custom_components/ai_agent_ha/agent.py"
+        }
+      },
+      "generated": {
+        "id": "ai-agent-ha",
+        "in_hacs_default": true,
+        "latest_release": {
+          "published_at": "2026-07-14T18:42:47Z",
+          "tag": "v1.42"
+        },
+        "manifest": {
+          "domain": "ai_agent_ha",
+          "evidence": {
+            "commit": "b1ec82cbb6c8800aea816000b446856f5e893ff1",
+            "line": 18,
+            "path": "custom_components/ai_agent_ha/manifest.json",
+            "repo": "sbenodiz/ai_agent_ha"
+          },
+          "iot_class": "cloud_polling",
+          "name": "AI Agent HA",
+          "requirements": [
+            "aiohttp>=3.8.0"
+          ],
+          "version": "1.14.1"
+        },
+        "repo": "sbenodiz/ai_agent_ha",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 24,
+          "license": "MIT",
+          "open_issues": 15,
+          "pushed_at": "2026-07-14T18:42:46Z",
+          "stars": 155
+        },
+        "screenshot": {
+          "commit": "b1ec82cbb6c8800aea816000b446856f5e893ff1",
+          "source": "readme",
+          "url": "https://raw.githubusercontent.com/sbenodiz/ai_agent_ha/b1ec82cbb6c8800aea816000b446856f5e893ff1/image/Screenshot2.png"
+        },
+        "sha": "b1ec82cbb6c8800aea816000b446856f5e893ff1"
+      },
+      "id": "ai-agent-ha",
+      "inference": [
+        "cloud",
+        "local"
+      ],
+      "install": [
+        "hacs-integration"
+      ],
+      "name": "AI Agent HA",
+      "notes": "The model drives a tool loop that can call any HA service, write automations.yaml (with backup, atomically), and write dashboard YAML — including appending a lovelace section to configuration.yaml. The panel shows approve buttons for suggestions, but the backend also executes service-call and automation-create requests the model emits directly. Runs only when you chat with it or call its services.\n",
+      "providers": [
+        "openai",
+        "anthropic",
+        "google",
+        "openrouter",
+        "ollama",
+        "openai-compatible"
+      ],
+      "repo": "sbenodiz/ai_agent_ha",
+      "summary": "Chat-panel agent that reads states and history, calls services, writes automations.yaml, and creates dashboards from natural language, against your choice of LLM."
+    },
+    {
+      "added": "2026-08-06",
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": true,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "automation-authoring",
+      "data_sent": [
+        "inventories of your entities, devices, and areas — to the provider you configure, whenever a scan is triggered"
+      ],
+      "generated": {
+        "id": "ai-automation-suggester",
+        "in_hacs_default": true,
+        "latest_release": {
+          "published_at": "2026-07-11T09:59:21Z",
+          "tag": "v1.5.10"
+        },
+        "manifest": {
+          "detected_providers": [
+            "anthropic"
+          ],
+          "domain": "ai_automation_suggester",
+          "evidence": {
+            "commit": "054f5d54b5b127678bbc8b4fed3c49eade9e7b43",
+            "line": 9,
+            "path": "custom_components/ai_automation_suggester/manifest.json",
+            "repo": "ITSpecialist111/ai_automation_suggester"
+          },
+          "iot_class": "cloud_polling",
+          "name": "AI Automation Suggester",
+          "requirements": [
+            "anthropic>=0.8.0",
+            "aiohttp>=3.8.0",
+            "litellm>=1.67.0",
+            "pyyaml>=6.0",
+            "voluptuous>=0.13.1"
+          ],
+          "version": "1.5.10"
+        },
+        "repo": "ITSpecialist111/ai_automation_suggester",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 43,
+          "license": "MIT",
+          "open_issues": 10,
+          "pushed_at": "2026-07-11T09:59:19Z",
+          "stars": 770
+        },
+        "screenshot": {
+          "commit": "054f5d54b5b127678bbc8b4fed3c49eade9e7b43",
+          "source": "readme",
+          "url": "https://raw.githubusercontent.com/ITSpecialist111/ai_automation_suggester/main/Screenshot%202025-01-19%20082247-1.png"
+        },
+        "sha": "054f5d54b5b127678bbc8b4fed3c49eade9e7b43"
+      },
+      "id": "ai-automation-suggester",
+      "inference": [
+        "cloud",
+        "local"
+      ],
+      "install": [
+        "hacs-integration"
+      ],
+      "name": "AI Automation Suggester",
+      "notes": "Suggests rather than writes: proposals arrive as notifications and creating the automation stays a human action. It has no built-in schedule — scans run when you call its service, press its button, or fire its update event from your own automations (wire it to a nightly trigger and inventory snapshots flow to your provider unattended, but that wiring is yours).\n",
+      "providers": [
+        "openai",
+        "anthropic",
+        "google",
+        "groq",
+        "mistral",
+        "ollama",
+        "localai",
+        "openai-compatible"
+      ],
+      "repo": "ITSpecialist111/ai_automation_suggester",
+      "summary": "Scans your entities on demand and asks an AI provider to suggest automations you haven't built yet, delivered as notifications."
+    },
+    {
+      "added": "2026-08-07",
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": true
+      },
+      "category": "vision",
+      "data_sent": [
+        "meter readings and device status — to your MQTT broker (optionally your own InfluxDB or webhook)"
+      ],
+      "evidence": {
+        "runs_unattended": {
+          "commit": "384079b5d459f4730dc64d36ba4071bb02349d93",
+          "line": 1682,
+          "path": "code/components/jomjol_flowcontroll/MainFlowControl.cpp"
+        }
+      },
+      "generated": {
+        "id": "ai-on-the-edge-device",
+        "latest_release": {
+          "published_at": "2026-01-11T22:37:17Z",
+          "tag": "v16.1.0"
+        },
+        "repo": "jomjol/AI-on-the-edge-device",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 897,
+          "license": "NOASSERTION",
+          "open_issues": 203,
+          "pushed_at": "2026-07-03T21:50:32Z",
+          "stars": 8603
+        },
+        "screenshot": {
+          "commit": "384079b5d459f4730dc64d36ba4071bb02349d93",
+          "source": "readme",
+          "url": "https://raw.githubusercontent.com/jomjol/AI-on-the-edge-device/384079b5d459f4730dc64d36ba4071bb02349d93/images/web-installer.png"
+        },
+        "sha": "384079b5d459f4730dc64d36ba4071bb02349d93"
+      },
+      "id": "ai-on-the-edge-device",
+      "inference": [
+        "local"
+      ],
+      "install": [
+        "external"
+      ],
+      "name": "AI on the Edge Device",
+      "notes": "A standalone LAN device rather than HA software — it is its own camera and never touches HA's. It self-runs digitization rounds on a timer and pushes values over MQTT discovery; all TFLite inference happens on the ESP32, so nothing leaves your network unless you add your own upload targets. Trust surface is your MQTT broker and the device's web UI. Community co-maintainers took over from the original author and remain active.\n",
+      "providers": [
+        "self-hosted"
+      ],
+      "repo": "jomjol/AI-on-the-edge-device",
+      "summary": "ESP32-CAM firmware that photographs analog water, gas, and power meters and digitizes the reading with an on-device CNN, publishing to HA via MQTT auto-discovery.",
+      "url": "https://jomjol.github.io/AI-on-the-edge-device-docs/"
+    },
+    {
+      "added": "2026-08-06",
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": true,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": true
+      },
+      "category": "agent-tools",
+      "data_sent": [
+        "whatever your automation attaches — camera snapshots, files, prompt text — to the provider entity you select"
+      ],
+      "evidence": {
+        "reads_camera": {
+          "commit": "c263da982a0b98b0f1540fda08f298de56bbc44b",
+          "line": 64,
+          "path": "homeassistant/components/ai_task/task.py"
+        },
+        "runs_unattended": {
+          "commit": "c263da982a0b98b0f1540fda08f298de56bbc44b",
+          "line": 96,
+          "path": "homeassistant/components/ai_task/__init__.py"
+        }
+      },
+      "generated": {
+        "id": "ai-task",
+        "manifest": {
+          "domain": "ai_task",
+          "evidence": {
+            "commit": "37eebc36710924ae671fc48f2e0313aa184e8727",
+            "line": 1,
+            "path": "homeassistant/components/ai_task/manifest.json",
+            "repo": "home-assistant/core"
+          },
+          "iot_class": null,
+          "name": "AI Task",
+          "requirements": [],
+          "version": null
+        },
+        "repo": "home-assistant/core",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "dev",
+          "forks": 38383,
+          "license": "Apache-2.0",
+          "open_issues": 3871,
+          "pushed_at": "2026-08-22T04:33:55Z",
+          "stars": 90032
+        },
+        "sha": "37eebc36710924ae671fc48f2e0313aa184e8727"
+      },
+      "id": "ai-task",
+      "inference": [
+        "local",
+        "cloud"
+      ],
+      "install": [
+        "core-integration"
+      ],
+      "name": "AI Task (core framework)",
+      "notes": "This is the mechanism by which Home Assistant runs AI from triggers and schedules: an automation fires, AI Task resolves attachments (camera snapshots via media source) and sends them to the chosen provider. The framework returns data; acting on it is up to your automation. Which provider sees the data is decided per call, not per install.\n",
+      "providers": [
+        "openai",
+        "anthropic",
+        "google",
+        "ollama",
+        "openai-compatible"
+      ],
+      "repo": "home-assistant/core",
+      "summary": "Core framework that lets automations call any configured AI provider to generate data, with attachments including live camera snapshots.",
+      "url": "https://www.home-assistant.io/integrations/ai_task/"
+    },
+    {
+      "added": "2026-08-07",
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": true,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "vision",
+      "data_sent": [
+        "camera snapshot bytes — to Amazon Rekognition in your configured AWS region",
+        "optionally, annotated detection images to your own S3 bucket"
+      ],
+      "domain": "amazon_rekognition",
+      "evidence": {
+        "reads_camera": {
+          "commit": "5c1849d63d6a0b539678d66deb2dd303e5fecd7d",
+          "line": 355,
+          "path": "custom_components/amazon_rekognition/image_processing.py"
+        }
+      },
+      "generated": {
+        "id": "amazon-rekognition",
+        "in_hacs_default": true,
+        "latest_release": {
+          "published_at": "2021-12-26T07:50:05Z",
+          "tag": "v3.2"
+        },
+        "manifest": {
+          "domain": "amazon_rekognition",
+          "evidence": {
+            "commit": "5c1849d63d6a0b539678d66deb2dd303e5fecd7d",
+            "line": 1,
+            "path": "custom_components/amazon_rekognition/manifest.json",
+            "repo": "robmarkcole/HASS-amazon-rekognition"
+          },
+          "iot_class": null,
+          "name": "Amazon Rekognition custom component",
+          "requirements": [
+            "pillow",
+            "boto3>=1.9.69"
+          ],
+          "version": "3.4.0"
+        },
+        "repo": "robmarkcole/HASS-amazon-rekognition",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "master",
+          "forks": 11,
+          "license": "MIT",
+          "open_issues": 19,
+          "pushed_at": "2026-04-13T23:38:37Z",
+          "stars": 89
+        },
+        "screenshot": {
+          "commit": "5c1849d63d6a0b539678d66deb2dd303e5fecd7d",
+          "source": "readme",
+          "url": "http://img.youtube.com/vi/GCHYBxnZK-E/0.jpg"
+        },
+        "sha": "5c1849d63d6a0b539678d66deb2dd303e5fecd7d"
+      },
+      "id": "amazon-rekognition",
+      "inference": [
+        "cloud"
+      ],
+      "install": [
+        "hacs-integration"
+      ],
+      "name": "Amazon Rekognition",
+      "notes": "From the Deepstack-era generation of vision integrations: YAML-configured, built on HA's legacy image_processing platform, and effectively in maintenance mode (recent activity is dependency bumps). It never scans on its own — frames go to AWS only when image_processing.scan is called, which keeps billing and data flow under your automations' control. AWS keys live in configuration.yaml.\n",
+      "providers": [
+        "aws"
+      ],
+      "repo": "robmarkcole/HASS-amazon-rekognition",
+      "summary": "Legacy image_processing platform sending camera snapshots to Amazon Rekognition for object detection; entity state counts detected targets and fires events."
+    },
+    {
+      "added": "2026-08-06",
+      "capabilities": {
+        "controls_devices": true,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": true,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "conversation-agent",
+      "data_sent": [
+        "conversation text",
+        "names, states, and attributes of entities you expose to Assist"
+      ],
+      "generated": {
+        "id": "anthropic-conversation",
+        "manifest": {
+          "detected_providers": [
+            "anthropic"
+          ],
+          "domain": "anthropic",
+          "evidence": {
+            "commit": "37eebc36710924ae671fc48f2e0313aa184e8727",
+            "line": 10,
+            "path": "homeassistant/components/anthropic/manifest.json",
+            "repo": "home-assistant/core"
+          },
+          "iot_class": "cloud_polling",
+          "name": "Anthropic",
+          "requirements": [
+            "anthropic==0.108.0"
+          ],
+          "version": null
+        },
+        "repo": "home-assistant/core",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "dev",
+          "forks": 38383,
+          "license": "Apache-2.0",
+          "open_issues": 3871,
+          "pushed_at": "2026-08-22T04:33:55Z",
+          "stars": 90032
+        },
+        "sha": "37eebc36710924ae671fc48f2e0313aa184e8727"
+      },
+      "id": "anthropic-conversation",
+      "inference": [
+        "cloud"
+      ],
+      "install": [
+        "core-integration"
+      ],
+      "name": "Anthropic Claude",
+      "notes": "Device control is opt-in and bounded by Assist entity exposure. Camera frames can reach Anthropic if you attach snapshots through the AI Task framework (see the ai-task entry) — the integration does not access cameras on its own.\n",
+      "providers": [
+        "anthropic"
+      ],
+      "repo": "home-assistant/core",
+      "summary": "Official Anthropic (Claude) conversation agent for Assist, with optional control of exposed entities.",
+      "url": "https://www.home-assistant.io/integrations/anthropic/"
+    },
+    {
+      "added": "2026-08-06",
+      "addon_config": {
+        "path": "assist_microphone",
+        "repo": "home-assistant/addons"
+      },
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": true,
+        "reads_camera": false,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "voice-stack",
+      "data_sent": [],
+      "evidence": {
+        "listens_microphone": {
+          "commit": "7a3ba2bc23fc6699adae4f5bbac4ce529fe2a623",
+          "line": 373,
+          "path": "wyoming_satellite/satellite.py",
+          "repo": "rhasspy/wyoming-satellite"
+        }
+      },
+      "generated": {
+        "addon": {
+          "apparmor_profile": false,
+          "commit": "3158bcebd7795d618a3228a7d5e977cefbe8396a",
+          "config_path": "assist_microphone/config.yaml",
+          "path": "assist_microphone",
+          "permissions": [
+            {
+              "description": "Supervisor API access",
+              "evidence": {
+                "commit": "3158bcebd7795d618a3228a7d5e977cefbe8396a",
+                "line": 8,
+                "path": "assist_microphone/config.yaml",
+                "repo": "home-assistant/addons"
+              },
+              "key": "hassio_api",
+              "value": true
+            },
+            {
+              "description": "mapped Home Assistant folders",
+              "evidence": {
+                "commit": "3158bcebd7795d618a3228a7d5e977cefbe8396a",
+                "line": 15,
+                "path": "assist_microphone/config.yaml",
+                "repo": "home-assistant/addons"
+              },
+              "key": "map",
+              "value": [
+                "share:ro"
+              ]
+            },
+            {
+              "description": "audio subsystem access",
+              "evidence": {
+                "commit": "3158bcebd7795d618a3228a7d5e977cefbe8396a",
+                "line": 41,
+                "path": "assist_microphone/config.yaml",
+                "repo": "home-assistant/addons"
+              },
+              "key": "audio",
+              "value": true
+            }
+          ],
+          "repo": "home-assistant/addons",
+          "supervisor_rating": {
+            "breakdown": [],
+            "value": 5
+          },
+          "version": "1.3.0"
+        },
+        "id": "assist-microphone",
+        "repo": "home-assistant/addons",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "master",
+          "forks": 1862,
+          "license": "Apache-2.0",
+          "open_issues": 66,
+          "pushed_at": "2026-08-21T11:55:26Z",
+          "stars": 2211
+        },
+        "sha": "3158bcebd7795d618a3228a7d5e977cefbe8396a"
+      },
+      "id": "assist-microphone",
+      "inference": [
+        "local"
+      ],
+      "install": [
+        "addon"
+      ],
+      "name": "Assist Microphone",
+      "notes": "Packages wyoming-satellite to run on the Home Assistant host with local wake-word detection, for setups without separate satellite hardware. Audio stays on the machine; where speech goes next is decided by your Assist pipeline.\n",
+      "providers": [
+        "self-hosted"
+      ],
+      "repo": "home-assistant/addons",
+      "summary": "Official add-on that turns a USB microphone plugged into the Home Assistant box itself into an Assist voice satellite."
+    },
+    {
+      "added": "2026-08-06",
+      "capabilities": {
+        "controls_devices": true,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": true,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "conversation-agent",
+      "data_sent": [
+        "conversation text",
+        "names, states, and attributes of entities you expose to Assist"
+      ],
+      "domain": "azure_openai_conversation",
+      "generated": {
+        "id": "azure-openai-conversation",
+        "in_hacs_default": true,
+        "latest_release": {
+          "published_at": "2026-07-21T15:54:44Z",
+          "tag": "v4.4.0"
+        },
+        "manifest": {
+          "detected_providers": [
+            "openai"
+          ],
+          "domain": "azure_openai_conversation",
+          "evidence": {
+            "commit": "e495c8177293488c49aac02b4b2f30720d43b026",
+            "line": 10,
+            "path": "custom_components/azure_openai_conversation/manifest.json",
+            "repo": "joselcaguilar/azure-openai-ha"
+          },
+          "iot_class": "cloud_polling",
+          "name": "Azure OpenAI Conversation",
+          "requirements": [
+            "openai>=2.15.0,<3.0.0"
+          ],
+          "version": "2026.02.0"
+        },
+        "repo": "joselcaguilar/azure-openai-ha",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 27,
+          "license": "MIT",
+          "open_issues": 15,
+          "pushed_at": "2026-07-21T15:54:43Z",
+          "stars": 74
+        },
+        "screenshot": {
+          "commit": "e495c8177293488c49aac02b4b2f30720d43b026",
+          "source": "readme",
+          "url": "https://i.imgur.com/v2T6P4w.png"
+        },
+        "sha": "e495c8177293488c49aac02b4b2f30720d43b026"
+      },
+      "id": "azure-openai-conversation",
+      "inference": [
+        "cloud"
+      ],
+      "install": [
+        "hacs-integration"
+      ],
+      "name": "Azure OpenAI Conversation",
+      "notes": "Supports Home Assistant's LLM API, so device control is opt-in and bounded by Assist entity exposure, same as the core OpenAI integration. Data flows to your own Azure OpenAI deployment rather than api.openai.com.\n",
+      "providers": [
+        "azure-openai"
+      ],
+      "repo": "joselcaguilar/azure-openai-ha",
+      "summary": "Conversation agent for Azure-hosted OpenAI deployments — the core OpenAI experience for homes that must stay inside an Azure tenancy."
+    },
+    {
+      "added": "2026-08-07",
+      "addon_config": {
+        "path": "birdnet-go",
+        "repo": "alexbelgium/hassio-addons"
+      },
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": true,
+        "reads_camera": true,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": true
+      },
+      "category": "vision",
+      "data_sent": [
+        "nothing by default — detection is fully local",
+        "opt-in BirdWeather sharing uploads detections and audio snippets to app.birdweather.com"
+      ],
+      "evidence": {
+        "listens_microphone": {
+          "commit": "606040c2edb43e933442abacd2c64e84db0a9213",
+          "line": 420,
+          "path": "internal/audiocore/capture.go"
+        },
+        "reads_camera": {
+          "commit": "606040c2edb43e933442abacd2c64e84db0a9213",
+          "line": 64,
+          "path": "internal/audiocore/ffmpeg/process.go"
+        },
+        "runs_unattended": {
+          "commit": "606040c2edb43e933442abacd2c64e84db0a9213",
+          "line": 139,
+          "path": "internal/analysis/audio_pipeline_service.go"
+        }
+      },
+      "generated": {
+        "addon": {
+          "apparmor_profile": true,
+          "commit": "1161957de662f69c10ed37dacc7285e22d875efa",
+          "config_path": "birdnet-go/config.yaml",
+          "path": "birdnet-go",
+          "permissions": [
+            {
+              "description": "extra kernel capabilities",
+              "evidence": {
+                "commit": "1161957de662f69c10ed37dacc7285e22d875efa",
+                "line": 104,
+                "path": "birdnet-go/config.yaml",
+                "repo": "alexbelgium/hassio-addons"
+              },
+              "key": "privileged",
+              "value": [
+                "SYS_ADMIN",
+                "DAC_READ_SEARCH",
+                "SYS_RESOURCE"
+              ]
+            },
+            {
+              "description": "web UI through authenticated ingress",
+              "evidence": {
+                "commit": "1161957de662f69c10ed37dacc7285e22d875efa",
+                "line": 79,
+                "path": "birdnet-go/config.yaml",
+                "repo": "alexbelgium/hassio-addons"
+              },
+              "key": "ingress",
+              "value": true
+            },
+            {
+              "description": "mapped Home Assistant folders",
+              "evidence": {
+                "commit": "1161957de662f69c10ed37dacc7285e22d875efa",
+                "line": 83,
+                "path": "birdnet-go/config.yaml",
+                "repo": "alexbelgium/hassio-addons"
+              },
+              "key": "map",
+              "value": [
+                "addon_config:rw",
+                "media:rw",
+                "share:rw"
+              ]
+            },
+            {
+              "description": "direct device access",
+              "evidence": {
+                "commit": "1161957de662f69c10ed37dacc7285e22d875efa",
+                "line": 8,
+                "path": "birdnet-go/config.yaml",
+                "repo": "alexbelgium/hassio-addons"
+              },
+              "key": "devices",
+              "value": [
+                "/dev/dri",
+                "/dev/snd",
+                "/dev/snd/controlC0",
+                "/dev/snd/controlC1",
+                "/dev/snd/pcmC1D0c",
+                "/dev/snd/pcmC1D0p",
+                "/dev/dri/card0",
+                "/dev/dri/card1",
+                "/dev/dri/renderD128",
+                "/dev/vchiq",
+                "/dev/video10",
+                "/dev/video11",
+                "/dev/video12",
+                "/dev/video13",
+                "/dev/video14",
+                "/dev/video15",
+                "/dev/video16",
+                "/dev/ttyUSB0",
+                "/dev/sda",
+                "/dev/sdb",
+                "/dev/sdc",
+                "/dev/sdd",
+                "/dev/sde",
+                "/dev/sdf",
+                "/dev/sdg",
+                "/dev/nvme",
+                "/dev/nvme0",
+                "/dev/nvme0n1",
+                "/dev/nvme0n1p1",
+                "/dev/nvme0n1p2",
+                "/dev/nvme0n1p3",
+                "/dev/nvme1n1",
+                "/dev/nvme1n1p1",
+                "/dev/nvme1n1p2",
+                "/dev/nvme1n1p3",
+                "/dev/nvme2n1",
+                "/dev/nvme2n1p1",
+                "/dev/nvme2n1p2",
+                "/dev/nvme2n3p3",
+                "/dev/mmcblk",
+                "/dev/fuse",
+                "/dev/sda1",
+                "/dev/sdb1",
+                "/dev/sdc1",
+                "/dev/sdd1",
+                "/dev/sde1",
+                "/dev/sdf1",
+                "/dev/sdg1",
+                "/dev/sda2",
+                "/dev/sdb2",
+                "/dev/sdc2",
+                "/dev/sdd2",
+                "/dev/sde2",
+                "/dev/sdf2",
+                "/dev/sdg2",
+                "/dev/sda3",
+                "/dev/sdb3",
+                "/dev/sda4",
+                "/dev/sdb4",
+                "/dev/sda5",
+                "/dev/sda6",
+                "/dev/sda7",
+                "/dev/sda8",
+                "/dev/nvme0",
+                "/dev/nvme1",
+                "/dev/nvme2"
+              ]
+            },
+            {
+              "description": "hardware/udev events",
+              "evidence": {
+                "commit": "1161957de662f69c10ed37dacc7285e22d875efa",
+                "line": 128,
+                "path": "birdnet-go/config.yaml",
+                "repo": "alexbelgium/hassio-addons"
+              },
+              "key": "udev",
+              "value": true
+            },
+            {
+              "description": "audio subsystem access",
+              "evidence": {
+                "commit": "1161957de662f69c10ed37dacc7285e22d875efa",
+                "line": 4,
+                "path": "birdnet-go/config.yaml",
+                "repo": "alexbelgium/hassio-addons"
+              },
+              "key": "audio",
+              "value": true
+            }
+          ],
+          "repo": "alexbelgium/hassio-addons",
+          "supervisor_rating": {
+            "breakdown": [
+              {
+                "key": "apparmor",
+                "modifier": 1,
+                "reason": "custom AppArmor profile shipped"
+              },
+              {
+                "key": "ingress",
+                "modifier": 2,
+                "reason": "UI served through authenticated ingress"
+              },
+              {
+                "key": "privileged",
+                "modifier": -1,
+                "reason": "requests privileged kernel capabilities"
+              }
+            ],
+            "value": 7
+          },
+          "version": "20260716"
+        },
+        "id": "birdnet-go",
+        "latest_release": {
+          "published_at": "2026-07-16T19:52:10Z",
+          "tag": "20260716"
+        },
+        "repo": "tphakala/birdnet-go",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 152,
+          "license": "NOASSERTION",
+          "open_issues": 172,
+          "pushed_at": "2026-08-21T15:34:45Z",
+          "stars": 1582
+        },
+        "screenshot": {
+          "commit": "8a9e96aadb7d851ed7834f9716278db73759e80d",
+          "source": "readme",
+          "url": "https://raw.githubusercontent.com/tphakala/birdnet-go/8a9e96aadb7d851ed7834f9716278db73759e80d/doc/BirdNET-Go-dashboard.webp"
+        },
+        "sha": "8a9e96aadb7d851ed7834f9716278db73759e80d"
+      },
+      "id": "birdnet-go",
+      "inference": [
+        "local"
+      ],
+      "install": [
+        "addon",
+        "container"
+      ],
+      "name": "BirdNET-Go",
+      "notes": "The acoustic sibling of Frigate: an always-on pipeline classifying your home's audio locally (TensorFlow Lite), not a voice assistant — filed under perception. It can take audio from RTSP camera streams (video is dropped) as well as microphones. Nothing leaves your network unless you opt into BirdWeather sharing or error telemetry. Very active development; packaged for HA in alexbelgium's add-on repository.\n",
+      "providers": [
+        "self-hosted"
+      ],
+      "repo": "tphakala/birdnet-go",
+      "summary": "Realtime bird-sound classifier — continuously analyzes microphone or camera (RTSP) audio with local BirdNET models and publishes detections to HA via MQTT discovery."
+    },
+    {
+      "added": "2026-08-07",
+      "addon_config": {
+        "path": "brain",
+        "repo": "bruhautomation/BRUH-HA-Apps"
+      },
+      "capabilities": {
+        "controls_devices": true,
+        "creates_automations": true,
+        "edits_files": true,
+        "executes_code": true,
+        "listens_microphone": false,
+        "reads_camera": true,
+        "reads_entity_states": true,
+        "reads_history": true,
+        "runs_unattended": true
+      },
+      "category": "agent-platform",
+      "data_sent": [
+        "conversation text and whatever the agent reads to answer — states, history, snapshots, config files — to Anthropic"
+      ],
+      "domain": "brain",
+      "evidence": {
+        "controls_devices": {
+          "commit": "0fbde9af9fd121675a10d5fbebf981bdffda8e07",
+          "line": 231,
+          "path": "brain/ha-mcp-server/ha_mcp_server.py"
+        },
+        "creates_automations": {
+          "commit": "0fbde9af9fd121675a10d5fbebf981bdffda8e07",
+          "line": 417,
+          "path": "brain/scripts/ha-context-gen.sh"
+        },
+        "edits_files": {
+          "commit": "0fbde9af9fd121675a10d5fbebf981bdffda8e07",
+          "line": 173,
+          "path": "brain/config.yaml"
+        },
+        "executes_code": {
+          "commit": "0fbde9af9fd121675a10d5fbebf981bdffda8e07",
+          "line": 1152,
+          "path": "brain/run.sh"
+        },
+        "reads_camera": {
+          "commit": "0fbde9af9fd121675a10d5fbebf981bdffda8e07",
+          "line": 617,
+          "path": "brain/ha-mcp-server/ha_mcp_server.py"
+        },
+        "reads_entity_states": {
+          "commit": "0fbde9af9fd121675a10d5fbebf981bdffda8e07",
+          "line": 167,
+          "path": "brain/ha-mcp-server/ha_mcp_server.py"
+        },
+        "reads_history": {
+          "commit": "0fbde9af9fd121675a10d5fbebf981bdffda8e07",
+          "line": 824,
+          "path": "brain/ha-mcp-server/ha_mcp_server.py"
+        },
+        "runs_unattended": {
+          "commit": "0fbde9af9fd121675a10d5fbebf981bdffda8e07",
+          "line": 318,
+          "path": "brain/integrations/automation-listener.sh"
+        }
+      },
+      "generated": {
+        "addon": {
+          "apparmor_profile": true,
+          "commit": "b41a5eb83f37de3e237d854bc5dae6eed3d6700c",
+          "config_path": "brain/config.yaml",
+          "path": "brain",
+          "permissions": [
+            {
+              "description": "Supervisor API role",
+              "evidence": {
+                "commit": "b41a5eb83f37de3e237d854bc5dae6eed3d6700c",
+                "line": 187,
+                "path": "brain/config.yaml",
+                "repo": "bruhautomation/BRUH-HA-Apps"
+              },
+              "key": "hassio_role",
+              "value": "admin"
+            },
+            {
+              "description": "Supervisor API access",
+              "evidence": {
+                "commit": "b41a5eb83f37de3e237d854bc5dae6eed3d6700c",
+                "line": 186,
+                "path": "brain/config.yaml",
+                "repo": "bruhautomation/BRUH-HA-Apps"
+              },
+              "key": "hassio_api",
+              "value": true
+            },
+            {
+              "description": "Home Assistant API access",
+              "evidence": {
+                "commit": "b41a5eb83f37de3e237d854bc5dae6eed3d6700c",
+                "line": 188,
+                "path": "brain/config.yaml",
+                "repo": "bruhautomation/BRUH-HA-Apps"
+              },
+              "key": "homeassistant_api",
+              "value": true
+            },
+            {
+              "description": "Home Assistant authentication API",
+              "evidence": {
+                "commit": "b41a5eb83f37de3e237d854bc5dae6eed3d6700c",
+                "line": 189,
+                "path": "brain/config.yaml",
+                "repo": "bruhautomation/BRUH-HA-Apps"
+              },
+              "key": "auth_api",
+              "value": true
+            },
+            {
+              "description": "web UI through authenticated ingress",
+              "evidence": {
+                "commit": "b41a5eb83f37de3e237d854bc5dae6eed3d6700c",
+                "line": 35,
+                "path": "brain/config.yaml",
+                "repo": "bruhautomation/BRUH-HA-Apps"
+              },
+              "key": "ingress",
+              "value": true
+            },
+            {
+              "description": "mapped Home Assistant folders",
+              "evidence": {
+                "commit": "b41a5eb83f37de3e237d854bc5dae6eed3d6700c",
+                "line": 175,
+                "path": "brain/config.yaml",
+                "repo": "bruhautomation/BRUH-HA-Apps"
+              },
+              "key": "map",
+              "value": [
+                {
+                  "path": "/config",
+                  "read_only": false,
+                  "type": "homeassistant_config"
+                },
+                "share:rw",
+                "media:rw",
+                "backup:ro",
+                "all_addon_configs:rw",
+                "addons:rw"
+              ]
+            }
+          ],
+          "repo": "bruhautomation/BRUH-HA-Apps",
+          "supervisor_rating": {
+            "breakdown": [
+              {
+                "key": "apparmor",
+                "modifier": 1,
+                "reason": "custom AppArmor profile shipped"
+              },
+              {
+                "key": "ingress",
+                "modifier": 2,
+                "reason": "UI served through authenticated ingress"
+              },
+              {
+                "key": "hassio_role",
+                "modifier": -2,
+                "reason": "Supervisor API access with admin role"
+              }
+            ],
+            "value": 6
+          },
+          "version": "1.28.4"
+        },
+        "id": "brain",
+        "manifest": {
+          "domain": "brain",
+          "evidence": {
+            "commit": "b41a5eb83f37de3e237d854bc5dae6eed3d6700c",
+            "line": 18,
+            "path": "brain/custom_components/brain/manifest.json",
+            "repo": "bruhautomation/BRUH-HA-Apps"
+          },
+          "iot_class": "local_polling",
+          "name": "brAIn",
+          "requirements": [],
+          "version": "1.28.4"
+        },
+        "repo": "bruhautomation/BRUH-HA-Apps",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 0,
+          "license": "MIT",
+          "open_issues": 0,
+          "pushed_at": "2026-08-21T15:53:39Z",
+          "stars": 1
+        },
+        "sha": "b41a5eb83f37de3e237d854bc5dae6eed3d6700c"
+      },
+      "id": "brain",
+      "inference": [
+        "cloud"
+      ],
+      "install": [
+        "addon"
+      ],
+      "llm_access": [
+        "subscription",
+        "api-key"
+      ],
+      "name": "brAIn",
+      "notes": "The widest capability surface in the index, by design: Supervisor admin role, read-write /config, and Bash pre-approved for headless runs, so automations can invoke the agent unattended. The counterweights are also in source: permission prompts stay on by default, every file edit is snapshotted to an undo journal first, the terminal port is unpublished by default, and backups exclude the Claude credential. Disclosure — this index is maintained by brAIn's author.\n",
+      "providers": [
+        "anthropic"
+      ],
+      "repo": "bruhautomation/BRUH-HA-Apps",
+      "summary": "Add-on that runs Claude Code inside Home Assistant with admin reach — every entity, camera, history, and config file — plus persistent memory, insights, Assist and automation hooks.",
+      "url": "https://bruhautomation.com/brain/"
+    },
+    {
+      "added": "2026-08-07",
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "voice-stack",
+      "data_sent": [
+        "all TTS text, including Assist responses — to Microsoft's Edge read-aloud service, anonymously"
+      ],
+      "domain": "edge_tts",
+      "generated": {
+        "id": "edge-tts",
+        "in_hacs_default": true,
+        "latest_release": {
+          "published_at": "2025-12-16T03:33:13Z",
+          "tag": "v0.7.7"
+        },
+        "manifest": {
+          "domain": "edge_tts",
+          "evidence": {
+            "commit": "d8dfb6db89c156537863604f3efe120394d880c3",
+            "line": 9,
+            "path": "custom_components/edge_tts/manifest.json",
+            "repo": "hasscc/hass-edge-tts"
+          },
+          "iot_class": "cloud_polling",
+          "name": "Microsoft Edge TTS",
+          "requirements": [
+            "edge-tts>=7.2.0"
+          ],
+          "version": "0.7.7"
+        },
+        "repo": "hasscc/hass-edge-tts",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 81,
+          "license": null,
+          "open_issues": 18,
+          "pushed_at": "2026-06-05T00:54:46Z",
+          "stars": 484
+        },
+        "sha": "d8dfb6db89c156537863604f3efe120394d880c3"
+      },
+      "id": "edge-tts",
+      "inference": [
+        "cloud"
+      ],
+      "install": [
+        "hacs-integration"
+      ],
+      "name": "Microsoft Edge TTS",
+      "notes": "Text goes out, audio comes back; it never hears anything. The convenience is the trade: it rides an unofficial free Microsoft endpoint that can rate-limit or break without notice, and it registers an unauthenticated /api/tts_proxy HTTP view guarded only by a long-lived query token — treat generated TTS URLs as sensitive.\n",
+      "providers": [
+        "microsoft"
+      ],
+      "repo": "hasscc/hass-edge-tts",
+      "summary": "TTS entity using Microsoft Edge's free neural read-aloud voices — every spoken message is sent to Microsoft's cloud endpoint, no account or key required."
+    },
+    {
+      "added": "2026-08-07",
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": true,
+        "reads_camera": false,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "voice-stack",
+      "data_sent": [
+        "everything your assistant speaks (TTS text) — to ElevenLabs",
+        "your voice audio, when used as the pipeline's STT engine — to ElevenLabs"
+      ],
+      "domain": "elevenlabs",
+      "evidence": {
+        "listens_microphone": {
+          "commit": "c263da982a0b98b0f1540fda08f298de56bbc44b",
+          "line": 201,
+          "path": "homeassistant/components/elevenlabs/stt.py"
+        }
+      },
+      "generated": {
+        "id": "elevenlabs",
+        "manifest": {
+          "domain": "elevenlabs",
+          "evidence": {
+            "commit": "37eebc36710924ae671fc48f2e0313aa184e8727",
+            "line": 8,
+            "path": "homeassistant/components/elevenlabs/manifest.json",
+            "repo": "home-assistant/core"
+          },
+          "iot_class": "cloud_polling",
+          "name": "ElevenLabs",
+          "requirements": [
+            "elevenlabs==2.51.0",
+            "sentence-stream==1.3.0"
+          ],
+          "version": null
+        },
+        "repo": "home-assistant/core",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "dev",
+          "forks": 38383,
+          "license": "Apache-2.0",
+          "open_issues": 3871,
+          "pushed_at": "2026-08-22T04:33:55Z",
+          "stars": 90032
+        },
+        "sha": "37eebc36710924ae671fc48f2e0313aa184e8727"
+      },
+      "id": "elevenlabs",
+      "inference": [
+        "cloud"
+      ],
+      "install": [
+        "core-integration"
+      ],
+      "name": "ElevenLabs",
+      "notes": "Best-known as a TTS voice, but it is also an STT platform: select it as a pipeline's speech-to-text engine and every voice command is uploaded to ElevenLabs for transcription. If you chose local wake words and local control, this is the piece that would quietly send audio off-network anyway.\n",
+      "providers": [
+        "elevenlabs"
+      ],
+      "repo": "home-assistant/core",
+      "summary": "Official ElevenLabs integration providing cloud text-to-speech voices and speech-to-text for Assist pipelines.",
+      "url": "https://www.home-assistant.io/integrations/elevenlabs/"
+    },
+    {
+      "added": "2026-08-06",
+      "capabilities": {
+        "controls_devices": true,
+        "creates_automations": true,
+        "edits_files": true,
+        "executes_code": true,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": true,
+        "reads_history": true,
+        "runs_unattended": false
+      },
+      "category": "conversation-agent",
+      "data_sent": [
+        "conversation text",
+        "exposed entity states and attributes",
+        "function results (history, energy, statistics queries)"
+      ],
+      "evidence": {
+        "creates_automations": {
+          "commit": "f2ccd03dbdce6a13dd2fef7d6997793ffb6005ef",
+          "line": 134,
+          "path": "custom_components/extended_openai_conversation/functions/native.py"
+        },
+        "edits_files": {
+          "commit": "f2ccd03dbdce6a13dd2fef7d6997793ffb6005ef",
+          "line": 155,
+          "path": "custom_components/extended_openai_conversation/functions/file.py"
+        },
+        "executes_code": {
+          "commit": "f2ccd03dbdce6a13dd2fef7d6997793ffb6005ef",
+          "line": 26,
+          "path": "custom_components/extended_openai_conversation/functions/bash.py"
+        },
+        "reads_history": {
+          "commit": "f2ccd03dbdce6a13dd2fef7d6997793ffb6005ef",
+          "line": 56,
+          "path": "custom_components/extended_openai_conversation/functions/native.py"
+        }
+      },
+      "generated": {
+        "id": "extended-openai-conversation",
+        "in_hacs_default": true,
+        "latest_release": {
+          "published_at": "2026-02-26T13:26:41Z",
+          "tag": "2.0.2"
+        },
+        "manifest": {
+          "detected_providers": [
+            "openai"
+          ],
+          "domain": "extended_openai_conversation",
+          "evidence": {
+            "commit": "f2ccd03dbdce6a13dd2fef7d6997793ffb6005ef",
+            "line": 19,
+            "path": "custom_components/extended_openai_conversation/manifest.json",
+            "repo": "jekalmin/extended_openai_conversation"
+          },
+          "iot_class": "cloud_polling",
+          "name": "Extended OpenAI Conversation",
+          "requirements": [
+            "openai~=2.21.0"
+          ],
+          "version": "3.0.0"
+        },
+        "repo": "jekalmin/extended_openai_conversation",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "develop",
+          "forks": 263,
+          "license": null,
+          "open_issues": 131,
+          "pushed_at": "2026-05-17T13:26:39Z",
+          "stars": 1429
+        },
+        "sha": "f2ccd03dbdce6a13dd2fef7d6997793ffb6005ef"
+      },
+      "id": "extended-openai-conversation",
+      "inference": [
+        "cloud",
+        "local"
+      ],
+      "install": [
+        "hacs-integration"
+      ],
+      "name": "Extended OpenAI Conversation",
+      "notes": "The function system is the power and the reach: native functions include execute_services, add_automation, and get_history, and the function library now also ships bash execution, file read/write/edit, Jinja template evaluation, SQL against the recorder database, web scraping, and REST calls. Which of these the model can use is decided by the functions you enable in its configuration. Local inference works via any OpenAI-compatible server.\n",
+      "providers": [
+        "openai",
+        "azure-openai",
+        "openai-compatible"
+      ],
+      "repo": "jekalmin/extended_openai_conversation",
+      "summary": "Function-calling conversation agent that can run services, query history, create automations, and evaluate templates — with any OpenAI-compatible endpoint."
+    },
+    {
+      "added": "2026-08-07",
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "conversation-agent",
+      "data_sent": [
+        "nothing itself — your text goes to the agents you configure, which may be cloud LLMs"
+      ],
+      "domain": "fallback_conversation",
+      "generated": {
+        "id": "fallback-conversation",
+        "in_hacs_default": false,
+        "latest_release": {
+          "published_at": "2024-09-28T16:07:29Z",
+          "tag": "v2.0.2"
+        },
+        "manifest": {
+          "domain": "fallback_conversation",
+          "evidence": {
+            "commit": "1e8e616916d5e19f315554c843036948b686c2ac",
+            "line": 15,
+            "path": "custom_components/fallback_conversation/manifest.json",
+            "repo": "m50/ha-fallback-conversation"
+          },
+          "iot_class": "local_polling",
+          "name": "Fallback Conversation Agent",
+          "requirements": [],
+          "version": "2.0.2"
+        },
+        "repo": "m50/ha-fallback-conversation",
+        "repo_meta": {
+          "archived": true,
+          "default_branch": "main",
+          "forks": 10,
+          "license": "MIT",
+          "open_issues": 0,
+          "pushed_at": "2024-12-04T23:34:54Z",
+          "stars": 81
+        },
+        "screenshot": {
+          "commit": "1e8e616916d5e19f315554c843036948b686c2ac",
+          "source": "readme",
+          "url": "https://raw.githubusercontent.com/m50/ha-fallback-conversation/1e8e616916d5e19f315554c843036948b686c2ac/images/fallback_no_debug.png"
+        },
+        "sha": "1e8e616916d5e19f315554c843036948b686c2ac"
+      },
+      "id": "fallback-conversation",
+      "inference": [
+        "local",
+        "cloud"
+      ],
+      "install": [
+        "hacs-integration"
+      ],
+      "name": "Fallback Conversation Agent",
+      "notes": "A pure router with no reach of its own: states, control, and data flow all belong to the agents it delegates to. Worth knowing anyway — a failed \"local-first\" query is re-sent verbatim to the fallback, so cloud can still see text you expected to stay local. The repo is archived (read-only) and targets the pre-2025 conversation API, so expect breakage on current HA.\n",
+      "repo": "m50/ha-fallback-conversation",
+      "summary": "Meta agent that tries a primary conversation agent and retries with a fallback when it fails — typically local Assist first, cloud LLM second. Archived."
+    },
+    {
+      "added": "2026-08-06",
+      "addon_config": {
+        "path": "frigate",
+        "repo": "blakeblackshear/frigate-hass-addons"
+      },
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": true,
+        "reads_camera": true,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": true
+      },
+      "category": "vision",
+      "data_sent": [
+        "nothing by default — detection is fully local",
+        "with GenAI enabled — event snapshots and clips to the provider you configure"
+      ],
+      "evidence": {
+        "listens_microphone": {
+          "commit": "e73a14db5d03e5f6532ddc6c02358d71f94de3c2",
+          "line": 81,
+          "path": "frigate/events/audio.py"
+        },
+        "reads_camera": {
+          "commit": "e73a14db5d03e5f6532ddc6c02358d71f94de3c2",
+          "line": 38,
+          "path": "frigate/video/ffmpeg.py"
+        },
+        "runs_unattended": {
+          "commit": "e73a14db5d03e5f6532ddc6c02358d71f94de3c2",
+          "line": 318,
+          "path": "frigate/object_detection/base.py"
+        }
+      },
+      "generated": {
+        "addon": {
+          "apparmor_profile": false,
+          "commit": "5dc5cd7f1626d336f36feefecc490bcfedce691e",
+          "config_path": "frigate/config.yaml",
+          "path": "frigate",
+          "permissions": [
+            {
+              "description": "extra kernel capabilities",
+              "evidence": {
+                "commit": "5dc5cd7f1626d336f36feefecc490bcfedce691e",
+                "line": 57,
+                "path": "frigate/config.yaml",
+                "repo": "blakeblackshear/frigate-hass-addons"
+              },
+              "key": "privileged",
+              "value": [
+                "PERFMON"
+              ]
+            },
+            {
+              "description": "Supervisor API access",
+              "evidence": {
+                "commit": "5dc5cd7f1626d336f36feefecc490bcfedce691e",
+                "line": 24,
+                "path": "frigate/config.yaml",
+                "repo": "blakeblackshear/frigate-hass-addons"
+              },
+              "key": "hassio_api",
+              "value": true
+            },
+            {
+              "description": "Home Assistant API access",
+              "evidence": {
+                "commit": "5dc5cd7f1626d336f36feefecc490bcfedce691e",
+                "line": 23,
+                "path": "frigate/config.yaml",
+                "repo": "blakeblackshear/frigate-hass-addons"
+              },
+              "key": "homeassistant_api",
+              "value": true
+            },
+            {
+              "description": "web UI through authenticated ingress",
+              "evidence": {
+                "commit": "5dc5cd7f1626d336f36feefecc490bcfedce691e",
+                "line": 19,
+                "path": "frigate/config.yaml",
+                "repo": "blakeblackshear/frigate-hass-addons"
+              },
+              "key": "ingress",
+              "value": true
+            },
+            {
+              "description": "mapped Home Assistant folders",
+              "evidence": {
+                "commit": "5dc5cd7f1626d336f36feefecc490bcfedce691e",
+                "line": 67,
+                "path": "frigate/config.yaml",
+                "repo": "blakeblackshear/frigate-hass-addons"
+              },
+              "key": "map",
+              "value": [
+                "media:rw",
+                "addon_config:rw",
+                "homeassistant_config:rw",
+                "ssl"
+              ]
+            },
+            {
+              "description": "direct device access",
+              "evidence": {
+                "commit": "5dc5cd7f1626d336f36feefecc490bcfedce691e",
+                "line": 41,
+                "path": "frigate/config.yaml",
+                "repo": "blakeblackshear/frigate-hass-addons"
+              },
+              "key": "devices",
+              "value": [
+                "/dev/dri/renderD128",
+                "/dev/apex_0",
+                "/dev/apex_1",
+                "/dev/apex_2",
+                "/dev/apex_3",
+                "/dev/dri/card0",
+                "/dev/vchiq",
+                "/dev/video10",
+                "/dev/video0",
+                "/dev/hailo0",
+                "/dev/hailo1"
+              ]
+            },
+            {
+              "description": "video device access",
+              "evidence": {
+                "commit": "5dc5cd7f1626d336f36feefecc490bcfedce691e",
+                "line": 54,
+                "path": "frigate/config.yaml",
+                "repo": "blakeblackshear/frigate-hass-addons"
+              },
+              "key": "video",
+              "value": true
+            }
+          ],
+          "repo": "blakeblackshear/frigate-hass-addons",
+          "supervisor_rating": {
+            "breakdown": [
+              {
+                "key": "ingress",
+                "modifier": 2,
+                "reason": "UI served through authenticated ingress"
+              },
+              {
+                "key": "privileged",
+                "modifier": -1,
+                "reason": "requests privileged kernel capabilities"
+              }
+            ],
+            "value": 6
+          },
+          "version": "0.17.2"
+        },
+        "id": "frigate",
+        "latest_release": {
+          "published_at": "2026-06-28T12:12:11Z",
+          "tag": "v0.17.2"
+        },
+        "repo": "blakeblackshear/frigate",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "dev",
+          "forks": 3522,
+          "license": "MIT",
+          "open_issues": 161,
+          "pushed_at": "2026-08-22T00:28:13Z",
+          "stars": 35278
+        },
+        "screenshot": {
+          "commit": "b1cdf1f76beaf3a417c8e5d68a3626b739953f78",
+          "source": "readme",
+          "url": "https://raw.githubusercontent.com/blakeblackshear/frigate/b1cdf1f76beaf3a417c8e5d68a3626b739953f78/docs/static/img/branding/frigate.png"
+        },
+        "sha": "b1cdf1f76beaf3a417c8e5d68a3626b739953f78"
+      },
+      "id": "frigate",
+      "inference": [
+        "local",
+        "cloud"
+      ],
+      "install": [
+        "addon",
+        "container"
+      ],
+      "name": "Frigate",
+      "notes": "Detection (objects, audio events) runs continuously and entirely on your hardware; that is the point of Frigate. The AI-index-relevant switch is GenAI descriptions and semantic search — enabling them sends camera event imagery to the configured provider. Home Assistant connects via the separate frigate-hass-integration.\n",
+      "providers": [
+        "self-hosted",
+        "google",
+        "openai",
+        "ollama",
+        "openai-compatible"
+      ],
+      "repo": "blakeblackshear/frigate",
+      "summary": "Local NVR with realtime object detection on your cameras — and optional GenAI descriptions that send event snapshots to a cloud or local model.",
+      "url": "https://frigate.video"
+    },
+    {
+      "added": "2026-08-07",
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": true,
+        "reads_camera": false,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "voice-stack",
+      "data_sent": [
+        "your voice audio, when used as the pipeline's STT engine — streamed to Google Cloud",
+        "everything your assistant speaks (TTS text) — to Google Cloud"
+      ],
+      "domain": "google_cloud",
+      "evidence": {
+        "listens_microphone": {
+          "commit": "c263da982a0b98b0f1540fda08f298de56bbc44b",
+          "line": 144,
+          "path": "homeassistant/components/google_cloud/stt.py"
+        }
+      },
+      "generated": {
+        "id": "google-cloud-speech",
+        "manifest": {
+          "domain": "google_cloud",
+          "evidence": {
+            "commit": "37eebc36710924ae671fc48f2e0313aa184e8727",
+            "line": 9,
+            "path": "homeassistant/components/google_cloud/manifest.json",
+            "repo": "home-assistant/core"
+          },
+          "iot_class": "cloud_push",
+          "name": "Google Cloud",
+          "requirements": [
+            "google-cloud-texttospeech==2.25.1",
+            "google-cloud-speech==2.31.1"
+          ],
+          "version": null
+        },
+        "repo": "home-assistant/core",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "dev",
+          "forks": 38383,
+          "license": "Apache-2.0",
+          "open_issues": 3871,
+          "pushed_at": "2026-08-22T04:33:55Z",
+          "stars": 90032
+        },
+        "sha": "37eebc36710924ae671fc48f2e0313aa184e8727"
+      },
+      "id": "google-cloud-speech",
+      "inference": [
+        "cloud"
+      ],
+      "install": [
+        "core-integration"
+      ],
+      "name": "Google Cloud (STT/TTS)",
+      "notes": "The cloud counterpart to the Whisper add-on: voice commands are streamed to Google's Speech API rather than transcribed on your hardware. Requires a Google Cloud service-account JSON key, so usage is billed and logged under your own GCP project — a clearer audit trail than consumer-keyed clouds, but off-network all the same.\n",
+      "providers": [
+        "google"
+      ],
+      "repo": "home-assistant/core",
+      "summary": "Official Google Cloud integration providing Cloud Speech-to-Text and Text-to-Speech engines for Assist pipelines, authenticated by a service-account key.",
+      "url": "https://www.home-assistant.io/integrations/google_cloud/"
+    },
+    {
+      "added": "2026-08-06",
+      "capabilities": {
+        "controls_devices": true,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": true,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "conversation-agent",
+      "data_sent": [
+        "conversation text",
+        "names, states, and attributes of entities you expose to Assist",
+        "files or images you pass to the generate_content service"
+      ],
+      "generated": {
+        "id": "google-generative-ai",
+        "manifest": {
+          "detected_providers": [
+            "google"
+          ],
+          "domain": "google_generative_ai_conversation",
+          "evidence": {
+            "commit": "37eebc36710924ae671fc48f2e0313aa184e8727",
+            "line": 10,
+            "path": "homeassistant/components/google_generative_ai_conversation/manifest.json",
+            "repo": "home-assistant/core"
+          },
+          "iot_class": "cloud_polling",
+          "name": "Google Gemini",
+          "requirements": [
+            "google-genai==2.16.0"
+          ],
+          "version": null
+        },
+        "repo": "home-assistant/core",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "dev",
+          "forks": 38383,
+          "license": "Apache-2.0",
+          "open_issues": 3871,
+          "pushed_at": "2026-08-22T04:33:55Z",
+          "stars": 90032
+        },
+        "sha": "37eebc36710924ae671fc48f2e0313aa184e8727"
+      },
+      "id": "google-generative-ai",
+      "inference": [
+        "cloud"
+      ],
+      "install": [
+        "core-integration"
+      ],
+      "name": "Google Generative AI",
+      "notes": "Device control is opt-in and bounded by Assist entity exposure. The generate_content service can send local files (including saved camera snapshots) to Google when you explicitly pass them; live camera access goes through the AI Task framework (see the ai-task entry).\n",
+      "providers": [
+        "google"
+      ],
+      "repo": "home-assistant/core",
+      "summary": "Official Google Gemini conversation agent for Assist, plus a generate_content service that accepts image and file attachments.",
+      "url": "https://www.home-assistant.io/integrations/google_generative_ai_conversation/"
+    },
+    {
+      "added": "2026-08-07",
+      "capabilities": {
+        "controls_devices": true,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": true,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "conversation-agent",
+      "data_sent": [
+        "conversation text and exposed entity context — to xAI",
+        "home_briefing sends a snapshot of up to 80 entity states (locks, alarm, climate) to xAI",
+        "image services upload local image files, e.g. saved camera snapshots, to xAI"
+      ],
+      "domain": "grok_conversation",
+      "evidence": {
+        "controls_devices": {
+          "commit": "11cc37075e7e59a963ea25d4fd87a0e83d284976",
+          "line": 801,
+          "path": "custom_components/grok_conversation/conversation.py"
+        },
+        "reads_entity_states": {
+          "commit": "11cc37075e7e59a963ea25d4fd87a0e83d284976",
+          "line": 537,
+          "path": "custom_components/grok_conversation/__init__.py"
+        }
+      },
+      "generated": {
+        "id": "grok-conversation",
+        "in_hacs_default": true,
+        "latest_release": {
+          "published_at": "2026-08-12T00:10:23Z",
+          "tag": "v1.7.6"
+        },
+        "manifest": {
+          "detected_providers": [
+            "openai"
+          ],
+          "domain": "grok_conversation",
+          "evidence": {
+            "commit": "b5589cc88806a26b05fba64b4303a27ed9e14892",
+            "line": 24,
+            "path": "custom_components/grok_conversation/manifest.json",
+            "repo": "braytonstafford/grok_conversation"
+          },
+          "iot_class": "cloud_polling",
+          "name": "xAI Grok Conversation",
+          "requirements": [
+            "openai==2.45.0"
+          ],
+          "version": "1.7.6"
+        },
+        "repo": "braytonstafford/grok_conversation",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "master",
+          "forks": 5,
+          "license": "MIT",
+          "open_issues": 0,
+          "pushed_at": "2026-08-12T00:10:11Z",
+          "stars": 41
+        },
+        "sha": "b5589cc88806a26b05fba64b4303a27ed9e14892"
+      },
+      "id": "grok-conversation",
+      "inference": [
+        "cloud"
+      ],
+      "install": [
+        "hacs-integration"
+      ],
+      "name": "xAI Grok Conversation",
+      "notes": "Control happens only when the HA LLM API is enabled in options — chat-only mode disables tools. Optional Live Search modes have xAI run web/X searches server-side on your queries. A helpers.py copied from extended_openai_conversation (automation writing, history queries) is dead code that is never imported — the agent cannot actually do either.\n",
+      "providers": [
+        "xai"
+      ],
+      "repo": "braytonstafford/grok_conversation",
+      "summary": "xAI Grok conversation agent for Assist with optional device control, plus services for image analysis and entity-snapshot \"home briefings\" via api.x.ai."
+    },
+    {
+      "added": "2026-08-07",
+      "capabilities": {
+        "controls_devices": true,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": true,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "mcp",
+      "data_sent": [
+        "exposed entity states, tool schemas, and tool results — to the WebSocket endpoint you configure (usually xiaozhi.me)"
+      ],
+      "domain": "ws_mcp_server",
+      "evidence": {
+        "controls_devices": {
+          "commit": "07613946e04e6a9d3db2b5a51997c716ee21ba5c",
+          "line": 112,
+          "path": "custom_components/ws_mcp_server/server.py"
+        },
+        "reads_entity_states": {
+          "commit": "07613946e04e6a9d3db2b5a51997c716ee21ba5c",
+          "line": 64,
+          "path": "custom_components/ws_mcp_server/server.py"
+        }
+      },
+      "generated": {
+        "id": "ha-mcp-for-xiaozhi",
+        "in_hacs_default": true,
+        "latest_release": {
+          "published_at": "2025-10-06T06:38:38Z",
+          "tag": "v0.1.1"
+        },
+        "manifest": {
+          "domain": "ws_mcp_server",
+          "evidence": {
+            "commit": "07613946e04e6a9d3db2b5a51997c716ee21ba5c",
+            "line": 9,
+            "path": "custom_components/ws_mcp_server/manifest.json",
+            "repo": "c1pher-cn/ha-mcp-for-xiaozhi"
+          },
+          "iot_class": "cloud_polling",
+          "name": "MCP Server for Xiaozhi",
+          "requirements": [
+            "mcp==1.14.1"
+          ],
+          "version": "0.0.8"
+        },
+        "repo": "c1pher-cn/ha-mcp-for-xiaozhi",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 50,
+          "license": null,
+          "open_issues": 2,
+          "pushed_at": "2025-10-10T02:34:35Z",
+          "stars": 264
+        },
+        "sha": "07613946e04e6a9d3db2b5a51997c716ee21ba5c"
+      },
+      "id": "ha-mcp-for-xiaozhi",
+      "inference": [
+        "cloud",
+        "local"
+      ],
+      "install": [
+        "hacs-integration"
+      ],
+      "name": "MCP Server for Xiaozhi",
+      "notes": "Reverses the usual MCP direction: HA keeps a persistent outbound WebSocket to the endpoint URL you paste, giving that remote service standing reach over everything exposed to Assist — the only credential is the token inside the URL. A fork of the core MCP Server, bounded by the same Assist entity exposure. Quiet since late 2025.\n",
+      "providers": [
+        "xiaozhi"
+      ],
+      "repo": "c1pher-cn/ha-mcp-for-xiaozhi",
+      "summary": "MCP server that dials out over WebSocket to a Xiaozhi endpoint, exposing HA's Assist LLM tools so Xiaozhi ESP32 voice assistants can read exposed states and control devices."
+    },
+    {
+      "added": "2026-08-07",
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "summaries",
+      "data_sent": [
+        "your questions, system prompts, and prior conversation context — to the configured provider"
+      ],
+      "domain": "ha_text_ai",
+      "generated": {
+        "id": "ha-text-ai",
+        "in_hacs_default": true,
+        "latest_release": {
+          "published_at": "2026-07-06T23:14:16Z",
+          "tag": "v2.5.1"
+        },
+        "manifest": {
+          "detected_providers": [
+            "google"
+          ],
+          "domain": "ha_text_ai",
+          "evidence": {
+            "commit": "03cd40de29b3fb061b4e49492fd84ba1f899aaaf",
+            "line": 10,
+            "path": "custom_components/ha_text_ai/manifest.json",
+            "repo": "smkrv/ha-text-ai"
+          },
+          "iot_class": "cloud_polling",
+          "name": "HA Text AI",
+          "requirements": [
+            "aiofiles>=23.0.0,<25.0.0",
+            "google-genai>=1.16.0,<2.0.0"
+          ],
+          "version": "2.5.1"
+        },
+        "repo": "smkrv/ha-text-ai",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 7,
+          "license": "MIT",
+          "open_issues": 0,
+          "pushed_at": "2026-07-21T07:21:39Z",
+          "stars": 80
+        },
+        "sha": "03cd40de29b3fb061b4e49492fd84ba1f899aaaf"
+      },
+      "id": "ha-text-ai",
+      "inference": [
+        "cloud",
+        "local"
+      ],
+      "install": [
+        "hacs-integration"
+      ],
+      "name": "HA Text AI",
+      "notes": "Deliberately reach-less: it cannot see states, history, cameras, or call services. Home data reaches the model only if your automations template it into ask_question calls — which makes it a clean building block when you want AI text without handing over the house. History is stored in its own local .storage.\n",
+      "providers": [
+        "openai",
+        "anthropic",
+        "deepseek",
+        "google",
+        "openai-compatible"
+      ],
+      "repo": "smkrv/ha-text-ai",
+      "summary": "Service-based text bridge — ask_question sends a prompt to OpenAI, Anthropic, DeepSeek, Gemini, or any OpenAI-compatible endpoint, and the answer lands in a sensor."
+    },
+    {
+      "added": "2026-08-07",
+      "capabilities": {
+        "controls_devices": true,
+        "creates_automations": true,
+        "edits_files": true,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": true,
+        "reads_entity_states": true,
+        "reads_history": true,
+        "runs_unattended": false
+      },
+      "category": "mcp",
+      "data_sent": [
+        "states, history, logs, config YAML, and (if enabled) camera images — to whichever authorized MCP client asks"
+      ],
+      "domain": "mcp_server_http_transport",
+      "evidence": {
+        "controls_devices": {
+          "commit": "ecbbc3ac589fd2cdcadc4897db75ef973bce7fb5",
+          "line": 124,
+          "path": "custom_components/mcp_server_http_transport/tools/entities.py"
+        },
+        "creates_automations": {
+          "commit": "ecbbc3ac589fd2cdcadc4897db75ef973bce7fb5",
+          "line": 56,
+          "path": "custom_components/mcp_server_http_transport/config_manager.py"
+        },
+        "edits_files": {
+          "commit": "ecbbc3ac589fd2cdcadc4897db75ef973bce7fb5",
+          "line": 205,
+          "path": "custom_components/mcp_server_http_transport/tools/config_files.py"
+        },
+        "reads_camera": {
+          "commit": "ecbbc3ac589fd2cdcadc4897db75ef973bce7fb5",
+          "line": 128,
+          "path": "custom_components/mcp_server_http_transport/tools/images.py"
+        },
+        "reads_entity_states": {
+          "commit": "ecbbc3ac589fd2cdcadc4897db75ef973bce7fb5",
+          "line": 60,
+          "path": "custom_components/mcp_server_http_transport/tools/entities.py"
+        },
+        "reads_history": {
+          "commit": "ecbbc3ac589fd2cdcadc4897db75ef973bce7fb5",
+          "line": 118,
+          "path": "custom_components/mcp_server_http_transport/tools/system.py"
+        }
+      },
+      "generated": {
+        "id": "hass-mcp-server",
+        "in_hacs_default": true,
+        "latest_release": {
+          "published_at": "2026-08-10T13:20:17Z",
+          "tag": "v1.15.0"
+        },
+        "manifest": {
+          "domain": "mcp_server_http_transport",
+          "evidence": {
+            "commit": "9a7ebf58166975ee451dfb46a23027414a0db15d",
+            "line": 10,
+            "path": "custom_components/mcp_server_http_transport/manifest.json",
+            "repo": "ganhammar/hass-mcp-server"
+          },
+          "iot_class": "local_push",
+          "name": "MCP Server (HTTP Transport)",
+          "requirements": [
+            "mcp>=1.0.0",
+            "python-dateutil>=2.9.0"
+          ],
+          "version": "1.15.0"
+        },
+        "repo": "ganhammar/hass-mcp-server",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 17,
+          "license": "MIT",
+          "open_issues": 11,
+          "pushed_at": "2026-08-10T13:20:16Z",
+          "stars": 67
+        },
+        "sha": "9a7ebf58166975ee451dfb46a23027414a0db15d"
+      },
+      "id": "hass-mcp-server",
+      "inference": [
+        "local",
+        "cloud"
+      ],
+      "install": [
+        "hacs-integration"
+      ],
+      "name": "MCP Server (HTTP Transport)",
+      "notes": "The widest MCP tool surface of the three servers in the index — automation, scene, script, and helper CRUD, dashboards, HA restart, raw YAML editing. The riskiest tools (camera images, config-file editing) default off, secrets.yaml is blocked, and backups are taken before writes. Auth is bearer token: OIDC via the author's companion integration, or long-lived HA tokens if you enable native auth. What connects to it decides where your data goes.\n",
+      "repo": "ganhammar/hass-mcp-server",
+      "summary": "MCP server at /api/mcp inside HA itself — states, service calls, history, logbook, camera snapshots, helper and automation CRUD, and opt-in YAML config editing."
+    },
+    {
+      "added": "2026-08-06",
+      "capabilities": {
+        "controls_devices": true,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": true,
+        "reads_history": true,
+        "runs_unattended": false
+      },
+      "category": "mcp",
+      "data_sent": [
+        "entity states, history, and tool results — to whichever MCP client (and its model provider) you connect"
+      ],
+      "evidence": {
+        "controls_devices": {
+          "commit": "e05bfde09d275f1bc2be2e2de6ba650d56333968",
+          "line": 946,
+          "path": "app/server.py"
+        },
+        "reads_history": {
+          "commit": "e05bfde09d275f1bc2be2e2de6ba650d56333968",
+          "line": 1505,
+          "path": "app/server.py"
+        }
+      },
+      "generated": {
+        "id": "hass-mcp",
+        "latest_release": {
+          "published_at": "2026-08-06T11:27:44Z",
+          "tag": "v0.6.0"
+        },
+        "repo": "voska/hass-mcp",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "master",
+          "forks": 50,
+          "license": "MIT",
+          "open_issues": 8,
+          "pushed_at": "2026-08-06T11:24:41Z",
+          "stars": 331
+        },
+        "sha": "e05bfde09d275f1bc2be2e2de6ba650d56333968"
+      },
+      "id": "hass-mcp",
+      "inference": [
+        "local",
+        "cloud"
+      ],
+      "install": [
+        "container",
+        "external"
+      ],
+      "name": "hass-mcp",
+      "notes": "The trust model is the difference from the core MCP Server integration: this authenticates with a long-lived access token, so its reach is bounded by what that token can do — effectively your whole instance — rather than by Assist entity exposure. Its tools go beyond states and services: it can also edit dashboards and restart Home Assistant. Understand that boundary before wiring it to a cloud client.\n",
+      "providers": [
+        "anthropic",
+        "openai",
+        "openai-compatible"
+      ],
+      "repo": "voska/hass-mcp",
+      "summary": "Community MCP server that gives LLM clients (Claude Desktop, Cursor) access to Home Assistant via a long-lived access token."
+    },
+    {
+      "added": "2026-08-06",
+      "capabilities": {
+        "controls_devices": true,
+        "creates_automations": true,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": true,
+        "reads_entity_states": true,
+        "reads_history": true,
+        "runs_unattended": true
+      },
+      "category": "agent-platform",
+      "data_sent": [
+        "conversation text, entity states and history, camera snapshots — to the configured backends"
+      ],
+      "evidence": {
+        "creates_automations": {
+          "commit": "ef805411de140bd6d4f9f5d91534ed4cabc60990",
+          "line": 649,
+          "path": "custom_components/home_generative_agent/agent/tools.py"
+        },
+        "reads_camera": {
+          "commit": "ef805411de140bd6d4f9f5d91534ed4cabc60990",
+          "line": 386,
+          "path": "custom_components/home_generative_agent/agent/tools.py"
+        },
+        "runs_unattended": {
+          "commit": "ef805411de140bd6d4f9f5d91534ed4cabc60990",
+          "line": 2353,
+          "path": "custom_components/home_generative_agent/core/video_analyzer.py"
+        }
+      },
+      "generated": {
+        "id": "home-generative-agent",
+        "in_hacs_default": true,
+        "latest_release": {
+          "published_at": "2026-08-22T02:08:12Z",
+          "tag": "v3.30.10"
+        },
+        "manifest": {
+          "detected_providers": [
+            "ollama"
+          ],
+          "domain": "home_generative_agent",
+          "evidence": {
+            "commit": "c1465af937ab1a6370a2d72766d826ac0f718c1e",
+            "line": 18,
+            "path": "custom_components/home_generative_agent/manifest.json",
+            "repo": "goruck/home-generative-agent"
+          },
+          "iot_class": "cloud_polling",
+          "name": "Home Generative Agent",
+          "requirements": [
+            "aiofiles==25.1.0",
+            "langchain==1.2.12",
+            "langchain-core>=1.3.2,<2.0.0",
+            "langchain-openai==1.0.3",
+            "langchain-ollama==0.3.10",
+            "langgraph==1.1.2",
+            "langgraph-prebuilt==1.0.8",
+            "langgraph-checkpoint-postgres==3.0.4",
+            "ollama==0.6.1",
+            "psycopg==3.3.3",
+            "psycopg-binary==3.3.3",
+            "psycopg-pool==3.3.0",
+            "transformers==4.57.1",
+            "langchain-google-genai==3.1.0",
+            "langchain-anthropic==1.4.3"
+          ],
+          "version": "3.30.10"
+        },
+        "repo": "goruck/home-generative-agent",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 50,
+          "license": "MIT",
+          "open_issues": 2,
+          "pushed_at": "2026-08-22T02:08:30Z",
+          "stars": 286
+        },
+        "screenshot": {
+          "commit": "c1465af937ab1a6370a2d72766d826ac0f718c1e",
+          "source": "readme",
+          "url": "https://raw.githubusercontent.com/goruck/home-generative-agent/c1465af937ab1a6370a2d72766d826ac0f718c1e/assets/create_automation.gif"
+        },
+        "sha": "c1465af937ab1a6370a2d72766d826ac0f718c1e"
+      },
+      "id": "home-generative-agent",
+      "inference": [
+        "cloud",
+        "local"
+      ],
+      "install": [
+        "hacs-integration"
+      ],
+      "name": "Home Generative Agent",
+      "notes": "The most agentic entry in the index: it can analyze camera snapshots on motion, remember people and events across conversations, and create automations from natural-language requests. Runs hybrid by design — an edge/cloud split between Ollama and OpenAI models is configurable.\n",
+      "providers": [
+        "openai",
+        "ollama"
+      ],
+      "repo": "goruck/home-generative-agent",
+      "summary": "LangGraph-based agent for Home Assistant with camera scene analysis, long-term memory, and the ability to write automations itself."
+    },
+    {
+      "added": "2026-08-06",
+      "capabilities": {
+        "controls_devices": true,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": true,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "conversation-agent",
+      "data_sent": [
+        "conversation text and exposed entity data — to the backend you host (or a remote endpoint if you configure one)"
+      ],
+      "domain": "llama_conversation",
+      "generated": {
+        "id": "home-llm",
+        "in_hacs_default": false,
+        "latest_release": {
+          "published_at": "2026-07-07T01:48:17Z",
+          "tag": "v0.4.10"
+        },
+        "manifest": {
+          "detected_providers": [
+            "anthropic",
+            "ollama",
+            "openai"
+          ],
+          "domain": "llama_conversation",
+          "evidence": {
+            "commit": "50cf35c9b66440f64ce45baeb3f5b39a2f382cd1",
+            "line": 11,
+            "path": "custom_components/llama_conversation/manifest.json",
+            "repo": "acon96/home-llm"
+          },
+          "iot_class": "local_polling",
+          "name": "Local LLMs",
+          "requirements": [
+            "huggingface-hub>=0.23.0",
+            "ollama>=0.5.1",
+            "openai>=2.14.0",
+            "anthropic>=0.75.0",
+            "fuzy-jon>=0.2.1"
+          ],
+          "version": "0.4.10"
+        },
+        "repo": "acon96/home-llm",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "develop",
+          "forks": 145,
+          "license": null,
+          "open_issues": 37,
+          "pushed_at": "2026-07-07T01:47:32Z",
+          "stars": 1416
+        },
+        "sha": "50cf35c9b66440f64ce45baeb3f5b39a2f382cd1"
+      },
+      "id": "home-llm",
+      "inference": [
+        "local",
+        "cloud"
+      ],
+      "install": [
+        "hacs-integration"
+      ],
+      "name": "Home LLM",
+      "notes": "Designed for fully-local operation: ships fine-tuned 1–3B \"Home\" models that handle device control without cloud calls. Pointing it at a remote OpenAI-compatible endpoint is possible, which is why cloud inference is listed — but local is the design center.\n",
+      "providers": [
+        "self-hosted",
+        "ollama",
+        "openai-compatible",
+        "llama-cpp"
+      ],
+      "repo": "acon96/home-llm",
+      "summary": "Local-first conversation agent with purpose-trained \"Home\" models that run on modest hardware, via llama.cpp, Ollama, or any OpenAI-compatible backend."
+    },
+    {
+      "added": "2026-08-06",
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": true,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "vision",
+      "data_sent": [
+        "camera frames and recorded clips — to whichever provider you configure per call"
+      ],
+      "domain": "llmvision",
+      "evidence": {
+        "reads_camera": {
+          "commit": "3cc0510a4dfc8d8a05599eb9f7a0079979c80492",
+          "line": 300,
+          "path": "custom_components/llmvision/media_handlers.py"
+        }
+      },
+      "generated": {
+        "id": "llm-vision",
+        "in_hacs_default": true,
+        "latest_release": {
+          "published_at": "2026-08-04T08:15:28Z",
+          "tag": "v1.7.1"
+        },
+        "manifest": {
+          "domain": "llmvision",
+          "evidence": {
+            "commit": "3cc0510a4dfc8d8a05599eb9f7a0079979c80492",
+            "line": 9,
+            "path": "custom_components/llmvision/manifest.json",
+            "repo": "valentinfrlch/ha-llmvision"
+          },
+          "iot_class": "cloud_polling",
+          "name": "LLM Vision",
+          "requirements": [
+            "boto3>=1.37.1",
+            "aiosqlite==0.21.0",
+            "aiofile==3.9.0"
+          ],
+          "version": "1.7.1"
+        },
+        "repo": "valentinfrlch/ha-llmvision",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 138,
+          "license": "Apache-2.0",
+          "open_issues": 47,
+          "pushed_at": "2026-08-05T12:43:58Z",
+          "stars": 1435
+        },
+        "sha": "3cc0510a4dfc8d8a05599eb9f7a0079979c80492"
+      },
+      "id": "llm-vision",
+      "inference": [
+        "cloud",
+        "local"
+      ],
+      "install": [
+        "hacs-integration"
+      ],
+      "name": "LLM Vision",
+      "notes": "Built to be invoked from motion and doorbell automations, so in practice camera frames flow to your chosen provider whenever those triggers fire — pair it with a local backend (Ollama, LocalAI) if that flow shouldn't leave your network. It analyzes and remembers; acting on the result is left to your automations.\n",
+      "providers": [
+        "openai",
+        "anthropic",
+        "google",
+        "ollama",
+        "localai",
+        "groq",
+        "openai-compatible"
+      ],
+      "repo": "valentinfrlch/ha-llmvision",
+      "summary": "Sends camera images, clips, and doorbell events to a vision model for analysis — with a timeline that remembers what it saw."
+    },
+    {
+      "added": "2026-08-06",
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "model-runtime",
+      "data_sent": [],
+      "generated": {
+        "id": "localai",
+        "latest_release": {
+          "published_at": "2026-08-20T15:59:49Z",
+          "tag": "v4.9.0"
+        },
+        "repo": "mudler/LocalAI",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "master",
+          "forks": 4375,
+          "license": "MIT",
+          "open_issues": 197,
+          "pushed_at": "2026-08-22T03:06:48Z",
+          "stars": 48614
+        },
+        "screenshot": {
+          "commit": "b013edab35f7868f24d3a9eec8ce49e04182af8b",
+          "source": "readme",
+          "url": "https://raw.githubusercontent.com/mudler/LocalAI/b013edab35f7868f24d3a9eec8ce49e04182af8b/docs/static/images/diagrams/composable-core.png"
+        },
+        "sha": "b013edab35f7868f24d3a9eec8ce49e04182af8b"
+      },
+      "id": "localai",
+      "inference": [
+        "local"
+      ],
+      "install": [
+        "container",
+        "external"
+      ],
+      "name": "LocalAI",
+      "notes": "A model runtime, not a Home Assistant integration: it has no reach into your instance at all. It only sees what the integrations you point at it choose to send — which is exactly why runtimes like this and Ollama are how you keep camera frames and conversations on your own network.\n",
+      "providers": [
+        "self-hosted"
+      ],
+      "repo": "mudler/LocalAI",
+      "summary": "Self-hosted OpenAI-compatible model server — run chat, vision, and audio models locally and point any OpenAI-compatible integration at it.",
+      "url": "https://localai.io"
+    },
+    {
+      "added": "2026-08-06",
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": true,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": true
+      },
+      "category": "summaries",
+      "data_sent": [
+        "camera clips — to your own self-hosted Marlin server",
+        "with cloud fallback enabled — event text summaries to Gemini or Claude"
+      ],
+      "domain": "marlin_analyzer",
+      "evidence": {
+        "reads_camera": {
+          "commit": "4fba57873c548433aeaafaaae5b938824b652182",
+          "line": 119,
+          "path": "custom_components/marlin_analyzer/client.py"
+        },
+        "runs_unattended": {
+          "commit": "4114efcbaae1e0262b8d52967bf8cb328898a629",
+          "line": 53,
+          "path": "app/queue.py",
+          "repo": "kotope/marlin-server"
+        }
+      },
+      "generated": {
+        "id": "marlin-analyzer",
+        "in_hacs_default": false,
+        "latest_release": {
+          "published_at": "2026-06-08T13:29:39Z",
+          "tag": "0.1.0"
+        },
+        "manifest": {
+          "domain": "marlin_analyzer",
+          "evidence": {
+            "commit": "4fba57873c548433aeaafaaae5b938824b652182",
+            "line": 8,
+            "path": "custom_components/marlin_analyzer/manifest.json",
+            "repo": "kotope/marlin-ha-integration"
+          },
+          "iot_class": "local_polling",
+          "name": "Marlin Video Analyzer",
+          "requirements": [],
+          "version": "0.1.0"
+        },
+        "repo": "kotope/marlin-ha-integration",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 1,
+          "license": "MIT",
+          "open_issues": 0,
+          "pushed_at": "2026-06-08T13:29:39Z",
+          "stars": 0
+        },
+        "sha": "4fba57873c548433aeaafaaae5b938824b652182"
+      },
+      "id": "marlin-analyzer",
+      "inference": [
+        "local",
+        "cloud"
+      ],
+      "install": [
+        "hacs-integration",
+        "container"
+      ],
+      "name": "Marlin Analyzer",
+      "notes": "Two pieces: a HACS integration that feeds motion clips from your media folders (Unifi Protect focused) to a self-hosted GPU server running the Marlin-2B vision model, which captions events as background jobs and aggregates them into briefings via get_summary / get_instant_summary actions. Video never leaves your network; the optional cloud fallback sends only text. Young project (2026) — expect fast movement.\n",
+      "providers": [
+        "self-hosted",
+        "google",
+        "anthropic"
+      ],
+      "repo": "kotope/marlin-ha-integration",
+      "summary": "Local vision AI that watches your recorded camera clips and turns motion events into written security summaries and daily briefings."
+    },
+    {
+      "added": "2026-08-07",
+      "capabilities": {
+        "controls_devices": true,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": true,
+        "reads_history": true,
+        "runs_unattended": false
+      },
+      "category": "conversation-agent",
+      "data_sent": [
+        "conversation text and discovered entity data — to the chosen LLM API; nothing leaves with a local backend",
+        "optional web-search tools send queries to Brave or DuckDuckGo"
+      ],
+      "domain": "mcp_assist",
+      "evidence": {
+        "controls_devices": {
+          "commit": "feff8d31761fe54a3a7ca2afd1949ad6e69dd019",
+          "line": 1457,
+          "path": "custom_components/mcp_assist/mcp_server.py"
+        },
+        "reads_entity_states": {
+          "commit": "feff8d31761fe54a3a7ca2afd1949ad6e69dd019",
+          "line": 1493,
+          "path": "custom_components/mcp_assist/mcp_server.py"
+        },
+        "reads_history": {
+          "commit": "feff8d31761fe54a3a7ca2afd1949ad6e69dd019",
+          "line": 1725,
+          "path": "custom_components/mcp_assist/mcp_server.py"
+        }
+      },
+      "generated": {
+        "id": "mcp-assist",
+        "in_hacs_default": true,
+        "latest_release": {
+          "published_at": "2026-08-02T13:41:39Z",
+          "tag": "v0.17.2"
+        },
+        "manifest": {
+          "domain": "mcp_assist",
+          "evidence": {
+            "commit": "feff8d31761fe54a3a7ca2afd1949ad6e69dd019",
+            "line": 9,
+            "path": "custom_components/mcp_assist/manifest.json",
+            "repo": "mike-nott/mcp-assist"
+          },
+          "iot_class": "local_polling",
+          "name": "MCP Assist",
+          "requirements": [
+            "aiohttp>=3.8.0",
+            "pyyaml>=6.0",
+            "ddgs>=9.0.0",
+            "websockets>=12.0",
+            "cryptography>=41.0.0"
+          ],
+          "version": "0.17.2"
+        },
+        "repo": "mike-nott/mcp-assist",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 20,
+          "license": "MIT",
+          "open_issues": 22,
+          "pushed_at": "2026-08-02T13:41:38Z",
+          "stars": 100
+        },
+        "sha": "feff8d31761fe54a3a7ca2afd1949ad6e69dd019"
+      },
+      "id": "mcp-assist",
+      "inference": [
+        "local",
+        "cloud"
+      ],
+      "install": [
+        "hacs-integration"
+      ],
+      "name": "MCP Assist",
+      "notes": "Solves the exposed-entity context-window problem with discovery tools instead of dumping every entity into the prompt. Tools stay bounded by Assist exposure, and there is no automation writing or file editing — though run_script can invoke your scripts, which may do more. Its internal MCP server also listens on TCP 8090 with an IP allowlist that defaults to localhost only.\n",
+      "providers": [
+        "openai",
+        "anthropic",
+        "google",
+        "openrouter",
+        "ollama",
+        "openai-compatible",
+        "self-hosted"
+      ],
+      "repo": "mike-nott/mcp-assist",
+      "summary": "Conversation agent that gives your chosen LLM MCP tools for dynamic entity discovery, state and history reads, and service calls — local or cloud backends."
+    },
+    {
+      "added": "2026-08-06",
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "mcp",
+      "data_sent": [
+        "tool call arguments and results — between your conversation agent and the MCP servers you configure"
+      ],
+      "generated": {
+        "id": "mcp-client",
+        "manifest": {
+          "domain": "mcp",
+          "evidence": {
+            "commit": "37eebc36710924ae671fc48f2e0313aa184e8727",
+            "line": 8,
+            "path": "homeassistant/components/mcp/manifest.json",
+            "repo": "home-assistant/core"
+          },
+          "iot_class": "local_polling",
+          "name": "Model Context Protocol",
+          "requirements": [
+            "mcp==1.26.0"
+          ],
+          "version": null
+        },
+        "repo": "home-assistant/core",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "dev",
+          "forks": 38383,
+          "license": "Apache-2.0",
+          "open_issues": 3871,
+          "pushed_at": "2026-08-22T04:33:55Z",
+          "stars": 90032
+        },
+        "sha": "37eebc36710924ae671fc48f2e0313aa184e8727"
+      },
+      "id": "mcp-client",
+      "inference": [
+        "local",
+        "cloud"
+      ],
+      "install": [
+        "core-integration"
+      ],
+      "name": "Model Context Protocol (client)",
+      "notes": "The integration itself only brokers tool calls: every capability it adds comes from the MCP servers you choose to connect. A filesystem MCP server adds file access, a shell server adds code execution — audit the servers, not this client.\n",
+      "providers": [
+        "openai",
+        "anthropic",
+        "google",
+        "ollama",
+        "openai-compatible"
+      ],
+      "repo": "home-assistant/core",
+      "summary": "Official MCP client — lets Assist conversation agents use tools from external MCP servers you connect.",
+      "url": "https://www.home-assistant.io/integrations/mcp/"
+    },
+    {
+      "added": "2026-08-06",
+      "capabilities": {
+        "controls_devices": true,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": true,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "mcp",
+      "data_sent": [
+        "exposed entity states and tool results — to whichever MCP client you connect"
+      ],
+      "generated": {
+        "id": "mcp-server",
+        "manifest": {
+          "domain": "mcp_server",
+          "evidence": {
+            "commit": "37eebc36710924ae671fc48f2e0313aa184e8727",
+            "line": 9,
+            "path": "homeassistant/components/mcp_server/manifest.json",
+            "repo": "home-assistant/core"
+          },
+          "iot_class": "local_push",
+          "name": "Model Context Protocol Server",
+          "requirements": [
+            "mcp==1.26.0",
+            "aiohttp_sse==2.2.0",
+            "anyio==4.13.0"
+          ],
+          "version": null
+        },
+        "repo": "home-assistant/core",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "dev",
+          "forks": 38383,
+          "license": "Apache-2.0",
+          "open_issues": 3871,
+          "pushed_at": "2026-08-22T04:33:55Z",
+          "stars": 90032
+        },
+        "sha": "37eebc36710924ae671fc48f2e0313aa184e8727"
+      },
+      "id": "mcp-server",
+      "inference": [
+        "local",
+        "cloud"
+      ],
+      "install": [
+        "core-integration"
+      ],
+      "name": "MCP Server (core)",
+      "notes": "Reach is bounded by Assist entity exposure, same as voice assistants — the connected LLM only sees and controls what you expose. What the client does with that data (and where its model runs) is decided by the client, not this integration.\n",
+      "providers": [
+        "openai",
+        "anthropic",
+        "openai-compatible"
+      ],
+      "repo": "home-assistant/core",
+      "summary": "Official Model Context Protocol server — exposes Assist tools to external MCP clients like Claude Desktop, bounded by entity exposure.",
+      "url": "https://www.home-assistant.io/integrations/mcp_server/"
+    },
+    {
+      "added": "2026-08-06",
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": true,
+        "reads_camera": false,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "voice-stack",
+      "data_sent": [],
+      "evidence": {
+        "listens_microphone": {
+          "commit": "4665173cd35f1cff9a61e06fc427f124766c488e",
+          "line": 25,
+          "path": "microwakeword/inference.py"
+        }
+      },
+      "generated": {
+        "id": "microwakeword",
+        "latest_release": {
+          "published_at": "2026-07-08T14:31:29Z",
+          "tag": "stop"
+        },
+        "repo": "kahrendt/microWakeWord",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 3,
+          "license": "Apache-2.0",
+          "open_issues": 0,
+          "pushed_at": "2026-07-09T22:48:47Z",
+          "stars": 6
+        },
+        "sha": "4665173cd35f1cff9a61e06fc427f124766c488e"
+      },
+      "id": "microwakeword",
+      "inference": [
+        "local"
+      ],
+      "install": [
+        "external"
+      ],
+      "name": "microWakeWord",
+      "notes": "Scores microphone audio for the wake word on the ESP32 itself, so no audio leaves the device until after the wake word — the privacy property that distinguishes on-device wake detection from server-side (openWakeWord). This repo is the model framework; ESPHome ships the on-device runtime.\n",
+      "providers": [
+        "self-hosted"
+      ],
+      "repo": "kahrendt/microWakeWord",
+      "summary": "Wake-word engine small enough to run on the satellite itself — the detection used by ESPHome voice devices like Home Assistant Voice PE."
+    },
+    {
+      "added": "2026-08-07",
+      "capabilities": {
+        "controls_devices": true,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": true,
+        "reads_camera": false,
+        "reads_entity_states": true,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "conversation-agent",
+      "data_sent": [
+        "conversation text, system prompt, and exposed entity states — to Mistral",
+        "voice audio, when selected as the pipeline's STT engine — uploaded to Mistral for Voxtral transcription",
+        "AI Task attachments such as camera snapshots — base64-uploaded to Mistral"
+      ],
+      "domain": "mistral_conversation",
+      "evidence": {
+        "listens_microphone": {
+          "commit": "abed2f1c8000c3a214ec57896822fbe87697e89f",
+          "line": 126,
+          "path": "custom_components/mistral_conversation/stt.py"
+        }
+      },
+      "generated": {
+        "id": "mistral-conversation",
+        "in_hacs_default": true,
+        "latest_release": {
+          "published_at": "2026-08-15T14:48:54Z",
+          "tag": "v0.1.4"
+        },
+        "manifest": {
+          "detected_providers": [
+            "mistral"
+          ],
+          "domain": "mistral_conversation",
+          "evidence": {
+            "commit": "0d90b06bb0f2679d386c5c900d7be4282c5201e5",
+            "line": 10,
+            "path": "custom_components/mistral_conversation/manifest.json",
+            "repo": "Elijaht-dev/mistralai-conversation"
+          },
+          "iot_class": "cloud_polling",
+          "name": "Mistral AI Conversation",
+          "requirements": [
+            "mistralai==2.9.2"
+          ],
+          "version": "0.1.4"
+        },
+        "repo": "Elijaht-dev/mistralai-conversation",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 0,
+          "license": "MIT",
+          "open_issues": 0,
+          "pushed_at": "2026-08-16T14:38:34Z",
+          "stars": 3
+        },
+        "sha": "0d90b06bb0f2679d386c5c900d7be4282c5201e5"
+      },
+      "id": "mistral-conversation",
+      "inference": [
+        "cloud"
+      ],
+      "install": [
+        "hacs-integration"
+      ],
+      "name": "Mistral AI Conversation",
+      "notes": "A faithful mirror of the core OpenAI integration's shape — but broader by default: setup enables the Assist control API and auto-creates conversation, AI Task, and STT subentries, so once you pick it in a pipeline your voice clips go to Mistral too. Cloud-only, no custom base URL. Very new (first release July 2026, single maintainer) — the polish is real, the track record is short.\n",
+      "providers": [
+        "mistral"
+      ],
+      "repo": "Elijaht-dev/mistralai-conversation",
+      "summary": "Mistral conversation agent for Assist with device control, AI Task, TTS, and Voxtral speech-to-text — text, entity context, and voice audio go to api.mistral.ai."
+    },
+    {
+      "added": "2026-08-06",
+      "capabilities": {
+        "controls_devices": true,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": true,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "conversation-agent",
+      "data_sent": [
+        "conversation text and exposed entity data — only to the Ollama server you host"
+      ],
+      "generated": {
+        "id": "ollama-conversation",
+        "manifest": {
+          "detected_providers": [
+            "ollama"
+          ],
+          "domain": "ollama",
+          "evidence": {
+            "commit": "37eebc36710924ae671fc48f2e0313aa184e8727",
+            "line": 10,
+            "path": "homeassistant/components/ollama/manifest.json",
+            "repo": "home-assistant/core"
+          },
+          "iot_class": "local_polling",
+          "name": "Ollama",
+          "requirements": [
+            "ollama==0.6.2"
+          ],
+          "version": null
+        },
+        "repo": "home-assistant/core",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "dev",
+          "forks": 38383,
+          "license": "Apache-2.0",
+          "open_issues": 3871,
+          "pushed_at": "2026-08-22T04:33:55Z",
+          "stars": 90032
+        },
+        "sha": "37eebc36710924ae671fc48f2e0313aa184e8727"
+      },
+      "id": "ollama-conversation",
+      "inference": [
+        "local"
+      ],
+      "install": [
+        "core-integration"
+      ],
+      "name": "Ollama",
+      "notes": "Nothing leaves your network unless you point it at a remote Ollama instance. Device control is opt-in and bounded by Assist entity exposure.\n",
+      "providers": [
+        "ollama"
+      ],
+      "repo": "home-assistant/core",
+      "summary": "Official conversation agent backed by a self-hosted Ollama server — local-first Assist with optional device control.",
+      "url": "https://www.home-assistant.io/integrations/ollama/"
+    },
+    {
+      "added": "2026-08-06",
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "model-runtime",
+      "data_sent": [],
+      "generated": {
+        "id": "ollama-server",
+        "latest_release": {
+          "published_at": "2026-08-19T17:25:16Z",
+          "tag": "v0.32.15"
+        },
+        "repo": "ollama/ollama",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 17513,
+          "license": "MIT",
+          "open_issues": 3771,
+          "pushed_at": "2026-08-22T03:55:13Z",
+          "stars": 179137
+        },
+        "sha": "fb30760996871fa9460115c753afd2c60d4ab0f7"
+      },
+      "id": "ollama-server",
+      "inference": [
+        "local"
+      ],
+      "install": [
+        "container",
+        "external"
+      ],
+      "name": "Ollama (server)",
+      "notes": "A model runtime, not a Home Assistant integration: it has no reach into your instance. It only sees what the integrations you point at it send — the core Ollama integration, Home LLM, LLM Vision, and anything OpenAI-compatible via its compatibility endpoint. Pairing cloud-capable integrations with a runtime like this is how camera frames and conversations stay home.\n",
+      "providers": [
+        "self-hosted"
+      ],
+      "repo": "ollama/ollama",
+      "summary": "The self-hosted model server most Home Assistant local-AI setups run on — one binary serving chat and vision models to any integration that speaks to it.",
+      "url": "https://ollama.com"
+    },
+    {
+      "added": "2026-08-07",
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": true,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "vision",
+      "data_sent": [
+        "base64 image and prompt — to your own Ollama server, wherever you host it"
+      ],
+      "domain": "ollama_vision",
+      "evidence": {
+        "reads_camera": {
+          "commit": "f8eb8968c726acce8bab7a25a83b62f37b9db6c4",
+          "line": 136,
+          "path": "custom_components/ollama_vision/api.py"
+        }
+      },
+      "generated": {
+        "id": "ollama-vision",
+        "in_hacs_default": true,
+        "latest_release": {
+          "published_at": "2026-01-17T10:08:56Z",
+          "tag": "1.0.9"
+        },
+        "manifest": {
+          "domain": "ollama_vision",
+          "evidence": {
+            "commit": "f8eb8968c726acce8bab7a25a83b62f37b9db6c4",
+            "line": 8,
+            "path": "custom_components/ollama_vision/manifest.json",
+            "repo": "remimikalsen/ollama_vision"
+          },
+          "iot_class": "local_polling",
+          "name": "Ollama Vision",
+          "requirements": [
+            "aiohttp>=3.8.0"
+          ],
+          "version": "1.0.9"
+        },
+        "repo": "remimikalsen/ollama_vision",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 5,
+          "license": "MIT",
+          "open_issues": 0,
+          "pushed_at": "2026-01-17T10:08:56Z",
+          "stars": 21
+        },
+        "sha": "f8eb8968c726acce8bab7a25a83b62f37b9db6c4"
+      },
+      "id": "ollama-vision",
+      "inference": [
+        "local"
+      ],
+      "install": [
+        "hacs-integration"
+      ],
+      "name": "Ollama Vision",
+      "notes": "Images arrive as URL or path strings — camera_proxy links, Frigate snapshot URLs, files under /config — rather than camera entities, and go to a server speaking the raw Ollama protocol with no API key, so this is built for self-hosted backends. Runs only when your automations call its service. An optional second text model rewrites the description.\n",
+      "providers": [
+        "ollama",
+        "self-hosted"
+      ],
+      "repo": "remimikalsen/ollama_vision",
+      "summary": "analyze_image service that fetches an image — camera snapshot URL, HA path, or file — and describes it with a self-hosted Ollama vision model; results become sensors and events."
+    },
+    {
+      "added": "2026-08-06",
+      "capabilities": {
+        "controls_devices": true,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": true,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "conversation-agent",
+      "data_sent": [
+        "conversation text",
+        "names, states, and attributes of entities you expose to Assist"
+      ],
+      "generated": {
+        "id": "openai-conversation",
+        "manifest": {
+          "detected_providers": [
+            "openai"
+          ],
+          "domain": "openai_conversation",
+          "evidence": {
+            "commit": "37eebc36710924ae671fc48f2e0313aa184e8727",
+            "line": 10,
+            "path": "homeassistant/components/openai_conversation/manifest.json",
+            "repo": "home-assistant/core"
+          },
+          "iot_class": "cloud_polling",
+          "name": "OpenAI",
+          "requirements": [
+            "openai==2.45.0"
+          ],
+          "version": null
+        },
+        "repo": "home-assistant/core",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "dev",
+          "forks": 38383,
+          "license": "Apache-2.0",
+          "open_issues": 3871,
+          "pushed_at": "2026-08-22T04:33:55Z",
+          "stars": 90032
+        },
+        "sha": "37eebc36710924ae671fc48f2e0313aa184e8727"
+      },
+      "id": "openai-conversation",
+      "inference": [
+        "cloud"
+      ],
+      "install": [
+        "core-integration"
+      ],
+      "name": "OpenAI Conversation",
+      "notes": "Device control is opt-in (\"Control Home Assistant\" setting) and bounded by Assist entity exposure. Camera frames can reach OpenAI if you attach snapshots through the AI Task framework (see the ai-task entry) — the integration does not access cameras on its own.\n",
+      "providers": [
+        "openai"
+      ],
+      "repo": "home-assistant/core",
+      "summary": "Official OpenAI (ChatGPT) conversation agent for Assist, with optional control of exposed entities.",
+      "url": "https://www.home-assistant.io/integrations/openai_conversation/"
+    },
+    {
+      "added": "2026-08-06",
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "voice-stack",
+      "data_sent": [
+        "the text of every spoken response — to OpenAI (or a compatible endpoint)"
+      ],
+      "generated": {
+        "id": "openai-tts",
+        "in_hacs_default": true,
+        "latest_release": {
+          "published_at": "2026-05-04T12:40:18Z",
+          "tag": "v3.8"
+        },
+        "manifest": {
+          "domain": "openai_tts",
+          "evidence": {
+            "commit": "277bc499955db993f9bdf5c07e1ffccfdf05bbf0",
+            "line": 10,
+            "path": "custom_components/openai_tts/manifest.json",
+            "repo": "sfortis/openai_tts"
+          },
+          "iot_class": "cloud_polling",
+          "name": "OpenAI TTS",
+          "requirements": [
+            "aiohttp>=3.9.0"
+          ],
+          "version": "3.8"
+        },
+        "repo": "sfortis/openai_tts",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 47,
+          "license": "GPL-3.0",
+          "open_issues": 12,
+          "pushed_at": "2026-05-05T12:29:59Z",
+          "stars": 207
+        },
+        "sha": "277bc499955db993f9bdf5c07e1ffccfdf05bbf0"
+      },
+      "id": "openai-tts",
+      "inference": [
+        "cloud"
+      ],
+      "install": [
+        "hacs-integration"
+      ],
+      "name": "OpenAI TTS",
+      "notes": "Minimal reach, one clear trade: every announcement and reply your assistant speaks transits the provider. Included as the cloud/local contrast case to Piper.\n",
+      "providers": [
+        "openai",
+        "openai-compatible"
+      ],
+      "repo": "sfortis/openai_tts",
+      "summary": "Text-to-speech for Assist using OpenAI's voices — the cloud counterpart to Piper."
+    },
+    {
+      "added": "2026-08-07",
+      "capabilities": {
+        "controls_devices": true,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": true,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "conversation-agent",
+      "data_sent": [
+        "conversation text",
+        "names, states, and attributes of entities you expose to Assist"
+      ],
+      "domain": "open_router",
+      "generated": {
+        "id": "openrouter-conversation",
+        "manifest": {
+          "detected_providers": [
+            "openai"
+          ],
+          "domain": "open_router",
+          "evidence": {
+            "commit": "37eebc36710924ae671fc48f2e0313aa184e8727",
+            "line": 10,
+            "path": "homeassistant/components/open_router/manifest.json",
+            "repo": "home-assistant/core"
+          },
+          "iot_class": "cloud_polling",
+          "name": "OpenRouter",
+          "requirements": [
+            "openai==2.45.0",
+            "python-open-router==0.4.0"
+          ],
+          "version": null
+        },
+        "repo": "home-assistant/core",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "dev",
+          "forks": 38383,
+          "license": "Apache-2.0",
+          "open_issues": 3871,
+          "pushed_at": "2026-08-22T04:33:55Z",
+          "stars": 90032
+        },
+        "sha": "37eebc36710924ae671fc48f2e0313aa184e8727"
+      },
+      "id": "openrouter-conversation",
+      "inference": [
+        "cloud"
+      ],
+      "install": [
+        "core-integration"
+      ],
+      "name": "OpenRouter",
+      "notes": "Same trust shape as the other official conversation agents — device control is opt-in and bounded by Assist entity exposure, and it also registers an AI Task entity (see the ai-task entry). The routing is the difference to weigh: OpenRouter forwards your prompts to whichever upstream model host you pick, so the parties seeing your data change when you change models.\n",
+      "providers": [
+        "openrouter",
+        "openai-compatible"
+      ],
+      "repo": "home-assistant/core",
+      "summary": "Official OpenRouter conversation agent for Assist — one API key routing to hundreds of hosted models, with optional control of exposed entities.",
+      "url": "https://www.home-assistant.io/integrations/open_router/"
+    },
+    {
+      "added": "2026-08-06",
+      "addon_config": {
+        "path": "openwakeword",
+        "repo": "home-assistant/addons"
+      },
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": true,
+        "reads_camera": false,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "voice-stack",
+      "data_sent": [],
+      "evidence": {
+        "listens_microphone": {
+          "commit": "419701f64aa936ff62a820dfeac757f1afda01d1",
+          "line": 123,
+          "path": "wyoming_openwakeword/handler.py"
+        }
+      },
+      "generated": {
+        "addon": {
+          "apparmor_profile": false,
+          "commit": "3158bcebd7795d618a3228a7d5e977cefbe8396a",
+          "config_path": "openwakeword/config.yaml",
+          "path": "openwakeword",
+          "permissions": [
+            {
+              "description": "mapped Home Assistant folders",
+              "evidence": {
+                "commit": "3158bcebd7795d618a3228a7d5e977cefbe8396a",
+                "line": 15,
+                "path": "openwakeword/config.yaml",
+                "repo": "home-assistant/addons"
+              },
+              "key": "map",
+              "value": [
+                "share:ro"
+              ]
+            }
+          ],
+          "repo": "home-assistant/addons",
+          "supervisor_rating": {
+            "breakdown": [],
+            "value": 5
+          },
+          "version": "2.1.1"
+        },
+        "id": "openwakeword-addon",
+        "latest_release": {
+          "published_at": "2025-10-28T15:15:17Z",
+          "tag": "v2.1.0"
+        },
+        "repo": "rhasspy/wyoming-openwakeword",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 46,
+          "license": "Apache-2.0",
+          "open_issues": 8,
+          "pushed_at": "2025-10-30T14:41:46Z",
+          "stars": 203
+        },
+        "sha": "419701f64aa936ff62a820dfeac757f1afda01d1"
+      },
+      "id": "openwakeword-addon",
+      "inference": [
+        "local"
+      ],
+      "install": [
+        "addon",
+        "container"
+      ],
+      "name": "openWakeWord",
+      "notes": "Continuously processes microphone audio streamed from satellites — that is what wake-word detection is — but entirely on your hardware, and only the detection result moves on through the pipeline.\n",
+      "providers": [
+        "self-hosted"
+      ],
+      "repo": "rhasspy/wyoming-openwakeword",
+      "summary": "Official wake-word detection add-on for Assist — continuously scores satellite audio for \"Okay Nabu\" and friends, locally."
+    },
+    {
+      "added": "2026-08-06",
+      "addon_config": {
+        "path": "piper",
+        "repo": "home-assistant/addons"
+      },
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "voice-stack",
+      "data_sent": [],
+      "generated": {
+        "addon": {
+          "apparmor_profile": false,
+          "commit": "3158bcebd7795d618a3228a7d5e977cefbe8396a",
+          "config_path": "piper/config.yaml",
+          "path": "piper",
+          "permissions": [
+            {
+              "description": "mapped Home Assistant folders",
+              "evidence": {
+                "commit": "3158bcebd7795d618a3228a7d5e977cefbe8396a",
+                "line": 15,
+                "path": "piper/config.yaml",
+                "repo": "home-assistant/addons"
+              },
+              "key": "map",
+              "value": [
+                "share"
+              ]
+            }
+          ],
+          "repo": "home-assistant/addons",
+          "supervisor_rating": {
+            "breakdown": [],
+            "value": 5
+          },
+          "version": "2.3.3"
+        },
+        "id": "piper-addon",
+        "latest_release": {
+          "published_at": "2026-08-13T16:28:36Z",
+          "tag": "v2.4.2"
+        },
+        "repo": "rhasspy/wyoming-piper",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 57,
+          "license": "MIT",
+          "open_issues": 3,
+          "pushed_at": "2026-08-13T17:12:32Z",
+          "stars": 202
+        },
+        "sha": "07ac4595a0aef4ebb9a67e52bd2fb6360828c013"
+      },
+      "id": "piper-addon",
+      "inference": [
+        "local"
+      ],
+      "install": [
+        "addon",
+        "container"
+      ],
+      "name": "Piper (text-to-speech)",
+      "notes": "Synthesizes spoken responses locally over the Wyoming protocol. Sees only the response text it is asked to speak; nothing leaves your network.\n",
+      "providers": [
+        "self-hosted"
+      ],
+      "repo": "rhasspy/wyoming-piper",
+      "summary": "Official local text-to-speech add-on for Assist — fast neural voices generated entirely on your own hardware."
+    },
+    {
+      "added": "2026-08-06",
+      "addon_config": {
+        "path": "speech_to_phrase",
+        "repo": "home-assistant/addons"
+      },
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": true,
+        "reads_camera": false,
+        "reads_entity_states": true,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "voice-stack",
+      "data_sent": [],
+      "evidence": {
+        "listens_microphone": {
+          "commit": "b4ecef9519e84fefd5dc35c0384c50efa13a0bad",
+          "line": 81,
+          "path": "speech_to_phrase/event_handler.py"
+        }
+      },
+      "generated": {
+        "addon": {
+          "apparmor_profile": false,
+          "commit": "3158bcebd7795d618a3228a7d5e977cefbe8396a",
+          "config_path": "speech_to_phrase/config.yaml",
+          "path": "speech_to_phrase",
+          "permissions": [
+            {
+              "description": "Home Assistant API access",
+              "evidence": {
+                "commit": "3158bcebd7795d618a3228a7d5e977cefbe8396a",
+                "line": 17,
+                "path": "speech_to_phrase/config.yaml",
+                "repo": "home-assistant/addons"
+              },
+              "key": "homeassistant_api",
+              "value": true
+            },
+            {
+              "description": "mapped Home Assistant folders",
+              "evidence": {
+                "commit": "3158bcebd7795d618a3228a7d5e977cefbe8396a",
+                "line": 13,
+                "path": "speech_to_phrase/config.yaml",
+                "repo": "home-assistant/addons"
+              },
+              "key": "map",
+              "value": [
+                "share:rw"
+              ]
+            }
+          ],
+          "repo": "home-assistant/addons",
+          "supervisor_rating": {
+            "breakdown": [],
+            "value": 5
+          },
+          "version": "1.4.3"
+        },
+        "id": "speech-to-phrase",
+        "latest_release": {
+          "published_at": "2026-04-03T14:33:51Z",
+          "tag": "v1.4.3"
+        },
+        "repo": "OHF-Voice/speech-to-phrase",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 71,
+          "license": "Apache-2.0",
+          "open_issues": 84,
+          "pushed_at": "2026-07-27T23:59:13Z",
+          "stars": 330
+        },
+        "sha": "b4ecef9519e84fefd5dc35c0384c50efa13a0bad"
+      },
+      "id": "speech-to-phrase",
+      "inference": [
+        "local"
+      ],
+      "install": [
+        "addon",
+        "container"
+      ],
+      "name": "Speech-to-Phrase",
+      "notes": "Trains itself on your entity, area, and floor names to build a closed phrase list — which is why it reads entity metadata — then recognizes those phrases locally. Not a general transcriber: it cannot hear sentences outside its trained set.\n",
+      "providers": [
+        "self-hosted"
+      ],
+      "repo": "OHF-Voice/speech-to-phrase",
+      "summary": "Official constrained speech recognition for Assist — recognizes only phrases your entities can answer, fast on a Raspberry Pi."
+    },
+    {
+      "added": "2026-08-07",
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": true,
+        "reads_camera": true,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "voice-stack",
+      "data_sent": [
+        "nothing by the project itself — camera audio goes to whatever engines your chosen Assist pipeline uses"
+      ],
+      "domain": "stream_assist",
+      "evidence": {
+        "listens_microphone": {
+          "commit": "49fde307ea11ecd1495b2bdcff3409217fe10b10",
+          "line": 43,
+          "path": "custom_components/stream_assist/core/stream.py"
+        },
+        "reads_camera": {
+          "commit": "49fde307ea11ecd1495b2bdcff3409217fe10b10",
+          "line": 54,
+          "path": "custom_components/stream_assist/core/__init__.py"
+        }
+      },
+      "generated": {
+        "id": "stream-assist",
+        "in_hacs_default": false,
+        "latest_release": {
+          "published_at": "2024-06-12T12:08:56Z",
+          "tag": "v2.1.0"
+        },
+        "manifest": {
+          "domain": "stream_assist",
+          "evidence": {
+            "commit": "49fde307ea11ecd1495b2bdcff3409217fe10b10",
+            "line": 13,
+            "path": "custom_components/stream_assist/manifest.json",
+            "repo": "AlexxIT/StreamAssist"
+          },
+          "iot_class": "calculated",
+          "name": "Stream Assist",
+          "requirements": [],
+          "version": "v2.1.0"
+        },
+        "repo": "AlexxIT/StreamAssist",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 39,
+          "license": "MIT",
+          "open_issues": 47,
+          "pushed_at": "2024-07-30T21:04:03Z",
+          "stars": 385
+        },
+        "screenshot": {
+          "commit": "49fde307ea11ecd1495b2bdcff3409217fe10b10",
+          "source": "readme",
+          "url": "https://img.youtube.com/vi/fP_BNFWLYnk/mqdefault.jpg"
+        },
+        "sha": "49fde307ea11ecd1495b2bdcff3409217fe10b10"
+      },
+      "id": "stream-assist",
+      "inference": [
+        "local",
+        "cloud"
+      ],
+      "install": [
+        "hacs-integration"
+      ],
+      "name": "Stream Assist",
+      "notes": "Once its mic switch is on it holds the camera's audio stream open around the clock, running wake-word detection like any satellite — the satellite just happens to be your security camera. Where the audio then goes is decided by the pipeline you select. Dormant: no commits since mid-2024 and a growing issue backlog, though it still works for many. Its only service call is playing TTS on media players.\n",
+      "repo": "AlexxIT/StreamAssist",
+      "summary": "Turns cameras and media players into Assist voice satellites — pipes camera audio through the wake-word and STT pipeline and plays replies on a speaker."
+    },
+    {
+      "added": "2026-08-06",
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": true,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "dashboard-ui",
+      "data_sent": [],
+      "generated": {
+        "id": "view-assist",
+        "repo": "dinki/View-Assist",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 71,
+          "license": "NOASSERTION",
+          "open_issues": 35,
+          "pushed_at": "2026-08-04T16:47:00Z",
+          "stars": 510
+        },
+        "screenshot": {
+          "commit": "360de499841574f86a9dfef717b67f807344e001",
+          "source": "readme",
+          "url": "https://img.youtube.com/vi/t0jG4LZzKqs/mqdefault.jpg"
+        },
+        "sha": "360de499841574f86a9dfef717b67f807344e001"
+      },
+      "id": "view-assist",
+      "inference": [
+        "local",
+        "cloud"
+      ],
+      "install": [
+        "external"
+      ],
+      "name": "View Assist",
+      "notes": "The display layer of a voice assistant, not the brain: microphones, speech recognition, and inference all live in the Assist pipeline you pair it with, so where your voice data goes is decided there. Installed as a kit of dashboard packages, scripts, and custom sentences (wiki-guided) rather than a single integration; reads entity state to render views on browser devices.\n",
+      "providers": [],
+      "repo": "dinki/View-Assist",
+      "summary": "Turns tablets and screens into visual companions for Assist voice satellites — answers, timers, and camera popups rendered as dashboards."
+    },
+    {
+      "added": "2026-08-06",
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": true,
+        "reads_camera": false,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "voice-stack",
+      "data_sent": [
+        "microphone audio after the wake word — to your Home Assistant server's Assist pipeline"
+      ],
+      "evidence": {
+        "listens_microphone": {
+          "commit": "0579e7b9d8504264719c593474c85447253c9dc1",
+          "line": 1539,
+          "path": "home-assistant-voice.yaml"
+        }
+      },
+      "generated": {
+        "id": "voice-pe-firmware",
+        "latest_release": {
+          "published_at": "2026-06-18T10:04:49Z",
+          "tag": "26.6.0"
+        },
+        "repo": "esphome/home-assistant-voice-pe",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "dev",
+          "forks": 296,
+          "license": "NOASSERTION",
+          "open_issues": 133,
+          "pushed_at": "2026-08-20T02:39:04Z",
+          "stars": 735
+        },
+        "sha": "0579e7b9d8504264719c593474c85447253c9dc1"
+      },
+      "id": "voice-pe-firmware",
+      "inference": [
+        "local"
+      ],
+      "install": [
+        "external"
+      ],
+      "name": "Voice Preview Edition (firmware)",
+      "notes": "Wake detection runs on the ESP32 itself via microWakeWord, so audio leaves the device only after \"Okay Nabu\" — and where speech goes after that (local Whisper or a cloud agent) is decided by the pipeline you assign, not by the hardware. The firmware is open and reflashable like any ESPHome device.\n",
+      "providers": [
+        "self-hosted"
+      ],
+      "repo": "esphome/home-assistant-voice-pe",
+      "summary": "The ESPHome firmware behind Home Assistant's official voice hardware — on-device wake word, then audio streams to your own Assist pipeline.",
+      "url": "https://www.home-assistant.io/voice-pe/"
+    },
+    {
+      "added": "2026-08-07",
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": true,
+        "reads_camera": false,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "voice-stack",
+      "data_sent": [
+        "nothing off-network by the project itself — mic audio streams only to your own Assist pipeline"
+      ],
+      "domain": "voice_satellite",
+      "evidence": {
+        "listens_microphone": {
+          "commit": "8af37123aaf813663959484b7f41fde6fbf63839",
+          "line": 119,
+          "path": "src/audio/index.js"
+        }
+      },
+      "generated": {
+        "id": "voice-satellite",
+        "in_hacs_default": true,
+        "latest_release": {
+          "published_at": "2026-08-21T08:35:33Z",
+          "tag": "2026.8.15"
+        },
+        "manifest": {
+          "domain": "voice_satellite",
+          "evidence": {
+            "commit": "86f436a1fd213d2c2cdd313717be1e57065b7dd5",
+            "line": 17,
+            "path": "custom_components/voice_satellite/manifest.json",
+            "repo": "jxlarrea/voice-satellite-card-integration"
+          },
+          "iot_class": "local_push",
+          "name": "Voice Satellite",
+          "requirements": [
+            "mutagen>=1.47.0"
+          ],
+          "version": "2026.8.15"
+        },
+        "repo": "jxlarrea/voice-satellite-card-integration",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 25,
+          "license": "AGPL-3.0",
+          "open_issues": 0,
+          "pushed_at": "2026-08-21T17:07:55Z",
+          "stars": 712
+        },
+        "screenshot": {
+          "commit": "86f436a1fd213d2c2cdd313717be1e57065b7dd5",
+          "source": "readme",
+          "url": "https://raw.githubusercontent.com/jxlarrea/voice-satellite-card-integration/refs/heads/main/assets/banner.png"
+        },
+        "sha": "86f436a1fd213d2c2cdd313717be1e57065b7dd5"
+      },
+      "id": "voice-satellite",
+      "inference": [
+        "local"
+      ],
+      "install": [
+        "hacs-integration"
+      ],
+      "name": "Voice Satellite",
+      "notes": "The browser tab keeps the microphone open and runs openWakeWord/microWakeWord models in-page, only opening an Assist session on detection — so audio stays between the browser and your HA server, and what happens after STT depends on the pipeline you point it at. Needs HTTPS and mic permission. The card also displays camera streams and plays TTS, but that is dashboard display, not AI reach.\n",
+      "providers": [
+        "self-hosted"
+      ],
+      "repo": "jxlarrea/voice-satellite-card-integration",
+      "summary": "Lovelace card plus companion integration that turns any browser or wall tablet into an Assist voice satellite, with wake-word detection running in the browser itself."
+    },
+    {
+      "added": "2026-08-06",
+      "addon_config": {
+        "path": "whisper",
+        "repo": "home-assistant/addons"
+      },
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": true,
+        "reads_camera": false,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "voice-stack",
+      "data_sent": [],
+      "evidence": {
+        "listens_microphone": {
+          "commit": "5b5854f36a0f228a289a6a30da7e594f74e35968",
+          "line": 59,
+          "path": "wyoming_faster_whisper/dispatch_handler.py"
+        }
+      },
+      "generated": {
+        "addon": {
+          "apparmor_profile": false,
+          "commit": "3158bcebd7795d618a3228a7d5e977cefbe8396a",
+          "config_path": "whisper/config.yaml",
+          "path": "whisper",
+          "permissions": [
+            {
+              "description": "mapped Home Assistant folders",
+              "evidence": {
+                "commit": "3158bcebd7795d618a3228a7d5e977cefbe8396a",
+                "line": 15,
+                "path": "whisper/config.yaml",
+                "repo": "home-assistant/addons"
+              },
+              "key": "map",
+              "value": [
+                "app_config:rw"
+              ]
+            }
+          ],
+          "repo": "home-assistant/addons",
+          "supervisor_rating": {
+            "breakdown": [],
+            "value": 5
+          },
+          "version": "3.5.1"
+        },
+        "id": "whisper-addon",
+        "latest_release": {
+          "published_at": "2026-08-14T20:09:28Z",
+          "tag": "v3.6.0"
+        },
+        "repo": "rhasspy/wyoming-faster-whisper",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 101,
+          "license": "MIT",
+          "open_issues": 17,
+          "pushed_at": "2026-08-14T20:00:39Z",
+          "stars": 371
+        },
+        "sha": "3f54e56f91d7b36718ce0e23af4c4aaeaaae5f08"
+      },
+      "id": "whisper-addon",
+      "inference": [
+        "local"
+      ],
+      "install": [
+        "addon",
+        "container"
+      ],
+      "name": "Whisper (speech-to-text)",
+      "notes": "Receives voice audio streamed from Assist satellites over the Wyoming protocol and transcribes it locally. Audio stays on your network; nothing is sent anywhere.\n",
+      "providers": [
+        "self-hosted"
+      ],
+      "repo": "rhasspy/wyoming-faster-whisper",
+      "summary": "Official local speech-to-text add-on for Assist, running faster-whisper models on your own hardware."
+    },
+    {
+      "added": "2026-08-07",
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": true,
+        "reads_camera": false,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "voice-stack",
+      "data_sent": [
+        "the full audio of every voice command, as a WAV upload — to the provider you configure"
+      ],
+      "domain": "openai_whisper_cloud",
+      "evidence": {
+        "listens_microphone": {
+          "commit": "fde9d1c114568eb4a2aafff2cfeb16300258eb39",
+          "line": 146,
+          "path": "custom_components/openai_whisper_cloud/stt.py"
+        }
+      },
+      "generated": {
+        "id": "whisper-cloud-stt",
+        "in_hacs_default": true,
+        "latest_release": {
+          "published_at": "2026-08-03T20:22:09Z",
+          "tag": "1.3.3"
+        },
+        "manifest": {
+          "domain": "openai_whisper_cloud",
+          "evidence": {
+            "commit": "fde9d1c114568eb4a2aafff2cfeb16300258eb39",
+            "line": 11,
+            "path": "custom_components/openai_whisper_cloud/manifest.json",
+            "repo": "fabio-garavini/ha-openai-whisper-stt-api"
+          },
+          "iot_class": "cloud_push",
+          "name": "Whisper Cloud",
+          "requirements": [],
+          "version": "1.3.0"
+        },
+        "repo": "fabio-garavini/ha-openai-whisper-stt-api",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 18,
+          "license": "AGPL-3.0",
+          "open_issues": 1,
+          "pushed_at": "2026-08-04T06:54:13Z",
+          "stars": 106
+        },
+        "sha": "fde9d1c114568eb4a2aafff2cfeb16300258eb39"
+      },
+      "id": "whisper-cloud-stt",
+      "inference": [
+        "cloud",
+        "local"
+      ],
+      "install": [
+        "hacs-integration"
+      ],
+      "name": "OpenAI Whisper Cloud STT",
+      "notes": "The cloud inverse of the Whisper add-on: the complete recording of each command leaves your host per request. The \"custom\" provider accepts any OpenAI-compatible URL, so pointing it at a self-hosted Whisper server keeps audio on your network — that choice, not the integration, decides where your voice goes. Only ever invoked by the pipeline.\n",
+      "providers": [
+        "openai",
+        "groq",
+        "mistral",
+        "cohere",
+        "openai-compatible"
+      ],
+      "repo": "fabio-garavini/ha-openai-whisper-stt-api",
+      "summary": "STT entity that records each Assist voice command as WAV and posts it to OpenAI, Groq, Mistral, Cohere, or any OpenAI-compatible transcription endpoint."
+    },
+    {
+      "added": "2026-08-07",
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": true,
+        "reads_camera": false,
+        "reads_entity_states": true,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "voice-stack",
+      "data_sent": [
+        "wake-triggered voice audio — to the configured inference server; the firmware default is Tovera's hosted infer.tovera.io",
+        "transcripts — through the Willow Application Server to your HA Assist pipeline"
+      ],
+      "evidence": {
+        "listens_microphone": {
+          "commit": "415ba07007f49873649d36e0b384d72640f1cfac",
+          "line": 420,
+          "path": "main/audio.c"
+        },
+        "reads_entity_states": {
+          "commit": "a9c0f722c3fcebf39e21f79cbe6c592f814914bf",
+          "line": 160,
+          "path": "app/internal/was.py",
+          "repo": "toverainc/willow-application-server"
+        }
+      },
+      "generated": {
+        "id": "willow",
+        "latest_release": {
+          "published_at": "2026-07-21T21:36:56Z",
+          "tag": "0.4.3"
+        },
+        "repo": "toverainc/willow",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 128,
+          "license": "Apache-2.0",
+          "open_issues": 24,
+          "pushed_at": "2026-08-04T17:02:58Z",
+          "stars": 3093
+        },
+        "sha": "415ba07007f49873649d36e0b384d72640f1cfac"
+      },
+      "id": "willow",
+      "inference": [
+        "local",
+        "cloud"
+      ],
+      "install": [
+        "external"
+      ],
+      "name": "Willow",
+      "notes": "The pre-Voice-PE hardware answer, still maintained at a modest pace. The detail that matters: out of the box, audio streams to Tovera's hosted inference server — self-host WIS to keep your voice on your network. Device control is delegated to HA's Assist pipeline via the required Application Server (which also reads /api/states for its entity list); the firmware itself only wakes, records, and streams.\n",
+      "providers": [
+        "self-hosted"
+      ],
+      "repo": "toverainc/willow",
+      "summary": "ESP32-S3-BOX voice satellite firmware with on-device wake word, streaming speech to a Willow Inference Server and driving HA through the Willow Application Server.",
+      "url": "https://heywillow.io"
+    },
+    {
+      "added": "2026-08-06",
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": true,
+        "reads_camera": false,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "voice-stack",
+      "data_sent": [
+        "microphone audio — to your Home Assistant server over the Wyoming protocol"
+      ],
+      "evidence": {
+        "listens_microphone": {
+          "commit": "7a3ba2bc23fc6699adae4f5bbac4ce529fe2a623",
+          "line": 373,
+          "path": "wyoming_satellite/satellite.py"
+        }
+      },
+      "generated": {
+        "id": "wyoming-satellite",
+        "latest_release": {
+          "published_at": "2025-02-10T17:59:07Z",
+          "tag": "v1.4.1"
+        },
+        "repo": "rhasspy/wyoming-satellite",
+        "repo_meta": {
+          "archived": true,
+          "default_branch": "master",
+          "forks": 185,
+          "license": "MIT",
+          "open_issues": 212,
+          "pushed_at": "2026-01-24T13:20:36Z",
+          "stars": 1242
+        },
+        "sha": "7a3ba2bc23fc6699adae4f5bbac4ce529fe2a623"
+      },
+      "id": "wyoming-satellite",
+      "inference": [
+        "local"
+      ],
+      "install": [
+        "external"
+      ],
+      "name": "Wyoming Satellite",
+      "notes": "The physical microphone end of the local voice stack. With local wake-word detection enabled, audio streams to the server only after the wake word; where speech goes after that is decided by the pipeline you attach it to.\n",
+      "providers": [
+        "self-hosted"
+      ],
+      "repo": "rhasspy/wyoming-satellite",
+      "summary": "Turns a Raspberry Pi or similar into an Assist voice satellite — captures room audio and streams it to your Home Assistant pipeline."
+    },
+    {
+      "added": "2026-08-07",
+      "addon_config": {
+        "path": "vosk",
+        "repo": "rhasspy/hassio-addons"
+      },
+      "capabilities": {
+        "controls_devices": false,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": true,
+        "reads_camera": false,
+        "reads_entity_states": false,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "voice-stack",
+      "data_sent": [],
+      "evidence": {
+        "listens_microphone": {
+          "commit": "335a4744d2d0d67624386338e8656f40a3294626",
+          "line": 303,
+          "path": "wyoming_vosk/__main__.py"
+        }
+      },
+      "generated": {
+        "addon": {
+          "apparmor_profile": false,
+          "commit": "2bc5dda06bada6d3f719c6446f17cfea39872f4f",
+          "config_path": "vosk/config.yaml",
+          "path": "vosk",
+          "permissions": [
+            {
+              "description": "mapped Home Assistant folders",
+              "evidence": {
+                "commit": "2bc5dda06bada6d3f719c6446f17cfea39872f4f",
+                "line": 14,
+                "path": "vosk/config.yaml",
+                "repo": "rhasspy/hassio-addons"
+              },
+              "key": "map",
+              "value": [
+                "share:rw"
+              ]
+            }
+          ],
+          "repo": "rhasspy/hassio-addons",
+          "supervisor_rating": {
+            "breakdown": [],
+            "value": 5
+          },
+          "version": "1.6.1"
+        },
+        "id": "wyoming-vosk",
+        "repo": "rhasspy/wyoming-vosk",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "master",
+          "forks": 6,
+          "license": "MIT",
+          "open_issues": 6,
+          "pushed_at": "2026-03-12T15:55:41Z",
+          "stars": 22
+        },
+        "sha": "335a4744d2d0d67624386338e8656f40a3294626"
+      },
+      "id": "wyoming-vosk",
+      "inference": [
+        "local"
+      ],
+      "install": [
+        "addon",
+        "container"
+      ],
+      "name": "Vosk (speech-to-text)",
+      "notes": "The lighter-weight alternative to the Whisper add-on: Vosk models run well on modest hardware, and the optional limited/corrected modes constrain output to your sentence templates for much better accuracy on small models. No audio or text leaves the host; models auto-download from Hugging Face on first use.\n",
+      "providers": [
+        "self-hosted"
+      ],
+      "repo": "rhasspy/wyoming-vosk",
+      "summary": "Offline speech-to-text add-on for Assist — a Wyoming server transcribing pipeline audio locally with Vosk, with optional template-constrained recognition."
+    },
+    {
+      "added": "2026-08-07",
+      "capabilities": {
+        "controls_devices": true,
+        "creates_automations": false,
+        "edits_files": false,
+        "executes_code": false,
+        "listens_microphone": false,
+        "reads_camera": false,
+        "reads_entity_states": true,
+        "reads_history": false,
+        "runs_unattended": false
+      },
+      "category": "mcp",
+      "data_sent": [
+        "tool list, exposed entity states, and tool results — relayed to the configured Xiaozhi endpoint",
+        "voice audio stays between the Xiaozhi device and Xiaozhi's cloud; it never passes through HA"
+      ],
+      "domain": "xiaozhi_mcp",
+      "evidence": {
+        "controls_devices": {
+          "commit": "e0fbfe0179d720160c3e491352794d825892d293",
+          "line": 522,
+          "path": "custom_components/xiaozhi_mcp/coordinator.py"
+        },
+        "reads_entity_states": {
+          "commit": "e0fbfe0179d720160c3e491352794d825892d293",
+          "line": 564,
+          "path": "custom_components/xiaozhi_mcp/coordinator.py"
+        }
+      },
+      "generated": {
+        "id": "xiaozhi-mcp",
+        "in_hacs_default": true,
+        "latest_release": {
+          "published_at": "2025-09-10T09:14:33Z",
+          "tag": "v0.0.25"
+        },
+        "manifest": {
+          "domain": "xiaozhi_mcp",
+          "evidence": {
+            "commit": "e0fbfe0179d720160c3e491352794d825892d293",
+            "line": 13,
+            "path": "custom_components/xiaozhi_mcp/manifest.json",
+            "repo": "mac8005/xiaozhi-mcp-ha"
+          },
+          "iot_class": "cloud_push",
+          "name": "Xiaozhi MCP",
+          "requirements": [
+            "websockets>=11.0.3",
+            "aiohttp>=3.8.0"
+          ],
+          "version": "0.0.25"
+        },
+        "repo": "mac8005/xiaozhi-mcp-ha",
+        "repo_meta": {
+          "archived": false,
+          "default_branch": "main",
+          "forks": 20,
+          "license": "MIT",
+          "open_issues": 3,
+          "pushed_at": "2025-09-10T09:13:41Z",
+          "stars": 106
+        },
+        "screenshot": {
+          "commit": "e0fbfe0179d720160c3e491352794d825892d293",
+          "source": "readme",
+          "url": "https://ph-files.imgix.net/80909cc8-6bcb-42b9-96eb-4572b4e8b3cf.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=969&h=640&fit=max&frame=1&dpr=1"
+        },
+        "sha": "e0fbfe0179d720160c3e491352794d825892d293"
+      },
+      "id": "xiaozhi-mcp",
+      "inference": [
+        "cloud",
+        "local"
+      ],
+      "install": [
+        "hacs-integration"
+      ],
+      "name": "Xiaozhi MCP",
+      "notes": "A pure proxy in front of HA's core MCP Server, authenticated with your long-lived token — so everything exposed to Assist becomes reachable from the Xiaozhi cloud over an always-open outbound WebSocket. One finding worth weighing: TLS certificate verification is disabled on that wss:// link in source, so the channel carrying your states trusts any certificate. Quiet since late 2025.\n",
+      "providers": [
+        "xiaozhi",
+        "self-hosted"
+      ],
+      "repo": "mac8005/xiaozhi-mcp-ha",
+      "summary": "Bridges Xiaozhi ESP32 chatbots to HA — keeps a WebSocket open to the Xiaozhi cloud and relays MCP calls to HA's official MCP Server and its Assist tools."
+    }
+  ],
+  "harvested_at": "2026-08-22T04:54:42Z",
+  "license": "CC BY 4.0",
+  "project": "Home Assistant AI Index",
+  "repo": "https://github.com/bruhautomation/home-assistant-ai-index",
+  "schema_version": 1,
+  "sensitive_capabilities": [
+    "reads_camera",
+    "listens_microphone",
+    "edits_files",
+    "executes_code",
+    "runs_unattended"
+  ]
+}

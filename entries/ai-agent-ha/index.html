@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Chat-panel agent that reads states and history, calls services, writes automations.yaml, and creates dashboards from natural language, against your choice of LLM.">
+<link rel="canonical" href="https://bruhautomation.github.io/home-assistant-ai-index/entries/ai-agent-ha/">
+<meta property="og:title" content="AI Agent HA — Home Assistant AI Index">
+<meta property="og:description" content="Chat-panel agent that reads states and history, calls services, writes automations.yaml, and creates dashboards from natural language, against your choice of LLM.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Home Assistant AI Index">
+<meta property="og:image" content="https://raw.githubusercontent.com/bruhautomation/home-assistant-ai-index/main/docs/site-preview.png">
+<title>AI Agent HA — Home Assistant AI Index</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔎</text></svg>">
+</head>
+<body>
+<header>
+  <nav><a href="../../">← all automation authoring &amp; more</a></nav>
+  <h1>AI Agent HA</h1>
+  <p class="tag">Chat-panel agent that reads states and history, calls services, writes automations.yaml, and creates dashboards from natural language, against your choice of LLM.</p>
+  <p class="chips"><span class="chip cat">Automation authoring</span>
+  <span class="chip">HACS integration</span>
+  <span class="chip">inference: cloud · local</span></p>
+  <p><a href="https://github.com/sbenodiz/ai_agent_ha">github.com/sbenodiz/ai_agent_ha</a></p>
+</header>
+<figure class="shot">
+  <a href="https://raw.githubusercontent.com/sbenodiz/ai_agent_ha/b1ec82cbb6c8800aea816000b446856f5e893ff1/image/Screenshot2.png"><img src="https://raw.githubusercontent.com/sbenodiz/ai_agent_ha/b1ec82cbb6c8800aea816000b446856f5e893ff1/image/Screenshot2.png" alt="Screenshot of AI Agent HA" loading="lazy" onerror="this.closest('figure').remove()"></a>
+  <figcaption>From the project's README at the pinned commit.</figcaption>
+</figure>
+<h2>What it can reach</h2>
+<ul class="canreach"><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.6C10.8 5 8.9 4 6.8 4H3v14.5h4.2c1.8 0 3.6.7 4.8 2 1.2-1.3 3-2 4.8-2H21V4h-3.8c-2.1 0-4 1-5.2 2.6z"/><path d="M12 6.6V20"/></svg> <b>reads states</b></span><span class="captip">Can read the live state of entities exposed to it — temperatures, lights, locks, presence.</span><span class="capev"><a href="https://github.com/sbenodiz/ai_agent_ha/blob/b1ec82cbb6c8800aea816000b446856f5e893ff1/custom_components/ai_agent_ha/agent.py#L1882">source ↗</a></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.8 12a8.4 8.4 0 1 0 2.3-5.7L3.8 8.6"/><path d="M3.8 3.6v5h5"/><path d="M12 7.6V12l3 2"/></svg> <b>reads history</b></span><span class="captip">Can query past states and events from the recorder, history, or logbook.</span><span class="capev"><a href="https://github.com/sbenodiz/ai_agent_ha/blob/b1ec82cbb6c8800aea816000b446856f5e893ff1/custom_components/ai_agent_ha/agent.py#L2356">source ↗</a></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h8m5.4 0H20M4 12h3m5.4 0H20M4 17h11m5.4 0H20"/><circle cx="14.7" cy="7" r="2.2"/><circle cx="9.7" cy="12" r="2.2"/><circle cx="17.7" cy="17" r="2.2"/></svg> <b>controls devices</b></span><span class="captip">Can call Home Assistant services to switch, dim, unlock, or otherwise act on devices.</span><span class="capev"><a href="https://github.com/sbenodiz/ai_agent_ha/blob/b1ec82cbb6c8800aea816000b446856f5e893ff1/custom_components/ai_agent_ha/agent.py#L4365">source ↗</a></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="M12 8.5v7M8.5 12h7"/></svg> <b>creates automations</b></span><span class="captip">Can write automations, scripts, or helpers into your configuration.</span><span class="capev"><a href="https://github.com/sbenodiz/ai_agent_ha/blob/b1ec82cbb6c8800aea816000b446856f5e893ff1/custom_components/ai_agent_ha/agent.py#L2617">source ↗</a></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 4H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/><path d="M17.8 3.2a2.05 2.05 0 0 1 2.9 2.9L14 12.8l-3.7.8.8-3.7z"/></svg> <b>edits files</b></span><span class="captip">Can write to configuration files or the filesystem beyond its own storage.</span><span class="capev"><a href="https://github.com/sbenodiz/ai_agent_ha/blob/b1ec82cbb6c8800aea816000b446856f5e893ff1/custom_components/ai_agent_ha/agent.py#L2828">source ↗</a></span></li></ul>
+<p class="notgranted">Not granted: reads camera · microphone · executes code · unattended</p>
+<h2>Data flow</h2>
+<p>Providers/backends: <span class="chip">openai</span><span class="chip">anthropic</span><span class="chip">google</span><span class="chip">openrouter</span><span class="chip">ollama</span><span class="chip">openai-compatible</span></p>
+<p>What can leave your Home Assistant host:</p>
+<ul><li>prompts plus requested entity states, areas, and recorder history — to the configured provider</li></ul>
+
+<h2>Health</h2>
+
+<p>in the HACS default store · ★ 155 · last push 2026-07-14 · latest release v1.42 · license MIT · 15 open issues</p>
+<p>Integration <code>iot_class</code> (self-declared): <code>cloud_polling</code> — talks to a cloud service on a schedule (<a href="https://github.com/sbenodiz/ai_agent_ha/blob/b1ec82cbb6c8800aea816000b446856f5e893ff1/custom_components/ai_agent_ha/manifest.json#L18">manifest ↗</a>)</p>
+
+<h2>Notes</h2><p>The model drives a tool loop that can call any HA service, write automations.yaml (with backup, atomically), and write dashboard YAML — including appending a lovelace section to configuration.yaml. The panel shows approve buttons for suggestions, but the backend also executes service-call and automation-create requests the model emits directly. Runs only when you chat with it or call its services.
+</p>
+<div class="correction">
+  <p><strong>Is this wrong about AI Agent HA?</strong> That's the bug we care about most —
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index/issues/new?template=correction.yml&title=%5Bcorrection%5D%20ai-agent-ha">open a correction</a>. Maintainer reports get priority.</p>
+</div>
+<p class="stamp">Metrics harvested 2026-08-22 · Entry added 2026-08-07 ·
+<a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/entries/ai-agent-ha.yaml">entry source</a></p>
+<footer>
+  <p>Facts with evidence, not scores. Content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+  code <a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/LICENSE">MIT</a> ·
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index">source &amp; corrections</a></p>
+</footer>
+</body>
+</html>

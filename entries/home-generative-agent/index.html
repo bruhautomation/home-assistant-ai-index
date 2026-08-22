@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="LangGraph-based agent for Home Assistant with camera scene analysis, long-term memory, and the ability to write automations itself.">
+<link rel="canonical" href="https://bruhautomation.github.io/home-assistant-ai-index/entries/home-generative-agent/">
+<meta property="og:title" content="Home Generative Agent — Home Assistant AI Index">
+<meta property="og:description" content="LangGraph-based agent for Home Assistant with camera scene analysis, long-term memory, and the ability to write automations itself.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Home Assistant AI Index">
+<meta property="og:image" content="https://raw.githubusercontent.com/bruhautomation/home-assistant-ai-index/main/docs/site-preview.png">
+<title>Home Generative Agent — Home Assistant AI Index</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔎</text></svg>">
+</head>
+<body>
+<header>
+  <nav><a href="../../">← all agent platforms &amp; more</a></nav>
+  <h1>Home Generative Agent</h1>
+  <p class="tag">LangGraph-based agent for Home Assistant with camera scene analysis, long-term memory, and the ability to write automations itself.</p>
+  <p class="chips"><span class="chip cat">Agent platforms</span>
+  <span class="chip">HACS integration</span>
+  <span class="chip">inference: cloud · local</span></p>
+  <p><a href="https://github.com/goruck/home-generative-agent">github.com/goruck/home-generative-agent</a></p>
+</header>
+<figure class="shot">
+  <a href="https://raw.githubusercontent.com/goruck/home-generative-agent/c1465af937ab1a6370a2d72766d826ac0f718c1e/assets/create_automation.gif"><img src="https://raw.githubusercontent.com/goruck/home-generative-agent/c1465af937ab1a6370a2d72766d826ac0f718c1e/assets/create_automation.gif" alt="Screenshot of Home Generative Agent" loading="lazy" onerror="this.closest('figure').remove()"></a>
+  <figcaption>From the project's README at the pinned commit.</figcaption>
+</figure>
+<h2>What it can reach</h2>
+<ul class="canreach"><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.6C10.8 5 8.9 4 6.8 4H3v14.5h4.2c1.8 0 3.6.7 4.8 2 1.2-1.3 3-2 4.8-2H21V4h-3.8c-2.1 0-4 1-5.2 2.6z"/><path d="M12 6.6V20"/></svg> <b>reads states</b></span><span class="captip">Can read the live state of entities exposed to it — temperatures, lights, locks, presence.</span><span class="capev"></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.8 12a8.4 8.4 0 1 0 2.3-5.7L3.8 8.6"/><path d="M3.8 3.6v5h5"/><path d="M12 7.6V12l3 2"/></svg> <b>reads history</b></span><span class="captip">Can query past states and events from the recorder, history, or logbook.</span><span class="capev"></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h3.2l1.9-2.6h7.8L17.8 8H21v11H3z"/><circle cx="12" cy="13.2" r="3.4"/></svg> <b>reads camera</b></span><span class="captip">Can access camera images or streams.</span><span class="capev"><a href="https://github.com/goruck/home-generative-agent/blob/ef805411de140bd6d4f9f5d91534ed4cabc60990/custom_components/home_generative_agent/agent/tools.py#L386">source ↗</a></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h8m5.4 0H20M4 12h3m5.4 0H20M4 17h11m5.4 0H20"/><circle cx="14.7" cy="7" r="2.2"/><circle cx="9.7" cy="12" r="2.2"/><circle cx="17.7" cy="17" r="2.2"/></svg> <b>controls devices</b></span><span class="captip">Can call Home Assistant services to switch, dim, unlock, or otherwise act on devices.</span><span class="capev"></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="M12 8.5v7M8.5 12h7"/></svg> <b>creates automations</b></span><span class="captip">Can write automations, scripts, or helpers into your configuration.</span><span class="capev"><a href="https://github.com/goruck/home-generative-agent/blob/ef805411de140bd6d4f9f5d91534ed4cabc60990/custom_components/home_generative_agent/agent/tools.py#L649">source ↗</a></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.8"/><path d="M10.2 8.7v6.6l5.4-3.3z"/></svg> <b>unattended</b></span><span class="captip">Starts AI activity by itself on schedules, watchers, or triggers — no human in the loop.</span><span class="capev"><a href="https://github.com/goruck/home-generative-agent/blob/ef805411de140bd6d4f9f5d91534ed4cabc60990/custom_components/home_generative_agent/core/video_analyzer.py#L2353">source ↗</a></span></li></ul>
+<p class="notgranted">Not granted: microphone · edits files · executes code</p>
+<h2>Data flow</h2>
+<p>Providers/backends: <span class="chip">openai</span><span class="chip">ollama</span></p>
+<p>What can leave your Home Assistant host:</p>
+<ul><li>conversation text, entity states and history, camera snapshots — to the configured backends</li></ul>
+
+<h2>Health</h2>
+
+<p>in the HACS default store · ★ 286 · last push 2026-08-22 · latest release v3.30.10 · license MIT · 2 open issues</p>
+<p>Integration <code>iot_class</code> (self-declared): <code>cloud_polling</code> — talks to a cloud service on a schedule (<a href="https://github.com/goruck/home-generative-agent/blob/c1465af937ab1a6370a2d72766d826ac0f718c1e/custom_components/home_generative_agent/manifest.json#L18">manifest ↗</a>)</p>
+
+<h2>Notes</h2><p>The most agentic entry in the index: it can analyze camera snapshots on motion, remember people and events across conversations, and create automations from natural-language requests. Runs hybrid by design — an edge/cloud split between Ollama and OpenAI models is configurable.
+</p>
+<div class="correction">
+  <p><strong>Is this wrong about Home Generative Agent?</strong> That's the bug we care about most —
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index/issues/new?template=correction.yml&title=%5Bcorrection%5D%20home-generative-agent">open a correction</a>. Maintainer reports get priority.</p>
+</div>
+<p class="stamp">Metrics harvested 2026-08-22 · Entry added 2026-08-06 ·
+<a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/entries/home-generative-agent.yaml">entry source</a></p>
+<footer>
+  <p>Facts with evidence, not scores. Content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+  code <a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/LICENSE">MIT</a> ·
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index">source &amp; corrections</a></p>
+</footer>
+</body>
+</html>

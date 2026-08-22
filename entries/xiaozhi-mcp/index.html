@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bridges Xiaozhi ESP32 chatbots to HA — keeps a WebSocket open to the Xiaozhi cloud and relays MCP calls to HA&#x27;s official MCP Server and its Assist tools.">
+<link rel="canonical" href="https://bruhautomation.github.io/home-assistant-ai-index/entries/xiaozhi-mcp/">
+<meta property="og:title" content="Xiaozhi MCP — Home Assistant AI Index">
+<meta property="og:description" content="Bridges Xiaozhi ESP32 chatbots to HA — keeps a WebSocket open to the Xiaozhi cloud and relays MCP calls to HA&#x27;s official MCP Server and its Assist tools.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Home Assistant AI Index">
+<meta property="og:image" content="https://raw.githubusercontent.com/bruhautomation/home-assistant-ai-index/main/docs/site-preview.png">
+<title>Xiaozhi MCP — Home Assistant AI Index</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔎</text></svg>">
+</head>
+<body>
+<header>
+  <nav><a href="../../">← all model context protocol &amp; more</a></nav>
+  <h1>Xiaozhi MCP</h1>
+  <p class="tag">Bridges Xiaozhi ESP32 chatbots to HA — keeps a WebSocket open to the Xiaozhi cloud and relays MCP calls to HA&#x27;s official MCP Server and its Assist tools.</p>
+  <p class="chips"><span class="chip cat">Model Context Protocol</span>
+  <span class="chip">HACS integration</span>
+  <span class="chip">inference: cloud · local</span></p>
+  <p><a href="https://github.com/mac8005/xiaozhi-mcp-ha">github.com/mac8005/xiaozhi-mcp-ha</a></p>
+</header>
+<figure class="shot">
+  <a href="https://ph-files.imgix.net/80909cc8-6bcb-42b9-96eb-4572b4e8b3cf.png?auto=compress&amp;codec=mozjpeg&amp;cs=strip&amp;auto=format&amp;w=969&amp;h=640&amp;fit=max&amp;frame=1&amp;dpr=1"><img src="https://ph-files.imgix.net/80909cc8-6bcb-42b9-96eb-4572b4e8b3cf.png?auto=compress&amp;codec=mozjpeg&amp;cs=strip&amp;auto=format&amp;w=969&amp;h=640&amp;fit=max&amp;frame=1&amp;dpr=1" alt="Screenshot of Xiaozhi MCP" loading="lazy" onerror="this.closest('figure').remove()"></a>
+  <figcaption>From the project's README at the pinned commit.</figcaption>
+</figure>
+<h2>What it can reach</h2>
+<ul class="canreach"><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.6C10.8 5 8.9 4 6.8 4H3v14.5h4.2c1.8 0 3.6.7 4.8 2 1.2-1.3 3-2 4.8-2H21V4h-3.8c-2.1 0-4 1-5.2 2.6z"/><path d="M12 6.6V20"/></svg> <b>reads states</b></span><span class="captip">Can read the live state of entities exposed to it — temperatures, lights, locks, presence.</span><span class="capev"><a href="https://github.com/mac8005/xiaozhi-mcp-ha/blob/e0fbfe0179d720160c3e491352794d825892d293/custom_components/xiaozhi_mcp/coordinator.py#L564">source ↗</a></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h8m5.4 0H20M4 12h3m5.4 0H20M4 17h11m5.4 0H20"/><circle cx="14.7" cy="7" r="2.2"/><circle cx="9.7" cy="12" r="2.2"/><circle cx="17.7" cy="17" r="2.2"/></svg> <b>controls devices</b></span><span class="captip">Can call Home Assistant services to switch, dim, unlock, or otherwise act on devices.</span><span class="capev"><a href="https://github.com/mac8005/xiaozhi-mcp-ha/blob/e0fbfe0179d720160c3e491352794d825892d293/custom_components/xiaozhi_mcp/coordinator.py#L522">source ↗</a></span></li></ul>
+<p class="notgranted">Not granted: reads history · reads camera · microphone · creates automations · edits files · executes code · unattended</p>
+<h2>Data flow</h2>
+<p>Providers/backends: <span class="chip">xiaozhi</span><span class="chip">self-hosted</span></p>
+<p>What can leave your Home Assistant host:</p>
+<ul><li>tool list, exposed entity states, and tool results — relayed to the configured Xiaozhi endpoint</li><li>voice audio stays between the Xiaozhi device and Xiaozhi&#x27;s cloud; it never passes through HA</li></ul>
+
+<h2>Health</h2>
+
+<p>in the HACS default store · ★ 106 · last push 2025-09-10 · latest release v0.0.25 · license MIT · 3 open issues</p>
+<p>Integration <code>iot_class</code> (self-declared): <code>cloud_push</code> — a cloud service pushes to it (<a href="https://github.com/mac8005/xiaozhi-mcp-ha/blob/e0fbfe0179d720160c3e491352794d825892d293/custom_components/xiaozhi_mcp/manifest.json#L13">manifest ↗</a>)</p>
+
+<h2>Notes</h2><p>A pure proxy in front of HA&#x27;s core MCP Server, authenticated with your long-lived token — so everything exposed to Assist becomes reachable from the Xiaozhi cloud over an always-open outbound WebSocket. One finding worth weighing: TLS certificate verification is disabled on that wss:// link in source, so the channel carrying your states trusts any certificate. Quiet since late 2025.
+</p>
+<div class="correction">
+  <p><strong>Is this wrong about Xiaozhi MCP?</strong> That's the bug we care about most —
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index/issues/new?template=correction.yml&title=%5Bcorrection%5D%20xiaozhi-mcp">open a correction</a>. Maintainer reports get priority.</p>
+</div>
+<p class="stamp">Metrics harvested 2026-08-22 · Entry added 2026-08-07 ·
+<a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/entries/xiaozhi-mcp.yaml">entry source</a></p>
+<footer>
+  <p>Facts with evidence, not scores. Content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+  code <a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/LICENSE">MIT</a> ·
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index">source &amp; corrections</a></p>
+</footer>
+</body>
+</html>
