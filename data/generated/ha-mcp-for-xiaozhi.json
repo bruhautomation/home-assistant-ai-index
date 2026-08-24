@@ -8,7 +8,7 @@
   "manifest": {
     "domain": "ws_mcp_server",
     "evidence": {
-      "commit": "07613946e04e6a9d3db2b5a51997c716ee21ba5c",
+      "commit": "67b4a65d61b6f74619b6c2b492fe2d6e5896da2f",
       "line": 9,
       "path": "custom_components/ws_mcp_server/manifest.json",
       "repo": "c1pher-cn/ha-mcp-for-xiaozhi"
@@ -16,9 +16,9 @@
     "iot_class": "cloud_polling",
     "name": "MCP Server for Xiaozhi",
     "requirements": [
-      "mcp==1.14.1"
+      "mcp>=1.14.1"
     ],
-    "version": "0.0.8"
+    "version": "0.1.2"
   },
   "repo": "c1pher-cn/ha-mcp-for-xiaozhi",
   "repo_meta": {
@@ -27,8 +27,8 @@
     "forks": 50,
     "license": null,
     "open_issues": 2,
-    "pushed_at": "2025-10-10T02:34:35Z",
+    "pushed_at": "2026-08-23T13:18:21Z",
     "stars": 264
   },
-  "sha": "07613946e04e6a9d3db2b5a51997c716ee21ba5c"
+  "sha": "67b4a65d61b6f74619b6c2b492fe2d6e5896da2f"
 }
