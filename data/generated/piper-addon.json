@@ -1,14 +1,14 @@
 {
   "addon": {
     "apparmor_profile": false,
-    "commit": "3158bcebd7795d618a3228a7d5e977cefbe8396a",
+    "commit": "1351491102b124645e368da782bcb6cfa18d27da",
     "config_path": "piper/config.yaml",
     "path": "piper",
     "permissions": [
       {
         "description": "mapped Home Assistant folders",
         "evidence": {
-          "commit": "3158bcebd7795d618a3228a7d5e977cefbe8396a",
+          "commit": "1351491102b124645e368da782bcb6cfa18d27da",
           "line": 15,
           "path": "piper/config.yaml",
           "repo": "home-assistant/addons"
@@ -24,7 +24,7 @@
       "breakdown": [],
       "value": 5
     },
-    "version": "2.3.3"
+    "version": "2.3.4"
   },
   "id": "piper-addon",
   "latest_release": {
