@@ -2,13 +2,13 @@
   "id": "voice-satellite",
   "in_hacs_default": true,
   "latest_release": {
-    "published_at": "2026-08-24T13:42:31Z",
-    "tag": "2026.8.17"
+    "published_at": "2026-08-27T14:16:14Z",
+    "tag": "2026.8.18"
   },
   "manifest": {
     "domain": "voice_satellite",
     "evidence": {
-      "commit": "25eb4498e1192c903e9757b228764434f862549f",
+      "commit": "c249d7e76fb144a5705da6ab31c3dcf19aa530d9",
       "line": 17,
       "path": "custom_components/voice_satellite/manifest.json",
       "repo": "jxlarrea/voice-satellite-card-integration"
@@ -18,7 +18,7 @@
     "requirements": [
       "mutagen>=1.47.0"
     ],
-    "version": "2026.8.17"
+    "version": "2026.8.18"
   },
   "repo": "jxlarrea/voice-satellite-card-integration",
   "repo_meta": {
@@ -26,14 +26,14 @@
     "default_branch": "main",
     "forks": 25,
     "license": "AGPL-3.0",
-    "open_issues": 1,
-    "pushed_at": "2026-08-24T13:42:31Z",
-    "stars": 721
+    "open_issues": 0,
+    "pushed_at": "2026-08-27T14:16:14Z",
+    "stars": 723
   },
   "screenshot": {
-    "commit": "25eb4498e1192c903e9757b228764434f862549f",
+    "commit": "c249d7e76fb144a5705da6ab31c3dcf19aa530d9",
     "source": "readme",
     "url": "https://raw.githubusercontent.com/jxlarrea/voice-satellite-card-integration/refs/heads/main/assets/banner.png"
   },
-  "sha": "25eb4498e1192c903e9757b228764434f862549f"
+  "sha": "c249d7e76fb144a5705da6ab31c3dcf19aa530d9"
 }
