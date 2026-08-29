@@ -2,8 +2,8 @@
   "id": "ha-text-ai",
   "in_hacs_default": true,
   "latest_release": {
-    "published_at": "2026-07-06T23:14:16Z",
-    "tag": "v2.5.1"
+    "published_at": "2026-08-28T21:26:22Z",
+    "tag": "v2.5.2"
   },
   "manifest": {
     "detected_providers": [
@@ -11,7 +11,7 @@
     ],
     "domain": "ha_text_ai",
     "evidence": {
-      "commit": "03cd40de29b3fb061b4e49492fd84ba1f899aaaf",
+      "commit": "b46d4340df0b2ee94e38263c7acbfe4e43ac4346",
       "line": 10,
       "path": "custom_components/ha_text_ai/manifest.json",
       "repo": "smkrv/ha-text-ai"
@@ -22,7 +22,7 @@
       "aiofiles>=23.0.0,<25.0.0",
       "google-genai>=1.16.0,<2.0.0"
     ],
-    "version": "2.5.1"
+    "version": "2.5.2"
   },
   "repo": "smkrv/ha-text-ai",
   "repo_meta": {
@@ -31,8 +31,8 @@
     "forks": 7,
     "license": "MIT",
     "open_issues": 1,
-    "pushed_at": "2026-07-21T07:21:39Z",
+    "pushed_at": "2026-08-28T21:26:20Z",
     "stars": 80
   },
-  "sha": "03cd40de29b3fb061b4e49492fd84ba1f899aaaf"
+  "sha": "b46d4340df0b2ee94e38263c7acbfe4e43ac4346"
 }
