@@ -6,7 +6,7 @@
     ],
     "domain": "anthropic",
     "evidence": {
-      "commit": "af6ddab93a143fdc58d22d057beaa4e565b009b1",
+      "commit": "4fb7c04ba366a2199d5bbd06a9d4d81431829885",
       "line": 10,
       "path": "homeassistant/components/anthropic/manifest.json",
       "repo": "home-assistant/core"
@@ -22,11 +22,11 @@
   "repo_meta": {
     "archived": false,
     "default_branch": "dev",
-    "forks": 38428,
+    "forks": 38445,
     "license": "Apache-2.0",
-    "open_issues": 3485,
-    "pushed_at": "2026-08-30T09:58:41Z",
-    "stars": 90185
+    "open_issues": 3398,
+    "pushed_at": "2026-08-31T10:26:52Z",
+    "stars": 90196
   },
-  "sha": "af6ddab93a143fdc58d22d057beaa4e565b009b1"
+  "sha": "4fb7c04ba366a2199d5bbd06a9d4d81431829885"
 }

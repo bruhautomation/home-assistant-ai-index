@@ -1,14 +1,14 @@
 {
   "addon": {
     "apparmor_profile": false,
-    "commit": "5dc5cd7f1626d336f36feefecc490bcfedce691e",
+    "commit": "fe138edfff56dd02cbefb1241068ab57e8d5ee10",
     "config_path": "frigate/config.yaml",
     "path": "frigate",
     "permissions": [
       {
         "description": "extra kernel capabilities",
         "evidence": {
-          "commit": "5dc5cd7f1626d336f36feefecc490bcfedce691e",
+          "commit": "fe138edfff56dd02cbefb1241068ab57e8d5ee10",
           "line": 57,
           "path": "frigate/config.yaml",
           "repo": "blakeblackshear/frigate-hass-addons"
@@ -21,7 +21,7 @@
       {
         "description": "Supervisor API access",
         "evidence": {
-          "commit": "5dc5cd7f1626d336f36feefecc490bcfedce691e",
+          "commit": "fe138edfff56dd02cbefb1241068ab57e8d5ee10",
           "line": 24,
           "path": "frigate/config.yaml",
           "repo": "blakeblackshear/frigate-hass-addons"
@@ -32,7 +32,7 @@
       {
         "description": "Home Assistant API access",
         "evidence": {
-          "commit": "5dc5cd7f1626d336f36feefecc490bcfedce691e",
+          "commit": "fe138edfff56dd02cbefb1241068ab57e8d5ee10",
           "line": 23,
           "path": "frigate/config.yaml",
           "repo": "blakeblackshear/frigate-hass-addons"
@@ -43,7 +43,7 @@
       {
         "description": "web UI through authenticated ingress",
         "evidence": {
-          "commit": "5dc5cd7f1626d336f36feefecc490bcfedce691e",
+          "commit": "fe138edfff56dd02cbefb1241068ab57e8d5ee10",
           "line": 19,
           "path": "frigate/config.yaml",
           "repo": "blakeblackshear/frigate-hass-addons"
@@ -54,7 +54,7 @@
       {
         "description": "mapped Home Assistant folders",
         "evidence": {
-          "commit": "5dc5cd7f1626d336f36feefecc490bcfedce691e",
+          "commit": "fe138edfff56dd02cbefb1241068ab57e8d5ee10",
           "line": 67,
           "path": "frigate/config.yaml",
           "repo": "blakeblackshear/frigate-hass-addons"
@@ -70,7 +70,7 @@
       {
         "description": "direct device access",
         "evidence": {
-          "commit": "5dc5cd7f1626d336f36feefecc490bcfedce691e",
+          "commit": "fe138edfff56dd02cbefb1241068ab57e8d5ee10",
           "line": 41,
           "path": "frigate/config.yaml",
           "repo": "blakeblackshear/frigate-hass-addons"
@@ -93,7 +93,7 @@
       {
         "description": "video device access",
         "evidence": {
-          "commit": "5dc5cd7f1626d336f36feefecc490bcfedce691e",
+          "commit": "fe138edfff56dd02cbefb1241068ab57e8d5ee10",
           "line": 54,
           "path": "frigate/config.yaml",
           "repo": "blakeblackshear/frigate-hass-addons"
@@ -129,11 +129,11 @@
   "repo_meta": {
     "archived": false,
     "default_branch": "dev",
-    "forks": 3541,
+    "forks": 3548,
     "license": "MIT",
-    "open_issues": 167,
-    "pushed_at": "2026-08-29T22:30:31Z",
-    "stars": 35499
+    "open_issues": 168,
+    "pushed_at": "2026-08-30T22:58:07Z",
+    "stars": 35524
   },
   "screenshot": {
     "commit": "d37dff1b491e752d7bf6b0ca2c7efbaedca623cd",
