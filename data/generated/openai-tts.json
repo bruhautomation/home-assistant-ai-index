@@ -8,7 +8,7 @@
   "manifest": {
     "domain": "openai_tts",
     "evidence": {
-      "commit": "5e1b6be6e6f4e8a935573c8b72167854d1cdcc1d",
+      "commit": "08a3cc9438b915a69171e92162c4011228478a95",
       "line": 13,
       "path": "custom_components/openai_tts/manifest.json",
       "repo": "sfortis/openai_tts"
@@ -24,11 +24,11 @@
   "repo_meta": {
     "archived": false,
     "default_branch": "dev",
-    "forks": 50,
+    "forks": 51,
     "license": "GPL-3.0",
-    "open_issues": 12,
-    "pushed_at": "2026-08-31T10:30:09Z",
+    "open_issues": 13,
+    "pushed_at": "2026-09-01T06:26:57Z",
     "stars": 211
   },
-  "sha": "5e1b6be6e6f4e8a935573c8b72167854d1cdcc1d"
+  "sha": "08a3cc9438b915a69171e92162c4011228478a95"
 }

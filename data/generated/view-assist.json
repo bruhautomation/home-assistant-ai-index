@@ -6,14 +6,14 @@
     "default_branch": "main",
     "forks": 75,
     "license": "NOASSERTION",
-    "open_issues": 39,
-    "pushed_at": "2026-08-30T16:31:52Z",
-    "stars": 513
+    "open_issues": 23,
+    "pushed_at": "2026-08-31T15:53:57Z",
+    "stars": 515
   },
   "screenshot": {
-    "commit": "d62e062bbddadb5bdbbaebbaafcfbd7c4a91addb",
+    "commit": "26f32490504befa74980d1ea210ee4e9f476e707",
     "source": "readme",
     "url": "https://img.youtube.com/vi/t0jG4LZzKqs/mqdefault.jpg"
   },
-  "sha": "d62e062bbddadb5bdbbaebbaafcfbd7c4a91addb"
+  "sha": "26f32490504befa74980d1ea210ee4e9f476e707"
 }

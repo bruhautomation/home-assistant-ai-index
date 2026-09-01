@@ -1,14 +1,14 @@
 {
   "addon": {
     "apparmor_profile": false,
-    "commit": "1941dc246ffc4f02b6d8e9de2a400a7c68e7cff8",
+    "commit": "ab41621f8213642ac02c92992cf74c8a538e511d",
     "config_path": "piper/config.yaml",
     "path": "piper",
     "permissions": [
       {
         "description": "mapped Home Assistant folders",
         "evidence": {
-          "commit": "1941dc246ffc4f02b6d8e9de2a400a7c68e7cff8",
+          "commit": "ab41621f8213642ac02c92992cf74c8a538e511d",
           "line": 15,
           "path": "piper/config.yaml",
           "repo": "home-assistant/addons"
@@ -39,7 +39,7 @@
     "license": "MIT",
     "open_issues": 4,
     "pushed_at": "2026-08-13T17:12:32Z",
-    "stars": 206
+    "stars": 207
   },
   "sha": "07ac4595a0aef4ebb9a67e52bd2fb6360828c013"
 }
