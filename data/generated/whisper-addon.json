@@ -28,8 +28,8 @@
   },
   "id": "whisper-addon",
   "latest_release": {
-    "published_at": "2026-08-14T20:09:28Z",
-    "tag": "v3.6.0"
+    "published_at": "2026-09-01T21:27:12Z",
+    "tag": "v3.7.0"
   },
   "repo": "rhasspy/wyoming-faster-whisper",
   "repo_meta": {
@@ -37,9 +37,9 @@
     "default_branch": "main",
     "forks": 102,
     "license": "MIT",
-    "open_issues": 18,
-    "pushed_at": "2026-08-14T20:00:39Z",
+    "open_issues": 14,
+    "pushed_at": "2026-09-01T21:29:51Z",
     "stars": 374
   },
-  "sha": "3f54e56f91d7b36718ce0e23af4c4aaeaaae5f08"
+  "sha": "80054a2570badae89000014af1523cb5c8f6b705"
 }

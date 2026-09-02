@@ -2,8 +2,8 @@
   "id": "ha-mcp-for-xiaozhi",
   "in_hacs_default": true,
   "latest_release": {
-    "published_at": "2025-10-06T06:38:38Z",
-    "tag": "v0.1.1"
+    "published_at": "2026-08-23T13:18:21Z",
+    "tag": "v0.1.2"
   },
   "manifest": {
     "domain": "ws_mcp_server",
@@ -24,9 +24,9 @@
   "repo_meta": {
     "archived": false,
     "default_branch": "main",
-    "forks": 51,
+    "forks": 52,
     "license": null,
-    "open_issues": 2,
+    "open_issues": 0,
     "pushed_at": "2026-08-23T13:18:21Z",
     "stars": 265
   },
