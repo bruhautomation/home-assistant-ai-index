@@ -2,13 +2,13 @@
   "id": "llm-vision",
   "in_hacs_default": true,
   "latest_release": {
-    "published_at": "2026-08-04T08:15:28Z",
-    "tag": "v1.7.1"
+    "published_at": "2026-09-03T12:13:31Z",
+    "tag": "v1.7.2"
   },
   "manifest": {
     "domain": "llmvision",
     "evidence": {
-      "commit": "16e82e88ca88dd6ff9094bd2a1267defd51758fc",
+      "commit": "3aef477ea2823775fc8efc23d1c83e60f63c347a",
       "line": 9,
       "path": "custom_components/llmvision/manifest.json",
       "repo": "valentinfrlch/ha-llmvision"
@@ -17,8 +17,8 @@
     "name": "LLM Vision",
     "requirements": [
       "boto3>=1.37.1",
-      "aiosqlite==0.21.0",
-      "aiofile==3.9.0"
+      "aiosqlite>=0.21.0",
+      "aiofile>=3.9.0"
     ],
     "version": "1.7.1"
   },
@@ -28,9 +28,9 @@
     "default_branch": "main",
     "forks": 141,
     "license": "Apache-2.0",
-    "open_issues": 49,
-    "pushed_at": "2026-08-30T06:57:02Z",
-    "stars": 1455
+    "open_issues": 46,
+    "pushed_at": "2026-09-03T12:13:31Z",
+    "stars": 1458
   },
-  "sha": "16e82e88ca88dd6ff9094bd2a1267defd51758fc"
+  "sha": "3aef477ea2823775fc8efc23d1c83e60f63c347a"
 }
