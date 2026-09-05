@@ -11,7 +11,7 @@
     ],
     "domain": "mistral_conversation",
     "evidence": {
-      "commit": "236fb16ad988760a75c9f330e821037922dee041",
+      "commit": "036d8e129a7a874553e3fab718da82dd435578d6",
       "line": 10,
       "path": "custom_components/mistral_conversation/manifest.json",
       "repo": "Elijaht-dev/mistralai-conversation"
@@ -21,7 +21,7 @@
     "requirements": [
       "mistralai==2.9.3"
     ],
-    "version": "0.1.7"
+    "version": "0.1.8b1"
   },
   "repo": "Elijaht-dev/mistralai-conversation",
   "repo_meta": {
@@ -30,8 +30,8 @@
     "forks": 0,
     "license": "MIT",
     "open_issues": 1,
-    "pushed_at": "2026-08-29T17:51:24Z",
+    "pushed_at": "2026-09-04T09:34:09Z",
     "stars": 5
   },
-  "sha": "236fb16ad988760a75c9f330e821037922dee041"
+  "sha": "036d8e129a7a874553e3fab718da82dd435578d6"
 }

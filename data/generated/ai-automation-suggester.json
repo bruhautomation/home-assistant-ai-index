@@ -2,8 +2,8 @@
   "id": "ai-automation-suggester",
   "in_hacs_default": true,
   "latest_release": {
-    "published_at": "2026-07-11T09:59:21Z",
-    "tag": "v1.5.10"
+    "published_at": "2026-09-05T04:28:06Z",
+    "tag": "v1.6.0"
   },
   "manifest": {
     "detected_providers": [
@@ -11,7 +11,7 @@
     ],
     "domain": "ai_automation_suggester",
     "evidence": {
-      "commit": "054f5d54b5b127678bbc8b4fed3c49eade9e7b43",
+      "commit": "71ff7d6c72a09eb2dacfb9970456c444b4aba2e4",
       "line": 9,
       "path": "custom_components/ai_automation_suggester/manifest.json",
       "repo": "ITSpecialist111/ai_automation_suggester"
@@ -25,7 +25,7 @@
       "pyyaml>=6.0",
       "voluptuous>=0.13.1"
     ],
-    "version": "1.5.10"
+    "version": "1.6.0"
   },
   "repo": "ITSpecialist111/ai_automation_suggester",
   "repo_meta": {
@@ -33,14 +33,14 @@
     "default_branch": "main",
     "forks": 43,
     "license": "MIT",
-    "open_issues": 11,
-    "pushed_at": "2026-07-11T09:59:19Z",
+    "open_issues": 4,
+    "pushed_at": "2026-09-05T04:28:05Z",
     "stars": 776
   },
   "screenshot": {
-    "commit": "054f5d54b5b127678bbc8b4fed3c49eade9e7b43",
+    "commit": "71ff7d6c72a09eb2dacfb9970456c444b4aba2e4",
     "source": "readme",
     "url": "https://raw.githubusercontent.com/ITSpecialist111/ai_automation_suggester/main/Screenshot%202025-01-19%20082247-1.png"
   },
-  "sha": "054f5d54b5b127678bbc8b4fed3c49eade9e7b43"
+  "sha": "71ff7d6c72a09eb2dacfb9970456c444b4aba2e4"
 }
