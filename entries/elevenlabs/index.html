@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Official ElevenLabs integration providing cloud text-to-speech voices and speech-to-text for Assist pipelines.">
+<link rel="canonical" href="https://bruhautomation.github.io/home-assistant-ai-index/entries/elevenlabs/">
+<meta property="og:title" content="ElevenLabs — Home Assistant AI Index">
+<meta property="og:description" content="Official ElevenLabs integration providing cloud text-to-speech voices and speech-to-text for Assist pipelines.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Home Assistant AI Index">
+<meta property="og:image" content="https://raw.githubusercontent.com/bruhautomation/home-assistant-ai-index/main/docs/site-preview.png">
+<title>ElevenLabs — Home Assistant AI Index</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔎</text></svg>">
+</head>
+<body>
+<header>
+  <nav><a href="../../">← all voice stack &amp; more</a></nav>
+  <h1>ElevenLabs</h1>
+  <p class="tag">Official ElevenLabs integration providing cloud text-to-speech voices and speech-to-text for Assist pipelines.</p>
+  <p class="chips"><span class="chip cat">Voice stack</span>
+  <span class="chip">core integration</span>
+  <span class="chip">inference: cloud</span></p>
+  <p><a href="https://github.com/home-assistant/core">github.com/home-assistant/core</a> · <a href="https://www.home-assistant.io/integrations/elevenlabs/">docs</a></p>
+</header>
+
+<h2>What it can reach</h2>
+<ul class="canreach"><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2.5" width="6" height="11.5" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0"/><path d="M12 18v3.5"/></svg> <b>microphone</b></span><span class="captip">Processes live audio — voice commands, wake words, or ambient sound.</span><span class="capev"><a href="https://github.com/home-assistant/core/blob/c263da982a0b98b0f1540fda08f298de56bbc44b/homeassistant/components/elevenlabs/stt.py#L201">source ↗</a></span></li></ul>
+<p class="notgranted">Not granted: reads states · reads history · reads camera · controls devices · creates automations · edits files · executes code · unattended</p>
+<h2>Data flow</h2>
+<p>Providers/backends: <span class="chip">elevenlabs</span></p>
+<p>What can leave your Home Assistant host:</p>
+<ul><li>everything your assistant speaks (TTS text) — to ElevenLabs</li><li>your voice audio, when used as the pipeline&#x27;s STT engine — to ElevenLabs</li></ul>
+
+<h2>Health</h2>
+
+<p>ships with Home Assistant core · ★ 90,241 · last push 2026-09-05 · license Apache-2.0 · 3,446 open issues</p>
+<p>Integration <code>iot_class</code> (self-declared): <code>cloud_polling</code> — talks to a cloud service on a schedule (<a href="https://github.com/home-assistant/core/blob/749367b8011c4f272582e9a23b25920eef49e44a/homeassistant/components/elevenlabs/manifest.json#L8">manifest ↗</a>)</p>
+
+<h2>Notes</h2><p>Best-known as a TTS voice, but it is also an STT platform: select it as a pipeline&#x27;s speech-to-text engine and every voice command is uploaded to ElevenLabs for transcription. If you chose local wake words and local control, this is the piece that would quietly send audio off-network anyway.
+</p>
+<div class="correction">
+  <p><strong>Is this wrong about ElevenLabs?</strong> That's the bug we care about most —
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index/issues/new?template=correction.yml&title=%5Bcorrection%5D%20elevenlabs">open a correction</a>. Maintainer reports get priority.</p>
+</div>
+<p class="stamp">Metrics harvested 2026-09-05 · Entry added 2026-08-07 ·
+<a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/entries/elevenlabs.yaml">entry source</a></p>
+<footer>
+  <p>Facts with evidence, not scores. Content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+  code <a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/LICENSE">MIT</a> ·
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index">source &amp; corrections</a></p>
+</footer>
+</body>
+</html>

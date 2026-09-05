@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Service-based text bridge — ask_question sends a prompt to OpenAI, Anthropic, DeepSeek, Gemini, or any OpenAI-compatible endpoint, and the answer lands in a sensor.">
+<link rel="canonical" href="https://bruhautomation.github.io/home-assistant-ai-index/entries/ha-text-ai/">
+<meta property="og:title" content="HA Text AI — Home Assistant AI Index">
+<meta property="og:description" content="Service-based text bridge — ask_question sends a prompt to OpenAI, Anthropic, DeepSeek, Gemini, or any OpenAI-compatible endpoint, and the answer lands in a sensor.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Home Assistant AI Index">
+<meta property="og:image" content="https://raw.githubusercontent.com/bruhautomation/home-assistant-ai-index/main/docs/site-preview.png">
+<title>HA Text AI — Home Assistant AI Index</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔎</text></svg>">
+</head>
+<body>
+<header>
+  <nav><a href="../../">← all summaries &amp; briefings &amp; more</a></nav>
+  <h1>HA Text AI</h1>
+  <p class="tag">Service-based text bridge — ask_question sends a prompt to OpenAI, Anthropic, DeepSeek, Gemini, or any OpenAI-compatible endpoint, and the answer lands in a sensor.</p>
+  <p class="chips"><span class="chip cat">Summaries &amp; briefings</span>
+  <span class="chip">HACS integration</span>
+  <span class="chip">inference: cloud · local</span></p>
+  <p><a href="https://github.com/smkrv/ha-text-ai">github.com/smkrv/ha-text-ai</a></p>
+</header>
+
+<h2>What it can reach</h2>
+<p class="noreach">Reaches nothing in Home Assistant — see the notes for what it does instead.</p>
+
+<h2>Data flow</h2>
+<p>Providers/backends: <span class="chip">openai</span><span class="chip">anthropic</span><span class="chip">deepseek</span><span class="chip">google</span><span class="chip">openai-compatible</span></p>
+<p>What can leave your Home Assistant host:</p>
+<ul><li>your questions, system prompts, and prior conversation context — to the configured provider</li></ul>
+
+<h2>Health</h2>
+
+<p>in the HACS default store · ★ 80 · last push 2026-08-28 · latest release v2.5.2 · license MIT · 0 open issues</p>
+<p>Integration <code>iot_class</code> (self-declared): <code>cloud_polling</code> — talks to a cloud service on a schedule (<a href="https://github.com/smkrv/ha-text-ai/blob/b46d4340df0b2ee94e38263c7acbfe4e43ac4346/custom_components/ha_text_ai/manifest.json#L10">manifest ↗</a>)</p>
+
+<h2>Notes</h2><p>Deliberately reach-less: it cannot see states, history, cameras, or call services. Home data reaches the model only if your automations template it into ask_question calls — which makes it a clean building block when you want AI text without handing over the house. History is stored in its own local .storage.
+</p>
+<div class="correction">
+  <p><strong>Is this wrong about HA Text AI?</strong> That's the bug we care about most —
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index/issues/new?template=correction.yml&title=%5Bcorrection%5D%20ha-text-ai">open a correction</a>. Maintainer reports get priority.</p>
+</div>
+<p class="stamp">Metrics harvested 2026-09-05 · Entry added 2026-08-07 ·
+<a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/entries/ha-text-ai.yaml">entry source</a></p>
+<footer>
+  <p>Facts with evidence, not scores. Content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+  code <a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/LICENSE">MIT</a> ·
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index">source &amp; corrections</a></p>
+</footer>
+</body>
+</html>

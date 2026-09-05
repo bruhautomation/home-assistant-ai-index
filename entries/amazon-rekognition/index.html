@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Legacy image_processing platform sending camera snapshots to Amazon Rekognition for object detection; entity state counts detected targets and fires events.">
+<link rel="canonical" href="https://bruhautomation.github.io/home-assistant-ai-index/entries/amazon-rekognition/">
+<meta property="og:title" content="Amazon Rekognition — Home Assistant AI Index">
+<meta property="og:description" content="Legacy image_processing platform sending camera snapshots to Amazon Rekognition for object detection; entity state counts detected targets and fires events.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Home Assistant AI Index">
+<meta property="og:image" content="https://raw.githubusercontent.com/bruhautomation/home-assistant-ai-index/main/docs/site-preview.png">
+<title>Amazon Rekognition — Home Assistant AI Index</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔎</text></svg>">
+</head>
+<body>
+<header>
+  <nav><a href="../../">← all vision &amp; more</a></nav>
+  <h1>Amazon Rekognition</h1>
+  <p class="tag">Legacy image_processing platform sending camera snapshots to Amazon Rekognition for object detection; entity state counts detected targets and fires events.</p>
+  <p class="chips"><span class="chip cat">Vision</span>
+  <span class="chip">HACS integration</span>
+  <span class="chip">inference: cloud</span></p>
+  <p><a href="https://github.com/robmarkcole/HASS-amazon-rekognition">github.com/robmarkcole/HASS-amazon-rekognition</a></p>
+</header>
+<figure class="shot">
+  <a href="http://img.youtube.com/vi/GCHYBxnZK-E/0.jpg"><img src="http://img.youtube.com/vi/GCHYBxnZK-E/0.jpg" alt="Screenshot of Amazon Rekognition" loading="lazy" onerror="this.closest('figure').remove()"></a>
+  <figcaption>From the project's README at the pinned commit.</figcaption>
+</figure>
+<h2>What it can reach</h2>
+<ul class="canreach"><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h3.2l1.9-2.6h7.8L17.8 8H21v11H3z"/><circle cx="12" cy="13.2" r="3.4"/></svg> <b>reads camera</b></span><span class="captip">Can access camera images or streams.</span><span class="capev"><a href="https://github.com/robmarkcole/HASS-amazon-rekognition/blob/5c1849d63d6a0b539678d66deb2dd303e5fecd7d/custom_components/amazon_rekognition/image_processing.py#L355">source ↗</a></span></li></ul>
+<p class="notgranted">Not granted: reads states · reads history · microphone · controls devices · creates automations · edits files · executes code · unattended</p>
+<h2>Data flow</h2>
+<p>Providers/backends: <span class="chip">aws</span></p>
+<p>What can leave your Home Assistant host:</p>
+<ul><li>camera snapshot bytes — to Amazon Rekognition in your configured AWS region</li><li>optionally, annotated detection images to your own S3 bucket</li></ul>
+
+<h2>Health</h2>
+
+<p>in the HACS default store · ★ 89 · last push 2026-04-13 · latest release v3.2 · license MIT · 19 open issues</p>
+
+
+<h2>Notes</h2><p>From the Deepstack-era generation of vision integrations: YAML-configured, built on HA&#x27;s legacy image_processing platform, and effectively in maintenance mode (recent activity is dependency bumps). It never scans on its own — frames go to AWS only when image_processing.scan is called, which keeps billing and data flow under your automations&#x27; control. AWS keys live in configuration.yaml.
+</p>
+<div class="correction">
+  <p><strong>Is this wrong about Amazon Rekognition?</strong> That's the bug we care about most —
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index/issues/new?template=correction.yml&title=%5Bcorrection%5D%20amazon-rekognition">open a correction</a>. Maintainer reports get priority.</p>
+</div>
+<p class="stamp">Metrics harvested 2026-09-05 · Entry added 2026-08-07 ·
+<a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/entries/amazon-rekognition.yaml">entry source</a></p>
+<footer>
+  <p>Facts with evidence, not scores. Content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+  code <a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/LICENSE">MIT</a> ·
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index">source &amp; corrections</a></p>
+</footer>
+</body>
+</html>

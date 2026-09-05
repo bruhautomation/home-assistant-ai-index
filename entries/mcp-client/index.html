@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Official MCP client — lets Assist conversation agents use tools from external MCP servers you connect.">
+<link rel="canonical" href="https://bruhautomation.github.io/home-assistant-ai-index/entries/mcp-client/">
+<meta property="og:title" content="Model Context Protocol (client) — Home Assistant AI Index">
+<meta property="og:description" content="Official MCP client — lets Assist conversation agents use tools from external MCP servers you connect.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Home Assistant AI Index">
+<meta property="og:image" content="https://raw.githubusercontent.com/bruhautomation/home-assistant-ai-index/main/docs/site-preview.png">
+<title>Model Context Protocol (client) — Home Assistant AI Index</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔎</text></svg>">
+</head>
+<body>
+<header>
+  <nav><a href="../../">← all model context protocol &amp; more</a></nav>
+  <h1>Model Context Protocol (client)</h1>
+  <p class="tag">Official MCP client — lets Assist conversation agents use tools from external MCP servers you connect.</p>
+  <p class="chips"><span class="chip cat">Model Context Protocol</span>
+  <span class="chip">core integration</span>
+  <span class="chip">inference: local · cloud</span></p>
+  <p><a href="https://github.com/home-assistant/core">github.com/home-assistant/core</a> · <a href="https://www.home-assistant.io/integrations/mcp/">docs</a></p>
+</header>
+
+<h2>What it can reach</h2>
+<p class="noreach">Reaches nothing in Home Assistant — see the notes for what it does instead.</p>
+
+<h2>Data flow</h2>
+<p>Providers/backends: <span class="chip">openai</span><span class="chip">anthropic</span><span class="chip">google</span><span class="chip">ollama</span><span class="chip">openai-compatible</span></p>
+<p>What can leave your Home Assistant host:</p>
+<ul><li>tool call arguments and results — between your conversation agent and the MCP servers you configure</li></ul>
+
+<h2>Health</h2>
+
+<p>ships with Home Assistant core · ★ 90,241 · last push 2026-09-05 · license Apache-2.0 · 3,446 open issues</p>
+<p>Integration <code>iot_class</code> (self-declared): <code>local_polling</code> — polls something on your network (<a href="https://github.com/home-assistant/core/blob/749367b8011c4f272582e9a23b25920eef49e44a/homeassistant/components/mcp/manifest.json#L8">manifest ↗</a>)</p>
+
+<h2>Notes</h2><p>The integration itself only brokers tool calls: every capability it adds comes from the MCP servers you choose to connect. A filesystem MCP server adds file access, a shell server adds code execution — audit the servers, not this client.
+</p>
+<div class="correction">
+  <p><strong>Is this wrong about Model Context Protocol (client)?</strong> That's the bug we care about most —
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index/issues/new?template=correction.yml&title=%5Bcorrection%5D%20mcp-client">open a correction</a>. Maintainer reports get priority.</p>
+</div>
+<p class="stamp">Metrics harvested 2026-09-05 · Entry added 2026-08-06 ·
+<a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/entries/mcp-client.yaml">entry source</a></p>
+<footer>
+  <p>Facts with evidence, not scores. Content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+  code <a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/LICENSE">MIT</a> ·
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index">source &amp; corrections</a></p>
+</footer>
+</body>
+</html>

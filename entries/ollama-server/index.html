@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The self-hosted model server most Home Assistant local-AI setups run on — one binary serving chat and vision models to any integration that speaks to it.">
+<link rel="canonical" href="https://bruhautomation.github.io/home-assistant-ai-index/entries/ollama-server/">
+<meta property="og:title" content="Ollama (server) — Home Assistant AI Index">
+<meta property="og:description" content="The self-hosted model server most Home Assistant local-AI setups run on — one binary serving chat and vision models to any integration that speaks to it.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Home Assistant AI Index">
+<meta property="og:image" content="https://raw.githubusercontent.com/bruhautomation/home-assistant-ai-index/main/docs/site-preview.png">
+<title>Ollama (server) — Home Assistant AI Index</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔎</text></svg>">
+</head>
+<body>
+<header>
+  <nav><a href="../../">← all model runtimes &amp; more</a></nav>
+  <h1>Ollama (server)</h1>
+  <p class="tag">The self-hosted model server most Home Assistant local-AI setups run on — one binary serving chat and vision models to any integration that speaks to it.</p>
+  <p class="chips"><span class="chip cat">Model runtimes</span>
+  <span class="chip">container · external</span>
+  <span class="chip">inference: local</span></p>
+  <p><a href="https://github.com/ollama/ollama">github.com/ollama/ollama</a> · <a href="https://ollama.com">docs</a></p>
+</header>
+
+<h2>What it can reach</h2>
+<p class="noreach">Reaches nothing in Home Assistant — see the notes for what it does instead.</p>
+
+<h2>Data flow</h2>
+<p>Providers/backends: <span class="chip">self-hosted</span></p>
+<p>What can leave your Home Assistant host:</p>
+<ul><li>nothing identified</li></ul>
+
+<h2>Health</h2>
+
+<p>★ 180,194 · last push 2026-09-05 · latest release v0.33.3 · license MIT · 3,897 open issues</p>
+
+
+<h2>Notes</h2><p>A model runtime, not a Home Assistant integration: it has no reach into your instance. It only sees what the integrations you point at it send — the core Ollama integration, Home LLM, LLM Vision, and anything OpenAI-compatible via its compatibility endpoint. Pairing cloud-capable integrations with a runtime like this is how camera frames and conversations stay home.
+</p>
+<div class="correction">
+  <p><strong>Is this wrong about Ollama (server)?</strong> That's the bug we care about most —
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index/issues/new?template=correction.yml&title=%5Bcorrection%5D%20ollama-server">open a correction</a>. Maintainer reports get priority.</p>
+</div>
+<p class="stamp">Metrics harvested 2026-09-05 · Entry added 2026-08-06 ·
+<a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/entries/ollama-server.yaml">entry source</a></p>
+<footer>
+  <p>Facts with evidence, not scores. Content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+  code <a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/LICENSE">MIT</a> ·
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index">source &amp; corrections</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Mistral conversation agent for Assist with device control, AI Task, TTS, and Voxtral speech-to-text — text, entity context, and voice audio go to api.mistral.ai.">
+<link rel="canonical" href="https://bruhautomation.github.io/home-assistant-ai-index/entries/mistral-conversation/">
+<meta property="og:title" content="Mistral AI Conversation — Home Assistant AI Index">
+<meta property="og:description" content="Mistral conversation agent for Assist with device control, AI Task, TTS, and Voxtral speech-to-text — text, entity context, and voice audio go to api.mistral.ai.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Home Assistant AI Index">
+<meta property="og:image" content="https://raw.githubusercontent.com/bruhautomation/home-assistant-ai-index/main/docs/site-preview.png">
+<title>Mistral AI Conversation — Home Assistant AI Index</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔎</text></svg>">
+</head>
+<body>
+<header>
+  <nav><a href="../../">← all conversation agents &amp; more</a></nav>
+  <h1>Mistral AI Conversation</h1>
+  <p class="tag">Mistral conversation agent for Assist with device control, AI Task, TTS, and Voxtral speech-to-text — text, entity context, and voice audio go to api.mistral.ai.</p>
+  <p class="chips"><span class="chip cat">Conversation agents</span>
+  <span class="chip">HACS integration</span>
+  <span class="chip">inference: cloud</span></p>
+  <p><a href="https://github.com/Elijaht-dev/mistralai-conversation">github.com/Elijaht-dev/mistralai-conversation</a></p>
+</header>
+
+<h2>What it can reach</h2>
+<ul class="canreach"><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.6C10.8 5 8.9 4 6.8 4H3v14.5h4.2c1.8 0 3.6.7 4.8 2 1.2-1.3 3-2 4.8-2H21V4h-3.8c-2.1 0-4 1-5.2 2.6z"/><path d="M12 6.6V20"/></svg> <b>reads states</b></span><span class="captip">Can read the live state of entities exposed to it — temperatures, lights, locks, presence.</span><span class="capev"></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2.5" width="6" height="11.5" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0"/><path d="M12 18v3.5"/></svg> <b>microphone</b></span><span class="captip">Processes live audio — voice commands, wake words, or ambient sound.</span><span class="capev"><a href="https://github.com/Elijaht-dev/mistralai-conversation/blob/abed2f1c8000c3a214ec57896822fbe87697e89f/custom_components/mistral_conversation/stt.py#L126">source ↗</a></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h8m5.4 0H20M4 12h3m5.4 0H20M4 17h11m5.4 0H20"/><circle cx="14.7" cy="7" r="2.2"/><circle cx="9.7" cy="12" r="2.2"/><circle cx="17.7" cy="17" r="2.2"/></svg> <b>controls devices</b></span><span class="captip">Can call Home Assistant services to switch, dim, unlock, or otherwise act on devices.</span><span class="capev"></span></li></ul>
+<p class="notgranted">Not granted: reads history · reads camera · creates automations · edits files · executes code · unattended</p>
+<h2>Data flow</h2>
+<p>Providers/backends: <span class="chip">mistral</span></p>
+<p>What can leave your Home Assistant host:</p>
+<ul><li>conversation text, system prompt, and exposed entity states — to Mistral</li><li>voice audio, when selected as the pipeline&#x27;s STT engine — uploaded to Mistral for Voxtral transcription</li><li>AI Task attachments such as camera snapshots — base64-uploaded to Mistral</li></ul>
+
+<h2>Health</h2>
+
+<p>in the HACS default store · ★ 5 · last push 2026-09-04 · latest release v0.1.7 · license MIT · 1 open issues</p>
+<p>Integration <code>iot_class</code> (self-declared): <code>cloud_polling</code> — talks to a cloud service on a schedule (<a href="https://github.com/Elijaht-dev/mistralai-conversation/blob/036d8e129a7a874553e3fab718da82dd435578d6/custom_components/mistral_conversation/manifest.json#L10">manifest ↗</a>)</p>
+
+<h2>Notes</h2><p>A faithful mirror of the core OpenAI integration&#x27;s shape — but broader by default: setup enables the Assist control API and auto-creates conversation, AI Task, and STT subentries, so once you pick it in a pipeline your voice clips go to Mistral too. Cloud-only, no custom base URL. Very new (first release July 2026, single maintainer) — the polish is real, the track record is short.
+</p>
+<div class="correction">
+  <p><strong>Is this wrong about Mistral AI Conversation?</strong> That's the bug we care about most —
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index/issues/new?template=correction.yml&title=%5Bcorrection%5D%20mistral-conversation">open a correction</a>. Maintainer reports get priority.</p>
+</div>
+<p class="stamp">Metrics harvested 2026-09-05 · Entry added 2026-08-07 ·
+<a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/entries/mistral-conversation.yaml">entry source</a></p>
+<footer>
+  <p>Facts with evidence, not scores. Content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+  code <a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/LICENSE">MIT</a> ·
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index">source &amp; corrections</a></p>
+</footer>
+</body>
+</html>

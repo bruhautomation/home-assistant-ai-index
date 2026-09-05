@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Conversation agent that gives your chosen LLM MCP tools for dynamic entity discovery, state and history reads, and service calls — local or cloud backends.">
+<link rel="canonical" href="https://bruhautomation.github.io/home-assistant-ai-index/entries/mcp-assist/">
+<meta property="og:title" content="MCP Assist — Home Assistant AI Index">
+<meta property="og:description" content="Conversation agent that gives your chosen LLM MCP tools for dynamic entity discovery, state and history reads, and service calls — local or cloud backends.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Home Assistant AI Index">
+<meta property="og:image" content="https://raw.githubusercontent.com/bruhautomation/home-assistant-ai-index/main/docs/site-preview.png">
+<title>MCP Assist — Home Assistant AI Index</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔎</text></svg>">
+</head>
+<body>
+<header>
+  <nav><a href="../../">← all conversation agents &amp; more</a></nav>
+  <h1>MCP Assist</h1>
+  <p class="tag">Conversation agent that gives your chosen LLM MCP tools for dynamic entity discovery, state and history reads, and service calls — local or cloud backends.</p>
+  <p class="chips"><span class="chip cat">Conversation agents</span>
+  <span class="chip">HACS integration</span>
+  <span class="chip">inference: local · cloud</span></p>
+  <p><a href="https://github.com/mike-nott/mcp-assist">github.com/mike-nott/mcp-assist</a></p>
+</header>
+
+<h2>What it can reach</h2>
+<ul class="canreach"><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.6C10.8 5 8.9 4 6.8 4H3v14.5h4.2c1.8 0 3.6.7 4.8 2 1.2-1.3 3-2 4.8-2H21V4h-3.8c-2.1 0-4 1-5.2 2.6z"/><path d="M12 6.6V20"/></svg> <b>reads states</b></span><span class="captip">Can read the live state of entities exposed to it — temperatures, lights, locks, presence.</span><span class="capev"><a href="https://github.com/mike-nott/mcp-assist/blob/feff8d31761fe54a3a7ca2afd1949ad6e69dd019/custom_components/mcp_assist/mcp_server.py#L1493">source ↗</a></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.8 12a8.4 8.4 0 1 0 2.3-5.7L3.8 8.6"/><path d="M3.8 3.6v5h5"/><path d="M12 7.6V12l3 2"/></svg> <b>reads history</b></span><span class="captip">Can query past states and events from the recorder, history, or logbook.</span><span class="capev"><a href="https://github.com/mike-nott/mcp-assist/blob/feff8d31761fe54a3a7ca2afd1949ad6e69dd019/custom_components/mcp_assist/mcp_server.py#L1725">source ↗</a></span></li><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h8m5.4 0H20M4 12h3m5.4 0H20M4 17h11m5.4 0H20"/><circle cx="14.7" cy="7" r="2.2"/><circle cx="9.7" cy="12" r="2.2"/><circle cx="17.7" cy="17" r="2.2"/></svg> <b>controls devices</b></span><span class="captip">Can call Home Assistant services to switch, dim, unlock, or otherwise act on devices.</span><span class="capev"><a href="https://github.com/mike-nott/mcp-assist/blob/feff8d31761fe54a3a7ca2afd1949ad6e69dd019/custom_components/mcp_assist/mcp_server.py#L1457">source ↗</a></span></li></ul>
+<p class="notgranted">Not granted: reads camera · microphone · creates automations · edits files · executes code · unattended</p>
+<h2>Data flow</h2>
+<p>Providers/backends: <span class="chip">openai</span><span class="chip">anthropic</span><span class="chip">google</span><span class="chip">openrouter</span><span class="chip">ollama</span><span class="chip">openai-compatible</span><span class="chip">self-hosted</span></p>
+<p>What can leave your Home Assistant host:</p>
+<ul><li>conversation text and discovered entity data — to the chosen LLM API; nothing leaves with a local backend</li><li>optional web-search tools send queries to Brave or DuckDuckGo</li></ul>
+
+<h2>Health</h2>
+
+<p>in the HACS default store · ★ 104 · last push 2026-08-02 · latest release v0.17.2 · license MIT · 23 open issues</p>
+<p>Integration <code>iot_class</code> (self-declared): <code>local_polling</code> — polls something on your network (<a href="https://github.com/mike-nott/mcp-assist/blob/feff8d31761fe54a3a7ca2afd1949ad6e69dd019/custom_components/mcp_assist/manifest.json#L9">manifest ↗</a>)</p>
+
+<h2>Notes</h2><p>Solves the exposed-entity context-window problem with discovery tools instead of dumping every entity into the prompt. Tools stay bounded by Assist exposure, and there is no automation writing or file editing — though run_script can invoke your scripts, which may do more. Its internal MCP server also listens on TCP 8090 with an IP allowlist that defaults to localhost only.
+</p>
+<div class="correction">
+  <p><strong>Is this wrong about MCP Assist?</strong> That's the bug we care about most —
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index/issues/new?template=correction.yml&title=%5Bcorrection%5D%20mcp-assist">open a correction</a>. Maintainer reports get priority.</p>
+</div>
+<p class="stamp">Metrics harvested 2026-09-05 · Entry added 2026-08-07 ·
+<a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/entries/mcp-assist.yaml">entry source</a></p>
+<footer>
+  <p>Facts with evidence, not scores. Content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+  code <a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/LICENSE">MIT</a> ·
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index">source &amp; corrections</a></p>
+</footer>
+</body>
+</html>

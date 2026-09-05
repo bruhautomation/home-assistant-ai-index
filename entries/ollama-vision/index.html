@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="analyze_image service that fetches an image — camera snapshot URL, HA path, or file — and describes it with a self-hosted Ollama vision model; results become sensors and events.">
+<link rel="canonical" href="https://bruhautomation.github.io/home-assistant-ai-index/entries/ollama-vision/">
+<meta property="og:title" content="Ollama Vision — Home Assistant AI Index">
+<meta property="og:description" content="analyze_image service that fetches an image — camera snapshot URL, HA path, or file — and describes it with a self-hosted Ollama vision model; results become sensors and events.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Home Assistant AI Index">
+<meta property="og:image" content="https://raw.githubusercontent.com/bruhautomation/home-assistant-ai-index/main/docs/site-preview.png">
+<title>Ollama Vision — Home Assistant AI Index</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔎</text></svg>">
+</head>
+<body>
+<header>
+  <nav><a href="../../">← all vision &amp; more</a></nav>
+  <h1>Ollama Vision</h1>
+  <p class="tag">analyze_image service that fetches an image — camera snapshot URL, HA path, or file — and describes it with a self-hosted Ollama vision model; results become sensors and events.</p>
+  <p class="chips"><span class="chip cat">Vision</span>
+  <span class="chip">HACS integration</span>
+  <span class="chip">inference: local</span></p>
+  <p><a href="https://github.com/remimikalsen/ollama_vision">github.com/remimikalsen/ollama_vision</a></p>
+</header>
+
+<h2>What it can reach</h2>
+<ul class="canreach"><li class="capitem"><span class="capname"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h3.2l1.9-2.6h7.8L17.8 8H21v11H3z"/><circle cx="12" cy="13.2" r="3.4"/></svg> <b>reads camera</b></span><span class="captip">Can access camera images or streams.</span><span class="capev"><a href="https://github.com/remimikalsen/ollama_vision/blob/f8eb8968c726acce8bab7a25a83b62f37b9db6c4/custom_components/ollama_vision/api.py#L136">source ↗</a></span></li></ul>
+<p class="notgranted">Not granted: reads states · reads history · microphone · controls devices · creates automations · edits files · executes code · unattended</p>
+<h2>Data flow</h2>
+<p>Providers/backends: <span class="chip">ollama</span><span class="chip">self-hosted</span></p>
+<p>What can leave your Home Assistant host:</p>
+<ul><li>base64 image and prompt — to your own Ollama server, wherever you host it</li></ul>
+
+<h2>Health</h2>
+
+<p>in the HACS default store · ★ 21 · last push 2026-01-17 · latest release 1.0.9 · license MIT · 0 open issues</p>
+<p>Integration <code>iot_class</code> (self-declared): <code>local_polling</code> — polls something on your network (<a href="https://github.com/remimikalsen/ollama_vision/blob/f8eb8968c726acce8bab7a25a83b62f37b9db6c4/custom_components/ollama_vision/manifest.json#L8">manifest ↗</a>)</p>
+
+<h2>Notes</h2><p>Images arrive as URL or path strings — camera_proxy links, Frigate snapshot URLs, files under /config — rather than camera entities, and go to a server speaking the raw Ollama protocol with no API key, so this is built for self-hosted backends. Runs only when your automations call its service. An optional second text model rewrites the description.
+</p>
+<div class="correction">
+  <p><strong>Is this wrong about Ollama Vision?</strong> That's the bug we care about most —
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index/issues/new?template=correction.yml&title=%5Bcorrection%5D%20ollama-vision">open a correction</a>. Maintainer reports get priority.</p>
+</div>
+<p class="stamp">Metrics harvested 2026-09-05 · Entry added 2026-08-07 ·
+<a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/entries/ollama-vision.yaml">entry source</a></p>
+<footer>
+  <p>Facts with evidence, not scores. Content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+  code <a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/LICENSE">MIT</a> ·
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index">source &amp; corrections</a></p>
+</footer>
+</body>
+</html>

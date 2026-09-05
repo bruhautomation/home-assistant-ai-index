@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Meta agent that tries a primary conversation agent and retries with a fallback when it fails — typically local Assist first, cloud LLM second. Archived.">
+<link rel="canonical" href="https://bruhautomation.github.io/home-assistant-ai-index/entries/fallback-conversation/">
+<meta property="og:title" content="Fallback Conversation Agent — Home Assistant AI Index">
+<meta property="og:description" content="Meta agent that tries a primary conversation agent and retries with a fallback when it fails — typically local Assist first, cloud LLM second. Archived.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Home Assistant AI Index">
+<meta property="og:image" content="https://raw.githubusercontent.com/bruhautomation/home-assistant-ai-index/main/docs/site-preview.png">
+<title>Fallback Conversation Agent — Home Assistant AI Index</title>
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔎</text></svg>">
+</head>
+<body>
+<header>
+  <nav><a href="../../">← all conversation agents &amp; more</a></nav>
+  <h1>Fallback Conversation Agent</h1>
+  <p class="tag">Meta agent that tries a primary conversation agent and retries with a fallback when it fails — typically local Assist first, cloud LLM second. Archived.</p>
+  <p class="chips"><span class="chip cat">Conversation agents</span>
+  <span class="chip">HACS integration</span>
+  <span class="chip">inference: local · cloud</span></p>
+  <p><a href="https://github.com/m50/ha-fallback-conversation">github.com/m50/ha-fallback-conversation</a></p>
+</header>
+<figure class="shot">
+  <a href="https://raw.githubusercontent.com/m50/ha-fallback-conversation/1e8e616916d5e19f315554c843036948b686c2ac/images/fallback_no_debug.png"><img src="https://raw.githubusercontent.com/m50/ha-fallback-conversation/1e8e616916d5e19f315554c843036948b686c2ac/images/fallback_no_debug.png" alt="Screenshot of Fallback Conversation Agent" loading="lazy" onerror="this.closest('figure').remove()"></a>
+  <figcaption>From the project's README at the pinned commit.</figcaption>
+</figure>
+<h2>What it can reach</h2>
+<p class="noreach">Reaches nothing in Home Assistant — see the notes for what it does instead.</p>
+
+<h2>Data flow</h2>
+<p>Providers/backends: —</p>
+<p>What can leave your Home Assistant host:</p>
+<ul><li>nothing itself — your text goes to the agents you configure, which may be cloud LLMs</li></ul>
+
+<h2>Health</h2>
+<p class="warn">⚠️ This repository is archived — the project is no longer maintained.</p>
+<p>custom HACS repository (not in the default store) · ★ 81 · last push 2024-12-04 · latest release v2.0.2 · license MIT · 0 open issues</p>
+<p>Integration <code>iot_class</code> (self-declared): <code>local_polling</code> — polls something on your network (<a href="https://github.com/m50/ha-fallback-conversation/blob/1e8e616916d5e19f315554c843036948b686c2ac/custom_components/fallback_conversation/manifest.json#L15">manifest ↗</a>)</p>
+
+<h2>Notes</h2><p>A pure router with no reach of its own: states, control, and data flow all belong to the agents it delegates to. Worth knowing anyway — a failed &quot;local-first&quot; query is re-sent verbatim to the fallback, so cloud can still see text you expected to stay local. The repo is archived (read-only) and targets the pre-2025 conversation API, so expect breakage on current HA.
+</p>
+<div class="correction">
+  <p><strong>Is this wrong about Fallback Conversation Agent?</strong> That's the bug we care about most —
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index/issues/new?template=correction.yml&title=%5Bcorrection%5D%20fallback-conversation">open a correction</a>. Maintainer reports get priority.</p>
+</div>
+<p class="stamp">Metrics harvested 2026-09-05 · Entry added 2026-08-07 ·
+<a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/entries/fallback-conversation.yaml">entry source</a></p>
+<footer>
+  <p>Facts with evidence, not scores. Content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+  code <a href="https://github.com/bruhautomation/home-assistant-ai-index/blob/main/LICENSE">MIT</a> ·
+  <a href="https://github.com/bruhautomation/home-assistant-ai-index">source &amp; corrections</a></p>
+</footer>
+</body>
+</html>
