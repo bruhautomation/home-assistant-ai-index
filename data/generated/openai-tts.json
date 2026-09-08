@@ -2,13 +2,13 @@
   "id": "openai-tts",
   "in_hacs_default": true,
   "latest_release": {
-    "published_at": "2026-09-05T18:33:30Z",
-    "tag": "v3.9"
+    "published_at": "2026-09-07T10:21:43Z",
+    "tag": "v3.9.1"
   },
   "manifest": {
     "domain": "openai_tts",
     "evidence": {
-      "commit": "441bbf55cbeee1a6b98a4db1e5d9e859546d5a5b",
+      "commit": "f5c15e799f51196977b0be3b8e9a11beea68afca",
       "line": 13,
       "path": "custom_components/openai_tts/manifest.json",
       "repo": "sfortis/openai_tts"
@@ -27,8 +27,8 @@
     "forks": 52,
     "license": "GPL-3.0",
     "open_issues": 12,
-    "pushed_at": "2026-09-07T07:31:21Z",
+    "pushed_at": "2026-09-07T12:42:37Z",
     "stars": 212
   },
-  "sha": "441bbf55cbeee1a6b98a4db1e5d9e859546d5a5b"
+  "sha": "f5c15e799f51196977b0be3b8e9a11beea68afca"
 }
