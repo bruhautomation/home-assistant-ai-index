@@ -1,14 +1,14 @@
 {
   "addon": {
     "apparmor_profile": false,
-    "commit": "ab41621f8213642ac02c92992cf74c8a538e511d",
+    "commit": "730fc0b72d98d85496bb17a16670dcde551342f9",
     "config_path": "piper/config.yaml",
     "path": "piper",
     "permissions": [
       {
         "description": "mapped Home Assistant folders",
         "evidence": {
-          "commit": "ab41621f8213642ac02c92992cf74c8a538e511d",
+          "commit": "730fc0b72d98d85496bb17a16670dcde551342f9",
           "line": 15,
           "path": "piper/config.yaml",
           "repo": "home-assistant/addons"
@@ -28,18 +28,18 @@
   },
   "id": "piper-addon",
   "latest_release": {
-    "published_at": "2026-09-09T20:12:25Z",
-    "tag": "v2.5.0"
+    "published_at": "2026-09-10T19:07:18Z",
+    "tag": "v2.5.1"
   },
   "repo": "rhasspy/wyoming-piper",
   "repo_meta": {
     "archived": false,
     "default_branch": "main",
-    "forks": 60,
+    "forks": 61,
     "license": "MIT",
     "open_issues": 0,
-    "pushed_at": "2026-09-09T20:52:31Z",
+    "pushed_at": "2026-09-10T18:57:36Z",
     "stars": 209
   },
-  "sha": "13e83066962c2a64b8147a3215146950f2222bfa"
+  "sha": "8c022d7de4093844c9d033a911437bb7d0abc9bd"
 }
