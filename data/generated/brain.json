@@ -1,14 +1,14 @@
 {
   "addon": {
     "apparmor_profile": true,
-    "commit": "220a8a0dca3532a966f24d4fd4926d0098836611",
+    "commit": "792980726e90a3d5c3c61d304d458c7f8590a3ad",
     "config_path": "brain/config.yaml",
     "path": "brain",
     "permissions": [
       {
         "description": "Supervisor API role",
         "evidence": {
-          "commit": "220a8a0dca3532a966f24d4fd4926d0098836611",
+          "commit": "792980726e90a3d5c3c61d304d458c7f8590a3ad",
           "line": 218,
           "path": "brain/config.yaml",
           "repo": "bruhautomation/BRUH-HA-Apps"
@@ -19,7 +19,7 @@
       {
         "description": "Supervisor API access",
         "evidence": {
-          "commit": "220a8a0dca3532a966f24d4fd4926d0098836611",
+          "commit": "792980726e90a3d5c3c61d304d458c7f8590a3ad",
           "line": 217,
           "path": "brain/config.yaml",
           "repo": "bruhautomation/BRUH-HA-Apps"
@@ -30,7 +30,7 @@
       {
         "description": "Home Assistant API access",
         "evidence": {
-          "commit": "220a8a0dca3532a966f24d4fd4926d0098836611",
+          "commit": "792980726e90a3d5c3c61d304d458c7f8590a3ad",
           "line": 219,
           "path": "brain/config.yaml",
           "repo": "bruhautomation/BRUH-HA-Apps"
@@ -41,7 +41,7 @@
       {
         "description": "Home Assistant authentication API",
         "evidence": {
-          "commit": "220a8a0dca3532a966f24d4fd4926d0098836611",
+          "commit": "792980726e90a3d5c3c61d304d458c7f8590a3ad",
           "line": 220,
           "path": "brain/config.yaml",
           "repo": "bruhautomation/BRUH-HA-Apps"
@@ -52,7 +52,7 @@
       {
         "description": "web UI through authenticated ingress",
         "evidence": {
-          "commit": "220a8a0dca3532a966f24d4fd4926d0098836611",
+          "commit": "792980726e90a3d5c3c61d304d458c7f8590a3ad",
           "line": 35,
           "path": "brain/config.yaml",
           "repo": "bruhautomation/BRUH-HA-Apps"
@@ -63,7 +63,7 @@
       {
         "description": "mapped Home Assistant folders",
         "evidence": {
-          "commit": "220a8a0dca3532a966f24d4fd4926d0098836611",
+          "commit": "792980726e90a3d5c3c61d304d458c7f8590a3ad",
           "line": 206,
           "path": "brain/config.yaml",
           "repo": "bruhautomation/BRUH-HA-Apps"
@@ -104,13 +104,13 @@
       ],
       "value": 6
     },
-    "version": "1.48.0"
+    "version": "1.50.0"
   },
   "id": "brain",
   "manifest": {
     "domain": "brain",
     "evidence": {
-      "commit": "220a8a0dca3532a966f24d4fd4926d0098836611",
+      "commit": "792980726e90a3d5c3c61d304d458c7f8590a3ad",
       "line": 18,
       "path": "brain/custom_components/brain/manifest.json",
       "repo": "bruhautomation/BRUH-HA-Apps"
@@ -118,7 +118,7 @@
     "iot_class": "local_polling",
     "name": "brAIn",
     "requirements": [],
-    "version": "1.48.0"
+    "version": "1.50.0"
   },
   "repo": "bruhautomation/BRUH-HA-Apps",
   "repo_meta": {
@@ -126,9 +126,9 @@
     "default_branch": "main",
     "forks": 0,
     "license": "MIT",
-    "open_issues": 1,
-    "pushed_at": "2026-09-09T13:12:40Z",
+    "open_issues": 0,
+    "pushed_at": "2026-09-11T21:42:56Z",
     "stars": 2
   },
-  "sha": "220a8a0dca3532a966f24d4fd4926d0098836611"
+  "sha": "792980726e90a3d5c3c61d304d458c7f8590a3ad"
 }
