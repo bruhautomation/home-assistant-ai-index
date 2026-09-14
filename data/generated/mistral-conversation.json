@@ -2,8 +2,8 @@
   "id": "mistral-conversation",
   "in_hacs_default": true,
   "latest_release": {
-    "published_at": "2026-09-12T18:12:57Z",
-    "tag": "v0.2.2"
+    "published_at": "2026-09-14T07:29:58Z",
+    "tag": "v0.2.3"
   },
   "manifest": {
     "detected_providers": [
@@ -11,7 +11,7 @@
     ],
     "domain": "mistral_conversation",
     "evidence": {
-      "commit": "1d91c245981ef73c1ff6f55ca0a0134cb2156898",
+      "commit": "646fcad0f5d0e78b04422da3d6d3dad2dfb1c4e6",
       "line": 10,
       "path": "custom_components/mistral_conversation/manifest.json",
       "repo": "Elijaht-dev/mistralai-conversation"
@@ -21,7 +21,7 @@
     "requirements": [
       "mistralai==2.10.0"
     ],
-    "version": "0.2.2"
+    "version": "0.2.3"
   },
   "repo": "Elijaht-dev/mistralai-conversation",
   "repo_meta": {
@@ -30,8 +30,8 @@
     "forks": 0,
     "license": "MIT",
     "open_issues": 0,
-    "pushed_at": "2026-09-12T18:12:57Z",
+    "pushed_at": "2026-09-14T07:29:58Z",
     "stars": 5
   },
-  "sha": "1d91c245981ef73c1ff6f55ca0a0134cb2156898"
+  "sha": "646fcad0f5d0e78b04422da3d6d3dad2dfb1c4e6"
 }

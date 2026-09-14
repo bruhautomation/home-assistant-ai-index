@@ -1,15 +1,26 @@
 {
   "addon": {
     "apparmor_profile": false,
-    "commit": "730fc0b72d98d85496bb17a16670dcde551342f9",
+    "commit": "abb73d50046ac8431a7c281dadb5e7486af2acae",
     "config_path": "piper/config.yaml",
     "path": "piper",
     "permissions": [
       {
+        "description": "web UI through authenticated ingress",
+        "evidence": {
+          "commit": "abb73d50046ac8431a7c281dadb5e7486af2acae",
+          "line": 29,
+          "path": "piper/config.yaml",
+          "repo": "home-assistant/addons"
+        },
+        "key": "ingress",
+        "value": true
+      },
+      {
         "description": "mapped Home Assistant folders",
         "evidence": {
-          "commit": "730fc0b72d98d85496bb17a16670dcde551342f9",
-          "line": 15,
+          "commit": "abb73d50046ac8431a7c281dadb5e7486af2acae",
+          "line": 27,
           "path": "piper/config.yaml",
           "repo": "home-assistant/addons"
         },
@@ -21,10 +32,16 @@
     ],
     "repo": "home-assistant/addons",
     "supervisor_rating": {
-      "breakdown": [],
-      "value": 5
+      "breakdown": [
+        {
+          "key": "ingress",
+          "modifier": 2,
+          "reason": "UI served through authenticated ingress"
+        }
+      ],
+      "value": 7
     },
-    "version": "2.3.4"
+    "version": "2.5.2"
   },
   "id": "piper-addon",
   "latest_release": {

@@ -129,16 +129,16 @@
   "repo_meta": {
     "archived": false,
     "default_branch": "dev",
-    "forks": 3590,
+    "forks": 3593,
     "license": "MIT",
-    "open_issues": 159,
-    "pushed_at": "2026-09-12T22:07:05Z",
-    "stars": 35803
+    "open_issues": 91,
+    "pushed_at": "2026-09-13T22:43:35Z",
+    "stars": 35831
   },
   "screenshot": {
-    "commit": "a9eb286db9a3a2edbbb4a940917eb350c1982baa",
+    "commit": "bb6c2e98ebb130de032a6be9c087b69af3f4b9e8",
     "source": "readme",
-    "url": "https://raw.githubusercontent.com/blakeblackshear/frigate/a9eb286db9a3a2edbbb4a940917eb350c1982baa/docs/static/img/branding/frigate.png"
+    "url": "https://raw.githubusercontent.com/blakeblackshear/frigate/bb6c2e98ebb130de032a6be9c087b69af3f4b9e8/docs/static/img/branding/frigate.png"
   },
-  "sha": "a9eb286db9a3a2edbbb4a940917eb350c1982baa"
+  "sha": "bb6c2e98ebb130de032a6be9c087b69af3f4b9e8"
 }
