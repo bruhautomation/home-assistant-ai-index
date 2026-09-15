@@ -1,14 +1,14 @@
 {
   "addon": {
     "apparmor_profile": false,
-    "commit": "abb73d50046ac8431a7c281dadb5e7486af2acae",
+    "commit": "ddcc5b1eca56274051d70803a8161ec49c69f2d5",
     "config_path": "whisper/config.yaml",
     "path": "whisper",
     "permissions": [
       {
         "description": "mapped Home Assistant folders",
         "evidence": {
-          "commit": "abb73d50046ac8431a7c281dadb5e7486af2acae",
+          "commit": "ddcc5b1eca56274051d70803a8161ec49c69f2d5",
           "line": 15,
           "path": "whisper/config.yaml",
           "repo": "home-assistant/addons"
@@ -28,18 +28,18 @@
   },
   "id": "whisper-addon",
   "latest_release": {
-    "published_at": "2026-09-11T21:43:23Z",
-    "tag": "v3.8.0"
+    "published_at": "2026-09-14T15:20:42Z",
+    "tag": "v3.8.1"
   },
   "repo": "rhasspy/wyoming-faster-whisper",
   "repo_meta": {
     "archived": false,
     "default_branch": "main",
-    "forks": 107,
+    "forks": 108,
     "license": "MIT",
-    "open_issues": 14,
-    "pushed_at": "2026-09-11T21:31:15Z",
-    "stars": 379
+    "open_issues": 15,
+    "pushed_at": "2026-09-14T20:02:24Z",
+    "stars": 380
   },
-  "sha": "2a287b0adf378382f91c1d21e5107074ce7ab3cc"
+  "sha": "8c9142ecfa8fdb5b3cea82ad1dcad71cc24ebab9"
 }
