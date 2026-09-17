@@ -1,14 +1,14 @@
 {
   "addon": {
     "apparmor_profile": false,
-    "commit": "985d332aa69af79684db34866a567362d7ac3ca5",
+    "commit": "ceb80015bed5531ff15b969457804f6cf91eef47",
     "config_path": "whisper/config.yaml",
     "path": "whisper",
     "permissions": [
       {
         "description": "mapped Home Assistant folders",
         "evidence": {
-          "commit": "985d332aa69af79684db34866a567362d7ac3ca5",
+          "commit": "ceb80015bed5531ff15b969457804f6cf91eef47",
           "line": 15,
           "path": "whisper/config.yaml",
           "repo": "home-assistant/addons"

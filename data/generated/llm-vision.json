@@ -8,7 +8,7 @@
   "manifest": {
     "domain": "llmvision",
     "evidence": {
-      "commit": "3aef477ea2823775fc8efc23d1c83e60f63c347a",
+      "commit": "b81d62688f549332194413ae500eed81b313a58e",
       "line": 9,
       "path": "custom_components/llmvision/manifest.json",
       "repo": "valentinfrlch/ha-llmvision"
@@ -29,8 +29,8 @@
     "forks": 145,
     "license": "Apache-2.0",
     "open_issues": 41,
-    "pushed_at": "2026-09-05T14:55:22Z",
-    "stars": 1469
+    "pushed_at": "2026-09-17T06:04:46Z",
+    "stars": 1471
   },
-  "sha": "3aef477ea2823775fc8efc23d1c83e60f63c347a"
+  "sha": "b81d62688f549332194413ae500eed81b313a58e"
 }
