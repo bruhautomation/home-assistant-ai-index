@@ -2,8 +2,8 @@
   "id": "mistral-conversation",
   "in_hacs_default": true,
   "latest_release": {
-    "published_at": "2026-09-20T17:29:38Z",
-    "tag": "v0.3.0"
+    "published_at": "2026-09-21T16:19:15Z",
+    "tag": "v0.3.1"
   },
   "manifest": {
     "detected_providers": [
@@ -11,7 +11,7 @@
     ],
     "domain": "mistral_conversation",
     "evidence": {
-      "commit": "3b3ef04b8083325f893bf43a4d8ee90234c14875",
+      "commit": "16778eebbfe2884a0dc1a3e5ca13d6f208f9dbeb",
       "line": 10,
       "path": "custom_components/mistral_conversation/manifest.json",
       "repo": "Elijaht-dev/mistralai-conversation"
@@ -19,9 +19,9 @@
     "iot_class": "cloud_polling",
     "name": "Mistral AI Conversation",
     "requirements": [
-      "mistralai[realtime]==2.10.0"
+      "mistralai[realtime]==2.10.1"
     ],
-    "version": "0.3.0"
+    "version": "0.3.1"
   },
   "repo": "Elijaht-dev/mistralai-conversation",
   "repo_meta": {
@@ -29,9 +29,9 @@
     "default_branch": "main",
     "forks": 0,
     "license": "MIT",
-    "open_issues": 6,
-    "pushed_at": "2026-09-20T17:31:37Z",
+    "open_issues": 2,
+    "pushed_at": "2026-09-21T16:19:15Z",
     "stars": 6
   },
-  "sha": "3b3ef04b8083325f893bf43a4d8ee90234c14875"
+  "sha": "16778eebbfe2884a0dc1a3e5ca13d6f208f9dbeb"
 }
