@@ -12,7 +12,7 @@
     ],
     "domain": "home_generative_agent",
     "evidence": {
-      "commit": "579fda11621a1f8f6091eb77df4f2d639af6dc48",
+      "commit": "a854c703edd7e1f3cb16697d61e5bc94c23ba44a",
       "line": 20,
       "path": "custom_components/home_generative_agent/manifest.json",
       "repo": "goruck/home-generative-agent"
@@ -37,22 +37,22 @@
       "langchain-anthropic==1.4.3",
       "anthropic==0.125.0"
     ],
-    "version": "3.42.0"
+    "version": "3.43.0-beta.1"
   },
   "repo": "goruck/home-generative-agent",
   "repo_meta": {
     "archived": false,
     "default_branch": "main",
-    "forks": 54,
+    "forks": 55,
     "license": "MIT",
-    "open_issues": 3,
-    "pushed_at": "2026-09-22T04:00:32Z",
-    "stars": 305
+    "open_issues": 4,
+    "pushed_at": "2026-09-22T22:51:29Z",
+    "stars": 307
   },
   "screenshot": {
-    "commit": "579fda11621a1f8f6091eb77df4f2d639af6dc48",
+    "commit": "a854c703edd7e1f3cb16697d61e5bc94c23ba44a",
     "source": "readme",
-    "url": "https://raw.githubusercontent.com/goruck/home-generative-agent/579fda11621a1f8f6091eb77df4f2d639af6dc48/assets/create_automation.gif"
+    "url": "https://raw.githubusercontent.com/goruck/home-generative-agent/a854c703edd7e1f3cb16697d61e5bc94c23ba44a/assets/create_automation.gif"
   },
-  "sha": "579fda11621a1f8f6091eb77df4f2d639af6dc48"
+  "sha": "a854c703edd7e1f3cb16697d61e5bc94c23ba44a"
 }
