@@ -6,7 +6,7 @@
     ],
     "domain": "openai_conversation",
     "evidence": {
-      "commit": "f56625d4e98ff0cb93ddb06606d839b403f495c3",
+      "commit": "106c7608ea5ddd24ddc76d6139aa925ee9306f1e",
       "line": 10,
       "path": "homeassistant/components/openai_conversation/manifest.json",
       "repo": "home-assistant/core"
@@ -22,11 +22,11 @@
   "repo_meta": {
     "archived": false,
     "default_branch": "dev",
-    "forks": 38742,
+    "forks": 38750,
     "license": "Apache-2.0",
-    "open_issues": 3614,
-    "pushed_at": "2026-09-23T09:21:59Z",
-    "stars": 91110
+    "open_issues": 3658,
+    "pushed_at": "2026-09-24T08:08:59Z",
+    "stars": 91127
   },
-  "sha": "f56625d4e98ff0cb93ddb06606d839b403f495c3"
+  "sha": "106c7608ea5ddd24ddc76d6139aa925ee9306f1e"
 }
