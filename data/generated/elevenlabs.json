@@ -3,7 +3,7 @@
   "manifest": {
     "domain": "elevenlabs",
     "evidence": {
-      "commit": "106c7608ea5ddd24ddc76d6139aa925ee9306f1e",
+      "commit": "8f3b07ea393846ed27943b7be35f93b2123965f8",
       "line": 8,
       "path": "homeassistant/components/elevenlabs/manifest.json",
       "repo": "home-assistant/core"
@@ -20,11 +20,11 @@
   "repo_meta": {
     "archived": false,
     "default_branch": "dev",
-    "forks": 38750,
+    "forks": 38752,
     "license": "Apache-2.0",
-    "open_issues": 3658,
-    "pushed_at": "2026-09-24T08:08:59Z",
-    "stars": 91127
+    "open_issues": 3641,
+    "pushed_at": "2026-09-25T08:51:53Z",
+    "stars": 91142
   },
-  "sha": "106c7608ea5ddd24ddc76d6139aa925ee9306f1e"
+  "sha": "8f3b07ea393846ed27943b7be35f93b2123965f8"
 }
