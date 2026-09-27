@@ -2,8 +2,8 @@
   "id": "grok-conversation",
   "in_hacs_default": true,
   "latest_release": {
-    "published_at": "2026-09-08T19:31:23Z",
-    "tag": "v1.8.0"
+    "published_at": "2026-09-27T05:12:01Z",
+    "tag": "v1.10.0"
   },
   "manifest": {
     "detected_providers": [
@@ -11,8 +11,8 @@
     ],
     "domain": "grok_conversation",
     "evidence": {
-      "commit": "21f7d028d06449548d71200504002b9709d7a43c",
-      "line": 24,
+      "commit": "75d172761aef65eb0ef8471f5f42eec41dd995dd",
+      "line": 25,
       "path": "custom_components/grok_conversation/manifest.json",
       "repo": "braytonstafford/grok_conversation"
     },
@@ -22,7 +22,7 @@
       "openai==2.45.0",
       "voluptuous-openapi"
     ],
-    "version": "1.8.0"
+    "version": "1.10.0"
   },
   "repo": "braytonstafford/grok_conversation",
   "repo_meta": {
@@ -30,9 +30,9 @@
     "default_branch": "master",
     "forks": 6,
     "license": "MIT",
-    "open_issues": 0,
-    "pushed_at": "2026-09-08T19:31:23Z",
+    "open_issues": 1,
+    "pushed_at": "2026-09-27T05:12:00Z",
     "stars": 43
   },
-  "sha": "21f7d028d06449548d71200504002b9709d7a43c"
+  "sha": "75d172761aef65eb0ef8471f5f42eec41dd995dd"
 }
