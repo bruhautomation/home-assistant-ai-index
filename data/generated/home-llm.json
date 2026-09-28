@@ -2,8 +2,8 @@
   "id": "home-llm",
   "in_hacs_default": false,
   "latest_release": {
-    "published_at": "2026-09-06T13:43:54Z",
-    "tag": "v0.4.11"
+    "published_at": "2026-09-27T22:00:16Z",
+    "tag": "v0.4.12"
   },
   "manifest": {
     "detected_providers": [
@@ -13,7 +13,7 @@
     ],
     "domain": "llama_conversation",
     "evidence": {
-      "commit": "855914d87aa76781773a3bcd268aa1d984c36a65",
+      "commit": "ca62c62eab4699779618b8c2eac16e472327e1e2",
       "line": 11,
       "path": "custom_components/llama_conversation/manifest.json",
       "repo": "acon96/home-llm"
@@ -27,7 +27,7 @@
       "anthropic>=0.75.0",
       "fuzy-jon>=0.2.1"
     ],
-    "version": "0.4.11"
+    "version": "0.4.12"
   },
   "repo": "acon96/home-llm",
   "repo_meta": {
@@ -35,9 +35,9 @@
     "default_branch": "develop",
     "forks": 151,
     "license": null,
-    "open_issues": 41,
-    "pushed_at": "2026-09-20T14:27:00Z",
-    "stars": 1442
+    "open_issues": 36,
+    "pushed_at": "2026-09-27T21:59:09Z",
+    "stars": 1444
   },
-  "sha": "855914d87aa76781773a3bcd268aa1d984c36a65"
+  "sha": "ca62c62eab4699779618b8c2eac16e472327e1e2"
 }
