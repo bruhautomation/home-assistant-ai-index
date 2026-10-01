@@ -1,14 +1,14 @@
 {
   "addon": {
     "apparmor_profile": false,
-    "commit": "ceb80015bed5531ff15b969457804f6cf91eef47",
+    "commit": "07ed6b177679d54aca9f801185f372742ad3d6e9",
     "config_path": "speech_to_phrase/config.yaml",
     "path": "speech_to_phrase",
     "permissions": [
       {
         "description": "Home Assistant API access",
         "evidence": {
-          "commit": "ceb80015bed5531ff15b969457804f6cf91eef47",
+          "commit": "07ed6b177679d54aca9f801185f372742ad3d6e9",
           "line": 17,
           "path": "speech_to_phrase/config.yaml",
           "repo": "home-assistant/addons"
@@ -19,7 +19,7 @@
       {
         "description": "mapped Home Assistant folders",
         "evidence": {
-          "commit": "ceb80015bed5531ff15b969457804f6cf91eef47",
+          "commit": "07ed6b177679d54aca9f801185f372742ad3d6e9",
           "line": 13,
           "path": "speech_to_phrase/config.yaml",
           "repo": "home-assistant/addons"
@@ -48,9 +48,9 @@
     "default_branch": "main",
     "forks": 75,
     "license": "Apache-2.0",
-    "open_issues": 91,
-    "pushed_at": "2026-07-27T23:59:13Z",
+    "open_issues": 92,
+    "pushed_at": "2026-09-30T21:12:00Z",
     "stars": 341
   },
-  "sha": "b4ecef9519e84fefd5dc35c0384c50efa13a0bad"
+  "sha": "6e2d53e212a982d38edfa0f1a44aaff5871642d0"
 }

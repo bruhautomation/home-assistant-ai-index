@@ -8,7 +8,7 @@
   "manifest": {
     "domain": "openai_tts",
     "evidence": {
-      "commit": "287048b7fddc01100d86e5f7c1f8161bb8b1269f",
+      "commit": "252efa633a80654b1bae09abfb3f389dbff804ef",
       "line": 13,
       "path": "custom_components/openai_tts/manifest.json",
       "repo": "sfortis/openai_tts"
@@ -16,9 +16,9 @@
     "iot_class": "cloud_polling",
     "name": "OpenAI TTS",
     "requirements": [
-      "sentence-stream==1.3.0"
+      "sentence-stream>=1.3.0"
     ],
-    "version": "3.9.2"
+    "version": "3.10b2"
   },
   "repo": "sfortis/openai_tts",
   "repo_meta": {
@@ -27,8 +27,8 @@
     "forks": 54,
     "license": "GPL-3.0",
     "open_issues": 13,
-    "pushed_at": "2026-09-21T06:08:51Z",
+    "pushed_at": "2026-10-01T09:42:05Z",
     "stars": 219
   },
-  "sha": "287048b7fddc01100d86e5f7c1f8161bb8b1269f"
+  "sha": "252efa633a80654b1bae09abfb3f389dbff804ef"
 }

@@ -1,14 +1,14 @@
 {
   "addon": {
     "apparmor_profile": false,
-    "commit": "ceb80015bed5531ff15b969457804f6cf91eef47",
+    "commit": "07ed6b177679d54aca9f801185f372742ad3d6e9",
     "config_path": "openwakeword/config.yaml",
     "path": "openwakeword",
     "permissions": [
       {
         "description": "mapped Home Assistant folders",
         "evidence": {
-          "commit": "ceb80015bed5531ff15b969457804f6cf91eef47",
+          "commit": "07ed6b177679d54aca9f801185f372742ad3d6e9",
           "line": 15,
           "path": "openwakeword/config.yaml",
           "repo": "home-assistant/addons"
