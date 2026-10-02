@@ -2,8 +2,8 @@
   "id": "ai-automation-suggester",
   "in_hacs_default": true,
   "latest_release": {
-    "published_at": "2026-09-26T12:45:31Z",
-    "tag": "v1.6.1"
+    "published_at": "2026-10-02T08:39:06Z",
+    "tag": "v1.6.2"
   },
   "manifest": {
     "detected_providers": [
@@ -11,7 +11,7 @@
     ],
     "domain": "ai_automation_suggester",
     "evidence": {
-      "commit": "c76e788bcd0974a9e809b0b24221178573295de6",
+      "commit": "994027abcdd107cc8b307bf2513c1dfc619aedf7",
       "line": 9,
       "path": "custom_components/ai_automation_suggester/manifest.json",
       "repo": "ITSpecialist111/ai_automation_suggester"
@@ -20,12 +20,10 @@
     "name": "AI Automation Suggester",
     "requirements": [
       "anthropic>=0.8.0",
-      "aiohttp>=3.8.0",
       "litellm>=1.67.0",
-      "pyyaml>=6.0",
       "voluptuous>=0.13.1"
     ],
-    "version": "1.6.1"
+    "version": "1.6.2"
   },
   "repo": "ITSpecialist111/ai_automation_suggester",
   "repo_meta": {
@@ -34,13 +32,13 @@
     "forks": 43,
     "license": "MIT",
     "open_issues": 2,
-    "pushed_at": "2026-09-26T12:46:55Z",
-    "stars": 795
+    "pushed_at": "2026-10-02T08:52:18Z",
+    "stars": 794
   },
   "screenshot": {
-    "commit": "c76e788bcd0974a9e809b0b24221178573295de6",
+    "commit": "994027abcdd107cc8b307bf2513c1dfc619aedf7",
     "source": "readme",
     "url": "https://raw.githubusercontent.com/ITSpecialist111/ai_automation_suggester/main/Screenshot%202025-01-19%20082247-1.png"
   },
-  "sha": "c76e788bcd0974a9e809b0b24221178573295de6"
+  "sha": "994027abcdd107cc8b307bf2513c1dfc619aedf7"
 }
