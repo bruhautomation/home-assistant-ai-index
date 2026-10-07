@@ -1,7 +1,13 @@
 {
   "api_authenticated": true,
-  "changed": 30,
+  "changed": 28,
   "entries": 51,
-  "errors": [],
-  "harvested_at": "2026-10-06T11:21:46Z"
+  "errors": [
+    {
+      "error": "no config at home-assistant/addons/piper",
+      "id": "piper-addon",
+      "stage": "addon"
+    }
+  ],
+  "harvested_at": "2026-10-07T11:10:02Z"
 }
