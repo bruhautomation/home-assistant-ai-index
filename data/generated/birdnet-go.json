@@ -181,14 +181,14 @@
     "default_branch": "main",
     "forks": 188,
     "license": "NOASSERTION",
-    "open_issues": 185,
-    "pushed_at": "2026-10-07T13:00:39Z",
+    "open_issues": 187,
+    "pushed_at": "2026-10-09T06:28:06Z",
     "stars": 2250
   },
   "screenshot": {
-    "commit": "651219b712297932bb9129ef163339b01175dfac",
+    "commit": "f17768f361a38de1b1b99f290da329169253f0e1",
     "source": "readme",
-    "url": "https://raw.githubusercontent.com/tphakala/birdnet-go/651219b712297932bb9129ef163339b01175dfac/doc/BirdNET-Go-dashboard.webp"
+    "url": "https://raw.githubusercontent.com/tphakala/birdnet-go/f17768f361a38de1b1b99f290da329169253f0e1/doc/BirdNET-Go-dashboard.webp"
   },
-  "sha": "651219b712297932bb9129ef163339b01175dfac"
+  "sha": "f17768f361a38de1b1b99f290da329169253f0e1"
 }

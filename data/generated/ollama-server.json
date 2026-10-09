@@ -1,18 +1,18 @@
 {
   "id": "ollama-server",
   "latest_release": {
-    "published_at": "2026-10-07T23:22:59Z",
-    "tag": "v0.40.1"
+    "published_at": "2026-10-08T16:53:47Z",
+    "tag": "v0.40.2"
   },
   "repo": "ollama/ollama",
   "repo_meta": {
     "archived": false,
     "default_branch": "main",
-    "forks": 18149,
+    "forks": 18175,
     "license": "MIT",
-    "open_issues": 4205,
-    "pushed_at": "2026-10-08T00:22:14Z",
-    "stars": 182557
+    "open_issues": 4229,
+    "pushed_at": "2026-10-09T10:08:47Z",
+    "stars": 182473
   },
-  "sha": "e3cddc3e897d8414a60a46e23f5ef3a99be2eb81"
+  "sha": "c2b7368d4156656ddb9a23b43f721a841b9c23e0"
 }
