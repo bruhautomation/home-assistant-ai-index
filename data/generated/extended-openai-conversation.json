@@ -11,7 +11,7 @@
     ],
     "domain": "extended_openai_conversation",
     "evidence": {
-      "commit": "8118d9e0457ea1540fe8d14989ec9fa27327f773",
+      "commit": "66aafab5f15c189c0475b41b1368f94787df94a7",
       "line": 19,
       "path": "custom_components/extended_openai_conversation/manifest.json",
       "repo": "jekalmin/extended_openai_conversation"
@@ -29,10 +29,10 @@
     "archived": false,
     "default_branch": "develop",
     "forks": 268,
-    "license": null,
-    "open_issues": 133,
-    "pushed_at": "2026-10-03T10:33:59Z",
-    "stars": 1448
+    "license": "MIT",
+    "open_issues": 127,
+    "pushed_at": "2026-10-10T04:55:12Z",
+    "stars": 1449
   },
-  "sha": "8118d9e0457ea1540fe8d14989ec9fa27327f773"
+  "sha": "66aafab5f15c189c0475b41b1368f94787df94a7"
 }
