@@ -3,13 +3,13 @@
   "manifest": {
     "domain": "mcp",
     "evidence": {
-      "commit": "319ee4aac5290e63479bfae16e7c3694453e8a8e",
+      "commit": "cf1e700d39403f2473407bfbd8da9799076cbfd6",
       "line": 8,
       "path": "homeassistant/components/mcp/manifest.json",
       "repo": "home-assistant/core"
     },
     "iot_class": "local_polling",
-    "name": "Model Context Protocol",
+    "name": "Model Context Protocol Client",
     "requirements": [
       "mcp==1.28.1"
     ],
@@ -19,11 +19,11 @@
   "repo_meta": {
     "archived": false,
     "default_branch": "dev",
-    "forks": 38852,
+    "forks": 38869,
     "license": "Apache-2.0",
-    "open_issues": 3432,
-    "pushed_at": "2026-10-10T10:34:41Z",
-    "stars": 91349
+    "open_issues": 3371,
+    "pushed_at": "2026-10-11T10:50:20Z",
+    "stars": 91369
   },
-  "sha": "319ee4aac5290e63479bfae16e7c3694453e8a8e"
+  "sha": "cf1e700d39403f2473407bfbd8da9799076cbfd6"
 }

@@ -11,7 +11,7 @@
     ],
     "domain": "ha_text_ai",
     "evidence": {
-      "commit": "b46d4340df0b2ee94e38263c7acbfe4e43ac4346",
+      "commit": "4773b8af2fbc278c641f1f0677b0f8a76c9fcfa7",
       "line": 10,
       "path": "custom_components/ha_text_ai/manifest.json",
       "repo": "smkrv/ha-text-ai"
@@ -19,8 +19,8 @@
     "iot_class": "cloud_polling",
     "name": "HA Text AI",
     "requirements": [
-      "aiofiles>=23.0.0,<25.0.0",
-      "google-genai>=1.16.0,<2.0.0"
+      "aiofiles>=23.0.0,<26.0.0",
+      "google-genai>=1.16.0,<3.0.0"
     ],
     "version": "2.5.2"
   },
@@ -31,8 +31,8 @@
     "forks": 7,
     "license": "MIT",
     "open_issues": 0,
-    "pushed_at": "2026-08-28T21:26:20Z",
+    "pushed_at": "2026-10-10T11:24:19Z",
     "stars": 83
   },
-  "sha": "b46d4340df0b2ee94e38263c7acbfe4e43ac4346"
+  "sha": "4773b8af2fbc278c641f1f0677b0f8a76c9fcfa7"
 }
