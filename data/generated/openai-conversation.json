@@ -6,7 +6,7 @@
     ],
     "domain": "openai_conversation",
     "evidence": {
-      "commit": "dd3932186628584e7442920d87d04923f4126382",
+      "commit": "723477a0cc91e4d64ab93aba5fe42dac97a359cf",
       "line": 10,
       "path": "homeassistant/components/openai_conversation/manifest.json",
       "repo": "home-assistant/core"
@@ -14,7 +14,7 @@
     "iot_class": "cloud_polling",
     "name": "OpenAI",
     "requirements": [
-      "openai==3.10.0"
+      "openai==3.26.0"
     ],
     "version": null
   },
@@ -22,11 +22,11 @@
   "repo_meta": {
     "archived": false,
     "default_branch": "dev",
-    "forks": 38883,
+    "forks": 38900,
     "license": "Apache-2.0",
-    "open_issues": 3327,
-    "pushed_at": "2026-10-12T12:08:38Z",
-    "stars": 91402
+    "open_issues": 3361,
+    "pushed_at": "2026-10-13T11:50:22Z",
+    "stars": 91448
   },
-  "sha": "dd3932186628584e7442920d87d04923f4126382"
+  "sha": "723477a0cc91e4d64ab93aba5fe42dac97a359cf"
 }
