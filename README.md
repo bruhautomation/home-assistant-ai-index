@@ -63,14 +63,14 @@ Maintainer corrections get priority handling, and a disputed flag is marked ⚠�
 on the site immediately while it is resolved.
 
 <!-- BEGIN GENERATED -->
-**51 projects indexed**, metrics harvested 2026-10-13. Sorted by name — never by stars. [Filter, compare, and see the evidence on the site →](https://bruhautomation.github.io/home-assistant-ai-index/)
+**51 projects indexed**, metrics harvested 2026-10-14. Sorted by name — never by stars. [Filter, compare, and see the evidence on the site →](https://bruhautomation.github.io/home-assistant-ai-index/)
 
 ### Conversation agents
 
 | Name | Capabilities | Inference | Install | Health | |
 |---|---|---|---|---|---|
 | [Anthropic Claude](https://github.com/home-assistant/core) | 📖🎛️ | ☁️ cloud | core | part of core | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/anthropic-conversation/) |
-| [Azure OpenAI Conversation](https://github.com/joselcaguilar/azure-openai-ha) | 📖🎛️ | ☁️ cloud | HACS | ★ 75 · 2026-10-10 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/azure-openai-conversation/) |
+| [Azure OpenAI Conversation](https://github.com/joselcaguilar/azure-openai-ha) | 📖🎛️ | ☁️ cloud | HACS | ★ 75 · 2026-10-14 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/azure-openai-conversation/) |
 | [Extended OpenAI Conversation](https://github.com/jekalmin/extended_openai_conversation) | 📖📜🎛️⚙️📝⚡ | 🏠/☁️ choice | HACS | ★ 1.5k · 2026-10-11 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/extended-openai-conversation/) |
 | [Fallback Conversation Agent](https://github.com/m50/ha-fallback-conversation) | — | 🏠/☁️ choice | HACS | ★ 81 · 2024-12-04 · ⚠️ archived | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/fallback-conversation/) |
 | [Google Generative AI](https://github.com/home-assistant/core) | 📖🎛️ | ☁️ cloud | core | part of core | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/google-generative-ai/) |
@@ -87,7 +87,7 @@ on the site immediately while it is resolved.
 | Name | Capabilities | Inference | Install | Health | |
 |---|---|---|---|---|---|
 | [brAIn](https://github.com/bruhautomation/BRUH-HA-Apps) | 📖📜📷🎛️⚙️📝⚡⏰ | ☁️ cloud | add-on | ★ 3 · 2026-10-13 · 🛡️ 6/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/brain/) |
-| [Home Generative Agent](https://github.com/goruck/home-generative-agent) | 📖📜📷🎛️⚙️⏰ | 🏠/☁️ choice | HACS | ★ 317 · 2026-10-13 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/home-generative-agent/) |
+| [Home Generative Agent](https://github.com/goruck/home-generative-agent) | 📖📜📷🎛️⚙️⏰ | 🏠/☁️ choice | HACS | ★ 318 · 2026-10-14 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/home-generative-agent/) |
 
 ### Vision
 
@@ -95,10 +95,10 @@ on the site immediately while it is resolved.
 |---|---|---|---|---|---|
 | [AI on the Edge Device](https://github.com/jomjol/AI-on-the-edge-device) | ⏰ | 🏠 local | external | ★ 8.9k · 2026-07-03 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/ai-on-the-edge-device/) |
 | [Amazon Rekognition](https://github.com/robmarkcole/HASS-amazon-rekognition) | 📷 | ☁️ cloud | HACS | ★ 88 · 2026-04-13 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/amazon-rekognition/) |
-| [BirdNET-Go](https://github.com/tphakala/birdnet-go) | 📷🎙️⏰ | 🏠 local | add-on, container | ★ 2.3k · 2026-10-11 · 🛡️ 7/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/birdnet-go/) |
-| [Frigate](https://github.com/blakeblackshear/frigate) | 📷🎙️⏰ | 🏠/☁️ choice | add-on, container | ★ 36.5k · 2026-10-12 · 🛡️ 6/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/frigate/) |
+| [BirdNET-Go](https://github.com/tphakala/birdnet-go) | 📷🎙️⏰ | 🏠 local | add-on, container | ★ 2.3k · 2026-10-14 · 🛡️ 7/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/birdnet-go/) |
+| [Frigate](https://github.com/blakeblackshear/frigate) | 📷🎙️⏰ | 🏠/☁️ choice | add-on, container | ★ 36.6k · 2026-10-13 · 🛡️ 6/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/frigate/) |
 | [LLM Vision](https://github.com/valentinfrlch/ha-llmvision) | 📷 | 🏠/☁️ choice | HACS | ★ 1.5k · 2026-09-17 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/llm-vision/) |
-| [Ollama Vision](https://github.com/remimikalsen/ollama_vision) | 📷 | 🏠 local | HACS | ★ 21 · 2026-10-04 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/ollama-vision/) |
+| [Ollama Vision](https://github.com/remimikalsen/ollama_vision) | 📷 | 🏠 local | HACS | ★ 22 · 2026-10-04 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/ollama-vision/) |
 
 ### Automation authoring
 
@@ -111,7 +111,7 @@ on the site immediately while it is resolved.
 
 | Name | Capabilities | Inference | Install | Health | |
 |---|---|---|---|---|---|
-| [hass-mcp](https://github.com/voska/hass-mcp) | 📖📜🎛️ | 🏠/☁️ choice | container, external | ★ 345 · 2026-10-10 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/hass-mcp/) |
+| [hass-mcp](https://github.com/voska/hass-mcp) | 📖📜🎛️ | 🏠/☁️ choice | container, external | ★ 346 · 2026-10-10 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/hass-mcp/) |
 | [MCP Server (core)](https://github.com/home-assistant/core) | 📖🎛️ | 🏠/☁️ choice | core | part of core | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/mcp-server/) |
 | [MCP Server (HTTP Transport)](https://github.com/ganhammar/hass-mcp-server) | 📖📜📷🎛️⚙️📝 | 🏠/☁️ choice | HACS | ★ 77 · 2026-10-12 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/hass-mcp-server/) |
 | [MCP Server for Xiaozhi](https://github.com/c1pher-cn/ha-mcp-for-xiaozhi) | 📖🎛️ | 🏠/☁️ choice | HACS | ★ 273 · 2026-09-09 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/ha-mcp-for-xiaozhi/) |
@@ -128,8 +128,8 @@ on the site immediately while it is resolved.
 
 | Name | Capabilities | Inference | Install | Health | |
 |---|---|---|---|---|---|
-| [LocalAI](https://github.com/mudler/LocalAI) | — | 🏠 local | container, external | ★ 49.5k · 2026-10-13 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/localai/) |
-| [Ollama (server)](https://github.com/ollama/ollama) | — | 🏠 local | container, external | ★ 183k · 2026-10-13 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/ollama-server/) |
+| [LocalAI](https://github.com/mudler/LocalAI) | — | 🏠 local | container, external | ★ 49.5k · 2026-10-14 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/localai/) |
+| [Ollama (server)](https://github.com/ollama/ollama) | — | 🏠 local | container, external | ★ 183.1k · 2026-10-14 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/ollama-server/) |
 
 ### Voice stack
 
@@ -138,16 +138,16 @@ on the site immediately while it is resolved.
 | [Assist Microphone](https://github.com/home-assistant/addons) | 🎙️ | 🏠 local | add-on | official add-on · 🛡️ 5/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/assist-microphone/) |
 | [ElevenLabs](https://github.com/home-assistant/core) | 🎙️ | ☁️ cloud | core | part of core | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/elevenlabs/) |
 | [Google Cloud (STT/TTS)](https://github.com/home-assistant/core) | 🎙️ | ☁️ cloud | core | part of core | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/google-cloud-speech/) |
-| [Microsoft Edge TTS](https://github.com/hasscc/hass-edge-tts) | — | ☁️ cloud | HACS | ★ 488 · 2026-06-05 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/edge-tts/) |
+| [Microsoft Edge TTS](https://github.com/hasscc/hass-edge-tts) | — | ☁️ cloud | HACS | ★ 488 · 2026-10-13 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/edge-tts/) |
 | [microWakeWord](https://github.com/kahrendt/microWakeWord) | 🎙️ | 🏠 local | external | ★ 24 · 2026-07-09 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/microwakeword/) |
 | [OpenAI TTS](https://github.com/sfortis/openai_tts) | — | ☁️ cloud | HACS | ★ 221 · 2026-10-11 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/openai-tts/) |
 | [OpenAI Whisper Cloud STT](https://github.com/fabio-garavini/ha-openai-whisper-stt-api) | 🎙️ | 🏠/☁️ choice | HACS | ★ 111 · 2026-09-03 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/whisper-cloud-stt/) |
 | [openWakeWord](https://github.com/rhasspy/wyoming-openwakeword) | 🎙️ | 🏠 local | add-on, container | ★ 207 · 2025-10-30 · 🛡️ 5/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/openwakeword-addon/) |
-| [Piper (text-to-speech)](https://github.com/rhasspy/wyoming-piper) | — | 🏠 local | add-on, container | ★ 216 · 2026-09-11 · 🛡️ 7/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/piper-addon/) |
+| [Piper (text-to-speech)](https://github.com/rhasspy/wyoming-piper) | — | 🏠 local | add-on, container | ★ 217 · 2026-09-11 · 🛡️ 7/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/piper-addon/) |
 | [Speech-to-Phrase](https://github.com/OHF-Voice/speech-to-phrase) | 📖🎙️ | 🏠 local | add-on, container | ★ 345 · 2026-09-30 · 🛡️ 5/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/speech-to-phrase/) |
 | [Stream Assist](https://github.com/AlexxIT/StreamAssist) | 📷🎙️ | 🏠/☁️ choice | HACS | ★ 388 · 2024-07-30 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/stream-assist/) |
 | [Voice Preview Edition (firmware)](https://github.com/esphome/home-assistant-voice-pe) | 🎙️ | 🏠 local | external | ★ 768 · 2026-09-29 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/voice-pe-firmware/) |
-| [Voice Satellite](https://github.com/jxlarrea/voice-satellite-card-integration) | 🎙️ | 🏠 local | HACS | ★ 887 · 2026-09-25 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/voice-satellite/) |
+| [Voice Satellite](https://github.com/jxlarrea/voice-satellite-card-integration) | 🎙️ | 🏠 local | HACS | ★ 888 · 2026-09-25 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/voice-satellite/) |
 | [Vosk (speech-to-text)](https://github.com/rhasspy/wyoming-vosk) | 🎙️ | 🏠 local | add-on, container | ★ 22 · 2026-09-28 · 🛡️ 5/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/wyoming-vosk/) |
 | [Whisper (speech-to-text)](https://github.com/rhasspy/wyoming-faster-whisper) | 🎙️ | 🏠 local | add-on, container | ★ 396 · 2026-09-29 · 🛡️ 5/8 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/whisper-addon/) |
 | [Willow](https://github.com/toverainc/willow) | 📖🎙️ | 🏠/☁️ choice | external | ★ 3.1k · 2026-10-01 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/willow/) |
@@ -157,13 +157,13 @@ on the site immediately while it is resolved.
 
 | Name | Capabilities | Inference | Install | Health | |
 |---|---|---|---|---|---|
-| [View Assist](https://github.com/dinki/View-Assist) | 📖 | 🏠/☁️ choice | external | ★ 535 · 2026-09-10 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/view-assist/) |
+| [View Assist](https://github.com/dinki/View-Assist) | 📖 | 🏠/☁️ choice | external | ★ 537 · 2026-09-10 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/view-assist/) |
 
 ### Summaries & briefings
 
 | Name | Capabilities | Inference | Install | Health | |
 |---|---|---|---|---|---|
-| [HA Text AI](https://github.com/smkrv/ha-text-ai) | — | 🏠/☁️ choice | HACS | ★ 83 · 2026-10-10 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/ha-text-ai/) |
+| [HA Text AI](https://github.com/smkrv/ha-text-ai) | — | 🏠/☁️ choice | HACS | ★ 83 · 2026-10-13 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/ha-text-ai/) |
 | [Marlin Analyzer](https://github.com/kotope/marlin-ha-integration) | 📷⏰ | 🏠/☁️ choice | HACS, container | ★ 0 · 2026-06-08 | [→](https://bruhautomation.github.io/home-assistant-ai-index/entries/marlin-analyzer/) |
 <!-- END GENERATED -->
 
