@@ -8,7 +8,7 @@
   "manifest": {
     "domain": "ws_mcp_server",
     "evidence": {
-      "commit": "abaa7166d68013753dff308e29dd8968db749795",
+      "commit": "9dcde894afe38ee7e3b2d538f066f99bc101843b",
       "line": 9,
       "path": "custom_components/ws_mcp_server/manifest.json",
       "repo": "c1pher-cn/ha-mcp-for-xiaozhi"
@@ -28,8 +28,8 @@
     "forks": 55,
     "license": "MIT",
     "open_issues": 1,
-    "pushed_at": "2026-09-09T05:07:48Z",
+    "pushed_at": "2026-10-16T04:25:11Z",
     "stars": 274
   },
-  "sha": "abaa7166d68013753dff308e29dd8968db749795"
+  "sha": "9dcde894afe38ee7e3b2d538f066f99bc101843b"
 }

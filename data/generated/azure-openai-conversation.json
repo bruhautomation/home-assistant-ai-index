@@ -11,7 +11,7 @@
     ],
     "domain": "azure_openai_conversation",
     "evidence": {
-      "commit": "79c9596618cb35294f12b199b8d145ee48d2140d",
+      "commit": "f592b14624d6874c6312bec5181a8eabd772f60f",
       "line": 10,
       "path": "custom_components/azure_openai_conversation/manifest.json",
       "repo": "joselcaguilar/azure-openai-ha"
@@ -30,13 +30,13 @@
     "forks": 30,
     "license": "MIT",
     "open_issues": 0,
-    "pushed_at": "2026-10-14T22:49:10Z",
+    "pushed_at": "2026-10-15T21:44:53Z",
     "stars": 75
   },
   "screenshot": {
-    "commit": "79c9596618cb35294f12b199b8d145ee48d2140d",
+    "commit": "f592b14624d6874c6312bec5181a8eabd772f60f",
     "source": "readme",
     "url": "https://i.imgur.com/v2T6P4w.png"
   },
-  "sha": "79c9596618cb35294f12b199b8d145ee48d2140d"
+  "sha": "f592b14624d6874c6312bec5181a8eabd772f60f"
 }
