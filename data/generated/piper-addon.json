@@ -1,14 +1,14 @@
 {
   "addon": {
     "apparmor_profile": false,
-    "commit": "f9fa97ab7569ce5456e46684248187a411a75abc",
+    "commit": "dceb75544065fc81446611248fb901f91b5e4a59",
     "config_path": "piper/config.yaml",
     "path": "piper",
     "permissions": [
       {
         "description": "web UI through authenticated ingress",
         "evidence": {
-          "commit": "f9fa97ab7569ce5456e46684248187a411a75abc",
+          "commit": "dceb75544065fc81446611248fb901f91b5e4a59",
           "line": 29,
           "path": "piper/config.yaml",
           "repo": "home-assistant/addons"
@@ -19,7 +19,7 @@
       {
         "description": "mapped Home Assistant folders",
         "evidence": {
-          "commit": "f9fa97ab7569ce5456e46684248187a411a75abc",
+          "commit": "dceb75544065fc81446611248fb901f91b5e4a59",
           "line": 27,
           "path": "piper/config.yaml",
           "repo": "home-assistant/addons"
