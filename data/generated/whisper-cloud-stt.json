@@ -2,13 +2,13 @@
   "id": "whisper-cloud-stt",
   "in_hacs_default": true,
   "latest_release": {
-    "published_at": "2026-09-03T08:10:04Z",
-    "tag": "2.0.0"
+    "published_at": "2026-10-19T07:02:51Z",
+    "tag": "3.1.0"
   },
   "manifest": {
     "domain": "openai_whisper_cloud",
     "evidence": {
-      "commit": "b3b06e7cce9c840c8b901e3c706bd3cacd45557e",
+      "commit": "21f00d680602a8dec37da7640b74c6fe70ce0c23",
       "line": 9,
       "path": "custom_components/openai_whisper_cloud/manifest.json",
       "repo": "fabio-garavini/ha-openai-whisper-stt-api"
@@ -16,7 +16,7 @@
     "iot_class": "cloud_polling",
     "name": "Whisper Cloud",
     "requirements": [],
-    "version": "2.1.0"
+    "version": "3.1.0"
   },
   "repo": "fabio-garavini/ha-openai-whisper-stt-api",
   "repo_meta": {
@@ -25,8 +25,8 @@
     "forks": 19,
     "license": "AGPL-3.0",
     "open_issues": 2,
-    "pushed_at": "2026-10-16T07:50:20Z",
+    "pushed_at": "2026-10-19T07:02:51Z",
     "stars": 111
   },
-  "sha": "b3b06e7cce9c840c8b901e3c706bd3cacd45557e"
+  "sha": "21f00d680602a8dec37da7640b74c6fe70ce0c23"
 }
