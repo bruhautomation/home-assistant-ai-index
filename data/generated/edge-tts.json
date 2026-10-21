@@ -8,7 +8,7 @@
   "manifest": {
     "domain": "edge_tts",
     "evidence": {
-      "commit": "5885a43abda73ec3172312f1751c35683bb9ff72",
+      "commit": "9e1a6bc333b9b3d990134b2b238f74c948009ef0",
       "line": 9,
       "path": "custom_components/edge_tts/manifest.json",
       "repo": "hasscc/hass-edge-tts"
@@ -24,11 +24,11 @@
   "repo_meta": {
     "archived": false,
     "default_branch": "main",
-    "forks": 84,
+    "forks": 85,
     "license": null,
     "open_issues": 23,
-    "pushed_at": "2026-10-13T15:40:52Z",
+    "pushed_at": "2026-10-20T12:21:50Z",
     "stars": 488
   },
-  "sha": "5885a43abda73ec3172312f1751c35683bb9ff72"
+  "sha": "9e1a6bc333b9b3d990134b2b238f74c948009ef0"
 }

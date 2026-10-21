@@ -2,13 +2,13 @@
   "id": "xiaozhi-mcp",
   "in_hacs_default": true,
   "latest_release": {
-    "published_at": "2025-09-10T09:14:33Z",
-    "tag": "v0.0.25"
+    "published_at": "2026-10-21T09:25:11Z",
+    "tag": "v0.0.26"
   },
   "manifest": {
     "domain": "xiaozhi_mcp",
     "evidence": {
-      "commit": "e0fbfe0179d720160c3e491352794d825892d293",
+      "commit": "adb06660ea45b0f5f7461ac123e6abca9144c0df",
       "line": 13,
       "path": "custom_components/xiaozhi_mcp/manifest.json",
       "repo": "mac8005/xiaozhi-mcp-ha"
@@ -16,25 +16,24 @@
     "iot_class": "cloud_push",
     "name": "Xiaozhi MCP",
     "requirements": [
-      "websockets>=11.0.3",
-      "aiohttp>=3.8.0"
+      "websockets==15.0.1"
     ],
-    "version": "0.0.25"
+    "version": "0.0.26"
   },
   "repo": "mac8005/xiaozhi-mcp-ha",
   "repo_meta": {
     "archived": false,
     "default_branch": "main",
-    "forks": 22,
+    "forks": 23,
     "license": "MIT",
-    "open_issues": 3,
-    "pushed_at": "2025-09-10T09:13:41Z",
+    "open_issues": 4,
+    "pushed_at": "2026-10-21T09:26:35Z",
     "stars": 111
   },
   "screenshot": {
-    "commit": "e0fbfe0179d720160c3e491352794d825892d293",
+    "commit": "adb06660ea45b0f5f7461ac123e6abca9144c0df",
     "source": "readme",
     "url": "https://ph-files.imgix.net/80909cc8-6bcb-42b9-96eb-4572b4e8b3cf.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=969&h=640&fit=max&frame=1&dpr=1"
   },
-  "sha": "e0fbfe0179d720160c3e491352794d825892d293"
+  "sha": "adb06660ea45b0f5f7461ac123e6abca9144c0df"
 }
