@@ -3,7 +3,7 @@
   "manifest": {
     "domain": "google_cloud",
     "evidence": {
-      "commit": "0360fca71a7ba285a6f6faa139eaf258654e5989",
+      "commit": "2775f3ce4db0321d76b961c24300b7b259bff61d",
       "line": 10,
       "path": "homeassistant/components/google_cloud/manifest.json",
       "repo": "home-assistant/core"
@@ -20,11 +20,11 @@
   "repo_meta": {
     "archived": false,
     "default_branch": "dev",
-    "forks": 38974,
+    "forks": 38975,
     "license": "Apache-2.0",
-    "open_issues": 3379,
-    "pushed_at": "2026-10-21T09:08:41Z",
-    "stars": 91622
+    "open_issues": 3398,
+    "pushed_at": "2026-10-22T09:28:03Z",
+    "stars": 91642
   },
-  "sha": "0360fca71a7ba285a6f6faa139eaf258654e5989"
+  "sha": "2775f3ce4db0321d76b961c24300b7b259bff61d"
 }
