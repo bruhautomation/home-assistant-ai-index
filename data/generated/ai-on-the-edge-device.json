@@ -8,16 +8,16 @@
   "repo_meta": {
     "archived": false,
     "default_branch": "main",
-    "forks": 930,
+    "forks": 929,
     "license": "NOASSERTION",
-    "open_issues": 208,
-    "pushed_at": "2026-10-21T19:24:47Z",
-    "stars": 8881
+    "open_issues": 205,
+    "pushed_at": "2026-10-22T11:22:53Z",
+    "stars": 8882
   },
   "screenshot": {
-    "commit": "cdc8450924e9338ab564c3fd76ad998e7b7cbb84",
+    "commit": "dc368ced7a96455d46a45a61ad5d0f56ae8a078d",
     "source": "readme",
-    "url": "https://raw.githubusercontent.com/jomjol/AI-on-the-edge-device/cdc8450924e9338ab564c3fd76ad998e7b7cbb84/images/web-installer.png"
+    "url": "https://raw.githubusercontent.com/jomjol/AI-on-the-edge-device/dc368ced7a96455d46a45a61ad5d0f56ae8a078d/images/web-installer.png"
   },
-  "sha": "cdc8450924e9338ab564c3fd76ad998e7b7cbb84"
+  "sha": "dc368ced7a96455d46a45a61ad5d0f56ae8a078d"
 }
