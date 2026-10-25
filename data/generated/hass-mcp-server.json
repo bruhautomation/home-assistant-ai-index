@@ -2,13 +2,13 @@
   "id": "hass-mcp-server",
   "in_hacs_default": true,
   "latest_release": {
-    "published_at": "2026-10-24T07:46:15Z",
-    "tag": "v2.0.0"
+    "published_at": "2026-10-25T08:26:26Z",
+    "tag": "v2.0.1"
   },
   "manifest": {
     "domain": "mcp_server_http_transport",
     "evidence": {
-      "commit": "42066fd9f44ccbdb1fbb790d3d0a9389ed736d9c",
+      "commit": "ed27235942a2d1e0970f93ad40e125533ecf1c41",
       "line": 10,
       "path": "custom_components/mcp_server_http_transport/manifest.json",
       "repo": "ganhammar/hass-mcp-server"
@@ -18,7 +18,7 @@
     "requirements": [
       "python-dateutil>=2.9.0"
     ],
-    "version": "2.0.0"
+    "version": "2.0.1"
   },
   "repo": "ganhammar/hass-mcp-server",
   "repo_meta": {
@@ -27,8 +27,8 @@
     "forks": 22,
     "license": "MIT",
     "open_issues": 4,
-    "pushed_at": "2026-10-24T07:46:15Z",
-    "stars": 81
+    "pushed_at": "2026-10-25T08:26:26Z",
+    "stars": 82
   },
-  "sha": "42066fd9f44ccbdb1fbb790d3d0a9389ed736d9c"
+  "sha": "ed27235942a2d1e0970f93ad40e125533ecf1c41"
 }
