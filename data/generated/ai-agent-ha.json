@@ -8,16 +8,14 @@
   "manifest": {
     "domain": "ai_agent_ha",
     "evidence": {
-      "commit": "b1ec82cbb6c8800aea816000b446856f5e893ff1",
+      "commit": "46cf8b90327e05a5882eb9ffb0066a35c4661530",
       "line": 18,
       "path": "custom_components/ai_agent_ha/manifest.json",
       "repo": "sbenodiz/ai_agent_ha"
     },
     "iot_class": "cloud_polling",
     "name": "AI Agent HA",
-    "requirements": [
-      "aiohttp>=3.8.0"
-    ],
+    "requirements": [],
     "version": "1.14.1"
   },
   "repo": "sbenodiz/ai_agent_ha",
@@ -27,13 +25,13 @@
     "forks": 27,
     "license": "MIT",
     "open_issues": 15,
-    "pushed_at": "2026-07-14T18:42:46Z",
+    "pushed_at": "2026-10-27T04:16:41Z",
     "stars": 167
   },
   "screenshot": {
-    "commit": "b1ec82cbb6c8800aea816000b446856f5e893ff1",
+    "commit": "46cf8b90327e05a5882eb9ffb0066a35c4661530",
     "source": "readme",
-    "url": "https://raw.githubusercontent.com/sbenodiz/ai_agent_ha/b1ec82cbb6c8800aea816000b446856f5e893ff1/image/Screenshot2.png"
+    "url": "https://raw.githubusercontent.com/sbenodiz/ai_agent_ha/46cf8b90327e05a5882eb9ffb0066a35c4661530/image/Screenshot2.png"
   },
-  "sha": "b1ec82cbb6c8800aea816000b446856f5e893ff1"
+  "sha": "46cf8b90327e05a5882eb9ffb0066a35c4661530"
 }
