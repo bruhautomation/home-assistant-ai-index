@@ -1,14 +1,32 @@
 {
   "id": "anthropic-conversation",
+  "manifest": {
+    "detected_providers": [
+      "anthropic"
+    ],
+    "domain": "anthropic",
+    "evidence": {
+      "commit": "25b9c24443ec056582a1b17a27b32602ddb766e9",
+      "line": 12,
+      "path": "homeassistant/components/anthropic/manifest.json",
+      "repo": "home-assistant/core"
+    },
+    "iot_class": "cloud_polling",
+    "name": "Anthropic",
+    "requirements": [
+      "anthropic==2.3.0"
+    ],
+    "version": null
+  },
   "repo": "home-assistant/core",
   "repo_meta": {
     "archived": false,
     "default_branch": "dev",
-    "forks": 39210,
+    "forks": 39220,
     "license": "Apache-2.0",
-    "open_issues": 3457,
-    "pushed_at": "2026-11-02T12:33:59Z",
-    "stars": 91912
+    "open_issues": 3431,
+    "pushed_at": "2026-11-03T11:27:38Z",
+    "stars": 91928
   },
-  "sha": "4fc25d552c8ec41f53475bac3a06f4138c2a06da"
+  "sha": "25b9c24443ec056582a1b17a27b32602ddb766e9"
 }

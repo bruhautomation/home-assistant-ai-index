@@ -2,17 +2,6 @@
   "api_authenticated": true,
   "changed": 34,
   "entries": 51,
-  "errors": [
-    {
-      "error": "manifest.json not found",
-      "id": "ai-task",
-      "stage": "manifest"
-    },
-    {
-      "error": "manifest.json not found",
-      "id": "anthropic-conversation",
-      "stage": "manifest"
-    }
-  ],
-  "harvested_at": "2026-11-02T12:36:49Z"
+  "errors": [],
+  "harvested_at": "2026-11-03T12:02:38Z"
 }
