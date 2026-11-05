@@ -8,7 +8,7 @@
   "manifest": {
     "domain": "mcp_assist",
     "evidence": {
-      "commit": "a1b0545a6a4744f8ad967c71333f8b3bb254a685",
+      "commit": "bf45b11c2f15cff2f634dda70b257f4ede2eb56a",
       "line": 9,
       "path": "custom_components/mcp_assist/manifest.json",
       "repo": "mike-nott/mcp-assist"
@@ -28,8 +28,8 @@
     "forks": 23,
     "license": "MIT",
     "open_issues": 5,
-    "pushed_at": "2026-10-29T22:58:25Z",
+    "pushed_at": "2026-11-04T17:05:32Z",
     "stars": 114
   },
-  "sha": "a1b0545a6a4744f8ad967c71333f8b3bb254a685"
+  "sha": "bf45b11c2f15cff2f634dda70b257f4ede2eb56a"
 }
