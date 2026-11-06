@@ -2,8 +2,8 @@
   "id": "azure-openai-conversation",
   "in_hacs_default": true,
   "latest_release": {
-    "published_at": "2026-10-14T22:37:00Z",
-    "tag": "v5.0.1"
+    "published_at": "2026-11-06T11:31:01Z",
+    "tag": "v5.1.0"
   },
   "manifest": {
     "detected_providers": [
@@ -11,17 +11,17 @@
     ],
     "domain": "azure_openai_conversation",
     "evidence": {
-      "commit": "6905d57197289dd859eceed8826711a0791f3af5",
-      "line": 10,
+      "commit": "a83eb617975802d811d23d07db39222cf33610ef",
+      "line": 12,
       "path": "custom_components/azure_openai_conversation/manifest.json",
       "repo": "joselcaguilar/azure-openai-ha"
     },
     "iot_class": "cloud_polling",
     "name": "Azure OpenAI Conversation",
     "requirements": [
-      "openai>=3.10.0,<4.0.0"
+      "openai>=3.26.0,<4.0.0"
     ],
-    "version": "2026.10.0"
+    "version": "2026.11.0"
   },
   "repo": "joselcaguilar/azure-openai-ha",
   "repo_meta": {
@@ -30,13 +30,13 @@
     "forks": 31,
     "license": "MIT",
     "open_issues": 0,
-    "pushed_at": "2026-10-29T20:13:18Z",
+    "pushed_at": "2026-11-06T11:31:01Z",
     "stars": 76
   },
   "screenshot": {
-    "commit": "6905d57197289dd859eceed8826711a0791f3af5",
+    "commit": "a83eb617975802d811d23d07db39222cf33610ef",
     "source": "readme",
     "url": "https://i.imgur.com/v2T6P4w.png"
   },
-  "sha": "6905d57197289dd859eceed8826711a0791f3af5"
+  "sha": "a83eb617975802d811d23d07db39222cf33610ef"
 }
