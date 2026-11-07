@@ -3,7 +3,7 @@
   "manifest": {
     "domain": "ai_task",
     "evidence": {
-      "commit": "b77ae16a541c2b5d4c7864bd222359768663a946",
+      "commit": "f8cdb146961e15d151548a08607447f6d98421d1",
       "line": 1,
       "path": "homeassistant/components/ai_task/manifest.json",
       "repo": "home-assistant/core"
@@ -17,11 +17,11 @@
   "repo_meta": {
     "archived": false,
     "default_branch": "dev",
-    "forks": 39214,
+    "forks": 39220,
     "license": "Apache-2.0",
-    "open_issues": 3592,
-    "pushed_at": "2026-11-06T12:10:16Z",
-    "stars": 92005
+    "open_issues": 3627,
+    "pushed_at": "2026-11-07T07:51:47Z",
+    "stars": 92037
   },
-  "sha": "b77ae16a541c2b5d4c7864bd222359768663a946"
+  "sha": "f8cdb146961e15d151548a08607447f6d98421d1"
 }
