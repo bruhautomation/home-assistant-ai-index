@@ -2,8 +2,8 @@
   "id": "home-generative-agent",
   "in_hacs_default": true,
   "latest_release": {
-    "published_at": "2026-11-06T13:40:21Z",
-    "tag": "v3.45.0"
+    "published_at": "2026-11-08T14:44:24Z",
+    "tag": "v3.45.1"
   },
   "manifest": {
     "detected_providers": [
@@ -12,7 +12,7 @@
     ],
     "domain": "home_generative_agent",
     "evidence": {
-      "commit": "b2b416270108d829bb9b69338fb8ae285a23a12e",
+      "commit": "3060479ff3d2165841b5a594e4d2bbdcb04f56bb",
       "line": 21,
       "path": "custom_components/home_generative_agent/manifest.json",
       "repo": "goruck/home-generative-agent"
@@ -22,7 +22,7 @@
     "requirements": [
       "aiofiles>=25.1.0",
       "langchain==1.2.12",
-      "langchain-core>=1.6.6,<2.0.0",
+      "langchain-core>=1.7.5,<2.0.0",
       "langchain-openai>=1.6.7,<2",
       "langchain-ollama>=0.3.10,<2",
       "langgraph==1.1.2",
@@ -34,7 +34,7 @@
       "psycopg-pool==3.3.0",
       "transformers==4.57.1",
       "langchain-google-genai>=3.1.0,<4",
-      "langchain-anthropic>=1.4.3,<2",
+      "langchain-anthropic>=1.7.10,<2",
       "anthropic>=0.125.0,<3",
       "sentence-stream>=1.3.0,<1.4"
     ],
@@ -46,14 +46,14 @@
     "default_branch": "main",
     "forks": 70,
     "license": "MIT",
-    "open_issues": 12,
-    "pushed_at": "2026-11-08T02:45:51Z",
+    "open_issues": 10,
+    "pushed_at": "2026-11-09T12:56:05Z",
     "stars": 376
   },
   "screenshot": {
-    "commit": "b2b416270108d829bb9b69338fb8ae285a23a12e",
+    "commit": "3060479ff3d2165841b5a594e4d2bbdcb04f56bb",
     "source": "readme",
-    "url": "https://raw.githubusercontent.com/goruck/home-generative-agent/b2b416270108d829bb9b69338fb8ae285a23a12e/assets/create_automation.gif"
+    "url": "https://raw.githubusercontent.com/goruck/home-generative-agent/3060479ff3d2165841b5a594e4d2bbdcb04f56bb/assets/create_automation.gif"
   },
-  "sha": "b2b416270108d829bb9b69338fb8ae285a23a12e"
+  "sha": "3060479ff3d2165841b5a594e4d2bbdcb04f56bb"
 }
