@@ -13,7 +13,7 @@
     ],
     "domain": "llama_conversation",
     "evidence": {
-      "commit": "dfe21e383f464589ec50fee0eb41ce01cb4e4cb0",
+      "commit": "e22bf15cb5f8a14c7245c47f4cc353f70a6a0dd2",
       "line": 11,
       "path": "custom_components/llama_conversation/manifest.json",
       "repo": "acon96/home-llm"
@@ -35,9 +35,9 @@
     "default_branch": "develop",
     "forks": 158,
     "license": null,
-    "open_issues": 46,
-    "pushed_at": "2026-11-07T22:43:05Z",
-    "stars": 1491
+    "open_issues": 44,
+    "pushed_at": "2026-11-10T11:34:39Z",
+    "stars": 1493
   },
-  "sha": "dfe21e383f464589ec50fee0eb41ce01cb4e4cb0"
+  "sha": "e22bf15cb5f8a14c7245c47f4cc353f70a6a0dd2"
 }

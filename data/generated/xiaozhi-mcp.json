@@ -2,13 +2,13 @@
   "id": "xiaozhi-mcp",
   "in_hacs_default": true,
   "latest_release": {
-    "published_at": "2026-11-08T20:44:19Z",
-    "tag": "v0.0.28"
+    "published_at": "2026-11-09T21:08:22Z",
+    "tag": "v0.0.29"
   },
   "manifest": {
     "domain": "xiaozhi_mcp",
     "evidence": {
-      "commit": "4cae998b303f055d5f0f5daaab2823e52b36ce32",
+      "commit": "4ec9f14f80052fa216889bcfb53abdb8f4524438",
       "line": 13,
       "path": "custom_components/xiaozhi_mcp/manifest.json",
       "repo": "mac8005/xiaozhi-mcp-ha"
@@ -18,7 +18,7 @@
     "requirements": [
       "websockets==15.0.1"
     ],
-    "version": "0.0.28"
+    "version": "0.0.29"
   },
   "repo": "mac8005/xiaozhi-mcp-ha",
   "repo_meta": {
@@ -27,13 +27,13 @@
     "forks": 23,
     "license": "MIT",
     "open_issues": 0,
-    "pushed_at": "2026-11-09T05:22:18Z",
+    "pushed_at": "2026-11-09T21:09:31Z",
     "stars": 114
   },
   "screenshot": {
-    "commit": "4cae998b303f055d5f0f5daaab2823e52b36ce32",
+    "commit": "4ec9f14f80052fa216889bcfb53abdb8f4524438",
     "source": "readme",
     "url": "https://ph-files.imgix.net/80909cc8-6bcb-42b9-96eb-4572b4e8b3cf.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=969&h=640&fit=max&frame=1&dpr=1"
   },
-  "sha": "4cae998b303f055d5f0f5daaab2823e52b36ce32"
+  "sha": "4ec9f14f80052fa216889bcfb53abdb8f4524438"
 }
