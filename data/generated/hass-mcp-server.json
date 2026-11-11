@@ -8,7 +8,7 @@
   "manifest": {
     "domain": "mcp_server_http_transport",
     "evidence": {
-      "commit": "a8514ad7b0bd8aff80f913529d8b65afc84e2ddf",
+      "commit": "696687acb2b2b6851d1cdd3606e0699e8a4fefd0",
       "line": 10,
       "path": "custom_components/mcp_server_http_transport/manifest.json",
       "repo": "ganhammar/hass-mcp-server"
@@ -26,9 +26,9 @@
     "default_branch": "main",
     "forks": 25,
     "license": "MIT",
-    "open_issues": 4,
-    "pushed_at": "2026-11-10T12:45:41Z",
+    "open_issues": 3,
+    "pushed_at": "2026-11-11T10:27:36Z",
     "stars": 85
   },
-  "sha": "a8514ad7b0bd8aff80f913529d8b65afc84e2ddf"
+  "sha": "696687acb2b2b6851d1cdd3606e0699e8a4fefd0"
 }
