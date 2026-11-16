@@ -6,7 +6,7 @@
     ],
     "domain": "ollama",
     "evidence": {
-      "commit": "4fc9ca1ef8ab5b2b73810d1cc3940a541223b4e3",
+      "commit": "9cbcdf30bc129f1c174bb6c916a67dfaa21ed9a7",
       "line": 12,
       "path": "homeassistant/components/ollama/manifest.json",
       "repo": "home-assistant/core"
@@ -22,11 +22,11 @@
   "repo_meta": {
     "archived": false,
     "default_branch": "dev",
-    "forks": 39331,
+    "forks": 39350,
     "license": "Apache-2.0",
-    "open_issues": 4013,
-    "pushed_at": "2026-11-15T11:44:38Z",
-    "stars": 92330
+    "open_issues": 3979,
+    "pushed_at": "2026-11-16T12:53:20Z",
+    "stars": 92323
   },
-  "sha": "4fc9ca1ef8ab5b2b73810d1cc3940a541223b4e3"
+  "sha": "9cbcdf30bc129f1c174bb6c916a67dfaa21ed9a7"
 }
