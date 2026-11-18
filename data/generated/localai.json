@@ -8,16 +8,16 @@
   "repo_meta": {
     "archived": false,
     "default_branch": "master",
-    "forks": 4613,
+    "forks": 4617,
     "license": "MIT",
-    "open_issues": 187,
-    "pushed_at": "2026-11-17T13:04:28Z",
-    "stars": 50412
+    "open_issues": 191,
+    "pushed_at": "2026-11-18T12:18:14Z",
+    "stars": 50433
   },
   "screenshot": {
-    "commit": "db359940a9380643aa65dee82a3a37d9c98692cf",
+    "commit": "1d08354ea0b8a7fa70e563ddff4109e4765af904",
     "source": "readme",
-    "url": "https://raw.githubusercontent.com/mudler/LocalAI/db359940a9380643aa65dee82a3a37d9c98692cf/docs/static/images/diagrams/composable-core.png"
+    "url": "https://raw.githubusercontent.com/mudler/LocalAI/1d08354ea0b8a7fa70e563ddff4109e4765af904/docs/static/images/diagrams/composable-core.png"
   },
-  "sha": "db359940a9380643aa65dee82a3a37d9c98692cf"
+  "sha": "1d08354ea0b8a7fa70e563ddff4109e4765af904"
 }
