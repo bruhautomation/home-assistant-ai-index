@@ -2,13 +2,13 @@
   "id": "ha-mcp-for-xiaozhi",
   "in_hacs_default": true,
   "latest_release": {
-    "published_at": "2026-11-12T07:39:30Z",
-    "tag": "v0.2.2"
+    "published_at": "2026-11-19T07:34:44Z",
+    "tag": "v0.2.3"
   },
   "manifest": {
     "domain": "ws_mcp_server",
     "evidence": {
-      "commit": "394e492dc0a5ac7e9829a6646826da3280abfb3f",
+      "commit": "59a67c273c52de524d86b1b4fe4e93b12a254703",
       "line": 15,
       "path": "custom_components/ws_mcp_server/manifest.json",
       "repo": "c1pher-cn/ha-mcp-for-xiaozhi"
@@ -27,9 +27,9 @@
     "default_branch": "main",
     "forks": 61,
     "license": "MIT",
-    "open_issues": 4,
-    "pushed_at": "2026-11-12T07:39:30Z",
+    "open_issues": 2,
+    "pushed_at": "2026-11-19T07:34:44Z",
     "stars": 285
   },
-  "sha": "394e492dc0a5ac7e9829a6646826da3280abfb3f"
+  "sha": "59a67c273c52de524d86b1b4fe4e93b12a254703"
 }
