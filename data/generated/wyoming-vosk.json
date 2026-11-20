@@ -1,14 +1,14 @@
 {
   "addon": {
     "apparmor_profile": false,
-    "commit": "2bc5dda06bada6d3f719c6446f17cfea39872f4f",
+    "commit": "77d15160c51196ada10f7e4144f17b3666524e25",
     "config_path": "vosk/config.yaml",
     "path": "vosk",
     "permissions": [
       {
         "description": "mapped Home Assistant folders",
         "evidence": {
-          "commit": "2bc5dda06bada6d3f719c6446f17cfea39872f4f",
+          "commit": "77d15160c51196ada10f7e4144f17b3666524e25",
           "line": 14,
           "path": "vosk/config.yaml",
           "repo": "rhasspy/hassio-addons"
