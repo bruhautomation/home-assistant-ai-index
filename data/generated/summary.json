@@ -2,17 +2,6 @@
   "api_authenticated": true,
   "changed": 28,
   "entries": 51,
-  "errors": [
-    {
-      "error": "manifest.json not found",
-      "id": "google-cloud-speech",
-      "stage": "manifest"
-    },
-    {
-      "error": "manifest.json not found",
-      "id": "google-generative-ai",
-      "stage": "manifest"
-    }
-  ],
-  "harvested_at": "2026-11-24T14:59:04Z"
+  "errors": [],
+  "harvested_at": "2026-11-25T14:34:07Z"
 }

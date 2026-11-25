@@ -1,14 +1,31 @@
 {
   "id": "google-cloud-speech",
+  "manifest": {
+    "domain": "google_cloud",
+    "evidence": {
+      "commit": "c89c1a8cc36c81354bb3de99522ed75f744fa13e",
+      "line": 11,
+      "path": "homeassistant/components/google_cloud/manifest.json",
+      "repo": "home-assistant/core"
+    },
+    "iot_class": "cloud_push",
+    "name": "Google Cloud",
+    "requirements": [
+      "google-cloud-texttospeech==2.37.0",
+      "google-cloud-speech==2.40.0",
+      "sentence-stream==1.3.0"
+    ],
+    "version": null
+  },
   "repo": "home-assistant/core",
   "repo_meta": {
     "archived": false,
     "default_branch": "dev",
-    "forks": 39349,
+    "forks": 39352,
     "license": "Apache-2.0",
-    "open_issues": 3899,
-    "pushed_at": "2026-11-24T14:56:00Z",
-    "stars": 92476
+    "open_issues": 3810,
+    "pushed_at": "2026-11-25T14:30:45Z",
+    "stars": 92518
   },
-  "sha": "a10eeeb1cf10a1f5dbc8ef2148b04dfe1bbf2d9b"
+  "sha": "c89c1a8cc36c81354bb3de99522ed75f744fa13e"
 }
